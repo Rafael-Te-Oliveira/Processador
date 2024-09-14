@@ -1,0 +1,440 @@
+// Copyright (C) 2018  Intel Corporation. All rights reserved.
+// Your use of Intel Corporation's design tools, logic functions 
+// and other software and tools, and its AMPP partner logic 
+// functions, and any output files from any of the foregoing 
+// (including device programming or simulation files), and any 
+// associated documentation or information are expressly subject 
+// to the terms and conditions of the Intel Program License 
+// Subscription Agreement, the Intel Quartus Prime License Agreement,
+// the Intel FPGA IP License Agreement, or other applicable license
+// agreement, including, without limitation, that your use is for
+// the sole purpose of programming logic devices manufactured by
+// Intel and sold by Intel or its authorized distributors.  Please
+// refer to the applicable agreement for further details.
+
+// *****************************************************************************
+// This file contains a Verilog test bench with test vectors .The test vectors  
+// are exported from a vector file in the Quartus Waveform Editor and apply to  
+// the top level entity of the current Quartus project .The user can use this   
+// testbench to simulate his design using a third-party simulation tool .       
+// *****************************************************************************
+// Generated on "07/11/2022 16:29:13"
+                                                                                
+// Verilog Test Bench (with test vectors) for design :                          mux_Mem
+// 
+// Simulation tool : 3rd Party
+// 
+
+`timescale 1 ps/ 1 ps
+module mux_Mem_vlg_vec_tst();
+// constants                                           
+// general purpose registers
+reg [31:0] dadosLidos;
+reg memReg;
+reg [31:0] result;
+// wires                                               
+wire [31:0] saida;
+
+// assign statements (if any)                          
+mux_Mem i1 (
+// port map - connection between master ports and signals/registers   
+	.dadosLidos(dadosLidos),
+	.memReg(memReg),
+	.result(result),
+	.saida(saida)
+);
+initial 
+begin 
+#1000000 $finish;
+end 
+
+// memReg
+initial
+begin
+	repeat(16)
+	begin
+		memReg = 1'b0;
+		memReg = #30000 1'b1;
+		# 30000;
+	end
+	memReg = 1'b0;
+	memReg = #30000 1'b1;
+end 
+// dadosLidos[ 31 ]
+initial
+begin
+	dadosLidos[31] = 1'b0;
+end 
+// dadosLidos[ 30 ]
+initial
+begin
+	dadosLidos[30] = 1'b0;
+end 
+// dadosLidos[ 29 ]
+initial
+begin
+	dadosLidos[29] = 1'b0;
+end 
+// dadosLidos[ 28 ]
+initial
+begin
+	dadosLidos[28] = 1'b0;
+end 
+// dadosLidos[ 27 ]
+initial
+begin
+	dadosLidos[27] = 1'b0;
+end 
+// dadosLidos[ 26 ]
+initial
+begin
+	dadosLidos[26] = 1'b0;
+end 
+// dadosLidos[ 25 ]
+initial
+begin
+	dadosLidos[25] = 1'b0;
+end 
+// dadosLidos[ 24 ]
+initial
+begin
+	dadosLidos[24] = 1'b0;
+end 
+// dadosLidos[ 23 ]
+initial
+begin
+	dadosLidos[23] = 1'b0;
+end 
+// dadosLidos[ 22 ]
+initial
+begin
+	dadosLidos[22] = 1'b0;
+end 
+// dadosLidos[ 21 ]
+initial
+begin
+	dadosLidos[21] = 1'b0;
+end 
+// dadosLidos[ 20 ]
+initial
+begin
+	dadosLidos[20] = 1'b0;
+end 
+// dadosLidos[ 19 ]
+initial
+begin
+	dadosLidos[19] = 1'b0;
+end 
+// dadosLidos[ 18 ]
+initial
+begin
+	dadosLidos[18] = 1'b0;
+end 
+// dadosLidos[ 17 ]
+initial
+begin
+	dadosLidos[17] = 1'b0;
+end 
+// dadosLidos[ 16 ]
+initial
+begin
+	dadosLidos[16] = 1'b0;
+end 
+// dadosLidos[ 15 ]
+initial
+begin
+	dadosLidos[15] = 1'b0;
+end 
+// dadosLidos[ 14 ]
+initial
+begin
+	dadosLidos[14] = 1'b0;
+end 
+// dadosLidos[ 13 ]
+initial
+begin
+	dadosLidos[13] = 1'b0;
+end 
+// dadosLidos[ 12 ]
+initial
+begin
+	dadosLidos[12] = 1'b0;
+end 
+// dadosLidos[ 11 ]
+initial
+begin
+	dadosLidos[11] = 1'b0;
+end 
+// dadosLidos[ 10 ]
+initial
+begin
+	dadosLidos[10] = 1'b0;
+end 
+// dadosLidos[ 9 ]
+initial
+begin
+	dadosLidos[9] = 1'b0;
+end 
+// dadosLidos[ 8 ]
+initial
+begin
+	dadosLidos[8] = 1'b0;
+end 
+// dadosLidos[ 7 ]
+initial
+begin
+	dadosLidos[7] = 1'b0;
+end 
+// dadosLidos[ 6 ]
+initial
+begin
+	dadosLidos[6] = 1'b0;
+end 
+// dadosLidos[ 5 ]
+initial
+begin
+	dadosLidos[5] = 1'b0;
+	dadosLidos[5] = #960000 1'b1;
+end 
+// dadosLidos[ 4 ]
+initial
+begin
+	dadosLidos[4] = 1'b0;
+	dadosLidos[4] = #480000 1'b1;
+	dadosLidos[4] = #480000 1'b0;
+end 
+// dadosLidos[ 3 ]
+initial
+begin
+	repeat(2)
+	begin
+		dadosLidos[3] = 1'b0;
+		dadosLidos[3] = #240000 1'b1;
+		# 240000;
+	end
+	dadosLidos[3] = 1'b0;
+end 
+// dadosLidos[ 2 ]
+initial
+begin
+	repeat(4)
+	begin
+		dadosLidos[2] = 1'b0;
+		dadosLidos[2] = #120000 1'b1;
+		# 120000;
+	end
+	dadosLidos[2] = 1'b0;
+end 
+// dadosLidos[ 1 ]
+initial
+begin
+	repeat(8)
+	begin
+		dadosLidos[1] = 1'b0;
+		dadosLidos[1] = #60000 1'b1;
+		# 60000;
+	end
+	dadosLidos[1] = 1'b0;
+end 
+// dadosLidos[ 0 ]
+initial
+begin
+	repeat(16)
+	begin
+		dadosLidos[0] = 1'b0;
+		dadosLidos[0] = #30000 1'b1;
+		# 30000;
+	end
+	dadosLidos[0] = 1'b0;
+	dadosLidos[0] = #30000 1'b1;
+end 
+// result[ 31 ]
+initial
+begin
+	result[31] = 1'b0;
+end 
+// result[ 30 ]
+initial
+begin
+	result[30] = 1'b0;
+end 
+// result[ 29 ]
+initial
+begin
+	result[29] = 1'b0;
+end 
+// result[ 28 ]
+initial
+begin
+	result[28] = 1'b0;
+end 
+// result[ 27 ]
+initial
+begin
+	result[27] = 1'b0;
+end 
+// result[ 26 ]
+initial
+begin
+	result[26] = 1'b0;
+end 
+// result[ 25 ]
+initial
+begin
+	result[25] = 1'b0;
+end 
+// result[ 24 ]
+initial
+begin
+	result[24] = 1'b0;
+end 
+// result[ 23 ]
+initial
+begin
+	result[23] = 1'b0;
+end 
+// result[ 22 ]
+initial
+begin
+	result[22] = 1'b0;
+end 
+// result[ 21 ]
+initial
+begin
+	result[21] = 1'b0;
+end 
+// result[ 20 ]
+initial
+begin
+	result[20] = 1'b0;
+end 
+// result[ 19 ]
+initial
+begin
+	result[19] = 1'b0;
+end 
+// result[ 18 ]
+initial
+begin
+	result[18] = 1'b0;
+end 
+// result[ 17 ]
+initial
+begin
+	result[17] = 1'b0;
+end 
+// result[ 16 ]
+initial
+begin
+	result[16] = 1'b0;
+end 
+// result[ 15 ]
+initial
+begin
+	result[15] = 1'b0;
+end 
+// result[ 14 ]
+initial
+begin
+	result[14] = 1'b0;
+end 
+// result[ 13 ]
+initial
+begin
+	result[13] = 1'b0;
+end 
+// result[ 12 ]
+initial
+begin
+	result[12] = 1'b0;
+end 
+// result[ 11 ]
+initial
+begin
+	result[11] = 1'b0;
+end 
+// result[ 10 ]
+initial
+begin
+	result[10] = 1'b0;
+end 
+// result[ 9 ]
+initial
+begin
+	result[9] = 1'b0;
+end 
+// result[ 8 ]
+initial
+begin
+	result[8] = 1'b0;
+end 
+// result[ 7 ]
+initial
+begin
+	result[7] = 1'b0;
+end 
+// result[ 6 ]
+initial
+begin
+	result[6] = 1'b0;
+	result[6] = #960000 1'b1;
+end 
+// result[ 5 ]
+initial
+begin
+	result[5] = 1'b0;
+	result[5] = #480000 1'b1;
+	result[5] = #480000 1'b0;
+end 
+// result[ 4 ]
+initial
+begin
+	repeat(2)
+	begin
+		result[4] = 1'b0;
+		result[4] = #240000 1'b1;
+		# 240000;
+	end
+	result[4] = 1'b0;
+end 
+// result[ 3 ]
+initial
+begin
+	repeat(4)
+	begin
+		result[3] = 1'b0;
+		result[3] = #120000 1'b1;
+		# 120000;
+	end
+	result[3] = 1'b0;
+end 
+// result[ 2 ]
+initial
+begin
+	repeat(8)
+	begin
+		result[2] = 1'b0;
+		result[2] = #60000 1'b1;
+		# 60000;
+	end
+	result[2] = 1'b0;
+end 
+// result[ 1 ]
+initial
+begin
+	repeat(16)
+	begin
+		result[1] = 1'b0;
+		result[1] = #30000 1'b1;
+		# 30000;
+	end
+	result[1] = 1'b0;
+	result[1] = #30000 1'b1;
+end 
+// result[ 0 ]
+initial
+begin
+	result[0] = 1'b0;
+end 
+endmodule
+

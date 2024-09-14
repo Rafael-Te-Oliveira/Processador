@@ -1,0 +1,967 @@
+Analysis & Synthesis report for CPU
+Thu Jul 13 21:19:18 2023
+Quartus Prime Version 17.1.0 Build 590 10/25/2017 SJ Lite Edition
+
+
+---------------------
+; Table of Contents ;
+---------------------
+  1. Legal Notice
+  2. Analysis & Synthesis Summary
+  3. Analysis & Synthesis Settings
+  4. Parallel Compilation
+  5. Analysis & Synthesis Source Files Read
+  6. Analysis & Synthesis Resource Usage Summary
+  7. Analysis & Synthesis Resource Utilization by Entity
+  8. Analysis & Synthesis DSP Block Usage Summary
+  9. User-Specified and Inferred Latches
+ 10. Registers Removed During Synthesis
+ 11. General Register Statistics
+ 12. Inverted Register Statistics
+ 13. Multiplexer Restructuring Statistics (Restructuring Performed)
+ 14. Parameter Settings for Inferred Entity Instance: ULA:ULA|lpm_mult:Mult0
+ 15. Parameter Settings for Inferred Entity Instance: ULA:ULA|lpm_divide:Div0
+ 16. lpm_mult Parameter Settings by Entity Instance
+ 17. Port Connectivity Checks: "saidaDados:SaidaDados"
+ 18. Post-Synthesis Netlist Statistics for Top Partition
+ 19. Elapsed Time Per Partition
+ 20. Analysis & Synthesis Messages
+
+
+
+----------------
+; Legal Notice ;
+----------------
+Copyright (C) 2017  Intel Corporation. All rights reserved.
+Your use of Intel Corporation's design tools, logic functions 
+and other software and tools, and its AMPP partner logic 
+functions, and any output files from any of the foregoing 
+(including device programming or simulation files), and any 
+associated documentation or information are expressly subject 
+to the terms and conditions of the Intel Program License 
+Subscription Agreement, the Intel Quartus Prime License Agreement,
+the Intel FPGA IP License Agreement, or other applicable license
+agreement, including, without limitation, that your use is for
+the sole purpose of programming logic devices manufactured by
+Intel and sold by Intel or its authorized distributors.  Please
+refer to the applicable agreement for further details.
+
+
+
++----------------------------------------------------------------------------------+
+; Analysis & Synthesis Summary                                                     ;
++------------------------------------+---------------------------------------------+
+; Analysis & Synthesis Status        ; Successful - Thu Jul 13 21:19:17 2023       ;
+; Quartus Prime Version              ; 17.1.0 Build 590 10/25/2017 SJ Lite Edition ;
+; Revision Name                      ; CPU                                         ;
+; Top-level Entity Name              ; teste                                       ;
+; Family                             ; Cyclone IV E                                ;
+; Total logic elements               ; 61,028                                      ;
+;     Total combinational functions  ; 27,248                                      ;
+;     Dedicated logic registers      ; 33,937                                      ;
+; Total registers                    ; 33937                                       ;
+; Total pins                         ; 81                                          ;
+; Total virtual pins                 ; 0                                           ;
+; Total memory bits                  ; 0                                           ;
+; Embedded Multiplier 9-bit elements ; 6                                           ;
+; Total PLLs                         ; 0                                           ;
++------------------------------------+---------------------------------------------+
+
+
++----------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Settings                                                                                        ;
++----------------------------------------------------------------------------+--------------------+--------------------+
+; Option                                                                     ; Setting            ; Default Value      ;
++----------------------------------------------------------------------------+--------------------+--------------------+
+; Device                                                                     ; EP4CE115F29C7      ;                    ;
+; Top-level entity name                                                      ; teste              ; CPU                ;
+; Family name                                                                ; Cyclone IV E       ; Cyclone V          ;
+; Use smart compilation                                                      ; On                 ; Off                ;
+; Maximum processors allowed for parallel compilation                        ; All                ;                    ;
+; Enable parallel Assembler and TimeQuest Timing Analyzer during compilation ; On                 ; On                 ;
+; Enable compact report table                                                ; Off                ; Off                ;
+; Restructure Multiplexers                                                   ; Auto               ; Auto               ;
+; Create Debugging Nodes for IP Cores                                        ; Off                ; Off                ;
+; Preserve fewer node names                                                  ; On                 ; On                 ;
+; Intel FPGA IP Evaluation Mode                                              ; Enable             ; Enable             ;
+; Verilog Version                                                            ; Verilog_2001       ; Verilog_2001       ;
+; VHDL Version                                                               ; VHDL_1993          ; VHDL_1993          ;
+; State Machine Processing                                                   ; Auto               ; Auto               ;
+; Safe State Machine                                                         ; Off                ; Off                ;
+; Extract Verilog State Machines                                             ; On                 ; On                 ;
+; Extract VHDL State Machines                                                ; On                 ; On                 ;
+; Ignore Verilog initial constructs                                          ; Off                ; Off                ;
+; Iteration limit for constant Verilog loops                                 ; 5000               ; 5000               ;
+; Iteration limit for non-constant Verilog loops                             ; 250                ; 250                ;
+; Add Pass-Through Logic to Inferred RAMs                                    ; On                 ; On                 ;
+; Infer RAMs from Raw Logic                                                  ; On                 ; On                 ;
+; Parallel Synthesis                                                         ; On                 ; On                 ;
+; DSP Block Balancing                                                        ; Auto               ; Auto               ;
+; NOT Gate Push-Back                                                         ; On                 ; On                 ;
+; Power-Up Don't Care                                                        ; On                 ; On                 ;
+; Remove Redundant Logic Cells                                               ; Off                ; Off                ;
+; Remove Duplicate Registers                                                 ; On                 ; On                 ;
+; Ignore CARRY Buffers                                                       ; Off                ; Off                ;
+; Ignore CASCADE Buffers                                                     ; Off                ; Off                ;
+; Ignore GLOBAL Buffers                                                      ; Off                ; Off                ;
+; Ignore ROW GLOBAL Buffers                                                  ; Off                ; Off                ;
+; Ignore LCELL Buffers                                                       ; Off                ; Off                ;
+; Ignore SOFT Buffers                                                        ; On                 ; On                 ;
+; Limit AHDL Integers to 32 Bits                                             ; Off                ; Off                ;
+; Optimization Technique                                                     ; Balanced           ; Balanced           ;
+; Carry Chain Length                                                         ; 70                 ; 70                 ;
+; Auto Carry Chains                                                          ; On                 ; On                 ;
+; Auto Open-Drain Pins                                                       ; On                 ; On                 ;
+; Perform WYSIWYG Primitive Resynthesis                                      ; Off                ; Off                ;
+; Auto ROM Replacement                                                       ; On                 ; On                 ;
+; Auto RAM Replacement                                                       ; On                 ; On                 ;
+; Auto DSP Block Replacement                                                 ; On                 ; On                 ;
+; Auto Shift Register Replacement                                            ; Auto               ; Auto               ;
+; Allow Shift Register Merging across Hierarchies                            ; Auto               ; Auto               ;
+; Auto Clock Enable Replacement                                              ; On                 ; On                 ;
+; Strict RAM Replacement                                                     ; Off                ; Off                ;
+; Allow Synchronous Control Signals                                          ; On                 ; On                 ;
+; Force Use of Synchronous Clear Signals                                     ; Off                ; Off                ;
+; Auto RAM Block Balancing                                                   ; On                 ; On                 ;
+; Auto RAM to Logic Cell Conversion                                          ; Off                ; Off                ;
+; Auto Resource Sharing                                                      ; Off                ; Off                ;
+; Allow Any RAM Size For Recognition                                         ; Off                ; Off                ;
+; Allow Any ROM Size For Recognition                                         ; Off                ; Off                ;
+; Allow Any Shift Register Size For Recognition                              ; Off                ; Off                ;
+; Use LogicLock Constraints during Resource Balancing                        ; On                 ; On                 ;
+; Ignore translate_off and synthesis_off directives                          ; Off                ; Off                ;
+; Timing-Driven Synthesis                                                    ; On                 ; On                 ;
+; Report Parameter Settings                                                  ; On                 ; On                 ;
+; Report Source Assignments                                                  ; On                 ; On                 ;
+; Report Connectivity Checks                                                 ; On                 ; On                 ;
+; Ignore Maximum Fan-Out Assignments                                         ; Off                ; Off                ;
+; Synchronization Register Chain Length                                      ; 2                  ; 2                  ;
+; Power Optimization During Synthesis                                        ; Normal compilation ; Normal compilation ;
+; HDL message level                                                          ; Level2             ; Level2             ;
+; Suppress Register Optimization Related Messages                            ; Off                ; Off                ;
+; Number of Removed Registers Reported in Synthesis Report                   ; 5000               ; 5000               ;
+; Number of Swept Nodes Reported in Synthesis Report                         ; 5000               ; 5000               ;
+; Number of Inverted Registers Reported in Synthesis Report                  ; 100                ; 100                ;
+; Clock MUX Protection                                                       ; On                 ; On                 ;
+; Auto Gated Clock Conversion                                                ; Off                ; Off                ;
+; Block Design Naming                                                        ; Auto               ; Auto               ;
+; SDC constraint protection                                                  ; Off                ; Off                ;
+; Synthesis Effort                                                           ; Auto               ; Auto               ;
+; Shift Register Replacement - Allow Asynchronous Clear Signal               ; On                 ; On                 ;
+; Pre-Mapping Resynthesis Optimization                                       ; Off                ; Off                ;
+; Analysis & Synthesis Message Level                                         ; Medium             ; Medium             ;
+; Disable Register Merging Across Hierarchies                                ; Auto               ; Auto               ;
+; Resource Aware Inference For Block RAM                                     ; On                 ; On                 ;
++----------------------------------------------------------------------------+--------------------+--------------------+
+
+
++------------------------------------------+
+; Parallel Compilation                     ;
++----------------------------+-------------+
+; Processors                 ; Number      ;
++----------------------------+-------------+
+; Number detected on machine ; 12          ;
+; Maximum allowed            ; 6           ;
+;                            ;             ;
+; Average used               ; 1.04        ;
+; Maximum used               ; 6           ;
+;                            ;             ;
+; Usage by Processor         ; % Time Used ;
+;     Processor 1            ; 100.0%      ;
+;     Processor 2            ;   1.0%      ;
+;     Processor 3            ;   0.9%      ;
+;     Processor 4            ;   0.8%      ;
+;     Processor 5            ;   0.7%      ;
+;     Processor 6            ;   0.7%      ;
++----------------------------+-------------+
+
+
++-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Source Files Read                                                                                                                                            ;
++----------------------------------+-----------------+------------------------------+-------------------------------------------------------------------------------------+---------+
+; File Name with User-Entered Path ; Used in Netlist ; File Type                    ; File Name with Absolute Path                                                        ; Library ;
++----------------------------------+-----------------+------------------------------+-------------------------------------------------------------------------------------+---------+
+; ULA.v                            ; yes             ; User Verilog HDL File        ; C:/Users/rafae/OneDrive/Documentos/Workspace/Processador/ULA.v                      ;         ;
+; BancoRegistradores.v             ; yes             ; User Verilog HDL File        ; C:/Users/rafae/OneDrive/Documentos/Workspace/Processador/BancoRegistradores.v       ;         ;
+; dados_RAM.v                      ; yes             ; User Verilog HDL File        ; C:/Users/rafae/OneDrive/Documentos/Workspace/Processador/dados_RAM.v                ;         ;
+; instrucoes_RAM.v                 ; yes             ; User Verilog HDL File        ; C:/Users/rafae/OneDrive/Documentos/Workspace/Processador/instrucoes_RAM.v           ;         ;
+; PC.v                             ; yes             ; User Verilog HDL File        ; C:/Users/rafae/OneDrive/Documentos/Workspace/Processador/PC.v                       ;         ;
+; UC.v                             ; yes             ; User Verilog HDL File        ; C:/Users/rafae/OneDrive/Documentos/Workspace/Processador/UC.v                       ;         ;
+; extensor_Bit.v                   ; yes             ; User Verilog HDL File        ; C:/Users/rafae/OneDrive/Documentos/Workspace/Processador/extensor_Bit.v             ;         ;
+; controle_ULA.v                   ; yes             ; User Verilog HDL File        ; C:/Users/rafae/OneDrive/Documentos/Workspace/Processador/controle_ULA.v             ;         ;
+; mux_Mem.v                        ; yes             ; User Verilog HDL File        ; C:/Users/rafae/OneDrive/Documentos/Workspace/Processador/mux_Mem.v                  ;         ;
+; teste.v                          ; yes             ; User Verilog HDL File        ; C:/Users/rafae/OneDrive/Documentos/Workspace/Processador/teste.v                    ;         ;
+; saidaDados.v                     ; yes             ; User Verilog HDL File        ; C:/Users/rafae/OneDrive/Documentos/Workspace/Processador/saidaDados.v               ;         ;
+; entradaDados.v                   ; yes             ; User Verilog HDL File        ; C:/Users/rafae/OneDrive/Documentos/Workspace/Processador/entradaDados.v             ;         ;
+; display7seg.v                    ; yes             ; User Verilog HDL File        ; C:/Users/rafae/OneDrive/Documentos/Workspace/Processador/display7seg.v              ;         ;
+; contato1.v                       ; yes             ; User Verilog HDL File        ; C:/Users/rafae/OneDrive/Documentos/Workspace/Processador/contato1.v                 ;         ;
+; codigobinario.txt                ; yes             ; Auto-Found File              ; C:/Users/rafae/OneDrive/Documentos/Workspace/Processador/codigobinario.txt          ;         ;
+; lpm_mult.tdf                     ; yes             ; Megafunction                 ; c:/intelfpga_lite/17.1/quartus/libraries/megafunctions/lpm_mult.tdf                 ;         ;
+; aglobal171.inc                   ; yes             ; Megafunction                 ; c:/intelfpga_lite/17.1/quartus/libraries/megafunctions/aglobal171.inc               ;         ;
+; lpm_add_sub.inc                  ; yes             ; Megafunction                 ; c:/intelfpga_lite/17.1/quartus/libraries/megafunctions/lpm_add_sub.inc              ;         ;
+; multcore.inc                     ; yes             ; Megafunction                 ; c:/intelfpga_lite/17.1/quartus/libraries/megafunctions/multcore.inc                 ;         ;
+; bypassff.inc                     ; yes             ; Megafunction                 ; c:/intelfpga_lite/17.1/quartus/libraries/megafunctions/bypassff.inc                 ;         ;
+; altshift.inc                     ; yes             ; Megafunction                 ; c:/intelfpga_lite/17.1/quartus/libraries/megafunctions/altshift.inc                 ;         ;
+; db/mult_7dt.tdf                  ; yes             ; Auto-Generated Megafunction  ; C:/Users/rafae/OneDrive/Documentos/Workspace/Processador/db/mult_7dt.tdf            ;         ;
+; lpm_divide.tdf                   ; yes             ; Megafunction                 ; c:/intelfpga_lite/17.1/quartus/libraries/megafunctions/lpm_divide.tdf               ;         ;
+; abs_divider.inc                  ; yes             ; Megafunction                 ; c:/intelfpga_lite/17.1/quartus/libraries/megafunctions/abs_divider.inc              ;         ;
+; sign_div_unsign.inc              ; yes             ; Megafunction                 ; c:/intelfpga_lite/17.1/quartus/libraries/megafunctions/sign_div_unsign.inc          ;         ;
+; db/lpm_divide_hkm.tdf            ; yes             ; Auto-Generated Megafunction  ; C:/Users/rafae/OneDrive/Documentos/Workspace/Processador/db/lpm_divide_hkm.tdf      ;         ;
+; db/sign_div_unsign_9nh.tdf       ; yes             ; Auto-Generated Megafunction  ; C:/Users/rafae/OneDrive/Documentos/Workspace/Processador/db/sign_div_unsign_9nh.tdf ;         ;
+; db/alt_u_div_6af.tdf             ; yes             ; Auto-Generated Megafunction  ; C:/Users/rafae/OneDrive/Documentos/Workspace/Processador/db/alt_u_div_6af.tdf       ;         ;
+; db/add_sub_7pc.tdf               ; yes             ; Auto-Generated Megafunction  ; C:/Users/rafae/OneDrive/Documentos/Workspace/Processador/db/add_sub_7pc.tdf         ;         ;
+; db/add_sub_8pc.tdf               ; yes             ; Auto-Generated Megafunction  ; C:/Users/rafae/OneDrive/Documentos/Workspace/Processador/db/add_sub_8pc.tdf         ;         ;
++----------------------------------+-----------------+------------------------------+-------------------------------------------------------------------------------------+---------+
+
+
++--------------------------------------------------------------------+
+; Analysis & Synthesis Resource Usage Summary                        ;
++---------------------------------------------+----------------------+
+; Resource                                    ; Usage                ;
++---------------------------------------------+----------------------+
+; Estimated Total logic elements              ; 61,028               ;
+;                                             ;                      ;
+; Total combinational functions               ; 27248                ;
+; Logic element usage by number of LUT inputs ;                      ;
+;     -- 4 input functions                    ; 25821                ;
+;     -- 3 input functions                    ; 1225                 ;
+;     -- <=2 input functions                  ; 202                  ;
+;                                             ;                      ;
+; Logic elements by mode                      ;                      ;
+;     -- normal mode                          ; 26578                ;
+;     -- arithmetic mode                      ; 670                  ;
+;                                             ;                      ;
+; Total registers                             ; 33937                ;
+;     -- Dedicated logic registers            ; 33937                ;
+;     -- I/O registers                        ; 0                    ;
+;                                             ;                      ;
+; I/O pins                                    ; 81                   ;
+;                                             ;                      ;
+; Embedded Multiplier 9-bit elements          ; 6                    ;
+;                                             ;                      ;
+; Maximum fan-out node                        ; contato1:C1|count[5] ;
+; Maximum fan-out                             ; 33910                ;
+; Total fan-out                               ; 209416               ;
+; Average fan-out                             ; 3.41                 ;
++---------------------------------------------+----------------------+
+
+
++--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Resource Utilization by Entity                                                                                                                                                                                                                                                                                              ;
++-------------------------------------------+---------------------+---------------------------+-------------+--------------+---------+-----------+------+--------------+--------------------------------------------------------------------------------------------------------------------------------------+---------------------+--------------+
+; Compilation Hierarchy Node                ; Combinational ALUTs ; Dedicated Logic Registers ; Memory Bits ; DSP Elements ; DSP 9x9 ; DSP 18x18 ; Pins ; Virtual Pins ; Full Hierarchy Name                                                                                                                  ; Entity Name         ; Library Name ;
++-------------------------------------------+---------------------+---------------------------+-------------+--------------+---------+-----------+------+--------------+--------------------------------------------------------------------------------------------------------------------------------------+---------------------+--------------+
+; |teste                                    ; 27248 (0)           ; 33937 (0)                 ; 0           ; 6            ; 0       ; 3         ; 81   ; 0            ; |teste                                                                                                                               ; teste               ; work         ;
+;    |BancoRegistradores:BR|                ; 1768 (1768)         ; 1024 (1024)               ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |teste|BancoRegistradores:BR                                                                                                         ; BancoRegistradores  ; work         ;
+;    |PC:PC|                                ; 77 (77)             ; 32 (32)                   ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |teste|PC:PC                                                                                                                         ; PC                  ; work         ;
+;    |UC:UC|                                ; 28 (28)             ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |teste|UC:UC                                                                                                                         ; UC                  ; work         ;
+;    |ULA:ULA|                              ; 1552 (408)          ; 0 (0)                     ; 0           ; 6            ; 0       ; 3         ; 0    ; 0            ; |teste|ULA:ULA                                                                                                                       ; ULA                 ; work         ;
+;       |lpm_divide:Div0|                   ; 1116 (0)            ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |teste|ULA:ULA|lpm_divide:Div0                                                                                                       ; lpm_divide          ; work         ;
+;          |lpm_divide_hkm:auto_generated|  ; 1116 (0)            ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |teste|ULA:ULA|lpm_divide:Div0|lpm_divide_hkm:auto_generated                                                                         ; lpm_divide_hkm      ; work         ;
+;             |sign_div_unsign_9nh:divider| ; 1116 (0)            ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |teste|ULA:ULA|lpm_divide:Div0|lpm_divide_hkm:auto_generated|sign_div_unsign_9nh:divider                                             ; sign_div_unsign_9nh ; work         ;
+;                |alt_u_div_6af:divider|    ; 1116 (1115)         ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |teste|ULA:ULA|lpm_divide:Div0|lpm_divide_hkm:auto_generated|sign_div_unsign_9nh:divider|alt_u_div_6af:divider                       ; alt_u_div_6af       ; work         ;
+;                   |add_sub_8pc:add_sub_1| ; 1 (1)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |teste|ULA:ULA|lpm_divide:Div0|lpm_divide_hkm:auto_generated|sign_div_unsign_9nh:divider|alt_u_div_6af:divider|add_sub_8pc:add_sub_1 ; add_sub_8pc         ; work         ;
+;       |lpm_mult:Mult0|                    ; 28 (0)              ; 0 (0)                     ; 0           ; 6            ; 0       ; 3         ; 0    ; 0            ; |teste|ULA:ULA|lpm_mult:Mult0                                                                                                        ; lpm_mult            ; work         ;
+;          |mult_7dt:auto_generated|        ; 28 (28)             ; 0 (0)                     ; 0           ; 6            ; 0       ; 3         ; 0    ; 0            ; |teste|ULA:ULA|lpm_mult:Mult0|mult_7dt:auto_generated                                                                                ; mult_7dt            ; work         ;
+;    |contato1:C1|                          ; 28 (28)             ; 28 (28)                   ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |teste|contato1:C1                                                                                                                   ; contato1            ; work         ;
+;    |controle_ULA:cULA|                    ; 11 (11)             ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |teste|controle_ULA:cULA                                                                                                             ; controle_ULA        ; work         ;
+;    |dados_RAM:DADO|                       ; 22933 (22933)       ; 32800 (32800)             ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |teste|dados_RAM:DADO                                                                                                                ; dados_RAM           ; work         ;
+;    |display7seg:Display|                  ; 63 (63)             ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |teste|display7seg:Display                                                                                                           ; display7seg         ; work         ;
+;    |entradaDados:comb_3|                  ; 3 (3)               ; 20 (20)                   ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |teste|entradaDados:comb_3                                                                                                           ; entradaDados        ; work         ;
+;    |extensor_Bit:BIT|                     ; 53 (53)             ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |teste|extensor_Bit:BIT                                                                                                              ; extensor_Bit        ; work         ;
+;    |instrucoes_RAM:INST|                  ; 97 (97)             ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |teste|instrucoes_RAM:INST                                                                                                           ; instrucoes_RAM      ; work         ;
+;    |saidaDados:SaidaDados|                ; 635 (635)           ; 33 (33)                   ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |teste|saidaDados:SaidaDados                                                                                                         ; saidaDados          ; work         ;
++-------------------------------------------+---------------------+---------------------------+-------------+--------------+---------+-----------+------+--------------+--------------------------------------------------------------------------------------------------------------------------------------+---------------------+--------------+
+Note: For table entries with two numbers listed, the numbers in parentheses indicate the number of resources of the given type used by the specific entity alone. The numbers listed outside of parentheses indicate the total resources of the given type used by the specific entity and all of its sub-entities in the hierarchy.
+
+
++-----------------------------------------------------+
+; Analysis & Synthesis DSP Block Usage Summary        ;
++---------------------------------------+-------------+
+; Statistic                             ; Number Used ;
++---------------------------------------+-------------+
+; Simple Multipliers (9-bit)            ; 0           ;
+; Simple Multipliers (18-bit)           ; 3           ;
+; Embedded Multiplier Blocks            ; --          ;
+; Embedded Multiplier 9-bit elements    ; 6           ;
+; Signed Embedded Multipliers           ; 0           ;
+; Unsigned Embedded Multipliers         ; 3           ;
+; Mixed Sign Embedded Multipliers       ; 0           ;
+; Variable Sign Embedded Multipliers    ; 0           ;
+; Dedicated Input Shift Register Chains ; 0           ;
++---------------------------------------+-------------+
+Note: number of Embedded Multiplier Blocks used is only available after a successful fit.
+
+
++----------------------------------------------------------------------------------------------------------+
+; User-Specified and Inferred Latches                                                                      ;
++-----------------------------------------------------+---------------------------+------------------------+
+; Latch Name                                          ; Latch Enable Signal       ; Free of Timing Hazards ;
++-----------------------------------------------------+---------------------------+------------------------+
+; ULA:ULA|result[0]                                   ; ULA:ULA|result[31]        ; yes                    ;
+; ULA:ULA|result[2]                                   ; ULA:ULA|result[31]        ; yes                    ;
+; ULA:ULA|result[3]                                   ; ULA:ULA|result[31]        ; yes                    ;
+; ULA:ULA|result[6]                                   ; ULA:ULA|result[31]        ; yes                    ;
+; ULA:ULA|result[1]                                   ; ULA:ULA|result[31]        ; yes                    ;
+; ULA:ULA|result[5]                                   ; ULA:ULA|result[31]        ; yes                    ;
+; ULA:ULA|result[7]                                   ; ULA:ULA|result[31]        ; yes                    ;
+; ULA:ULA|result[4]                                   ; ULA:ULA|result[31]        ; yes                    ;
+; ULA:ULA|result[9]                                   ; ULA:ULA|result[31]        ; yes                    ;
+; ULA:ULA|result[8]                                   ; ULA:ULA|result[31]        ; yes                    ;
+; ULA:ULA|result[10]                                  ; ULA:ULA|result[31]        ; yes                    ;
+; ULA:ULA|result[28]                                  ; ULA:ULA|result[31]        ; yes                    ;
+; ULA:ULA|result[27]                                  ; ULA:ULA|result[31]        ; yes                    ;
+; ULA:ULA|result[26]                                  ; ULA:ULA|result[31]        ; yes                    ;
+; ULA:ULA|result[25]                                  ; ULA:ULA|result[31]        ; yes                    ;
+; ULA:ULA|result[24]                                  ; ULA:ULA|result[31]        ; yes                    ;
+; ULA:ULA|result[23]                                  ; ULA:ULA|result[31]        ; yes                    ;
+; ULA:ULA|result[22]                                  ; ULA:ULA|result[31]        ; yes                    ;
+; ULA:ULA|result[21]                                  ; ULA:ULA|result[31]        ; yes                    ;
+; ULA:ULA|result[20]                                  ; ULA:ULA|result[31]        ; yes                    ;
+; ULA:ULA|result[19]                                  ; ULA:ULA|result[31]        ; yes                    ;
+; ULA:ULA|result[18]                                  ; ULA:ULA|result[31]        ; yes                    ;
+; ULA:ULA|result[17]                                  ; ULA:ULA|result[31]        ; yes                    ;
+; ULA:ULA|result[16]                                  ; ULA:ULA|result[31]        ; yes                    ;
+; ULA:ULA|result[15]                                  ; ULA:ULA|result[31]        ; yes                    ;
+; ULA:ULA|result[14]                                  ; ULA:ULA|result[31]        ; yes                    ;
+; ULA:ULA|result[13]                                  ; ULA:ULA|result[31]        ; yes                    ;
+; ULA:ULA|result[12]                                  ; ULA:ULA|result[31]        ; yes                    ;
+; ULA:ULA|result[11]                                  ; ULA:ULA|result[31]        ; yes                    ;
+; ULA:ULA|result[31]                                  ; ULA:ULA|result[31]        ; yes                    ;
+; ULA:ULA|result[29]                                  ; ULA:ULA|result[31]        ; yes                    ;
+; ULA:ULA|result[30]                                  ; ULA:ULA|result[31]        ; yes                    ;
+; extensor_Bit:BIT|imediato[0]                        ; extensor_Bit:BIT|Mux26    ; yes                    ;
+; controle_ULA:cULA|selec[0]                          ; controle_ULA:cULA|Mux1    ; yes                    ;
+; controle_ULA:cULA|selec[1]                          ; controle_ULA:cULA|Mux1    ; yes                    ;
+; controle_ULA:cULA|selec[2]                          ; controle_ULA:cULA|WideOr0 ; yes                    ;
+; extensor_Bit:BIT|imediato[2]                        ; extensor_Bit:BIT|Mux26    ; yes                    ;
+; extensor_Bit:BIT|imediato[1]                        ; extensor_Bit:BIT|Mux26    ; yes                    ;
+; extensor_Bit:BIT|imediato[3]                        ; extensor_Bit:BIT|Mux26    ; yes                    ;
+; extensor_Bit:BIT|imediato[6]                        ; extensor_Bit:BIT|Mux26    ; yes                    ;
+; extensor_Bit:BIT|imediato[5]                        ; extensor_Bit:BIT|Mux26    ; yes                    ;
+; extensor_Bit:BIT|imediato[4]                        ; extensor_Bit:BIT|Mux26    ; yes                    ;
+; extensor_Bit:BIT|imediato[7]                        ; extensor_Bit:BIT|Mux26    ; yes                    ;
+; extensor_Bit:BIT|imediato[9]                        ; extensor_Bit:BIT|Mux26    ; yes                    ;
+; extensor_Bit:BIT|imediato[8]                        ; extensor_Bit:BIT|Mux26    ; yes                    ;
+; extensor_Bit:BIT|imediato[10]                       ; extensor_Bit:BIT|Mux26    ; yes                    ;
+; extensor_Bit:BIT|imediato[28]                       ; extensor_Bit:BIT|Mux26    ; yes                    ;
+; extensor_Bit:BIT|imediato[27]                       ; extensor_Bit:BIT|Mux26    ; yes                    ;
+; extensor_Bit:BIT|imediato[26]                       ; extensor_Bit:BIT|Mux26    ; yes                    ;
+; extensor_Bit:BIT|imediato[25]                       ; extensor_Bit:BIT|Mux26    ; yes                    ;
+; extensor_Bit:BIT|imediato[24]                       ; extensor_Bit:BIT|Mux26    ; yes                    ;
+; extensor_Bit:BIT|imediato[23]                       ; extensor_Bit:BIT|Mux26    ; yes                    ;
+; extensor_Bit:BIT|imediato[22]                       ; extensor_Bit:BIT|Mux26    ; yes                    ;
+; extensor_Bit:BIT|imediato[21]                       ; extensor_Bit:BIT|Mux26    ; yes                    ;
+; extensor_Bit:BIT|imediato[20]                       ; extensor_Bit:BIT|Mux26    ; yes                    ;
+; extensor_Bit:BIT|imediato[19]                       ; extensor_Bit:BIT|Mux26    ; yes                    ;
+; extensor_Bit:BIT|imediato[18]                       ; extensor_Bit:BIT|Mux26    ; yes                    ;
+; extensor_Bit:BIT|imediato[17]                       ; extensor_Bit:BIT|Mux26    ; yes                    ;
+; extensor_Bit:BIT|imediato[16]                       ; extensor_Bit:BIT|Mux26    ; yes                    ;
+; extensor_Bit:BIT|imediato[15]                       ; extensor_Bit:BIT|Mux26    ; yes                    ;
+; extensor_Bit:BIT|imediato[14]                       ; extensor_Bit:BIT|Mux26    ; yes                    ;
+; extensor_Bit:BIT|imediato[13]                       ; extensor_Bit:BIT|Mux26    ; yes                    ;
+; extensor_Bit:BIT|imediato[12]                       ; extensor_Bit:BIT|Mux26    ; yes                    ;
+; extensor_Bit:BIT|imediato[11]                       ; extensor_Bit:BIT|Mux26    ; yes                    ;
+; extensor_Bit:BIT|imediato[31]                       ; extensor_Bit:BIT|Mux26    ; yes                    ;
+; extensor_Bit:BIT|imediato[30]                       ; extensor_Bit:BIT|Mux26    ; yes                    ;
+; extensor_Bit:BIT|imediato[29]                       ; extensor_Bit:BIT|Mux26    ; yes                    ;
+; Number of user-specified and inferred latches = 67  ;                           ;                        ;
++-----------------------------------------------------+---------------------------+------------------------+
+Note: All latches listed above may not be present at the end of synthesis due to various synthesis optimizations.
+
+
++------------------------------------------------------------------------------------------+
+; Registers Removed During Synthesis                                                       ;
++-------------------------------------------+----------------------------------------------+
+; Register name                             ; Reason for Removal                           ;
++-------------------------------------------+----------------------------------------------+
+; entradaDados:comb_3|controle[1..9,11..31] ; Merged with entradaDados:comb_3|controle[10] ;
+; entradaDados:comb_3|controle[10]          ; Stuck at GND due to stuck port data_in       ;
+; Total Number of Removed Registers = 31    ;                                              ;
++-------------------------------------------+----------------------------------------------+
+
+
++------------------------------------------------------+
+; General Register Statistics                          ;
++----------------------------------------------+-------+
+; Statistic                                    ; Value ;
++----------------------------------------------+-------+
+; Total registers                              ; 33937 ;
+; Number of registers using Synchronous Clear  ; 0     ;
+; Number of registers using Synchronous Load   ; 32    ;
+; Number of registers using Asynchronous Clear ; 28    ;
+; Number of registers using Asynchronous Load  ; 0     ;
+; Number of registers using Clock Enable       ; 33907 ;
+; Number of registers using Preset             ; 0     ;
++----------------------------------------------+-------+
+
+
++---------------------------------------------------+
+; Inverted Register Statistics                      ;
++-----------------------------------------+---------+
+; Inverted Register                       ; Fan out ;
++-----------------------------------------+---------+
+; PC:PC|endereco[0]                       ; 42      ;
+; PC:PC|endereco[3]                       ; 46      ;
+; PC:PC|endereco[4]                       ; 45      ;
+; PC:PC|endereco[1]                       ; 42      ;
+; PC:PC|endereco[5]                       ; 32      ;
+; PC:PC|endereco[2]                       ; 35      ;
+; PC:PC|endereco[10]                      ; 13      ;
+; PC:PC|endereco[6]                       ; 2       ;
+; PC:PC|endereco[7]                       ; 2       ;
+; PC:PC|endereco[8]                       ; 2       ;
+; PC:PC|endereco[9]                       ; 2       ;
+; PC:PC|endereco[31]                      ; 1       ;
+; PC:PC|endereco[30]                      ; 1       ;
+; PC:PC|endereco[29]                      ; 1       ;
+; PC:PC|endereco[28]                      ; 1       ;
+; PC:PC|endereco[27]                      ; 1       ;
+; PC:PC|endereco[26]                      ; 1       ;
+; PC:PC|endereco[25]                      ; 1       ;
+; PC:PC|endereco[24]                      ; 1       ;
+; PC:PC|endereco[23]                      ; 1       ;
+; PC:PC|endereco[22]                      ; 1       ;
+; PC:PC|endereco[21]                      ; 1       ;
+; PC:PC|endereco[20]                      ; 1       ;
+; PC:PC|endereco[19]                      ; 1       ;
+; PC:PC|endereco[18]                      ; 1       ;
+; PC:PC|endereco[17]                      ; 1       ;
+; PC:PC|endereco[16]                      ; 1       ;
+; PC:PC|endereco[15]                      ; 1       ;
+; PC:PC|endereco[14]                      ; 1       ;
+; PC:PC|endereco[13]                      ; 1       ;
+; PC:PC|endereco[12]                      ; 1       ;
+; PC:PC|endereco[11]                      ; 1       ;
+; Total number of inverted registers = 32 ;         ;
++-----------------------------------------+---------+
+
+
++---------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Multiplexer Restructuring Statistics (Restructuring Performed)                                                                                          ;
++--------------------+-----------+---------------+----------------------+------------------------+------------+-------------------------------------------+
+; Multiplexer Inputs ; Bus Width ; Baseline Area ; Area if Restructured ; Saving if Restructured ; Registered ; Example Multiplexer Output                ;
++--------------------+-----------+---------------+----------------------+------------------------+------------+-------------------------------------------+
+; 3:1                ; 32 bits   ; 64 LEs        ; 32 LEs               ; 32 LEs                 ; Yes        ; |teste|BancoRegistradores:BR|regs[31][22] ;
+; 6:1                ; 32 bits   ; 128 LEs       ; 64 LEs               ; 64 LEs                 ; Yes        ; |teste|PC:PC|endereco[5]                  ;
+; 3:1                ; 8 bits    ; 16 LEs        ; 8 LEs                ; 8 LEs                  ; No         ; |teste|extensor_Bit:BIT|Mux2              ;
+; 3:1                ; 8 bits    ; 16 LEs        ; 8 LEs                ; 8 LEs                  ; No         ; |teste|extensor_Bit:BIT|Mux1              ;
+; 4:1                ; 2 bits    ; 4 LEs         ; 4 LEs                ; 0 LEs                  ; No         ; |teste|controle_ULA:cULA|Mux2             ;
+; 16:1               ; 32 bits   ; 320 LEs       ; 320 LEs              ; 0 LEs                  ; No         ; |teste|BancoRegistradores:BR|Mux76        ;
+; 32:1               ; 32 bits   ; 672 LEs       ; 672 LEs              ; 0 LEs                  ; No         ; |teste|BancoRegistradores:BR|Mux47        ;
+; 32:1               ; 32 bits   ; 672 LEs       ; 672 LEs              ; 0 LEs                  ; No         ; |teste|BancoRegistradores:BR|Mux25        ;
+; 10:1               ; 32 bits   ; 192 LEs       ; 128 LEs              ; 64 LEs                 ; No         ; |teste|ULA:ULA|result[4]                  ;
+; 6:1                ; 32 bits   ; 128 LEs       ; 64 LEs               ; 64 LEs                 ; No         ; |teste|ULA:ULA|Add0                       ;
+; 7:1                ; 32 bits   ; 128 LEs       ; 128 LEs              ; 0 LEs                  ; No         ; |teste|ULA:ULA|Add0                       ;
++--------------------+-----------+---------------+----------------------+------------------------+------------+-------------------------------------------+
+
+
++-------------------------------------------------------------------------------------+
+; Parameter Settings for Inferred Entity Instance: ULA:ULA|lpm_mult:Mult0             ;
++------------------------------------------------+--------------+---------------------+
+; Parameter Name                                 ; Value        ; Type                ;
++------------------------------------------------+--------------+---------------------+
+; AUTO_CARRY_CHAINS                              ; ON           ; AUTO_CARRY          ;
+; IGNORE_CARRY_BUFFERS                           ; OFF          ; IGNORE_CARRY        ;
+; AUTO_CASCADE_CHAINS                            ; ON           ; AUTO_CASCADE        ;
+; IGNORE_CASCADE_BUFFERS                         ; OFF          ; IGNORE_CASCADE      ;
+; LPM_WIDTHA                                     ; 32           ; Untyped             ;
+; LPM_WIDTHB                                     ; 32           ; Untyped             ;
+; LPM_WIDTHP                                     ; 64           ; Untyped             ;
+; LPM_WIDTHR                                     ; 64           ; Untyped             ;
+; LPM_WIDTHS                                     ; 1            ; Untyped             ;
+; LPM_REPRESENTATION                             ; UNSIGNED     ; Untyped             ;
+; LPM_PIPELINE                                   ; 0            ; Untyped             ;
+; LATENCY                                        ; 0            ; Untyped             ;
+; INPUT_A_IS_CONSTANT                            ; NO           ; Untyped             ;
+; INPUT_B_IS_CONSTANT                            ; NO           ; Untyped             ;
+; USE_EAB                                        ; OFF          ; Untyped             ;
+; MAXIMIZE_SPEED                                 ; 5            ; Untyped             ;
+; DEVICE_FAMILY                                  ; Cyclone IV E ; Untyped             ;
+; CARRY_CHAIN                                    ; MANUAL       ; Untyped             ;
+; APEX20K_TECHNOLOGY_MAPPER                      ; LUT          ; TECH_MAPPER_APEX20K ;
+; DEDICATED_MULTIPLIER_CIRCUITRY                 ; AUTO         ; Untyped             ;
+; DEDICATED_MULTIPLIER_MIN_INPUT_WIDTH_FOR_AUTO  ; 0            ; Untyped             ;
+; DEDICATED_MULTIPLIER_MIN_OUTPUT_WIDTH_FOR_AUTO ; 0            ; Untyped             ;
+; CBXI_PARAMETER                                 ; mult_7dt     ; Untyped             ;
+; INPUT_A_FIXED_VALUE                            ; Bx           ; Untyped             ;
+; INPUT_B_FIXED_VALUE                            ; Bx           ; Untyped             ;
+; USE_AHDL_IMPLEMENTATION                        ; OFF          ; Untyped             ;
++------------------------------------------------+--------------+---------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++--------------------------------------------------------------------------+
+; Parameter Settings for Inferred Entity Instance: ULA:ULA|lpm_divide:Div0 ;
++------------------------+----------------+--------------------------------+
+; Parameter Name         ; Value          ; Type                           ;
++------------------------+----------------+--------------------------------+
+; LPM_WIDTHN             ; 32             ; Untyped                        ;
+; LPM_WIDTHD             ; 32             ; Untyped                        ;
+; LPM_NREPRESENTATION    ; UNSIGNED       ; Untyped                        ;
+; LPM_DREPRESENTATION    ; UNSIGNED       ; Untyped                        ;
+; LPM_PIPELINE           ; 0              ; Untyped                        ;
+; LPM_REMAINDERPOSITIVE  ; TRUE           ; Untyped                        ;
+; MAXIMIZE_SPEED         ; 5              ; Untyped                        ;
+; CBXI_PARAMETER         ; lpm_divide_hkm ; Untyped                        ;
+; CARRY_CHAIN            ; MANUAL         ; Untyped                        ;
+; OPTIMIZE_FOR_SPEED     ; 5              ; Untyped                        ;
+; AUTO_CARRY_CHAINS      ; ON             ; AUTO_CARRY                     ;
+; IGNORE_CARRY_BUFFERS   ; OFF            ; IGNORE_CARRY                   ;
+; AUTO_CASCADE_CHAINS    ; ON             ; AUTO_CASCADE                   ;
+; IGNORE_CASCADE_BUFFERS ; OFF            ; IGNORE_CASCADE                 ;
++------------------------+----------------+--------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++----------------------------------------------------------------+
+; lpm_mult Parameter Settings by Entity Instance                 ;
++---------------------------------------+------------------------+
+; Name                                  ; Value                  ;
++---------------------------------------+------------------------+
+; Number of entity instances            ; 1                      ;
+; Entity Instance                       ; ULA:ULA|lpm_mult:Mult0 ;
+;     -- LPM_WIDTHA                     ; 32                     ;
+;     -- LPM_WIDTHB                     ; 32                     ;
+;     -- LPM_WIDTHP                     ; 64                     ;
+;     -- LPM_REPRESENTATION             ; UNSIGNED               ;
+;     -- INPUT_A_IS_CONSTANT            ; NO                     ;
+;     -- INPUT_B_IS_CONSTANT            ; NO                     ;
+;     -- USE_EAB                        ; OFF                    ;
+;     -- DEDICATED_MULTIPLIER_CIRCUITRY ; AUTO                   ;
+;     -- INPUT_A_FIXED_VALUE            ; Bx                     ;
+;     -- INPUT_B_FIXED_VALUE            ; Bx                     ;
++---------------------------------------+------------------------+
+
+
++-----------------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "saidaDados:SaidaDados"                                                               ;
++-------+--------+----------+-------------------------------------------------------------------------------------+
+; Port  ; Type   ; Severity ; Details                                                                             ;
++-------+--------+----------+-------------------------------------------------------------------------------------+
+; saida ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
++-------+--------+----------+-------------------------------------------------------------------------------------+
+
+
++-----------------------------------------------------+
+; Post-Synthesis Netlist Statistics for Top Partition ;
++-----------------------+-----------------------------+
+; Type                  ; Count                       ;
++-----------------------+-----------------------------+
+; boundary_port         ; 81                          ;
+; cycloneiii_ff         ; 33937                       ;
+;     CLR               ; 28                          ;
+;     ENA               ; 33875                       ;
+;     ENA SLD           ; 32                          ;
+;     plain             ; 2                           ;
+; cycloneiii_lcell_comb ; 27256                       ;
+;     arith             ; 670                         ;
+;         2 data inputs ; 86                          ;
+;         3 data inputs ; 584                         ;
+;     normal            ; 26586                       ;
+;         0 data inputs ; 30                          ;
+;         1 data inputs ; 12                          ;
+;         2 data inputs ; 82                          ;
+;         3 data inputs ; 641                         ;
+;         4 data inputs ; 25821                       ;
+; cycloneiii_mac_mult   ; 3                           ;
+; cycloneiii_mac_out    ; 3                           ;
+;                       ;                             ;
+; Max LUT depth         ; 130.50                      ;
+; Average LUT depth     ; 45.63                       ;
++-----------------------+-----------------------------+
+
+
++-------------------------------+
+; Elapsed Time Per Partition    ;
++----------------+--------------+
+; Partition Name ; Elapsed Time ;
++----------------+--------------+
+; Top            ; 00:01:28     ;
++----------------+--------------+
+
+
++-------------------------------+
+; Analysis & Synthesis Messages ;
++-------------------------------+
+Info: *******************************************************************
+Info: Running Quartus Prime Analysis & Synthesis
+    Info: Version 17.1.0 Build 590 10/25/2017 SJ Lite Edition
+    Info: Processing started: Thu Jul 13 21:17:33 2023
+Info: Command: quartus_map --read_settings_files=on --write_settings_files=off CPU -c CPU
+Info (20030): Parallel compilation is enabled and will use 6 of the 6 processors detected
+Info (12021): Found 1 design units, including 1 entities, in source file ula.v
+    Info (12023): Found entity 1: ULA File: C:/Users/rafae/OneDrive/Documentos/Workspace/Processador/ULA.v Line: 1
+Info (12021): Found 1 design units, including 1 entities, in source file bancoregistradores.v
+    Info (12023): Found entity 1: BancoRegistradores File: C:/Users/rafae/OneDrive/Documentos/Workspace/Processador/BancoRegistradores.v Line: 1
+Info (12021): Found 1 design units, including 1 entities, in source file dados_ram.v
+    Info (12023): Found entity 1: dados_RAM File: C:/Users/rafae/OneDrive/Documentos/Workspace/Processador/dados_RAM.v Line: 1
+Info (12021): Found 1 design units, including 1 entities, in source file instrucoes_ram.v
+    Info (12023): Found entity 1: instrucoes_RAM File: C:/Users/rafae/OneDrive/Documentos/Workspace/Processador/instrucoes_RAM.v Line: 1
+Info (12021): Found 1 design units, including 1 entities, in source file pc.v
+    Info (12023): Found entity 1: PC File: C:/Users/rafae/OneDrive/Documentos/Workspace/Processador/PC.v Line: 1
+Warning (10263): Verilog HDL Event Control warning at UC.v(19): event expression contains "|" or "||" File: C:/Users/rafae/OneDrive/Documentos/Workspace/Processador/UC.v Line: 19
+Info (12021): Found 1 design units, including 1 entities, in source file uc.v
+    Info (12023): Found entity 1: UC File: C:/Users/rafae/OneDrive/Documentos/Workspace/Processador/UC.v Line: 1
+Info (12021): Found 1 design units, including 1 entities, in source file extensor_bit.v
+    Info (12023): Found entity 1: extensor_Bit File: C:/Users/rafae/OneDrive/Documentos/Workspace/Processador/extensor_Bit.v Line: 1
+Info (12021): Found 1 design units, including 1 entities, in source file controle_ula.v
+    Info (12023): Found entity 1: controle_ULA File: C:/Users/rafae/OneDrive/Documentos/Workspace/Processador/controle_ULA.v Line: 1
+Info (12021): Found 1 design units, including 1 entities, in source file mux_mem.v
+    Info (12023): Found entity 1: mux_Mem File: C:/Users/rafae/OneDrive/Documentos/Workspace/Processador/mux_Mem.v Line: 1
+Warning (12019): Can't analyze file -- file teste[.v is missing
+Info (12021): Found 1 design units, including 1 entities, in source file teste.v
+    Info (12023): Found entity 1: teste File: C:/Users/rafae/OneDrive/Documentos/Workspace/Processador/teste.v Line: 1
+Warning (12019): Can't analyze file -- file teste.vhd is missing
+Info (12021): Found 1 design units, including 1 entities, in source file saidadados.v
+    Info (12023): Found entity 1: saidaDados File: C:/Users/rafae/OneDrive/Documentos/Workspace/Processador/saidaDados.v Line: 1
+Info (12021): Found 1 design units, including 1 entities, in source file entradadados.v
+    Info (12023): Found entity 1: entradaDados File: C:/Users/rafae/OneDrive/Documentos/Workspace/Processador/entradaDados.v Line: 1
+Info (12021): Found 1 design units, including 1 entities, in source file display7seg.v
+    Info (12023): Found entity 1: display7seg File: C:/Users/rafae/OneDrive/Documentos/Workspace/Processador/display7seg.v Line: 1
+Info (12021): Found 0 design units, including 0 entities, in source file contato1.vhd
+Info (12021): Found 1 design units, including 1 entities, in source file contato1.v
+    Info (12023): Found entity 1: contato1 File: C:/Users/rafae/OneDrive/Documentos/Workspace/Processador/contato1.v Line: 1
+Critical Warning (10846): Verilog HDL Instantiation warning at teste.v(53): instance has no name File: C:/Users/rafae/OneDrive/Documentos/Workspace/Processador/teste.v Line: 53
+Info (12127): Elaborating entity "teste" for the top level hierarchy
+Info (12128): Elaborating entity "contato1" for hierarchy "contato1:C1" File: C:/Users/rafae/OneDrive/Documentos/Workspace/Processador/teste.v Line: 49
+Warning (10230): Verilog HDL assignment warning at contato1.v(19): truncated value with size 32 to match size of target (28) File: C:/Users/rafae/OneDrive/Documentos/Workspace/Processador/contato1.v Line: 19
+Info (12128): Elaborating entity "PC" for hierarchy "PC:PC" File: C:/Users/rafae/OneDrive/Documentos/Workspace/Processador/teste.v Line: 51
+Info (12128): Elaborating entity "entradaDados" for hierarchy "entradaDados:comb_3" File: C:/Users/rafae/OneDrive/Documentos/Workspace/Processador/teste.v Line: 53
+Info (12128): Elaborating entity "instrucoes_RAM" for hierarchy "instrucoes_RAM:INST" File: C:/Users/rafae/OneDrive/Documentos/Workspace/Processador/teste.v Line: 55
+Warning (10850): Verilog HDL warning at instrucoes_RAM.v(9): number of words (39) in memory file does not match the number of elements in the address range [0:1024] File: C:/Users/rafae/OneDrive/Documentos/Workspace/Processador/instrucoes_RAM.v Line: 9
+Warning (10030): Net "inst_ram.data_a" at instrucoes_RAM.v(6) has no driver or initial value, using a default initial value '0' File: C:/Users/rafae/OneDrive/Documentos/Workspace/Processador/instrucoes_RAM.v Line: 6
+Warning (10030): Net "inst_ram.waddr_a" at instrucoes_RAM.v(6) has no driver or initial value, using a default initial value '0' File: C:/Users/rafae/OneDrive/Documentos/Workspace/Processador/instrucoes_RAM.v Line: 6
+Warning (10030): Net "inst_ram.we_a" at instrucoes_RAM.v(6) has no driver or initial value, using a default initial value '0' File: C:/Users/rafae/OneDrive/Documentos/Workspace/Processador/instrucoes_RAM.v Line: 6
+Info (12128): Elaborating entity "UC" for hierarchy "UC:UC" File: C:/Users/rafae/OneDrive/Documentos/Workspace/Processador/teste.v Line: 57
+Warning (10270): Verilog HDL Case Statement warning at UC.v(33): incomplete case statement has no default case item File: C:/Users/rafae/OneDrive/Documentos/Workspace/Processador/UC.v Line: 33
+Info (12128): Elaborating entity "BancoRegistradores" for hierarchy "BancoRegistradores:BR" File: C:/Users/rafae/OneDrive/Documentos/Workspace/Processador/teste.v Line: 59
+Warning (10855): Verilog HDL warning at BancoRegistradores.v(13): initial value for variable regs should be constant File: C:/Users/rafae/OneDrive/Documentos/Workspace/Processador/BancoRegistradores.v Line: 13
+Info (12128): Elaborating entity "extensor_Bit" for hierarchy "extensor_Bit:BIT" File: C:/Users/rafae/OneDrive/Documentos/Workspace/Processador/teste.v Line: 61
+Warning (10270): Verilog HDL Case Statement warning at extensor_Bit.v(8): incomplete case statement has no default case item File: C:/Users/rafae/OneDrive/Documentos/Workspace/Processador/extensor_Bit.v Line: 8
+Warning (10240): Verilog HDL Always Construct warning at extensor_Bit.v(8): inferring latch(es) for variable "imediato", which holds its previous value in one or more paths through the always construct File: C:/Users/rafae/OneDrive/Documentos/Workspace/Processador/extensor_Bit.v Line: 8
+Info (10041): Inferred latch for "imediato[0]" at extensor_Bit.v(8) File: C:/Users/rafae/OneDrive/Documentos/Workspace/Processador/extensor_Bit.v Line: 8
+Info (10041): Inferred latch for "imediato[1]" at extensor_Bit.v(8) File: C:/Users/rafae/OneDrive/Documentos/Workspace/Processador/extensor_Bit.v Line: 8
+Info (10041): Inferred latch for "imediato[2]" at extensor_Bit.v(8) File: C:/Users/rafae/OneDrive/Documentos/Workspace/Processador/extensor_Bit.v Line: 8
+Info (10041): Inferred latch for "imediato[3]" at extensor_Bit.v(8) File: C:/Users/rafae/OneDrive/Documentos/Workspace/Processador/extensor_Bit.v Line: 8
+Info (10041): Inferred latch for "imediato[4]" at extensor_Bit.v(8) File: C:/Users/rafae/OneDrive/Documentos/Workspace/Processador/extensor_Bit.v Line: 8
+Info (10041): Inferred latch for "imediato[5]" at extensor_Bit.v(8) File: C:/Users/rafae/OneDrive/Documentos/Workspace/Processador/extensor_Bit.v Line: 8
+Info (10041): Inferred latch for "imediato[6]" at extensor_Bit.v(8) File: C:/Users/rafae/OneDrive/Documentos/Workspace/Processador/extensor_Bit.v Line: 8
+Info (10041): Inferred latch for "imediato[7]" at extensor_Bit.v(8) File: C:/Users/rafae/OneDrive/Documentos/Workspace/Processador/extensor_Bit.v Line: 8
+Info (10041): Inferred latch for "imediato[8]" at extensor_Bit.v(8) File: C:/Users/rafae/OneDrive/Documentos/Workspace/Processador/extensor_Bit.v Line: 8
+Info (10041): Inferred latch for "imediato[9]" at extensor_Bit.v(8) File: C:/Users/rafae/OneDrive/Documentos/Workspace/Processador/extensor_Bit.v Line: 8
+Info (10041): Inferred latch for "imediato[10]" at extensor_Bit.v(8) File: C:/Users/rafae/OneDrive/Documentos/Workspace/Processador/extensor_Bit.v Line: 8
+Info (10041): Inferred latch for "imediato[11]" at extensor_Bit.v(8) File: C:/Users/rafae/OneDrive/Documentos/Workspace/Processador/extensor_Bit.v Line: 8
+Info (10041): Inferred latch for "imediato[12]" at extensor_Bit.v(8) File: C:/Users/rafae/OneDrive/Documentos/Workspace/Processador/extensor_Bit.v Line: 8
+Info (10041): Inferred latch for "imediato[13]" at extensor_Bit.v(8) File: C:/Users/rafae/OneDrive/Documentos/Workspace/Processador/extensor_Bit.v Line: 8
+Info (10041): Inferred latch for "imediato[14]" at extensor_Bit.v(8) File: C:/Users/rafae/OneDrive/Documentos/Workspace/Processador/extensor_Bit.v Line: 8
+Info (10041): Inferred latch for "imediato[15]" at extensor_Bit.v(8) File: C:/Users/rafae/OneDrive/Documentos/Workspace/Processador/extensor_Bit.v Line: 8
+Info (10041): Inferred latch for "imediato[16]" at extensor_Bit.v(8) File: C:/Users/rafae/OneDrive/Documentos/Workspace/Processador/extensor_Bit.v Line: 8
+Info (10041): Inferred latch for "imediato[17]" at extensor_Bit.v(8) File: C:/Users/rafae/OneDrive/Documentos/Workspace/Processador/extensor_Bit.v Line: 8
+Info (10041): Inferred latch for "imediato[18]" at extensor_Bit.v(8) File: C:/Users/rafae/OneDrive/Documentos/Workspace/Processador/extensor_Bit.v Line: 8
+Info (10041): Inferred latch for "imediato[19]" at extensor_Bit.v(8) File: C:/Users/rafae/OneDrive/Documentos/Workspace/Processador/extensor_Bit.v Line: 8
+Info (10041): Inferred latch for "imediato[20]" at extensor_Bit.v(8) File: C:/Users/rafae/OneDrive/Documentos/Workspace/Processador/extensor_Bit.v Line: 8
+Info (10041): Inferred latch for "imediato[21]" at extensor_Bit.v(8) File: C:/Users/rafae/OneDrive/Documentos/Workspace/Processador/extensor_Bit.v Line: 8
+Info (10041): Inferred latch for "imediato[22]" at extensor_Bit.v(8) File: C:/Users/rafae/OneDrive/Documentos/Workspace/Processador/extensor_Bit.v Line: 8
+Info (10041): Inferred latch for "imediato[23]" at extensor_Bit.v(8) File: C:/Users/rafae/OneDrive/Documentos/Workspace/Processador/extensor_Bit.v Line: 8
+Info (10041): Inferred latch for "imediato[24]" at extensor_Bit.v(8) File: C:/Users/rafae/OneDrive/Documentos/Workspace/Processador/extensor_Bit.v Line: 8
+Info (10041): Inferred latch for "imediato[25]" at extensor_Bit.v(8) File: C:/Users/rafae/OneDrive/Documentos/Workspace/Processador/extensor_Bit.v Line: 8
+Info (10041): Inferred latch for "imediato[26]" at extensor_Bit.v(8) File: C:/Users/rafae/OneDrive/Documentos/Workspace/Processador/extensor_Bit.v Line: 8
+Info (10041): Inferred latch for "imediato[27]" at extensor_Bit.v(8) File: C:/Users/rafae/OneDrive/Documentos/Workspace/Processador/extensor_Bit.v Line: 8
+Info (10041): Inferred latch for "imediato[28]" at extensor_Bit.v(8) File: C:/Users/rafae/OneDrive/Documentos/Workspace/Processador/extensor_Bit.v Line: 8
+Info (10041): Inferred latch for "imediato[29]" at extensor_Bit.v(8) File: C:/Users/rafae/OneDrive/Documentos/Workspace/Processador/extensor_Bit.v Line: 8
+Info (10041): Inferred latch for "imediato[30]" at extensor_Bit.v(8) File: C:/Users/rafae/OneDrive/Documentos/Workspace/Processador/extensor_Bit.v Line: 8
+Info (10041): Inferred latch for "imediato[31]" at extensor_Bit.v(8) File: C:/Users/rafae/OneDrive/Documentos/Workspace/Processador/extensor_Bit.v Line: 8
+Info (12128): Elaborating entity "controle_ULA" for hierarchy "controle_ULA:cULA" File: C:/Users/rafae/OneDrive/Documentos/Workspace/Processador/teste.v Line: 63
+Warning (10235): Verilog HDL Always Construct warning at controle_ULA.v(9): variable "opULA" is read inside the Always Construct but isn't in the Always Construct's Event Control File: C:/Users/rafae/OneDrive/Documentos/Workspace/Processador/controle_ULA.v Line: 9
+Warning (10235): Verilog HDL Always Construct warning at controle_ULA.v(12): variable "instrucao" is read inside the Always Construct but isn't in the Always Construct's Event Control File: C:/Users/rafae/OneDrive/Documentos/Workspace/Processador/controle_ULA.v Line: 12
+Warning (10270): Verilog HDL Case Statement warning at controle_ULA.v(12): incomplete case statement has no default case item File: C:/Users/rafae/OneDrive/Documentos/Workspace/Processador/controle_ULA.v Line: 12
+Warning (10240): Verilog HDL Always Construct warning at controle_ULA.v(8): inferring latch(es) for variable "selec", which holds its previous value in one or more paths through the always construct File: C:/Users/rafae/OneDrive/Documentos/Workspace/Processador/controle_ULA.v Line: 8
+Info (10041): Inferred latch for "selec[0]" at controle_ULA.v(8) File: C:/Users/rafae/OneDrive/Documentos/Workspace/Processador/controle_ULA.v Line: 8
+Info (10041): Inferred latch for "selec[1]" at controle_ULA.v(8) File: C:/Users/rafae/OneDrive/Documentos/Workspace/Processador/controle_ULA.v Line: 8
+Info (10041): Inferred latch for "selec[2]" at controle_ULA.v(8) File: C:/Users/rafae/OneDrive/Documentos/Workspace/Processador/controle_ULA.v Line: 8
+Info (12128): Elaborating entity "ULA" for hierarchy "ULA:ULA" File: C:/Users/rafae/OneDrive/Documentos/Workspace/Processador/teste.v Line: 65
+Warning (10235): Verilog HDL Always Construct warning at ULA.v(11): variable "origULA" is read inside the Always Construct but isn't in the Always Construct's Event Control File: C:/Users/rafae/OneDrive/Documentos/Workspace/Processador/ULA.v Line: 11
+Warning (10235): Verilog HDL Always Construct warning at ULA.v(24): variable "origULA" is read inside the Always Construct but isn't in the Always Construct's Event Control File: C:/Users/rafae/OneDrive/Documentos/Workspace/Processador/ULA.v Line: 24
+Warning (10270): Verilog HDL Case Statement warning at ULA.v(25): incomplete case statement has no default case item File: C:/Users/rafae/OneDrive/Documentos/Workspace/Processador/ULA.v Line: 25
+Info (10264): Verilog HDL Case Statement information at ULA.v(25): all case item expressions in this case statement are onehot File: C:/Users/rafae/OneDrive/Documentos/Workspace/Processador/ULA.v Line: 25
+Warning (10235): Verilog HDL Always Construct warning at ULA.v(31): variable "origULA" is read inside the Always Construct but isn't in the Always Construct's Event Control File: C:/Users/rafae/OneDrive/Documentos/Workspace/Processador/ULA.v Line: 31
+Warning (10270): Verilog HDL Case Statement warning at ULA.v(32): incomplete case statement has no default case item File: C:/Users/rafae/OneDrive/Documentos/Workspace/Processador/ULA.v Line: 32
+Info (10264): Verilog HDL Case Statement information at ULA.v(32): all case item expressions in this case statement are onehot File: C:/Users/rafae/OneDrive/Documentos/Workspace/Processador/ULA.v Line: 32
+Warning (10240): Verilog HDL Always Construct warning at ULA.v(9): inferring latch(es) for variable "result", which holds its previous value in one or more paths through the always construct File: C:/Users/rafae/OneDrive/Documentos/Workspace/Processador/ULA.v Line: 9
+Info (10041): Inferred latch for "result[0]" at ULA.v(31) File: C:/Users/rafae/OneDrive/Documentos/Workspace/Processador/ULA.v Line: 31
+Info (10041): Inferred latch for "result[1]" at ULA.v(31) File: C:/Users/rafae/OneDrive/Documentos/Workspace/Processador/ULA.v Line: 31
+Info (10041): Inferred latch for "result[2]" at ULA.v(31) File: C:/Users/rafae/OneDrive/Documentos/Workspace/Processador/ULA.v Line: 31
+Info (10041): Inferred latch for "result[3]" at ULA.v(31) File: C:/Users/rafae/OneDrive/Documentos/Workspace/Processador/ULA.v Line: 31
+Info (10041): Inferred latch for "result[4]" at ULA.v(31) File: C:/Users/rafae/OneDrive/Documentos/Workspace/Processador/ULA.v Line: 31
+Info (10041): Inferred latch for "result[5]" at ULA.v(31) File: C:/Users/rafae/OneDrive/Documentos/Workspace/Processador/ULA.v Line: 31
+Info (10041): Inferred latch for "result[6]" at ULA.v(31) File: C:/Users/rafae/OneDrive/Documentos/Workspace/Processador/ULA.v Line: 31
+Info (10041): Inferred latch for "result[7]" at ULA.v(31) File: C:/Users/rafae/OneDrive/Documentos/Workspace/Processador/ULA.v Line: 31
+Info (10041): Inferred latch for "result[8]" at ULA.v(31) File: C:/Users/rafae/OneDrive/Documentos/Workspace/Processador/ULA.v Line: 31
+Info (10041): Inferred latch for "result[9]" at ULA.v(31) File: C:/Users/rafae/OneDrive/Documentos/Workspace/Processador/ULA.v Line: 31
+Info (10041): Inferred latch for "result[10]" at ULA.v(31) File: C:/Users/rafae/OneDrive/Documentos/Workspace/Processador/ULA.v Line: 31
+Info (10041): Inferred latch for "result[11]" at ULA.v(31) File: C:/Users/rafae/OneDrive/Documentos/Workspace/Processador/ULA.v Line: 31
+Info (10041): Inferred latch for "result[12]" at ULA.v(31) File: C:/Users/rafae/OneDrive/Documentos/Workspace/Processador/ULA.v Line: 31
+Info (10041): Inferred latch for "result[13]" at ULA.v(31) File: C:/Users/rafae/OneDrive/Documentos/Workspace/Processador/ULA.v Line: 31
+Info (10041): Inferred latch for "result[14]" at ULA.v(31) File: C:/Users/rafae/OneDrive/Documentos/Workspace/Processador/ULA.v Line: 31
+Info (10041): Inferred latch for "result[15]" at ULA.v(31) File: C:/Users/rafae/OneDrive/Documentos/Workspace/Processador/ULA.v Line: 31
+Info (10041): Inferred latch for "result[16]" at ULA.v(31) File: C:/Users/rafae/OneDrive/Documentos/Workspace/Processador/ULA.v Line: 31
+Info (10041): Inferred latch for "result[17]" at ULA.v(31) File: C:/Users/rafae/OneDrive/Documentos/Workspace/Processador/ULA.v Line: 31
+Info (10041): Inferred latch for "result[18]" at ULA.v(31) File: C:/Users/rafae/OneDrive/Documentos/Workspace/Processador/ULA.v Line: 31
+Info (10041): Inferred latch for "result[19]" at ULA.v(31) File: C:/Users/rafae/OneDrive/Documentos/Workspace/Processador/ULA.v Line: 31
+Info (10041): Inferred latch for "result[20]" at ULA.v(31) File: C:/Users/rafae/OneDrive/Documentos/Workspace/Processador/ULA.v Line: 31
+Info (10041): Inferred latch for "result[21]" at ULA.v(31) File: C:/Users/rafae/OneDrive/Documentos/Workspace/Processador/ULA.v Line: 31
+Info (10041): Inferred latch for "result[22]" at ULA.v(31) File: C:/Users/rafae/OneDrive/Documentos/Workspace/Processador/ULA.v Line: 31
+Info (10041): Inferred latch for "result[23]" at ULA.v(31) File: C:/Users/rafae/OneDrive/Documentos/Workspace/Processador/ULA.v Line: 31
+Info (10041): Inferred latch for "result[24]" at ULA.v(31) File: C:/Users/rafae/OneDrive/Documentos/Workspace/Processador/ULA.v Line: 31
+Info (10041): Inferred latch for "result[25]" at ULA.v(31) File: C:/Users/rafae/OneDrive/Documentos/Workspace/Processador/ULA.v Line: 31
+Info (10041): Inferred latch for "result[26]" at ULA.v(31) File: C:/Users/rafae/OneDrive/Documentos/Workspace/Processador/ULA.v Line: 31
+Info (10041): Inferred latch for "result[27]" at ULA.v(31) File: C:/Users/rafae/OneDrive/Documentos/Workspace/Processador/ULA.v Line: 31
+Info (10041): Inferred latch for "result[28]" at ULA.v(31) File: C:/Users/rafae/OneDrive/Documentos/Workspace/Processador/ULA.v Line: 31
+Info (10041): Inferred latch for "result[29]" at ULA.v(31) File: C:/Users/rafae/OneDrive/Documentos/Workspace/Processador/ULA.v Line: 31
+Info (10041): Inferred latch for "result[30]" at ULA.v(31) File: C:/Users/rafae/OneDrive/Documentos/Workspace/Processador/ULA.v Line: 31
+Info (10041): Inferred latch for "result[31]" at ULA.v(31) File: C:/Users/rafae/OneDrive/Documentos/Workspace/Processador/ULA.v Line: 31
+Info (12128): Elaborating entity "dados_RAM" for hierarchy "dados_RAM:DADO" File: C:/Users/rafae/OneDrive/Documentos/Workspace/Processador/teste.v Line: 67
+Info (12128): Elaborating entity "mux_Mem" for hierarchy "mux_Mem:MUX" File: C:/Users/rafae/OneDrive/Documentos/Workspace/Processador/teste.v Line: 69
+Warning (10240): Verilog HDL Always Construct warning at mux_Mem.v(10): inferring latch(es) for variable "saida", which holds its previous value in one or more paths through the always construct File: C:/Users/rafae/OneDrive/Documentos/Workspace/Processador/mux_Mem.v Line: 10
+Info (10041): Inferred latch for "saida[0]" at mux_Mem.v(11) File: C:/Users/rafae/OneDrive/Documentos/Workspace/Processador/mux_Mem.v Line: 11
+Info (10041): Inferred latch for "saida[1]" at mux_Mem.v(11) File: C:/Users/rafae/OneDrive/Documentos/Workspace/Processador/mux_Mem.v Line: 11
+Info (10041): Inferred latch for "saida[2]" at mux_Mem.v(11) File: C:/Users/rafae/OneDrive/Documentos/Workspace/Processador/mux_Mem.v Line: 11
+Info (10041): Inferred latch for "saida[3]" at mux_Mem.v(11) File: C:/Users/rafae/OneDrive/Documentos/Workspace/Processador/mux_Mem.v Line: 11
+Info (10041): Inferred latch for "saida[4]" at mux_Mem.v(11) File: C:/Users/rafae/OneDrive/Documentos/Workspace/Processador/mux_Mem.v Line: 11
+Info (10041): Inferred latch for "saida[5]" at mux_Mem.v(11) File: C:/Users/rafae/OneDrive/Documentos/Workspace/Processador/mux_Mem.v Line: 11
+Info (10041): Inferred latch for "saida[6]" at mux_Mem.v(11) File: C:/Users/rafae/OneDrive/Documentos/Workspace/Processador/mux_Mem.v Line: 11
+Info (10041): Inferred latch for "saida[7]" at mux_Mem.v(11) File: C:/Users/rafae/OneDrive/Documentos/Workspace/Processador/mux_Mem.v Line: 11
+Info (10041): Inferred latch for "saida[8]" at mux_Mem.v(11) File: C:/Users/rafae/OneDrive/Documentos/Workspace/Processador/mux_Mem.v Line: 11
+Info (10041): Inferred latch for "saida[9]" at mux_Mem.v(11) File: C:/Users/rafae/OneDrive/Documentos/Workspace/Processador/mux_Mem.v Line: 11
+Info (10041): Inferred latch for "saida[10]" at mux_Mem.v(11) File: C:/Users/rafae/OneDrive/Documentos/Workspace/Processador/mux_Mem.v Line: 11
+Info (10041): Inferred latch for "saida[11]" at mux_Mem.v(11) File: C:/Users/rafae/OneDrive/Documentos/Workspace/Processador/mux_Mem.v Line: 11
+Info (10041): Inferred latch for "saida[12]" at mux_Mem.v(11) File: C:/Users/rafae/OneDrive/Documentos/Workspace/Processador/mux_Mem.v Line: 11
+Info (10041): Inferred latch for "saida[13]" at mux_Mem.v(11) File: C:/Users/rafae/OneDrive/Documentos/Workspace/Processador/mux_Mem.v Line: 11
+Info (10041): Inferred latch for "saida[14]" at mux_Mem.v(11) File: C:/Users/rafae/OneDrive/Documentos/Workspace/Processador/mux_Mem.v Line: 11
+Info (10041): Inferred latch for "saida[15]" at mux_Mem.v(11) File: C:/Users/rafae/OneDrive/Documentos/Workspace/Processador/mux_Mem.v Line: 11
+Info (10041): Inferred latch for "saida[16]" at mux_Mem.v(11) File: C:/Users/rafae/OneDrive/Documentos/Workspace/Processador/mux_Mem.v Line: 11
+Info (10041): Inferred latch for "saida[17]" at mux_Mem.v(11) File: C:/Users/rafae/OneDrive/Documentos/Workspace/Processador/mux_Mem.v Line: 11
+Info (10041): Inferred latch for "saida[18]" at mux_Mem.v(11) File: C:/Users/rafae/OneDrive/Documentos/Workspace/Processador/mux_Mem.v Line: 11
+Info (10041): Inferred latch for "saida[19]" at mux_Mem.v(11) File: C:/Users/rafae/OneDrive/Documentos/Workspace/Processador/mux_Mem.v Line: 11
+Info (10041): Inferred latch for "saida[20]" at mux_Mem.v(11) File: C:/Users/rafae/OneDrive/Documentos/Workspace/Processador/mux_Mem.v Line: 11
+Info (10041): Inferred latch for "saida[21]" at mux_Mem.v(11) File: C:/Users/rafae/OneDrive/Documentos/Workspace/Processador/mux_Mem.v Line: 11
+Info (10041): Inferred latch for "saida[22]" at mux_Mem.v(11) File: C:/Users/rafae/OneDrive/Documentos/Workspace/Processador/mux_Mem.v Line: 11
+Info (10041): Inferred latch for "saida[23]" at mux_Mem.v(11) File: C:/Users/rafae/OneDrive/Documentos/Workspace/Processador/mux_Mem.v Line: 11
+Info (10041): Inferred latch for "saida[24]" at mux_Mem.v(11) File: C:/Users/rafae/OneDrive/Documentos/Workspace/Processador/mux_Mem.v Line: 11
+Info (10041): Inferred latch for "saida[25]" at mux_Mem.v(11) File: C:/Users/rafae/OneDrive/Documentos/Workspace/Processador/mux_Mem.v Line: 11
+Info (10041): Inferred latch for "saida[26]" at mux_Mem.v(11) File: C:/Users/rafae/OneDrive/Documentos/Workspace/Processador/mux_Mem.v Line: 11
+Info (10041): Inferred latch for "saida[27]" at mux_Mem.v(11) File: C:/Users/rafae/OneDrive/Documentos/Workspace/Processador/mux_Mem.v Line: 11
+Info (10041): Inferred latch for "saida[28]" at mux_Mem.v(11) File: C:/Users/rafae/OneDrive/Documentos/Workspace/Processador/mux_Mem.v Line: 11
+Info (10041): Inferred latch for "saida[29]" at mux_Mem.v(11) File: C:/Users/rafae/OneDrive/Documentos/Workspace/Processador/mux_Mem.v Line: 11
+Info (10041): Inferred latch for "saida[30]" at mux_Mem.v(11) File: C:/Users/rafae/OneDrive/Documentos/Workspace/Processador/mux_Mem.v Line: 11
+Info (10041): Inferred latch for "saida[31]" at mux_Mem.v(11) File: C:/Users/rafae/OneDrive/Documentos/Workspace/Processador/mux_Mem.v Line: 11
+Info (12128): Elaborating entity "saidaDados" for hierarchy "saidaDados:SaidaDados" File: C:/Users/rafae/OneDrive/Documentos/Workspace/Processador/teste.v Line: 71
+Warning (10036): Verilog HDL or VHDL warning at saidaDados.v(9): object "ultSegmentos" assigned a value but never read File: C:/Users/rafae/OneDrive/Documentos/Workspace/Processador/saidaDados.v Line: 9
+Warning (10230): Verilog HDL assignment warning at saidaDados.v(39): truncated value with size 33 to match size of target (32) File: C:/Users/rafae/OneDrive/Documentos/Workspace/Processador/saidaDados.v Line: 39
+Warning (10230): Verilog HDL assignment warning at saidaDados.v(31): truncated value with size 32 to match size of target (4) File: C:/Users/rafae/OneDrive/Documentos/Workspace/Processador/saidaDados.v Line: 31
+Warning (10230): Verilog HDL assignment warning at saidaDados.v(32): truncated value with size 32 to match size of target (4) File: C:/Users/rafae/OneDrive/Documentos/Workspace/Processador/saidaDados.v Line: 32
+Warning (10230): Verilog HDL assignment warning at saidaDados.v(33): truncated value with size 32 to match size of target (4) File: C:/Users/rafae/OneDrive/Documentos/Workspace/Processador/saidaDados.v Line: 33
+Warning (10230): Verilog HDL assignment warning at saidaDados.v(34): truncated value with size 32 to match size of target (4) File: C:/Users/rafae/OneDrive/Documentos/Workspace/Processador/saidaDados.v Line: 34
+Warning (10230): Verilog HDL assignment warning at saidaDados.v(35): truncated value with size 32 to match size of target (4) File: C:/Users/rafae/OneDrive/Documentos/Workspace/Processador/saidaDados.v Line: 35
+Warning (10230): Verilog HDL assignment warning at saidaDados.v(36): truncated value with size 32 to match size of target (4) File: C:/Users/rafae/OneDrive/Documentos/Workspace/Processador/saidaDados.v Line: 36
+Warning (10230): Verilog HDL assignment warning at saidaDados.v(37): truncated value with size 32 to match size of target (4) File: C:/Users/rafae/OneDrive/Documentos/Workspace/Processador/saidaDados.v Line: 37
+Warning (10230): Verilog HDL assignment warning at saidaDados.v(38): truncated value with size 32 to match size of target (4) File: C:/Users/rafae/OneDrive/Documentos/Workspace/Processador/saidaDados.v Line: 38
+Info (12128): Elaborating entity "display7seg" for hierarchy "display7seg:Display" File: C:/Users/rafae/OneDrive/Documentos/Workspace/Processador/teste.v Line: 73
+Warning (10059): Verilog HDL Case Statement warning at display7seg.v(27): case item expression never matches the case expression because it contains an 'x' or 'z' value File: C:/Users/rafae/OneDrive/Documentos/Workspace/Processador/display7seg.v Line: 27
+Warning (10059): Verilog HDL Case Statement warning at display7seg.v(41): case item expression never matches the case expression because it contains an 'x' or 'z' value File: C:/Users/rafae/OneDrive/Documentos/Workspace/Processador/display7seg.v Line: 41
+Warning (10059): Verilog HDL Case Statement warning at display7seg.v(55): case item expression never matches the case expression because it contains an 'x' or 'z' value File: C:/Users/rafae/OneDrive/Documentos/Workspace/Processador/display7seg.v Line: 55
+Warning (10059): Verilog HDL Case Statement warning at display7seg.v(69): case item expression never matches the case expression because it contains an 'x' or 'z' value File: C:/Users/rafae/OneDrive/Documentos/Workspace/Processador/display7seg.v Line: 69
+Warning (10059): Verilog HDL Case Statement warning at display7seg.v(83): case item expression never matches the case expression because it contains an 'x' or 'z' value File: C:/Users/rafae/OneDrive/Documentos/Workspace/Processador/display7seg.v Line: 83
+Warning (10059): Verilog HDL Case Statement warning at display7seg.v(97): case item expression never matches the case expression because it contains an 'x' or 'z' value File: C:/Users/rafae/OneDrive/Documentos/Workspace/Processador/display7seg.v Line: 97
+Warning (10059): Verilog HDL Case Statement warning at display7seg.v(111): case item expression never matches the case expression because it contains an 'x' or 'z' value File: C:/Users/rafae/OneDrive/Documentos/Workspace/Processador/display7seg.v Line: 111
+Warning (10059): Verilog HDL Case Statement warning at display7seg.v(125): case item expression never matches the case expression because it contains an 'x' or 'z' value File: C:/Users/rafae/OneDrive/Documentos/Workspace/Processador/display7seg.v Line: 125
+Info (276014): Found 2 instances of uninferred RAM logic
+    Info (276007): RAM logic "dados_RAM:DADO|dados_ram" is uninferred due to asynchronous read logic File: C:/Users/rafae/OneDrive/Documentos/Workspace/Processador/dados_RAM.v Line: 8
+    Info (276007): RAM logic "instrucoes_RAM:INST|inst_ram" is uninferred due to asynchronous read logic File: C:/Users/rafae/OneDrive/Documentos/Workspace/Processador/instrucoes_RAM.v Line: 6
+Critical Warning (127005): Memory depth (2048) in the design file differs from memory depth (1025) in the Memory Initialization File "C:/Users/rafae/OneDrive/Documentos/Workspace/Processador/db/CPU.ram0_instrucoes_RAM_436a63f4.hdl.mif" -- setting initial value for remaining addresses to 0
+Warning (127007): Memory Initialization File or Hexadecimal (Intel-Format) File "C:/Users/rafae/OneDrive/Documentos/Workspace/Processador/db/CPU.ram0_instrucoes_RAM_436a63f4.hdl.mif" contains "don't care" values -- overwriting them with 0s
+Warning (276002): Cannot convert all sets of registers into RAM megafunctions when creating nodes; therefore, the resulting number of registers remaining in design can cause longer compilation time or result in insufficient memory to complete Analysis and Synthesis
+Info (278001): Inferred 2 megafunctions from design logic
+    Info (278003): Inferred multiplier megafunction ("lpm_mult") from the following logic: "ULA:ULA|Mult0" File: C:/Users/rafae/OneDrive/Documentos/Workspace/Processador/ULA.v Line: 16
+    Info (278004): Inferred divider/modulo megafunction ("lpm_divide") from the following logic: "ULA:ULA|Div0" File: C:/Users/rafae/OneDrive/Documentos/Workspace/Processador/ULA.v Line: 17
+Info (12130): Elaborated megafunction instantiation "ULA:ULA|lpm_mult:Mult0" File: C:/Users/rafae/OneDrive/Documentos/Workspace/Processador/ULA.v Line: 16
+Info (12133): Instantiated megafunction "ULA:ULA|lpm_mult:Mult0" with the following parameter: File: C:/Users/rafae/OneDrive/Documentos/Workspace/Processador/ULA.v Line: 16
+    Info (12134): Parameter "LPM_WIDTHA" = "32"
+    Info (12134): Parameter "LPM_WIDTHB" = "32"
+    Info (12134): Parameter "LPM_WIDTHP" = "64"
+    Info (12134): Parameter "LPM_WIDTHR" = "64"
+    Info (12134): Parameter "LPM_WIDTHS" = "1"
+    Info (12134): Parameter "LPM_REPRESENTATION" = "UNSIGNED"
+    Info (12134): Parameter "INPUT_A_IS_CONSTANT" = "NO"
+    Info (12134): Parameter "INPUT_B_IS_CONSTANT" = "NO"
+    Info (12134): Parameter "MAXIMIZE_SPEED" = "5"
+Info (12021): Found 1 design units, including 1 entities, in source file db/mult_7dt.tdf
+    Info (12023): Found entity 1: mult_7dt File: C:/Users/rafae/OneDrive/Documentos/Workspace/Processador/db/mult_7dt.tdf Line: 30
+Info (12130): Elaborated megafunction instantiation "ULA:ULA|lpm_divide:Div0" File: C:/Users/rafae/OneDrive/Documentos/Workspace/Processador/ULA.v Line: 17
+Info (12133): Instantiated megafunction "ULA:ULA|lpm_divide:Div0" with the following parameter: File: C:/Users/rafae/OneDrive/Documentos/Workspace/Processador/ULA.v Line: 17
+    Info (12134): Parameter "LPM_WIDTHN" = "32"
+    Info (12134): Parameter "LPM_WIDTHD" = "32"
+    Info (12134): Parameter "LPM_NREPRESENTATION" = "UNSIGNED"
+    Info (12134): Parameter "LPM_DREPRESENTATION" = "UNSIGNED"
+Info (12021): Found 1 design units, including 1 entities, in source file db/lpm_divide_hkm.tdf
+    Info (12023): Found entity 1: lpm_divide_hkm File: C:/Users/rafae/OneDrive/Documentos/Workspace/Processador/db/lpm_divide_hkm.tdf Line: 24
+Info (12021): Found 1 design units, including 1 entities, in source file db/sign_div_unsign_9nh.tdf
+    Info (12023): Found entity 1: sign_div_unsign_9nh File: C:/Users/rafae/OneDrive/Documentos/Workspace/Processador/db/sign_div_unsign_9nh.tdf Line: 24
+Info (12021): Found 1 design units, including 1 entities, in source file db/alt_u_div_6af.tdf
+    Info (12023): Found entity 1: alt_u_div_6af File: C:/Users/rafae/OneDrive/Documentos/Workspace/Processador/db/alt_u_div_6af.tdf Line: 26
+Info (12021): Found 1 design units, including 1 entities, in source file db/add_sub_7pc.tdf
+    Info (12023): Found entity 1: add_sub_7pc File: C:/Users/rafae/OneDrive/Documentos/Workspace/Processador/db/add_sub_7pc.tdf Line: 22
+Info (12021): Found 1 design units, including 1 entities, in source file db/add_sub_8pc.tdf
+    Info (12023): Found entity 1: add_sub_8pc File: C:/Users/rafae/OneDrive/Documentos/Workspace/Processador/db/add_sub_8pc.tdf Line: 22
+Warning (14284): Synthesized away the following node(s):
+    Warning (14285): Synthesized away the following DSP element node(s):
+        Warning (14320): Synthesized away node "ULA:ULA|lpm_mult:Mult0|mult_7dt:auto_generated|mac_mult7" File: C:/Users/rafae/OneDrive/Documentos/Workspace/Processador/db/mult_7dt.tdf Line: 66
+        Warning (14320): Synthesized away node "ULA:ULA|lpm_mult:Mult0|mult_7dt:auto_generated|mac_out8" File: C:/Users/rafae/OneDrive/Documentos/Workspace/Processador/db/mult_7dt.tdf Line: 90
+Info (13014): Ignored 84 buffer(s)
+    Info (13019): Ignored 84 SOFT buffer(s)
+Info (13025): Duplicate LATCH primitives merged into single LATCH primitive
+    Info (13026): Duplicate LATCH primitive "extensor_Bit:BIT|imediato[31]" merged with LATCH primitive "extensor_Bit:BIT|imediato[28]" File: C:/Users/rafae/OneDrive/Documentos/Workspace/Processador/extensor_Bit.v Line: 8
+    Info (13026): Duplicate LATCH primitive "extensor_Bit:BIT|imediato[30]" merged with LATCH primitive "extensor_Bit:BIT|imediato[28]" File: C:/Users/rafae/OneDrive/Documentos/Workspace/Processador/extensor_Bit.v Line: 8
+    Info (13026): Duplicate LATCH primitive "extensor_Bit:BIT|imediato[29]" merged with LATCH primitive "extensor_Bit:BIT|imediato[28]" File: C:/Users/rafae/OneDrive/Documentos/Workspace/Processador/extensor_Bit.v Line: 8
+    Info (13026): Duplicate LATCH primitive "extensor_Bit:BIT|imediato[27]" merged with LATCH primitive "extensor_Bit:BIT|imediato[28]" File: C:/Users/rafae/OneDrive/Documentos/Workspace/Processador/extensor_Bit.v Line: 8
+    Info (13026): Duplicate LATCH primitive "extensor_Bit:BIT|imediato[26]" merged with LATCH primitive "extensor_Bit:BIT|imediato[28]" File: C:/Users/rafae/OneDrive/Documentos/Workspace/Processador/extensor_Bit.v Line: 8
+    Info (13026): Duplicate LATCH primitive "extensor_Bit:BIT|imediato[25]" merged with LATCH primitive "extensor_Bit:BIT|imediato[28]" File: C:/Users/rafae/OneDrive/Documentos/Workspace/Processador/extensor_Bit.v Line: 8
+Warning (13012): Latch ULA:ULA|result[0] has unsafe behavior File: C:/Users/rafae/OneDrive/Documentos/Workspace/Processador/ULA.v Line: 31
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal controle_ULA:cULA|selec[1] File: C:/Users/rafae/OneDrive/Documentos/Workspace/Processador/controle_ULA.v Line: 8
+Warning (13012): Latch ULA:ULA|result[2] has unsafe behavior File: C:/Users/rafae/OneDrive/Documentos/Workspace/Processador/ULA.v Line: 31
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal controle_ULA:cULA|selec[1] File: C:/Users/rafae/OneDrive/Documentos/Workspace/Processador/controle_ULA.v Line: 8
+Warning (13012): Latch ULA:ULA|result[3] has unsafe behavior File: C:/Users/rafae/OneDrive/Documentos/Workspace/Processador/ULA.v Line: 31
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal controle_ULA:cULA|selec[1] File: C:/Users/rafae/OneDrive/Documentos/Workspace/Processador/controle_ULA.v Line: 8
+Warning (13012): Latch ULA:ULA|result[6] has unsafe behavior File: C:/Users/rafae/OneDrive/Documentos/Workspace/Processador/ULA.v Line: 31
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal controle_ULA:cULA|selec[1] File: C:/Users/rafae/OneDrive/Documentos/Workspace/Processador/controle_ULA.v Line: 8
+Warning (13012): Latch ULA:ULA|result[1] has unsafe behavior File: C:/Users/rafae/OneDrive/Documentos/Workspace/Processador/ULA.v Line: 31
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal controle_ULA:cULA|selec[1] File: C:/Users/rafae/OneDrive/Documentos/Workspace/Processador/controle_ULA.v Line: 8
+Warning (13012): Latch ULA:ULA|result[5] has unsafe behavior File: C:/Users/rafae/OneDrive/Documentos/Workspace/Processador/ULA.v Line: 31
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal controle_ULA:cULA|selec[1] File: C:/Users/rafae/OneDrive/Documentos/Workspace/Processador/controle_ULA.v Line: 8
+Warning (13012): Latch ULA:ULA|result[7] has unsafe behavior File: C:/Users/rafae/OneDrive/Documentos/Workspace/Processador/ULA.v Line: 31
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal controle_ULA:cULA|selec[1] File: C:/Users/rafae/OneDrive/Documentos/Workspace/Processador/controle_ULA.v Line: 8
+Warning (13012): Latch ULA:ULA|result[4] has unsafe behavior File: C:/Users/rafae/OneDrive/Documentos/Workspace/Processador/ULA.v Line: 31
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal controle_ULA:cULA|selec[1] File: C:/Users/rafae/OneDrive/Documentos/Workspace/Processador/controle_ULA.v Line: 8
+Warning (13012): Latch ULA:ULA|result[9] has unsafe behavior File: C:/Users/rafae/OneDrive/Documentos/Workspace/Processador/ULA.v Line: 31
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal controle_ULA:cULA|selec[1] File: C:/Users/rafae/OneDrive/Documentos/Workspace/Processador/controle_ULA.v Line: 8
+Warning (13012): Latch ULA:ULA|result[8] has unsafe behavior File: C:/Users/rafae/OneDrive/Documentos/Workspace/Processador/ULA.v Line: 31
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal controle_ULA:cULA|selec[1] File: C:/Users/rafae/OneDrive/Documentos/Workspace/Processador/controle_ULA.v Line: 8
+Warning (13012): Latch ULA:ULA|result[10] has unsafe behavior File: C:/Users/rafae/OneDrive/Documentos/Workspace/Processador/ULA.v Line: 31
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal controle_ULA:cULA|selec[1] File: C:/Users/rafae/OneDrive/Documentos/Workspace/Processador/controle_ULA.v Line: 8
+Warning (13012): Latch ULA:ULA|result[28] has unsafe behavior File: C:/Users/rafae/OneDrive/Documentos/Workspace/Processador/ULA.v Line: 31
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal controle_ULA:cULA|selec[1] File: C:/Users/rafae/OneDrive/Documentos/Workspace/Processador/controle_ULA.v Line: 8
+Warning (13012): Latch ULA:ULA|result[27] has unsafe behavior File: C:/Users/rafae/OneDrive/Documentos/Workspace/Processador/ULA.v Line: 31
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal controle_ULA:cULA|selec[1] File: C:/Users/rafae/OneDrive/Documentos/Workspace/Processador/controle_ULA.v Line: 8
+Warning (13012): Latch ULA:ULA|result[26] has unsafe behavior File: C:/Users/rafae/OneDrive/Documentos/Workspace/Processador/ULA.v Line: 31
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal controle_ULA:cULA|selec[1] File: C:/Users/rafae/OneDrive/Documentos/Workspace/Processador/controle_ULA.v Line: 8
+Warning (13012): Latch ULA:ULA|result[25] has unsafe behavior File: C:/Users/rafae/OneDrive/Documentos/Workspace/Processador/ULA.v Line: 31
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal controle_ULA:cULA|selec[1] File: C:/Users/rafae/OneDrive/Documentos/Workspace/Processador/controle_ULA.v Line: 8
+Warning (13012): Latch ULA:ULA|result[24] has unsafe behavior File: C:/Users/rafae/OneDrive/Documentos/Workspace/Processador/ULA.v Line: 31
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal controle_ULA:cULA|selec[1] File: C:/Users/rafae/OneDrive/Documentos/Workspace/Processador/controle_ULA.v Line: 8
+Warning (13012): Latch ULA:ULA|result[23] has unsafe behavior File: C:/Users/rafae/OneDrive/Documentos/Workspace/Processador/ULA.v Line: 31
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal controle_ULA:cULA|selec[1] File: C:/Users/rafae/OneDrive/Documentos/Workspace/Processador/controle_ULA.v Line: 8
+Warning (13012): Latch ULA:ULA|result[22] has unsafe behavior File: C:/Users/rafae/OneDrive/Documentos/Workspace/Processador/ULA.v Line: 31
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal controle_ULA:cULA|selec[1] File: C:/Users/rafae/OneDrive/Documentos/Workspace/Processador/controle_ULA.v Line: 8
+Warning (13012): Latch ULA:ULA|result[21] has unsafe behavior File: C:/Users/rafae/OneDrive/Documentos/Workspace/Processador/ULA.v Line: 31
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal controle_ULA:cULA|selec[1] File: C:/Users/rafae/OneDrive/Documentos/Workspace/Processador/controle_ULA.v Line: 8
+Warning (13012): Latch ULA:ULA|result[20] has unsafe behavior File: C:/Users/rafae/OneDrive/Documentos/Workspace/Processador/ULA.v Line: 31
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal controle_ULA:cULA|selec[1] File: C:/Users/rafae/OneDrive/Documentos/Workspace/Processador/controle_ULA.v Line: 8
+Warning (13012): Latch ULA:ULA|result[19] has unsafe behavior File: C:/Users/rafae/OneDrive/Documentos/Workspace/Processador/ULA.v Line: 31
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal controle_ULA:cULA|selec[1] File: C:/Users/rafae/OneDrive/Documentos/Workspace/Processador/controle_ULA.v Line: 8
+Warning (13012): Latch ULA:ULA|result[18] has unsafe behavior File: C:/Users/rafae/OneDrive/Documentos/Workspace/Processador/ULA.v Line: 31
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal controle_ULA:cULA|selec[1] File: C:/Users/rafae/OneDrive/Documentos/Workspace/Processador/controle_ULA.v Line: 8
+Warning (13012): Latch ULA:ULA|result[17] has unsafe behavior File: C:/Users/rafae/OneDrive/Documentos/Workspace/Processador/ULA.v Line: 31
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal controle_ULA:cULA|selec[1] File: C:/Users/rafae/OneDrive/Documentos/Workspace/Processador/controle_ULA.v Line: 8
+Warning (13012): Latch ULA:ULA|result[16] has unsafe behavior File: C:/Users/rafae/OneDrive/Documentos/Workspace/Processador/ULA.v Line: 31
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal controle_ULA:cULA|selec[1] File: C:/Users/rafae/OneDrive/Documentos/Workspace/Processador/controle_ULA.v Line: 8
+Warning (13012): Latch ULA:ULA|result[15] has unsafe behavior File: C:/Users/rafae/OneDrive/Documentos/Workspace/Processador/ULA.v Line: 31
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal controle_ULA:cULA|selec[1] File: C:/Users/rafae/OneDrive/Documentos/Workspace/Processador/controle_ULA.v Line: 8
+Warning (13012): Latch ULA:ULA|result[14] has unsafe behavior File: C:/Users/rafae/OneDrive/Documentos/Workspace/Processador/ULA.v Line: 31
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal controle_ULA:cULA|selec[1] File: C:/Users/rafae/OneDrive/Documentos/Workspace/Processador/controle_ULA.v Line: 8
+Warning (13012): Latch ULA:ULA|result[13] has unsafe behavior File: C:/Users/rafae/OneDrive/Documentos/Workspace/Processador/ULA.v Line: 31
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal controle_ULA:cULA|selec[1] File: C:/Users/rafae/OneDrive/Documentos/Workspace/Processador/controle_ULA.v Line: 8
+Warning (13012): Latch ULA:ULA|result[12] has unsafe behavior File: C:/Users/rafae/OneDrive/Documentos/Workspace/Processador/ULA.v Line: 31
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal controle_ULA:cULA|selec[1] File: C:/Users/rafae/OneDrive/Documentos/Workspace/Processador/controle_ULA.v Line: 8
+Warning (13012): Latch ULA:ULA|result[11] has unsafe behavior File: C:/Users/rafae/OneDrive/Documentos/Workspace/Processador/ULA.v Line: 31
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal controle_ULA:cULA|selec[1] File: C:/Users/rafae/OneDrive/Documentos/Workspace/Processador/controle_ULA.v Line: 8
+Warning (13012): Latch ULA:ULA|result[31] has unsafe behavior File: C:/Users/rafae/OneDrive/Documentos/Workspace/Processador/ULA.v Line: 31
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal controle_ULA:cULA|selec[1] File: C:/Users/rafae/OneDrive/Documentos/Workspace/Processador/controle_ULA.v Line: 8
+Warning (13012): Latch ULA:ULA|result[29] has unsafe behavior File: C:/Users/rafae/OneDrive/Documentos/Workspace/Processador/ULA.v Line: 31
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal controle_ULA:cULA|selec[1] File: C:/Users/rafae/OneDrive/Documentos/Workspace/Processador/controle_ULA.v Line: 8
+Warning (13012): Latch ULA:ULA|result[30] has unsafe behavior File: C:/Users/rafae/OneDrive/Documentos/Workspace/Processador/ULA.v Line: 31
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal controle_ULA:cULA|selec[1] File: C:/Users/rafae/OneDrive/Documentos/Workspace/Processador/controle_ULA.v Line: 8
+Warning (13012): Latch extensor_Bit:BIT|imediato[0] has unsafe behavior File: C:/Users/rafae/OneDrive/Documentos/Workspace/Processador/extensor_Bit.v Line: 8
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal PC:PC|endereco[10] File: C:/Users/rafae/OneDrive/Documentos/Workspace/Processador/PC.v Line: 14
+Warning (13012): Latch controle_ULA:cULA|selec[0] has unsafe behavior File: C:/Users/rafae/OneDrive/Documentos/Workspace/Processador/controle_ULA.v Line: 8
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal PC:PC|endereco[3] File: C:/Users/rafae/OneDrive/Documentos/Workspace/Processador/PC.v Line: 14
+Warning (13012): Latch controle_ULA:cULA|selec[1] has unsafe behavior File: C:/Users/rafae/OneDrive/Documentos/Workspace/Processador/controle_ULA.v Line: 8
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal PC:PC|endereco[3] File: C:/Users/rafae/OneDrive/Documentos/Workspace/Processador/PC.v Line: 14
+Warning (13012): Latch controle_ULA:cULA|selec[2] has unsafe behavior File: C:/Users/rafae/OneDrive/Documentos/Workspace/Processador/controle_ULA.v Line: 8
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal PC:PC|endereco[10] File: C:/Users/rafae/OneDrive/Documentos/Workspace/Processador/PC.v Line: 14
+    Warning (13013): Ports ENA and CLR on the latch are fed by the same signal PC:PC|endereco[3] File: C:/Users/rafae/OneDrive/Documentos/Workspace/Processador/PC.v Line: 14
+Warning (13012): Latch extensor_Bit:BIT|imediato[2] has unsafe behavior File: C:/Users/rafae/OneDrive/Documentos/Workspace/Processador/extensor_Bit.v Line: 8
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal entradaDados:comb_3|sinal File: C:/Users/rafae/OneDrive/Documentos/Workspace/Processador/entradaDados.v Line: 10
+Warning (13012): Latch extensor_Bit:BIT|imediato[1] has unsafe behavior File: C:/Users/rafae/OneDrive/Documentos/Workspace/Processador/extensor_Bit.v Line: 8
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal PC:PC|endereco[10] File: C:/Users/rafae/OneDrive/Documentos/Workspace/Processador/PC.v Line: 14
+Warning (13012): Latch extensor_Bit:BIT|imediato[3] has unsafe behavior File: C:/Users/rafae/OneDrive/Documentos/Workspace/Processador/extensor_Bit.v Line: 8
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal PC:PC|endereco[3] File: C:/Users/rafae/OneDrive/Documentos/Workspace/Processador/PC.v Line: 14
+Warning (13012): Latch extensor_Bit:BIT|imediato[6] has unsafe behavior File: C:/Users/rafae/OneDrive/Documentos/Workspace/Processador/extensor_Bit.v Line: 8
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal entradaDados:comb_3|sinal File: C:/Users/rafae/OneDrive/Documentos/Workspace/Processador/entradaDados.v Line: 10
+Warning (13012): Latch extensor_Bit:BIT|imediato[5] has unsafe behavior File: C:/Users/rafae/OneDrive/Documentos/Workspace/Processador/extensor_Bit.v Line: 8
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal entradaDados:comb_3|sinal File: C:/Users/rafae/OneDrive/Documentos/Workspace/Processador/entradaDados.v Line: 10
+Warning (13012): Latch extensor_Bit:BIT|imediato[4] has unsafe behavior File: C:/Users/rafae/OneDrive/Documentos/Workspace/Processador/extensor_Bit.v Line: 8
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal PC:PC|endereco[3] File: C:/Users/rafae/OneDrive/Documentos/Workspace/Processador/PC.v Line: 14
+Warning (13012): Latch extensor_Bit:BIT|imediato[7] has unsafe behavior File: C:/Users/rafae/OneDrive/Documentos/Workspace/Processador/extensor_Bit.v Line: 8
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal entradaDados:comb_3|sinal File: C:/Users/rafae/OneDrive/Documentos/Workspace/Processador/entradaDados.v Line: 10
+Warning (13012): Latch extensor_Bit:BIT|imediato[9] has unsafe behavior File: C:/Users/rafae/OneDrive/Documentos/Workspace/Processador/extensor_Bit.v Line: 8
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal entradaDados:comb_3|sinal File: C:/Users/rafae/OneDrive/Documentos/Workspace/Processador/entradaDados.v Line: 10
+Warning (13012): Latch extensor_Bit:BIT|imediato[8] has unsafe behavior File: C:/Users/rafae/OneDrive/Documentos/Workspace/Processador/extensor_Bit.v Line: 8
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal entradaDados:comb_3|sinal File: C:/Users/rafae/OneDrive/Documentos/Workspace/Processador/entradaDados.v Line: 10
+Warning (13012): Latch extensor_Bit:BIT|imediato[10] has unsafe behavior File: C:/Users/rafae/OneDrive/Documentos/Workspace/Processador/extensor_Bit.v Line: 8
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal entradaDados:comb_3|sinal File: C:/Users/rafae/OneDrive/Documentos/Workspace/Processador/entradaDados.v Line: 10
+Warning (13012): Latch extensor_Bit:BIT|imediato[28] has unsafe behavior File: C:/Users/rafae/OneDrive/Documentos/Workspace/Processador/extensor_Bit.v Line: 8
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal PC:PC|endereco[6] File: C:/Users/rafae/OneDrive/Documentos/Workspace/Processador/PC.v Line: 14
+Warning (13012): Latch extensor_Bit:BIT|imediato[24] has unsafe behavior File: C:/Users/rafae/OneDrive/Documentos/Workspace/Processador/extensor_Bit.v Line: 8
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal PC:PC|endereco[6] File: C:/Users/rafae/OneDrive/Documentos/Workspace/Processador/PC.v Line: 14
+Warning (13012): Latch extensor_Bit:BIT|imediato[23] has unsafe behavior File: C:/Users/rafae/OneDrive/Documentos/Workspace/Processador/extensor_Bit.v Line: 8
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal PC:PC|endereco[6] File: C:/Users/rafae/OneDrive/Documentos/Workspace/Processador/PC.v Line: 14
+Warning (13012): Latch extensor_Bit:BIT|imediato[22] has unsafe behavior File: C:/Users/rafae/OneDrive/Documentos/Workspace/Processador/extensor_Bit.v Line: 8
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal PC:PC|endereco[6] File: C:/Users/rafae/OneDrive/Documentos/Workspace/Processador/PC.v Line: 14
+Warning (13012): Latch extensor_Bit:BIT|imediato[21] has unsafe behavior File: C:/Users/rafae/OneDrive/Documentos/Workspace/Processador/extensor_Bit.v Line: 8
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal PC:PC|endereco[6] File: C:/Users/rafae/OneDrive/Documentos/Workspace/Processador/PC.v Line: 14
+Warning (13012): Latch extensor_Bit:BIT|imediato[20] has unsafe behavior File: C:/Users/rafae/OneDrive/Documentos/Workspace/Processador/extensor_Bit.v Line: 8
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal PC:PC|endereco[6] File: C:/Users/rafae/OneDrive/Documentos/Workspace/Processador/PC.v Line: 14
+Warning (13012): Latch extensor_Bit:BIT|imediato[19] has unsafe behavior File: C:/Users/rafae/OneDrive/Documentos/Workspace/Processador/extensor_Bit.v Line: 8
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal PC:PC|endereco[6] File: C:/Users/rafae/OneDrive/Documentos/Workspace/Processador/PC.v Line: 14
+Warning (13012): Latch extensor_Bit:BIT|imediato[18] has unsafe behavior File: C:/Users/rafae/OneDrive/Documentos/Workspace/Processador/extensor_Bit.v Line: 8
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal PC:PC|endereco[6] File: C:/Users/rafae/OneDrive/Documentos/Workspace/Processador/PC.v Line: 14
+Warning (13012): Latch extensor_Bit:BIT|imediato[17] has unsafe behavior File: C:/Users/rafae/OneDrive/Documentos/Workspace/Processador/extensor_Bit.v Line: 8
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal PC:PC|endereco[6] File: C:/Users/rafae/OneDrive/Documentos/Workspace/Processador/PC.v Line: 14
+Warning (13012): Latch extensor_Bit:BIT|imediato[16] has unsafe behavior File: C:/Users/rafae/OneDrive/Documentos/Workspace/Processador/extensor_Bit.v Line: 8
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal PC:PC|endereco[6] File: C:/Users/rafae/OneDrive/Documentos/Workspace/Processador/PC.v Line: 14
+Warning (13012): Latch extensor_Bit:BIT|imediato[15] has unsafe behavior File: C:/Users/rafae/OneDrive/Documentos/Workspace/Processador/extensor_Bit.v Line: 8
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal entradaDados:comb_3|sinal File: C:/Users/rafae/OneDrive/Documentos/Workspace/Processador/entradaDados.v Line: 10
+Warning (13012): Latch extensor_Bit:BIT|imediato[14] has unsafe behavior File: C:/Users/rafae/OneDrive/Documentos/Workspace/Processador/extensor_Bit.v Line: 8
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal PC:PC|endereco[4] File: C:/Users/rafae/OneDrive/Documentos/Workspace/Processador/PC.v Line: 14
+Warning (13012): Latch extensor_Bit:BIT|imediato[13] has unsafe behavior File: C:/Users/rafae/OneDrive/Documentos/Workspace/Processador/extensor_Bit.v Line: 8
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal PC:PC|endereco[3] File: C:/Users/rafae/OneDrive/Documentos/Workspace/Processador/PC.v Line: 14
+Warning (13012): Latch extensor_Bit:BIT|imediato[12] has unsafe behavior File: C:/Users/rafae/OneDrive/Documentos/Workspace/Processador/extensor_Bit.v Line: 8
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal PC:PC|endereco[3] File: C:/Users/rafae/OneDrive/Documentos/Workspace/Processador/PC.v Line: 14
+Warning (13012): Latch extensor_Bit:BIT|imediato[11] has unsafe behavior File: C:/Users/rafae/OneDrive/Documentos/Workspace/Processador/extensor_Bit.v Line: 8
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal PC:PC|endereco[2] File: C:/Users/rafae/OneDrive/Documentos/Workspace/Processador/PC.v Line: 14
+Info (286030): Timing-Driven Synthesis is running
+Info (16010): Generating hard_block partition "hard_block:auto_generated_inst"
+    Info (16011): Adding 0 node(s), including 0 DDIO, 0 PLL, 0 transceiver and 0 LCELL
+Info (21057): Implemented 61180 device resources after synthesis - the final resource count might be different
+    Info (21058): Implemented 21 input pins
+    Info (21059): Implemented 60 output pins
+    Info (21061): Implemented 61093 logic cells
+    Info (21062): Implemented 6 DSP elements
+Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 172 warnings
+    Info: Peak virtual memory: 5144 megabytes
+    Info: Processing ended: Thu Jul 13 21:19:18 2023
+    Info: Elapsed time: 00:01:45
+    Info: Total CPU time (on all processors): 00:01:29
+
+

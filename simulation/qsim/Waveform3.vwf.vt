@@ -1,0 +1,412 @@
+// Copyright (C) 2018  Intel Corporation. All rights reserved.
+// Your use of Intel Corporation's design tools, logic functions 
+// and other software and tools, and its AMPP partner logic 
+// functions, and any output files from any of the foregoing 
+// (including device programming or simulation files), and any 
+// associated documentation or information are expressly subject 
+// to the terms and conditions of the Intel Program License 
+// Subscription Agreement, the Intel Quartus Prime License Agreement,
+// the Intel FPGA IP License Agreement, or other applicable license
+// agreement, including, without limitation, that your use is for
+// the sole purpose of programming logic devices manufactured by
+// Intel and sold by Intel or its authorized distributors.  Please
+// refer to the applicable agreement for further details.
+
+// *****************************************************************************
+// This file contains a Verilog test bench with test vectors .The test vectors  
+// are exported from a vector file in the Quartus Waveform Editor and apply to  
+// the top level entity of the current Quartus project .The user can use this   
+// testbench to simulate his design using a third-party simulation tool .       
+// *****************************************************************************
+// Generated on "07/11/2022 15:52:39"
+                                                                                
+// Verilog Test Bench (with test vectors) for design :                          BancoRegistradores
+// 
+// Simulation tool : 3rd Party
+// 
+
+`timescale 1 ps/ 1 ps
+module BancoRegistradores_vlg_vec_tst();
+// constants                                           
+// general purpose registers
+reg clock;
+reg [31:0] dados_escrita;
+reg escreveReg;
+reg [31:0] instrucao;
+reg regDst;
+// wires                                               
+wire [31:0] leRS;
+wire [31:0] leRT;
+
+// assign statements (if any)                          
+BancoRegistradores i1 (
+// port map - connection between master ports and signals/registers   
+	.clock(clock),
+	.dados_escrita(dados_escrita),
+	.escreveReg(escreveReg),
+	.instrucao(instrucao),
+	.leRS(leRS),
+	.leRT(leRT),
+	.regDst(regDst)
+);
+initial 
+begin 
+#1000000 $finish;
+end 
+
+// clock
+always
+begin
+	clock = 1'b0;
+	clock = #10000 1'b1;
+	#10000;
+end 
+// instrucao[ 31 ]
+initial
+begin
+	instrucao[31] = 1'b0;
+end 
+// instrucao[ 30 ]
+initial
+begin
+	instrucao[30] = 1'b0;
+end 
+// instrucao[ 29 ]
+initial
+begin
+	instrucao[29] = 1'b0;
+end 
+// instrucao[ 28 ]
+initial
+begin
+	instrucao[28] = 1'b0;
+end 
+// instrucao[ 27 ]
+initial
+begin
+	instrucao[27] = 1'b0;
+end 
+// instrucao[ 26 ]
+initial
+begin
+	instrucao[26] = 1'b0;
+end 
+// instrucao[ 25 ]
+initial
+begin
+	instrucao[25] = 1'b0;
+end 
+// instrucao[ 24 ]
+initial
+begin
+	instrucao[24] = 1'b0;
+end 
+// instrucao[ 23 ]
+initial
+begin
+	instrucao[23] = 1'b0;
+end 
+// instrucao[ 22 ]
+initial
+begin
+	instrucao[22] = 1'b0;
+end 
+// instrucao[ 21 ]
+initial
+begin
+	instrucao[21] = 1'b1;
+end 
+// instrucao[ 20 ]
+initial
+begin
+	instrucao[20] = 1'b0;
+end 
+// instrucao[ 19 ]
+initial
+begin
+	instrucao[19] = 1'b0;
+end 
+// instrucao[ 18 ]
+initial
+begin
+	instrucao[18] = 1'b0;
+end 
+// instrucao[ 17 ]
+initial
+begin
+	instrucao[17] = 1'b1;
+end 
+// instrucao[ 16 ]
+initial
+begin
+	instrucao[16] = 1'b0;
+end 
+// instrucao[ 15 ]
+initial
+begin
+	instrucao[15] = 1'b0;
+end 
+// instrucao[ 14 ]
+initial
+begin
+	instrucao[14] = 1'b0;
+end 
+// instrucao[ 13 ]
+initial
+begin
+	instrucao[13] = 1'b0;
+end 
+// instrucao[ 12 ]
+initial
+begin
+	instrucao[12] = 1'b0;
+end 
+// instrucao[ 11 ]
+initial
+begin
+	instrucao[11] = 1'b0;
+end 
+// instrucao[ 10 ]
+initial
+begin
+	instrucao[10] = 1'b0;
+end 
+// instrucao[ 9 ]
+initial
+begin
+	instrucao[9] = 1'b0;
+end 
+// instrucao[ 8 ]
+initial
+begin
+	instrucao[8] = 1'b0;
+end 
+// instrucao[ 7 ]
+initial
+begin
+	instrucao[7] = 1'b0;
+end 
+// instrucao[ 6 ]
+initial
+begin
+	instrucao[6] = 1'b0;
+end 
+// instrucao[ 5 ]
+initial
+begin
+	instrucao[5] = 1'b0;
+end 
+// instrucao[ 4 ]
+initial
+begin
+	instrucao[4] = 1'b0;
+end 
+// instrucao[ 3 ]
+initial
+begin
+	instrucao[3] = 1'b0;
+end 
+// instrucao[ 2 ]
+initial
+begin
+	instrucao[2] = 1'b0;
+end 
+// instrucao[ 1 ]
+initial
+begin
+	instrucao[1] = 1'b0;
+end 
+// instrucao[ 0 ]
+initial
+begin
+	instrucao[0] = 1'b0;
+end 
+// dados_escrita[ 31 ]
+initial
+begin
+	dados_escrita[31] = 1'b0;
+end 
+// dados_escrita[ 30 ]
+initial
+begin
+	dados_escrita[30] = 1'b0;
+end 
+// dados_escrita[ 29 ]
+initial
+begin
+	dados_escrita[29] = 1'b0;
+end 
+// dados_escrita[ 28 ]
+initial
+begin
+	dados_escrita[28] = 1'b0;
+end 
+// dados_escrita[ 27 ]
+initial
+begin
+	dados_escrita[27] = 1'b0;
+end 
+// dados_escrita[ 26 ]
+initial
+begin
+	dados_escrita[26] = 1'b0;
+end 
+// dados_escrita[ 25 ]
+initial
+begin
+	dados_escrita[25] = 1'b0;
+end 
+// dados_escrita[ 24 ]
+initial
+begin
+	dados_escrita[24] = 1'b0;
+end 
+// dados_escrita[ 23 ]
+initial
+begin
+	dados_escrita[23] = 1'b0;
+end 
+// dados_escrita[ 22 ]
+initial
+begin
+	dados_escrita[22] = 1'b0;
+end 
+// dados_escrita[ 21 ]
+initial
+begin
+	dados_escrita[21] = 1'b0;
+end 
+// dados_escrita[ 20 ]
+initial
+begin
+	dados_escrita[20] = 1'b0;
+end 
+// dados_escrita[ 19 ]
+initial
+begin
+	dados_escrita[19] = 1'b0;
+end 
+// dados_escrita[ 18 ]
+initial
+begin
+	dados_escrita[18] = 1'b0;
+end 
+// dados_escrita[ 17 ]
+initial
+begin
+	dados_escrita[17] = 1'b0;
+end 
+// dados_escrita[ 16 ]
+initial
+begin
+	dados_escrita[16] = 1'b0;
+end 
+// dados_escrita[ 15 ]
+initial
+begin
+	dados_escrita[15] = 1'b0;
+end 
+// dados_escrita[ 14 ]
+initial
+begin
+	dados_escrita[14] = 1'b0;
+end 
+// dados_escrita[ 13 ]
+initial
+begin
+	dados_escrita[13] = 1'b0;
+end 
+// dados_escrita[ 12 ]
+initial
+begin
+	dados_escrita[12] = 1'b0;
+end 
+// dados_escrita[ 11 ]
+initial
+begin
+	dados_escrita[11] = 1'b0;
+end 
+// dados_escrita[ 10 ]
+initial
+begin
+	dados_escrita[10] = 1'b0;
+end 
+// dados_escrita[ 9 ]
+initial
+begin
+	dados_escrita[9] = 1'b0;
+end 
+// dados_escrita[ 8 ]
+initial
+begin
+	dados_escrita[8] = 1'b0;
+end 
+// dados_escrita[ 7 ]
+initial
+begin
+	dados_escrita[7] = 1'b1;
+end 
+// dados_escrita[ 6 ]
+initial
+begin
+	dados_escrita[6] = 1'b1;
+end 
+// dados_escrita[ 5 ]
+initial
+begin
+	dados_escrita[5] = 1'b1;
+end 
+// dados_escrita[ 4 ]
+initial
+begin
+	dados_escrita[4] = 1'b1;
+end 
+// dados_escrita[ 3 ]
+initial
+begin
+	dados_escrita[3] = 1'b1;
+end 
+// dados_escrita[ 2 ]
+initial
+begin
+	dados_escrita[2] = 1'b1;
+end 
+// dados_escrita[ 1 ]
+initial
+begin
+	dados_escrita[1] = 1'b1;
+end 
+// dados_escrita[ 0 ]
+initial
+begin
+	dados_escrita[0] = 1'b1;
+end 
+
+// escreveReg
+initial
+begin
+	repeat(12)
+	begin
+		escreveReg = 1'b0;
+		escreveReg = #40000 1'b1;
+		# 40000;
+	end
+	escreveReg = 1'b0;
+end 
+
+// regDst
+initial
+begin
+	regDst = 1'b1;
+	# 60000;
+	repeat(7)
+	begin
+		regDst = 1'b0;
+		regDst = #60000 1'b1;
+		# 60000;
+	end
+	regDst = 1'b0;
+	regDst = #60000 1'b1;
+end 
+endmodule
+

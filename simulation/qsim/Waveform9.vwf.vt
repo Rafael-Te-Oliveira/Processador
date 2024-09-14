@@ -1,0 +1,689 @@
+// Copyright (C) 2018  Intel Corporation. All rights reserved.
+// Your use of Intel Corporation's design tools, logic functions 
+// and other software and tools, and its AMPP partner logic 
+// functions, and any output files from any of the foregoing 
+// (including device programming or simulation files), and any 
+// associated documentation or information are expressly subject 
+// to the terms and conditions of the Intel Program License 
+// Subscription Agreement, the Intel Quartus Prime License Agreement,
+// the Intel FPGA IP License Agreement, or other applicable license
+// agreement, including, without limitation, that your use is for
+// the sole purpose of programming logic devices manufactured by
+// Intel and sold by Intel or its authorized distributors.  Please
+// refer to the applicable agreement for further details.
+
+// *****************************************************************************
+// This file contains a Verilog test bench with test vectors .The test vectors  
+// are exported from a vector file in the Quartus Waveform Editor and apply to  
+// the top level entity of the current Quartus project .The user can use this   
+// testbench to simulate his design using a third-party simulation tool .       
+// *****************************************************************************
+// Generated on "07/11/2022 16:25:17"
+                                                                                
+// Verilog Test Bench (with test vectors) for design :                          ULA
+// 
+// Simulation tool : 3rd Party
+// 
+
+`timescale 1 ps/ 1 ps
+module ULA_vlg_vec_tst();
+// constants                                           
+// general purpose registers
+reg [31:0] X;
+reg [31:0] Y;
+reg [31:0] Z;
+reg origULA;
+reg [2:0] selec;
+// wires                                               
+wire negativo;
+wire [31:0] result;
+wire zero;
+
+// assign statements (if any)                          
+ULA i1 (
+// port map - connection between master ports and signals/registers   
+	.X(X),
+	.Y(Y),
+	.Z(Z),
+	.negativo(negativo),
+	.origULA(origULA),
+	.result(result),
+	.selec(selec),
+	.zero(zero)
+);
+initial 
+begin 
+#1000000 $finish;
+end 
+// X[ 31 ]
+initial
+begin
+	X[31] = 1'b0;
+end 
+// X[ 30 ]
+initial
+begin
+	X[30] = 1'b0;
+end 
+// X[ 29 ]
+initial
+begin
+	X[29] = 1'b0;
+end 
+// X[ 28 ]
+initial
+begin
+	X[28] = 1'b0;
+end 
+// X[ 27 ]
+initial
+begin
+	X[27] = 1'b0;
+end 
+// X[ 26 ]
+initial
+begin
+	X[26] = 1'b0;
+end 
+// X[ 25 ]
+initial
+begin
+	X[25] = 1'b0;
+end 
+// X[ 24 ]
+initial
+begin
+	X[24] = 1'b0;
+end 
+// X[ 23 ]
+initial
+begin
+	X[23] = 1'b0;
+end 
+// X[ 22 ]
+initial
+begin
+	X[22] = 1'b0;
+end 
+// X[ 21 ]
+initial
+begin
+	X[21] = 1'b0;
+end 
+// X[ 20 ]
+initial
+begin
+	X[20] = 1'b0;
+end 
+// X[ 19 ]
+initial
+begin
+	X[19] = 1'b0;
+end 
+// X[ 18 ]
+initial
+begin
+	X[18] = 1'b0;
+end 
+// X[ 17 ]
+initial
+begin
+	X[17] = 1'b0;
+end 
+// X[ 16 ]
+initial
+begin
+	X[16] = 1'b0;
+end 
+// X[ 15 ]
+initial
+begin
+	X[15] = 1'b0;
+end 
+// X[ 14 ]
+initial
+begin
+	X[14] = 1'b0;
+end 
+// X[ 13 ]
+initial
+begin
+	X[13] = 1'b0;
+end 
+// X[ 12 ]
+initial
+begin
+	X[12] = 1'b0;
+end 
+// X[ 11 ]
+initial
+begin
+	X[11] = 1'b0;
+end 
+// X[ 10 ]
+initial
+begin
+	X[10] = 1'b0;
+end 
+// X[ 9 ]
+initial
+begin
+	X[9] = 1'b0;
+end 
+// X[ 8 ]
+initial
+begin
+	X[8] = 1'b0;
+end 
+// X[ 7 ]
+initial
+begin
+	X[7] = 1'b0;
+end 
+// X[ 6 ]
+initial
+begin
+	X[6] = 1'b0;
+	X[6] = #640000 1'b1;
+end 
+// X[ 5 ]
+initial
+begin
+	X[5] = 1'b0;
+	X[5] = #320000 1'b1;
+	X[5] = #320000 1'b0;
+	X[5] = #320000 1'b1;
+end 
+// X[ 4 ]
+initial
+begin
+	repeat(3)
+	begin
+		X[4] = 1'b0;
+		X[4] = #160000 1'b1;
+		# 160000;
+	end
+	X[4] = 1'b0;
+end 
+// X[ 3 ]
+initial
+begin
+	repeat(6)
+	begin
+		X[3] = 1'b0;
+		X[3] = #80000 1'b1;
+		# 80000;
+	end
+	X[3] = 1'b0;
+end 
+// X[ 2 ]
+initial
+begin
+	repeat(12)
+	begin
+		X[2] = 1'b0;
+		X[2] = #40000 1'b1;
+		# 40000;
+	end
+	X[2] = 1'b0;
+end 
+// X[ 1 ]
+always
+begin
+	X[1] = 1'b0;
+	X[1] = #20000 1'b1;
+	#20000;
+end 
+// X[ 0 ]
+always
+begin
+	X[0] = 1'b0;
+	X[0] = #10000 1'b1;
+	#10000;
+end 
+// Y[ 31 ]
+initial
+begin
+	Y[31] = 1'b0;
+end 
+// Y[ 30 ]
+initial
+begin
+	Y[30] = 1'b0;
+end 
+// Y[ 29 ]
+initial
+begin
+	Y[29] = 1'b0;
+end 
+// Y[ 28 ]
+initial
+begin
+	Y[28] = 1'b0;
+end 
+// Y[ 27 ]
+initial
+begin
+	Y[27] = 1'b0;
+end 
+// Y[ 26 ]
+initial
+begin
+	Y[26] = 1'b0;
+end 
+// Y[ 25 ]
+initial
+begin
+	Y[25] = 1'b0;
+end 
+// Y[ 24 ]
+initial
+begin
+	Y[24] = 1'b0;
+end 
+// Y[ 23 ]
+initial
+begin
+	Y[23] = 1'b0;
+end 
+// Y[ 22 ]
+initial
+begin
+	Y[22] = 1'b0;
+end 
+// Y[ 21 ]
+initial
+begin
+	Y[21] = 1'b0;
+end 
+// Y[ 20 ]
+initial
+begin
+	Y[20] = 1'b0;
+end 
+// Y[ 19 ]
+initial
+begin
+	Y[19] = 1'b0;
+end 
+// Y[ 18 ]
+initial
+begin
+	Y[18] = 1'b0;
+end 
+// Y[ 17 ]
+initial
+begin
+	Y[17] = 1'b0;
+end 
+// Y[ 16 ]
+initial
+begin
+	Y[16] = 1'b0;
+end 
+// Y[ 15 ]
+initial
+begin
+	Y[15] = 1'b0;
+end 
+// Y[ 14 ]
+initial
+begin
+	Y[14] = 1'b0;
+end 
+// Y[ 13 ]
+initial
+begin
+	Y[13] = 1'b0;
+end 
+// Y[ 12 ]
+initial
+begin
+	Y[12] = 1'b0;
+end 
+// Y[ 11 ]
+initial
+begin
+	Y[11] = 1'b0;
+end 
+// Y[ 10 ]
+initial
+begin
+	Y[10] = 1'b0;
+end 
+// Y[ 9 ]
+initial
+begin
+	Y[9] = 1'b0;
+end 
+// Y[ 8 ]
+initial
+begin
+	Y[8] = 1'b0;
+end 
+// Y[ 7 ]
+initial
+begin
+	Y[7] = 1'b0;
+	Y[7] = #640000 1'b1;
+end 
+// Y[ 6 ]
+initial
+begin
+	Y[6] = 1'b0;
+	Y[6] = #320000 1'b1;
+	Y[6] = #320000 1'b0;
+	Y[6] = #320000 1'b1;
+end 
+// Y[ 5 ]
+initial
+begin
+	repeat(3)
+	begin
+		Y[5] = 1'b0;
+		Y[5] = #160000 1'b1;
+		# 160000;
+	end
+	Y[5] = 1'b0;
+end 
+// Y[ 4 ]
+initial
+begin
+	repeat(6)
+	begin
+		Y[4] = 1'b0;
+		Y[4] = #80000 1'b1;
+		# 80000;
+	end
+	Y[4] = 1'b0;
+end 
+// Y[ 3 ]
+initial
+begin
+	repeat(12)
+	begin
+		Y[3] = 1'b0;
+		Y[3] = #40000 1'b1;
+		# 40000;
+	end
+	Y[3] = 1'b0;
+end 
+// Y[ 2 ]
+always
+begin
+	Y[2] = 1'b0;
+	Y[2] = #20000 1'b1;
+	#20000;
+end 
+// Y[ 1 ]
+always
+begin
+	Y[1] = 1'b0;
+	Y[1] = #10000 1'b1;
+	#10000;
+end 
+// Y[ 0 ]
+initial
+begin
+	Y[0] = 1'b0;
+end 
+// Z[ 31 ]
+initial
+begin
+	Z[31] = 1'b0;
+end 
+// Z[ 30 ]
+initial
+begin
+	Z[30] = 1'b0;
+end 
+// Z[ 29 ]
+initial
+begin
+	Z[29] = 1'b0;
+end 
+// Z[ 28 ]
+initial
+begin
+	Z[28] = 1'b0;
+end 
+// Z[ 27 ]
+initial
+begin
+	Z[27] = 1'b0;
+end 
+// Z[ 26 ]
+initial
+begin
+	Z[26] = 1'b0;
+end 
+// Z[ 25 ]
+initial
+begin
+	Z[25] = 1'b0;
+end 
+// Z[ 24 ]
+initial
+begin
+	Z[24] = 1'b0;
+end 
+// Z[ 23 ]
+initial
+begin
+	Z[23] = 1'b0;
+end 
+// Z[ 22 ]
+initial
+begin
+	Z[22] = 1'b0;
+end 
+// Z[ 21 ]
+initial
+begin
+	Z[21] = 1'b0;
+end 
+// Z[ 20 ]
+initial
+begin
+	Z[20] = 1'b0;
+end 
+// Z[ 19 ]
+initial
+begin
+	Z[19] = 1'b0;
+end 
+// Z[ 18 ]
+initial
+begin
+	Z[18] = 1'b0;
+end 
+// Z[ 17 ]
+initial
+begin
+	Z[17] = 1'b0;
+end 
+// Z[ 16 ]
+initial
+begin
+	Z[16] = 1'b0;
+end 
+// Z[ 15 ]
+initial
+begin
+	Z[15] = 1'b0;
+end 
+// Z[ 14 ]
+initial
+begin
+	Z[14] = 1'b0;
+end 
+// Z[ 13 ]
+initial
+begin
+	Z[13] = 1'b0;
+end 
+// Z[ 12 ]
+initial
+begin
+	Z[12] = 1'b0;
+end 
+// Z[ 11 ]
+initial
+begin
+	Z[11] = 1'b0;
+end 
+// Z[ 10 ]
+initial
+begin
+	Z[10] = 1'b0;
+end 
+// Z[ 9 ]
+initial
+begin
+	Z[9] = 1'b0;
+end 
+// Z[ 8 ]
+initial
+begin
+	Z[8] = 1'b0;
+	Z[8] = #860000 1'b1;
+end 
+// Z[ 7 ]
+initial
+begin
+	Z[7] = 1'b0;
+	Z[7] = #430000 1'b1;
+	Z[7] = #430000 1'b0;
+end 
+// Z[ 6 ]
+initial
+begin
+	Z[6] = 1'b0;
+	Z[6] = #220000 1'b1;
+	Z[6] = #210000 1'b0;
+	Z[6] = #210000 1'b1;
+	Z[6] = #220000 1'b0;
+end 
+// Z[ 5 ]
+initial
+begin
+	Z[5] = 1'b0;
+	Z[5] = #110000 1'b1;
+	Z[5] = #110000 1'b0;
+	Z[5] = #100000 1'b1;
+	Z[5] = #110000 1'b0;
+	Z[5] = #110000 1'b1;
+	Z[5] = #100000 1'b0;
+	Z[5] = #110000 1'b1;
+	Z[5] = #110000 1'b0;
+	Z[5] = #100000 1'b1;
+end 
+// Z[ 4 ]
+initial
+begin
+	repeat(3)
+	begin
+		Z[4] = 1'b0;
+		Z[4] = #60000 1'b1;
+		Z[4] = #50000 1'b0;
+		Z[4] = #50000 1'b1;
+		Z[4] = #60000 1'b0;
+		Z[4] = #50000 1'b1;
+		# 50000;
+	end
+	Z[4] = 1'b0;
+end 
+// Z[ 3 ]
+initial
+begin
+	repeat(6)
+	begin
+		Z[3] = 1'b0;
+		Z[3] = #30000 1'b1;
+		Z[3] = #30000 1'b0;
+		Z[3] = #20000 1'b1;
+		Z[3] = #30000 1'b0;
+		Z[3] = #30000 1'b1;
+		# 20000;
+	end
+	Z[3] = 1'b0;
+	Z[3] = #30000 1'b1;
+end 
+// Z[ 2 ]
+initial
+begin
+	repeat(12)
+	begin
+		Z[2] = 1'b0;
+		Z[2] = #20000 1'b1;
+		Z[2] = #10000 1'b0;
+		Z[2] = #10000 1'b1;
+		Z[2] = #20000 1'b0;
+		Z[2] = #10000 1'b1;
+		# 10000;
+	end
+	Z[2] = 1'b0;
+	Z[2] = #20000 1'b1;
+	Z[2] = #10000 1'b0;
+end 
+// Z[ 1 ]
+initial
+begin
+	Z[1] = 1'b0;
+	# 10000;
+	repeat(24)
+	begin
+		Z[1] = 1'b1;
+		Z[1] = #20000 1'b0;
+		# 20000;
+	end
+	Z[1] = 1'b1;
+	Z[1] = #20000 1'b0;
+end 
+// Z[ 0 ]
+always
+begin
+	Z[0] = 1'b0;
+	Z[0] = #10000 1'b1;
+	#10000;
+end 
+
+// origULA
+initial
+begin
+	repeat(16)
+	begin
+		origULA = 1'b0;
+		origULA = #30000 1'b1;
+		# 30000;
+	end
+	origULA = 1'b0;
+	origULA = #30000 1'b1;
+end 
+// selec[ 2 ]
+initial
+begin
+	repeat(12)
+	begin
+		selec[2] = 1'b0;
+		selec[2] = #40000 1'b1;
+		# 40000;
+	end
+	selec[2] = 1'b0;
+end 
+// selec[ 1 ]
+always
+begin
+	selec[1] = 1'b0;
+	selec[1] = #20000 1'b1;
+	#20000;
+end 
+// selec[ 0 ]
+always
+begin
+	selec[0] = 1'b0;
+	selec[0] = #10000 1'b1;
+	#10000;
+end 
+endmodule
+

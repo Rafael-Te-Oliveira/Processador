@@ -1,0 +1,18 @@
+module dados_RAM (data, endereco, escreveMem, clock, saida);
+	
+	input [31:0] data;
+	input [10:0] endereco;
+	input escreveMem, clock;
+	output [31:0] saida;
+	
+	reg[31:0] dados_RAM[10:0];
+	
+	always @ (posedge clock) begin
+		if (escreveMem) begin
+			dados_RAM[endereco] = data;
+		end
+	end
+	
+	assign saida = dados_RAM[endereco];
+	
+endmodule;

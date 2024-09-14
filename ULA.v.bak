@@ -1,0 +1,19 @@
+module ULA (selec, X, Y, result, zero);
+
+input selec [2:0] selec;
+input [31:0] X, Y;
+output reg [31:0] result;
+output zero;
+
+always @(selec or X or Y) begin
+	case (selec[2:0])
+		3'b000: result = X;
+		3'b001: result = X + Y;
+		3'b010: result = X - Y;
+		3'b011: result = X & Y;
+		3'b100: result = X | Y;
+		3'b101: result = X >> 1;
+		3'b110: result = X << 1;
+		3'b111: result = -X;
+	endcase
+end

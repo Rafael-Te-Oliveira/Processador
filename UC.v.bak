@@ -1,0 +1,211 @@
+module UC (opcode, clock, regDst, jump, jr, branch, leMem, memReg, opULA, escreveMem, origULA, escreveReg);
+
+	input [5:0] opcode;
+	input clock;
+	input [5:0] funct;
+	
+	output reg [2:0] opULA;
+	output reg regDst;
+	output reg jump;
+	output reg jr;
+	output reg branch;
+	output reg leMem;
+	output reg memReg;
+	output reg escreveMem;
+	output reg origULA;
+	output reg escreveReg;
+	
+	always @ (posedge clock) begin
+		case(opcode)
+			6'b000000: begin
+				regDst =1'b ;
+				jump = 1'b ;
+				jr = 1'b ;
+				branch = 1'b ;
+				leMem = 1'b ;
+				memReg = 1'b ;
+				escreveMem = 1'b ;
+				origULA = 1'b ;
+				escreveReg = 1'b ;
+				opULA = 3'b   ;
+			end
+			6'b000000: begin
+				regDst =1'b ;
+				jump = 1'b ;
+				jr = 1'b ;
+				branch = 1'b ;
+				leMem = 1'b ;
+				memReg = 1'b ;
+				escreveMem = 1'b ;
+				origULA = 1'b ;
+				escreveReg = 1'b ;
+				opULA = 3'b   ;
+			end6'b000000: begin
+				regDst =1'b ;
+				jump = 1'b ;
+				jr = 1'b ;
+				branch = 1'b ;
+				leMem = 1'b ;
+				memReg = 1'b ;
+				escreveMem = 1'b ;
+				origULA = 1'b ;
+				escreveReg = 1'b ;
+				opULA = 3'b   ;
+			end6'b000000: begin
+				regDst =1'b ;
+				jump = 1'b ;
+				jr = 1'b ;
+				branch = 1'b ;
+				leMem = 1'b ;
+				memReg = 1'b ;
+				escreveMem = 1'b ;
+				origULA = 1'b ;
+				escreveReg = 1'b ;
+				opULA = 3'b   ;
+			end6'b000000: begin
+				regDst =1'b ;
+				jump = 1'b ;
+				jr = 1'b ;
+				branch = 1'b ;
+				leMem = 1'b ;
+				memReg = 1'b ;
+				escreveMem = 1'b ;
+				origULA = 1'b ;
+				escreveReg = 1'b ;
+				opULA = 3'b   ;
+			end6'b000000: begin
+				regDst =1'b ;
+				jump = 1'b ;
+				jr = 1'b ;
+				branch = 1'b ;
+				leMem = 1'b ;
+				memReg = 1'b ;
+				escreveMem = 1'b ;
+				origULA = 1'b ;
+				escreveReg = 1'b ;
+				opULA = 3'b   ;
+			end6'b000000: begin
+				regDst =1'b ;
+				jump = 1'b ;
+				jr = 1'b ;
+				branch = 1'b ;
+				leMem = 1'b ;
+				memReg = 1'b ;
+				escreveMem = 1'b ;
+				origULA = 1'b ;
+				escreveReg = 1'b ;
+				opULA = 3'b   ;
+			end6'b000000: begin
+				regDst =1'b ;
+				jump = 1'b ;
+				jr = 1'b ;
+				branch = 1'b ;
+				leMem = 1'b ;
+				memReg = 1'b ;
+				escreveMem = 1'b ;
+				origULA = 1'b ;
+				escreveReg = 1'b ;
+				opULA = 3'b   ;
+			end6'b000000: begin
+				regDst =1'b ;
+				jump = 1'b ;
+				jr = 1'b ;
+				branch = 1'b ;
+				leMem = 1'b ;
+				memReg = 1'b ;
+				escreveMem = 1'b ;
+				origULA = 1'b ;
+				escreveReg = 1'b ;
+				opULA = 3'b   ;
+			end6'b000000: begin
+				regDst =1'b ;
+				jump = 1'b ;
+				jr = 1'b ;
+				branch = 1'b ;
+				leMem = 1'b ;
+				memReg = 1'b ;
+				escreveMem = 1'b ;
+				origULA = 1'b ;
+				escreveReg = 1'b ;
+				opULA = 3'b   ;
+			end6'b000000: begin
+				regDst =1'b ;
+				jump = 1'b ;
+				jr = 1'b ;
+				branch = 1'b ;
+				leMem = 1'b ;
+				memReg = 1'b ;
+				escreveMem = 1'b ;
+				origULA = 1'b ;
+				escreveReg = 1'b ;
+				opULA = 3'b   ;
+			end6'b000000: begin
+				regDst =1'b ;
+				jump = 1'b ;
+				jr = 1'b ;
+				branch = 1'b ;
+				leMem = 1'b ;
+				memReg = 1'b ;
+				escreveMem = 1'b ;
+				origULA = 1'b ;
+				escreveReg = 1'b ;
+				opULA = 3'b   ;
+			end6'b000000: begin
+				regDst =1'b ;
+				jump = 1'b ;
+				jr = 1'b ;
+				branch = 1'b ;
+				leMem = 1'b ;
+				memReg = 1'b ;
+				escreveMem = 1'b ;
+				origULA = 1'b ;
+				escreveReg = 1'b ;
+				opULA = 3'b   ;
+			end6'b000000: begin
+				regDst =1'b ;
+				jump = 1'b ;
+				jr = 1'b ;
+				branch = 1'b ;
+				leMem = 1'b ;
+				memReg = 1'b ;
+				escreveMem = 1'b ;
+				origULA = 1'b ;
+				escreveReg = 1'b ;
+				opULA = 3'b   ;
+			end6'b000000: begin
+				regDst =1'b ;
+				jump = 1'b ;
+				jr = 1'b ;
+				branch = 1'b ;
+				leMem = 1'b ;
+				memReg = 1'b ;
+				escreveMem = 1'b ;
+				origULA = 1'b ;
+				escreveReg = 1'b ;
+				opULA = 3'b   ;
+			end6'b000000: begin
+				regDst =1'b ;
+				jump = 1'b ;
+				jr = 1'b ;
+				branch = 1'b ;
+				leMem = 1'b ;
+				memReg = 1'b ;
+				escreveMem = 1'b ;
+				origULA = 1'b ;
+				escreveReg = 1'b ;
+				opULA = 3'b   ;
+			end6'b000000: begin
+				regDst =1'b ;
+				jump = 1'b ;
+				jr = 1'b ;
+				branch = 1'b ;
+				leMem = 1'b ;
+				memReg = 1'b ;
+				escreveMem = 1'b ;
+				origULA = 1'b ;
+				escreveReg = 1'b ;
+				opULA = 3'b   ;
+			end
+		end
+	end
+endmodule

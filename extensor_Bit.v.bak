@@ -1,0 +1,9 @@
+module extensor_Bit(entrada, saida);
+	input[16:0] entrada;
+	output reg[31:0] saida;
+	
+	always @(*) begin
+		saida = entrada;
+		if(entrada[16] == 1'b1) saida = saida + 32'b11111111111111100000000000000000;
+	end
+endmodule 

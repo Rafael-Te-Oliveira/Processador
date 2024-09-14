@@ -1,0 +1,21 @@
+module instrucoes_RAM (endereco, clock, saida)
+
+	input [15:0] endereco;
+	input clock;
+	output [31:0] saida;
+	
+	reg [31:0] inst_ram[15:0];
+	
+	inst_ram[0] = 32'b001010 00000 00000 0000000000000000; // load 1 to rt[0]
+	inst_ram[1] = 32'b001010 00001 00000 0000000000000001; // load 6 to rt[1] 
+	inst_ram[2] = 32'b000000 00000 00001 00010 00000 000001; // rd[2] = rs[0] + rt[1] = 7
+	inst_ram[3] = 32'b000000 00000000000000000000000000;
+	inst_ram[4] = 32'b000000 00000000000000000000000000;
+	inst_ram[5] = 32'b000000 00000000000000000000000000;
+	inst_ram[6] = 32'b000000 00000000000000000000000000;
+	inst_ram[7] = 32'b000000 00000000000000000000000000;
+	inst_ram[8] = 32'b000000 00000000000000000000000000;	
+	
+	assign saida = inst_ram[endereco];
+
+endmodule

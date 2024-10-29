@@ -50,9 +50,9 @@ module teste (clock, enter,reset, entrada, seg0, seg1, seg2, seg3, seg4, seg5, s
 	
 	PC PC(imediato, result, desvio, zero, negativo, divclock, endereco, stop, reset);
 	
-	entradaDados(divclock, entrada, in, enter, sinal, valor);
+	entradaDados(divclock, entrada, in, out, enter, sinal, valor);
 	
-	instrucoes_RAM INST(endereco, instrucao);
+	instrucoes_RAM INST(endereco, instrucao,  clock , divclock);
 	
 	UC UC(instrucao, divclock, sinal, desvio, memReg, opULA, escreveMem, origULA, escreveReg, ext, out, in, stop, jal);
 	
@@ -64,7 +64,9 @@ module teste (clock, enter,reset, entrada, seg0, seg1, seg2, seg3, seg4, seg5, s
 	
 	ULA ULA (selec, leRS, leRT, leRD, imediato, origULA, result, zero, negativo);
 	
-	dados_RAM DADO(result, leRS, escreveMem, divclock, dadosLidos);
+	dados_RAM DADO(leRS, result, result, escreveMem, clock , divclock, dadosLidos);
+	
+	//dados_RAM DADO(result, leRS, escreveMem, divclock, dadosLidos);
 	
 	mux_Mem MUX(dadosLidos, result, memReg, dados);
 	

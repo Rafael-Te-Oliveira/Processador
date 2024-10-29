@@ -1,8 +1,8 @@
-module entradaDados(clock, entrada, in, enter, sinal, valor);
+module entradaDados(clock, entrada, in, out, enter, sinal, valor);
 
 	input[17:0] entrada;
 	input clock;
-	input in;
+	input in, out;
 	input enter;
 	
 	integer controle=0;
@@ -14,6 +14,10 @@ module entradaDados(clock, entrada, in, enter, sinal, valor);
 				sinal = 1'b0;
 				if(in && !controle && !enter)begin
 					valor = entrada;
+					sinal = !enter;
+					controle = 1;
+				end
+				if(out && !controle && !enter)begin
 					sinal = !enter;
 					controle = 1;
 				end

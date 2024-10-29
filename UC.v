@@ -100,7 +100,10 @@ module UC (instrucao, clock, sinal, desvio, memReg, opULA, escreveMem, origULA, 
 				jal = 1'b1;
 				end
 			6'b001110: begin //out
-				out = 1'b1;
+				if(!sinal)begin
+					stop = 1'b1;
+					out = 1'b1;
+					end
 				end
 			6'b001111: begin //in
 				escreveReg = 1'b1;

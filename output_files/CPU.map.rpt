@@ -1,5 +1,5 @@
 Analysis & Synthesis report for CPU
-Tue Oct 29 17:16:14 2024
+Tue Oct 29 18:12:32 2024
 Quartus Prime Version 17.1.0 Build 590 10/25/2017 SJ Lite Edition
 
 
@@ -60,7 +60,7 @@ refer to the applicable agreement for further details.
 +----------------------------------------------------------------------------------+
 ; Analysis & Synthesis Summary                                                     ;
 +------------------------------------+---------------------------------------------+
-; Analysis & Synthesis Status        ; Successful - Tue Oct 29 17:16:13 2024       ;
+; Analysis & Synthesis Status        ; Successful - Tue Oct 29 18:12:31 2024       ;
 ; Quartus Prime Version              ; 17.1.0 Build 590 10/25/2017 SJ Lite Edition ;
 ; Revision Name                      ; CPU                                         ;
 ; Top-level Entity Name              ; teste                                       ;
@@ -219,7 +219,7 @@ refer to the applicable agreement for further details.
 ; altdpram.inc                                ; yes             ; Megafunction                                          ; c:/intelfpga_lite/17.1/quartus/libraries/megafunctions/altdpram.inc                                           ;         ;
 ; db/altsyncram_09d1.tdf                      ; yes             ; Auto-Generated Megafunction                           ; C:/Users/rafae/OneDrive/Documents/Workspace/Faculdade/Processador/db/altsyncram_09d1.tdf                      ;         ;
 ; db/altsyncram_5c71.tdf                      ; yes             ; Auto-Generated Megafunction                           ; C:/Users/rafae/OneDrive/Documents/Workspace/Faculdade/Processador/db/altsyncram_5c71.tdf                      ;         ;
-; db/cpu.ram0_instrucoes_ram_436a63f4.hdl.mif ; yes             ; Auto-Generated Auto-Found Memory Initialization File  ; C:/Users/rafae/OneDrive/Documents/Workspace/Faculdade/Processador/db/cpu.ram0_instrucoes_ram_436a63f4.hdl.mif ;         ;
+; db/CPU.ram0_instrucoes_RAM_436a63f4.hdl.mif ; yes             ; Auto-Generated Auto-Found Memory Initialization File  ; C:/Users/rafae/OneDrive/Documents/Workspace/Faculdade/Processador/db/CPU.ram0_instrucoes_RAM_436a63f4.hdl.mif ;         ;
 ; lpm_mult.tdf                                ; yes             ; Megafunction                                          ; c:/intelfpga_lite/17.1/quartus/libraries/megafunctions/lpm_mult.tdf                                           ;         ;
 ; lpm_add_sub.inc                             ; yes             ; Megafunction                                          ; c:/intelfpga_lite/17.1/quartus/libraries/megafunctions/lpm_add_sub.inc                                        ;         ;
 ; multcore.inc                                ; yes             ; Megafunction                                          ; c:/intelfpga_lite/17.1/quartus/libraries/megafunctions/multcore.inc                                           ;         ;
@@ -818,7 +818,7 @@ Note: In order to hide this table in the UI and the text report file, please set
 +----------------+--------------+
 ; Partition Name ; Elapsed Time ;
 +----------------+--------------+
-; Top            ; 00:00:07     ;
+; Top            ; 00:00:08     ;
 +----------------+--------------+
 
 
@@ -828,7 +828,7 @@ Note: In order to hide this table in the UI and the text report file, please set
 Info: *******************************************************************
 Info: Running Quartus Prime Analysis & Synthesis
     Info: Version 17.1.0 Build 590 10/25/2017 SJ Lite Edition
-    Info: Processing started: Tue Oct 29 17:15:56 2024
+    Info: Processing started: Tue Oct 29 18:12:13 2024
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off CPU -c CPU
 Info (20030): Parallel compilation is enabled and will use 12 of the 12 processors detected
 Info (12021): Found 1 design units, including 1 entities, in source file ula.v
@@ -870,7 +870,7 @@ Warning (10230): Verilog HDL assignment warning at contato1.v(19): truncated val
 Info (12128): Elaborating entity "PC" for hierarchy "PC:PC" File: C:/Users/rafae/OneDrive/Documents/Workspace/Faculdade/Processador/teste.v Line: 51
 Info (12128): Elaborating entity "entradaDados" for hierarchy "entradaDados:comb_3" File: C:/Users/rafae/OneDrive/Documents/Workspace/Faculdade/Processador/teste.v Line: 53
 Info (12128): Elaborating entity "instrucoes_RAM" for hierarchy "instrucoes_RAM:INST" File: C:/Users/rafae/OneDrive/Documents/Workspace/Faculdade/Processador/teste.v Line: 55
-Warning (10850): Verilog HDL warning at instrucoes_RAM.v(14): number of words (34) in memory file does not match the number of elements in the address range [0:2047] File: C:/Users/rafae/OneDrive/Documents/Workspace/Faculdade/Processador/instrucoes_RAM.v Line: 14
+Warning (10850): Verilog HDL warning at instrucoes_RAM.v(14): number of words (20) in memory file does not match the number of elements in the address range [0:2047] File: C:/Users/rafae/OneDrive/Documents/Workspace/Faculdade/Processador/instrucoes_RAM.v Line: 14
 Warning (10030): Net "inst_ram.data_a" at instrucoes_RAM.v(10) has no driver or initial value, using a default initial value '0' File: C:/Users/rafae/OneDrive/Documents/Workspace/Faculdade/Processador/instrucoes_RAM.v Line: 10
 Warning (10030): Net "inst_ram.waddr_a" at instrucoes_RAM.v(10) has no driver or initial value, using a default initial value '0' File: C:/Users/rafae/OneDrive/Documents/Workspace/Faculdade/Processador/instrucoes_RAM.v Line: 10
 Warning (10030): Net "inst_ram.we_a" at instrucoes_RAM.v(10) has no driver or initial value, using a default initial value '0' File: C:/Users/rafae/OneDrive/Documents/Workspace/Faculdade/Processador/instrucoes_RAM.v Line: 10
@@ -1080,6 +1080,8 @@ Info (12133): Instantiated megafunction "instrucoes_RAM:INST|altsyncram:inst_ram
     Info (12134): Parameter "INIT_FILE" = "db/CPU.ram0_instrucoes_RAM_436a63f4.hdl.mif"
 Info (12021): Found 1 design units, including 1 entities, in source file db/altsyncram_5c71.tdf
     Info (12023): Found entity 1: altsyncram_5c71 File: C:/Users/rafae/OneDrive/Documents/Workspace/Faculdade/Processador/db/altsyncram_5c71.tdf Line: 27
+Warning (127007): Memory Initialization File or Hexadecimal (Intel-Format) File "C:/Users/rafae/OneDrive/Documents/Workspace/Faculdade/Processador/db/CPU.ram0_instrucoes_RAM_436a63f4.hdl.mif" contains "don't care" values -- overwriting them with 0s File: c:/intelfpga_lite/17.1/quartus/libraries/megafunctions/altsyncram.tdf Line: 791
+Warning (127007): Memory Initialization File or Hexadecimal (Intel-Format) File "C:/Users/rafae/OneDrive/Documents/Workspace/Faculdade/Processador/db/CPU.ram0_instrucoes_RAM_436a63f4.hdl.mif" contains "don't care" values -- overwriting them with 0s File: c:/intelfpga_lite/17.1/quartus/libraries/megafunctions/altsyncram.tdf Line: 791
 Info (12130): Elaborated megafunction instantiation "ULA:ULA|lpm_mult:Mult0" File: C:/Users/rafae/OneDrive/Documents/Workspace/Faculdade/Processador/ULA.v Line: 16
 Info (12133): Instantiated megafunction "ULA:ULA|lpm_mult:Mult0" with the following parameter: File: C:/Users/rafae/OneDrive/Documents/Workspace/Faculdade/Processador/ULA.v Line: 16
     Info (12134): Parameter "LPM_WIDTHA" = "32"
@@ -1253,10 +1255,10 @@ Info (21057): Implemented 5735 device resources after synthesis - the final reso
     Info (21061): Implemented 5584 logic cells
     Info (21064): Implemented 64 RAM segments
     Info (21062): Implemented 6 DSP elements
-Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 169 warnings
-    Info: Peak virtual memory: 4883 megabytes
-    Info: Processing ended: Tue Oct 29 17:16:14 2024
-    Info: Elapsed time: 00:00:18
-    Info: Total CPU time (on all processors): 00:00:11
+Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 171 warnings
+    Info: Peak virtual memory: 4886 megabytes
+    Info: Processing ended: Tue Oct 29 18:12:32 2024
+    Info: Elapsed time: 00:00:19
+    Info: Total CPU time (on all processors): 00:00:10
 
 

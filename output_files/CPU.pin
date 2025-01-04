@@ -540,13 +540,13 @@ RESERVED_INPUT               : J25       :        :                   :         
 RESERVED_INPUT               : J26       :        :                   :         : 6         :                
 GND+                         : J27       :        :                   :         : 6         :                
 GND+                         : J28       :        :                   :         : 6         :                
-RESERVED_INPUT               : K1        :        :                   :         : 1         :                
-RESERVED_INPUT               : K2        :        :                   :         : 1         :                
+LCD_DATA[4]                  : K1        : bidir  : 2.5 V             :         : 1         : Y              
+LCD_DATA[5]                  : K2        : bidir  : 2.5 V             :         : 1         : Y              
 RESERVED_INPUT               : K3        :        :                   :         : 1         :                
 RESERVED_INPUT               : K4        :        :                   :         : 1         :                
 VCCIO1                       : K5        : power  :                   : 2.5V    : 1         :                
 GND                          : K6        : gnd    :                   :         :           :                
-RESERVED_INPUT               : K7        :        :                   :         : 1         :                
+LCD_DATA[3]                  : K7        : bidir  : 2.5 V             :         : 1         : Y              
 RESERVED_INPUT               : K8        :        :                   :         : 1         :                
 VCCINT                       : K9        : power  :                   : 1.2V    :           :                
 GND                          : K10       : gnd    :                   :         :           :                
@@ -568,12 +568,12 @@ RESERVED_INPUT               : K25       :        :                   :         
 RESERVED_INPUT               : K26       :        :                   :         : 6         :                
 RESERVED_INPUT               : K27       :        :                   :         : 6         :                
 RESERVED_INPUT               : K28       :        :                   :         : 6         :                
-RESERVED_INPUT               : L1        :        :                   :         : 1         :                
-RESERVED_INPUT               : L2        :        :                   :         : 1         :                
-RESERVED_INPUT               : L3        :        :                   :         : 1         :                
-RESERVED_INPUT               : L4        :        :                   :         : 1         :                
-RESERVED_INPUT               : L5        :        :                   :         : 1         :                
-RESERVED_INPUT               : L6        :        :                   :         : 1         :                
+LCD_DATA[1]                  : L1        : bidir  : 2.5 V             :         : 1         : Y              
+LCD_DATA[2]                  : L2        : bidir  : 2.5 V             :         : 1         : Y              
+LCD_DATA[0]                  : L3        : bidir  : 2.5 V             :         : 1         : Y              
+LCD_EN                       : L4        : output : 2.5 V             :         : 1         : Y              
+LCD_ON                       : L5        : output : 2.5 V             :         : 1         : Y              
+LCD_BLON                     : L6        : output : 2.5 V             :         : 1         : Y              
 RESERVED_INPUT               : L7        :        :                   :         : 1         :                
 RESERVED_INPUT               : L8        :        :                   :         : 1         :                
 GND                          : L9        : gnd    :                   :         :           :                
@@ -596,11 +596,11 @@ seg0[4]                      : L25       : output : 2.5 V             :         
 seg0[3]                      : L26       : output : 2.5 V             :         : 6         : Y              
 RESERVED_INPUT               : L27       :        :                   :         : 6         :                
 RESERVED_INPUT               : L28       :        :                   :         : 6         :                
-RESERVED_INPUT               : M1        :        :                   :         : 1         :                
-RESERVED_INPUT               : M2        :        :                   :         : 1         :                
-RESERVED_INPUT               : M3        :        :                   :         : 1         :                
+LCD_RW                       : M1        : output : 2.5 V             :         : 1         : Y              
+LCD_RS                       : M2        : output : 2.5 V             :         : 1         : Y              
+LCD_DATA[6]                  : M3        : bidir  : 2.5 V             :         : 1         : Y              
 RESERVED_INPUT               : M4        :        :                   :         : 1         :                
-RESERVED_INPUT               : M5        :        :                   :         : 1         :                
+LCD_DATA[7]                  : M5        : bidir  : 2.5 V             :         : 1         : Y              
 nSTATUS                      : M6        :        :                   :         : 1         :                
 RESERVED_INPUT               : M7        :        :                   :         : 1         :                
 RESERVED_INPUT               : M8        :        :                   :         : 1         :                

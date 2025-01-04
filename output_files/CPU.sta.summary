@@ -3,99 +3,99 @@ TimeQuest Timing Analyzer Summary
 ------------------------------------------------------------
 
 Type  : Slow 1200mV 85C Model Setup 'controle_ULA:cULA|selec[0]'
-Slack : -134.404
-TNS   : -2316.617
+Slack : -138.069
+TNS   : -2332.514
 
-Type  : Slow 1200mV 85C Model Setup 'entradaDados:comb_3|sinal'
-Slack : -133.738
-TNS   : -2574.340
+Type  : Slow 1200mV 85C Model Setup 'entradaDados:comb_5|sinal'
+Slack : -137.643
+TNS   : -2569.016
 
 Type  : Slow 1200mV 85C Model Setup 'contato1:C1|count[5]'
-Slack : -36.347
-TNS   : -12490.691
+Slack : -37.391
+TNS   : -12899.974
 
 Type  : Slow 1200mV 85C Model Setup 'instrucoes_RAM:INST|altsyncram:inst_ram_rtl_0|altsyncram_5c71:auto_generated|ram_block1a0~porta_address_reg0'
-Slack : -9.442
-TNS   : -22.347
+Slack : -8.878
+TNS   : -22.411
 
 Type  : Slow 1200mV 85C Model Setup 'clock'
-Slack : -4.785
-TNS   : -122.312
+Slack : -3.501
+TNS   : -81.520
 
-Type  : Slow 1200mV 85C Model Hold 'entradaDados:comb_3|sinal'
-Slack : -1.478
-TNS   : -1.779
+Type  : Slow 1200mV 85C Model Hold 'entradaDados:comb_5|sinal'
+Slack : -0.751
+TNS   : -1.318
+
+Type  : Slow 1200mV 85C Model Hold 'controle_ULA:cULA|selec[0]'
+Slack : 0.174
+TNS   : 0.000
 
 Type  : Slow 1200mV 85C Model Hold 'contato1:C1|count[5]'
-Slack : 0.404
+Slack : 0.402
 TNS   : 0.000
 
 Type  : Slow 1200mV 85C Model Hold 'clock'
-Slack : 0.409
+Slack : 0.408
 TNS   : 0.000
 
 Type  : Slow 1200mV 85C Model Hold 'instrucoes_RAM:INST|altsyncram:inst_ram_rtl_0|altsyncram_5c71:auto_generated|ram_block1a0~porta_address_reg0'
-Slack : 0.460
-TNS   : 0.000
-
-Type  : Slow 1200mV 85C Model Hold 'controle_ULA:cULA|selec[0]'
-Slack : 1.162
+Slack : 0.673
 TNS   : 0.000
 
 Type  : Slow 1200mV 85C Model Recovery 'instrucoes_RAM:INST|altsyncram:inst_ram_rtl_0|altsyncram_5c71:auto_generated|ram_block1a0~porta_address_reg0'
-Slack : -8.242
-TNS   : -8.242
+Slack : -8.771
+TNS   : -8.771
 
 Type  : Slow 1200mV 85C Model Removal 'instrucoes_RAM:INST|altsyncram:inst_ram_rtl_0|altsyncram_5c71:auto_generated|ram_block1a0~porta_address_reg0'
-Slack : 1.471
+Slack : 0.719
 TNS   : 0.000
 
 Type  : Slow 1200mV 85C Model Minimum Pulse Width 'clock'
 Slack : -3.000
-TNS   : -84.761
+TNS   : -65.910
 
 Type  : Slow 1200mV 85C Model Minimum Pulse Width 'contato1:C1|count[5]'
 Slack : -2.693
-TNS   : -1489.697
+TNS   : -1433.144
 
-Type  : Slow 1200mV 85C Model Minimum Pulse Width 'entradaDados:comb_3|sinal'
-Slack : 0.421
+Type  : Slow 1200mV 85C Model Minimum Pulse Width 'entradaDados:comb_5|sinal'
+Slack : 0.399
 TNS   : 0.000
 
 Type  : Slow 1200mV 85C Model Minimum Pulse Width 'controle_ULA:cULA|selec[0]'
-Slack : 0.452
+Slack : 0.455
 TNS   : 0.000
 
 Type  : Slow 1200mV 85C Model Minimum Pulse Width 'instrucoes_RAM:INST|altsyncram:inst_ram_rtl_0|altsyncram_5c71:auto_generated|ram_block1a0~porta_address_reg0'
-Slack : 0.452
+Slack : 0.464
 TNS   : 0.000
 
 Type  : Slow 1200mV 0C Model Setup 'controle_ULA:cULA|selec[0]'
-Slack : -121.290
-TNS   : -2101.503
+Slack : -124.535
+TNS   : -2113.179
 
-Type  : Slow 1200mV 0C Model Setup 'entradaDados:comb_3|sinal'
-Slack : -120.672
-TNS   : -2337.209
+Type  : Slow 1200mV 0C Model Setup 'entradaDados:comb_5|sinal'
+Slack : -124.157
+TNS   : -2330.623
 
 Type  : Slow 1200mV 0C Model Setup 'contato1:C1|count[5]'
-Slack : -33.105
-TNS   : -11366.647
+Slack : -34.178
+TNS   : -11899.482
 
 Type  : Slow 1200mV 0C Model Setup 'instrucoes_RAM:INST|altsyncram:inst_ram_rtl_0|altsyncram_5c71:auto_generated|ram_block1a0~porta_address_reg0'
-Slack : -8.676
-TNS   : -20.446
+Slack : -8.062
+TNS   : -20.252
 
 Type  : Slow 1200mV 0C Model Setup 'clock'
-Slack : -4.280
-TNS   : -106.910
+Slack : -3.097
+TNS   : -70.161
 
-Type  : Slow 1200mV 0C Model Hold 'entradaDados:comb_3|sinal'
-Slack : -1.405
-TNS   : -1.728
+Type  : Slow 1200mV 0C Model Hold 'entradaDados:comb_5|sinal'
+Slack : -0.695
+TNS   : -1.115
 
-Type  : Slow 1200mV 0C Model Hold 'instrucoes_RAM:INST|altsyncram:inst_ram_rtl_0|altsyncram_5c71:auto_generated|ram_block1a0~porta_address_reg0'
-Slack : 0.320
+Type  : Slow 1200mV 0C Model Hold 'controle_ULA:cULA|selec[0]'
+Slack : 0.246
 TNS   : 0.000
 
 Type  : Slow 1200mV 0C Model Hold 'contato1:C1|count[5]'
@@ -103,71 +103,71 @@ Slack : 0.354
 TNS   : 0.000
 
 Type  : Slow 1200mV 0C Model Hold 'clock'
-Slack : 0.366
+Slack : 0.365
 TNS   : 0.000
 
-Type  : Slow 1200mV 0C Model Hold 'controle_ULA:cULA|selec[0]'
-Slack : 1.031
+Type  : Slow 1200mV 0C Model Hold 'instrucoes_RAM:INST|altsyncram:inst_ram_rtl_0|altsyncram_5c71:auto_generated|ram_block1a0~porta_address_reg0'
+Slack : 0.522
 TNS   : 0.000
 
 Type  : Slow 1200mV 0C Model Recovery 'instrucoes_RAM:INST|altsyncram:inst_ram_rtl_0|altsyncram_5c71:auto_generated|ram_block1a0~porta_address_reg0'
-Slack : -7.570
-TNS   : -7.570
+Slack : -7.972
+TNS   : -7.972
 
 Type  : Slow 1200mV 0C Model Removal 'instrucoes_RAM:INST|altsyncram:inst_ram_rtl_0|altsyncram_5c71:auto_generated|ram_block1a0~porta_address_reg0'
-Slack : 1.276
+Slack : 0.743
 TNS   : 0.000
 
 Type  : Slow 1200mV 0C Model Minimum Pulse Width 'clock'
 Slack : -3.000
-TNS   : -84.013
+TNS   : -65.496
 
 Type  : Slow 1200mV 0C Model Minimum Pulse Width 'contato1:C1|count[5]'
 Slack : -2.649
-TNS   : -1488.641
+TNS   : -1433.012
 
-Type  : Slow 1200mV 0C Model Minimum Pulse Width 'entradaDados:comb_3|sinal'
-Slack : 0.370
+Type  : Slow 1200mV 0C Model Minimum Pulse Width 'entradaDados:comb_5|sinal'
+Slack : 0.345
 TNS   : 0.000
 
 Type  : Slow 1200mV 0C Model Minimum Pulse Width 'instrucoes_RAM:INST|altsyncram:inst_ram_rtl_0|altsyncram_5c71:auto_generated|ram_block1a0~porta_address_reg0'
-Slack : 0.396
+Slack : 0.373
 TNS   : 0.000
 
 Type  : Slow 1200mV 0C Model Minimum Pulse Width 'controle_ULA:cULA|selec[0]'
-Slack : 0.441
+Slack : 0.417
 TNS   : 0.000
 
 Type  : Fast 1200mV 0C Model Setup 'controle_ULA:cULA|selec[0]'
-Slack : -66.195
-TNS   : -1129.746
+Slack : -68.097
+TNS   : -1134.626
 
-Type  : Fast 1200mV 0C Model Setup 'entradaDados:comb_3|sinal'
-Slack : -65.888
-TNS   : -1251.744
+Type  : Fast 1200mV 0C Model Setup 'entradaDados:comb_5|sinal'
+Slack : -67.890
+TNS   : -1234.040
 
 Type  : Fast 1200mV 0C Model Setup 'contato1:C1|count[5]'
-Slack : -17.524
-TNS   : -5588.029
+Slack : -18.035
+TNS   : -5901.666
 
 Type  : Fast 1200mV 0C Model Setup 'instrucoes_RAM:INST|altsyncram:inst_ram_rtl_0|altsyncram_5c71:auto_generated|ram_block1a0~porta_address_reg0'
-Slack : -4.753
-TNS   : -10.887
+Slack : -4.331
+TNS   : -10.715
 
 Type  : Fast 1200mV 0C Model Setup 'clock'
-Slack : -2.044
-TNS   : -50.866
+Slack : -1.379
+TNS   : -31.645
 
-Type  : Fast 1200mV 0C Model Hold 'entradaDados:comb_3|sinal'
-Slack : -1.182
-TNS   : -1.948
+Type  : Fast 1200mV 0C Model Hold 'entradaDados:comb_5|sinal'
+Slack : -0.913
+TNS   : -2.223
 
 Type  : Fast 1200mV 0C Model Hold 'controle_ULA:cULA|selec[0]'
-Slack : -0.008
-TNS   : -0.008
+Slack : -0.273
+TNS   : -0.273
 
 Type  : Fast 1200mV 0C Model Hold 'contato1:C1|count[5]'
-Slack : 0.085
+Slack : 0.102
 TNS   : 0.000
 
 Type  : Fast 1200mV 0C Model Hold 'clock'
@@ -175,35 +175,35 @@ Slack : 0.189
 TNS   : 0.000
 
 Type  : Fast 1200mV 0C Model Hold 'instrucoes_RAM:INST|altsyncram:inst_ram_rtl_0|altsyncram_5c71:auto_generated|ram_block1a0~porta_address_reg0'
-Slack : 0.206
+Slack : 0.334
 TNS   : 0.000
 
 Type  : Fast 1200mV 0C Model Recovery 'instrucoes_RAM:INST|altsyncram:inst_ram_rtl_0|altsyncram_5c71:auto_generated|ram_block1a0~porta_address_reg0'
-Slack : -4.078
-TNS   : -4.078
+Slack : -4.292
+TNS   : -4.292
 
 Type  : Fast 1200mV 0C Model Removal 'instrucoes_RAM:INST|altsyncram:inst_ram_rtl_0|altsyncram_5c71:auto_generated|ram_block1a0~porta_address_reg0'
-Slack : 0.981
+Slack : 0.555
 TNS   : 0.000
 
 Type  : Fast 1200mV 0C Model Minimum Pulse Width 'clock'
 Slack : -3.000
-TNS   : -51.546
+TNS   : -43.752
 
 Type  : Fast 1200mV 0C Model Minimum Pulse Width 'contato1:C1|count[5]'
 Slack : -1.000
-TNS   : -1133.000
-
-Type  : Fast 1200mV 0C Model Minimum Pulse Width 'entradaDados:comb_3|sinal'
-Slack : 0.227
-TNS   : 0.000
+TNS   : -1112.000
 
 Type  : Fast 1200mV 0C Model Minimum Pulse Width 'instrucoes_RAM:INST|altsyncram:inst_ram_rtl_0|altsyncram_5c71:auto_generated|ram_block1a0~porta_address_reg0'
-Slack : 0.325
+Slack : 0.356
+TNS   : 0.000
+
+Type  : Fast 1200mV 0C Model Minimum Pulse Width 'entradaDados:comb_5|sinal'
+Slack : 0.374
 TNS   : 0.000
 
 Type  : Fast 1200mV 0C Model Minimum Pulse Width 'controle_ULA:cULA|selec[0]'
-Slack : 0.396
+Slack : 0.402
 TNS   : 0.000
 
 ------------------------------------------------------------

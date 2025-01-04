@@ -1,5 +1,5 @@
 Analysis & Synthesis report for CPU
-Tue Oct 29 18:12:32 2024
+Fri Jan 03 17:18:32 2025
 Quartus Prime Version 17.1.0 Build 590 10/25/2017 SJ Lite Edition
 
 
@@ -15,26 +15,32 @@ Quartus Prime Version 17.1.0 Build 590 10/25/2017 SJ Lite Edition
   7. Analysis & Synthesis Resource Utilization by Entity
   8. Analysis & Synthesis RAM Summary
   9. Analysis & Synthesis DSP Block Usage Summary
- 10. User-Specified and Inferred Latches
- 11. Registers Removed During Synthesis
- 12. General Register Statistics
- 13. Inverted Register Statistics
- 14. Registers Packed Into Inferred Megafunctions
- 15. Multiplexer Restructuring Statistics (Restructuring Performed)
- 16. Source assignments for dados_RAM:DADO|altsyncram:ram_rtl_0|altsyncram_09d1:auto_generated
- 17. Source assignments for instrucoes_RAM:INST|altsyncram:inst_ram_rtl_0|altsyncram_5c71:auto_generated
- 18. Parameter Settings for User Entity Instance: instrucoes_RAM:INST
- 19. Parameter Settings for User Entity Instance: dados_RAM:DADO
- 20. Parameter Settings for Inferred Entity Instance: dados_RAM:DADO|altsyncram:ram_rtl_0
- 21. Parameter Settings for Inferred Entity Instance: instrucoes_RAM:INST|altsyncram:inst_ram_rtl_0
- 22. Parameter Settings for Inferred Entity Instance: ULA:ULA|lpm_mult:Mult0
- 23. Parameter Settings for Inferred Entity Instance: ULA:ULA|lpm_divide:Div0
- 24. altsyncram Parameter Settings by Entity Instance
- 25. lpm_mult Parameter Settings by Entity Instance
- 26. Port Connectivity Checks: "saidaDados:SaidaDados"
- 27. Post-Synthesis Netlist Statistics for Top Partition
- 28. Elapsed Time Per Partition
- 29. Analysis & Synthesis Messages
+ 10. State Machine - |teste|LCD_TEST:u1|mLCD_ST
+ 11. State Machine - |teste|LCD_TEST:u1|LCD_Controller:u0|ST
+ 12. User-Specified and Inferred Latches
+ 13. Registers Removed During Synthesis
+ 14. Removed Registers Triggering Further Register Optimizations
+ 15. General Register Statistics
+ 16. Inverted Register Statistics
+ 17. Registers Packed Into Inferred Megafunctions
+ 18. Multiplexer Restructuring Statistics (Restructuring Performed)
+ 19. Source assignments for dados_RAM:DADO|altsyncram:ram_rtl_0|altsyncram_kvc1:auto_generated
+ 20. Source assignments for instrucoes_RAM:INST|altsyncram:inst_ram_rtl_0|altsyncram_5c71:auto_generated
+ 21. Parameter Settings for User Entity Instance: instrucoes_RAM:INST
+ 22. Parameter Settings for User Entity Instance: dados_RAM:DADO
+ 23. Parameter Settings for User Entity Instance: LCD_TEST:u1
+ 24. Parameter Settings for User Entity Instance: LCD_TEST:u1|LCD_Controller:u0
+ 25. Parameter Settings for Inferred Entity Instance: dados_RAM:DADO|altsyncram:ram_rtl_0
+ 26. Parameter Settings for Inferred Entity Instance: instrucoes_RAM:INST|altsyncram:inst_ram_rtl_0
+ 27. Parameter Settings for Inferred Entity Instance: ULA:ULA|lpm_mult:Mult0
+ 28. Parameter Settings for Inferred Entity Instance: ULA:ULA|lpm_divide:Div0
+ 29. altsyncram Parameter Settings by Entity Instance
+ 30. lpm_mult Parameter Settings by Entity Instance
+ 31. Port Connectivity Checks: "saidaDados:SaidaDados"
+ 32. Post-Synthesis Netlist Statistics for Top Partition
+ 33. Elapsed Time Per Partition
+ 34. Analysis & Synthesis Messages
+ 35. Analysis & Synthesis Suppressed Messages
 
 
 
@@ -60,18 +66,18 @@ refer to the applicable agreement for further details.
 +----------------------------------------------------------------------------------+
 ; Analysis & Synthesis Summary                                                     ;
 +------------------------------------+---------------------------------------------+
-; Analysis & Synthesis Status        ; Successful - Tue Oct 29 18:12:31 2024       ;
+; Analysis & Synthesis Status        ; Successful - Fri Jan 03 17:18:32 2025       ;
 ; Quartus Prime Version              ; 17.1.0 Build 590 10/25/2017 SJ Lite Edition ;
 ; Revision Name                      ; CPU                                         ;
 ; Top-level Entity Name              ; teste                                       ;
 ; Family                             ; Cyclone IV E                                ;
-; Total logic elements               ; 5,552                                       ;
-;     Total combinational functions  ; 4,540                                       ;
+; Total logic elements               ; 5,555                                       ;
+;     Total combinational functions  ; 4,543                                       ;
 ;     Dedicated logic registers      ; 1,137                                       ;
 ; Total registers                    ; 1137                                        ;
-; Total pins                         ; 81                                          ;
+; Total pins                         ; 94                                          ;
 ; Total virtual pins                 ; 0                                           ;
-; Total memory bits                  ; 131,072                                     ;
+; Total memory bits                  ; 66,560                                      ;
 ; Embedded Multiplier 9-bit elements ; 6                                           ;
 ; Total PLLs                         ; 0                                           ;
 +------------------------------------+---------------------------------------------+
@@ -207,6 +213,9 @@ refer to the applicable agreement for further details.
 ; entradaDados.v                              ; yes             ; User Verilog HDL File                                 ; C:/Users/rafae/OneDrive/Documents/Workspace/Faculdade/Processador/entradaDados.v                              ;         ;
 ; display7seg.v                               ; yes             ; User Verilog HDL File                                 ; C:/Users/rafae/OneDrive/Documents/Workspace/Faculdade/Processador/display7seg.v                               ;         ;
 ; contato1.v                                  ; yes             ; User Verilog HDL File                                 ; C:/Users/rafae/OneDrive/Documents/Workspace/Faculdade/Processador/contato1.v                                  ;         ;
+; displayLCD.v                                ; yes             ; User Verilog HDL File                                 ; C:/Users/rafae/OneDrive/Documents/Workspace/Faculdade/Processador/displayLCD.v                                ;         ;
+; Reset_Delay.v                               ; yes             ; User Verilog HDL File                                 ; C:/Users/rafae/OneDrive/Documents/Workspace/Faculdade/Processador/Reset_Delay.v                               ;         ;
+; LCD_TEST.v                                  ; yes             ; User Verilog HDL File                                 ; C:/Users/rafae/OneDrive/Documents/Workspace/Faculdade/Processador/LCD_TEST.v                                  ;         ;
 ; codigobinario.txt                           ; yes             ; Auto-Found File                                       ; C:/Users/rafae/OneDrive/Documents/Workspace/Faculdade/Processador/codigobinario.txt                           ;         ;
 ; altsyncram.tdf                              ; yes             ; Megafunction                                          ; c:/intelfpga_lite/17.1/quartus/libraries/megafunctions/altsyncram.tdf                                         ;         ;
 ; stratix_ram_block.inc                       ; yes             ; Megafunction                                          ; c:/intelfpga_lite/17.1/quartus/libraries/megafunctions/stratix_ram_block.inc                                  ;         ;
@@ -217,7 +226,7 @@ refer to the applicable agreement for further details.
 ; altrom.inc                                  ; yes             ; Megafunction                                          ; c:/intelfpga_lite/17.1/quartus/libraries/megafunctions/altrom.inc                                             ;         ;
 ; altram.inc                                  ; yes             ; Megafunction                                          ; c:/intelfpga_lite/17.1/quartus/libraries/megafunctions/altram.inc                                             ;         ;
 ; altdpram.inc                                ; yes             ; Megafunction                                          ; c:/intelfpga_lite/17.1/quartus/libraries/megafunctions/altdpram.inc                                           ;         ;
-; db/altsyncram_09d1.tdf                      ; yes             ; Auto-Generated Megafunction                           ; C:/Users/rafae/OneDrive/Documents/Workspace/Faculdade/Processador/db/altsyncram_09d1.tdf                      ;         ;
+; db/altsyncram_kvc1.tdf                      ; yes             ; Auto-Generated Megafunction                           ; C:/Users/rafae/OneDrive/Documents/Workspace/Faculdade/Processador/db/altsyncram_kvc1.tdf                      ;         ;
 ; db/altsyncram_5c71.tdf                      ; yes             ; Auto-Generated Megafunction                           ; C:/Users/rafae/OneDrive/Documents/Workspace/Faculdade/Processador/db/altsyncram_5c71.tdf                      ;         ;
 ; db/CPU.ram0_instrucoes_RAM_436a63f4.hdl.mif ; yes             ; Auto-Generated Auto-Found Memory Initialization File  ; C:/Users/rafae/OneDrive/Documents/Workspace/Faculdade/Processador/db/CPU.ram0_instrucoes_RAM_436a63f4.hdl.mif ;         ;
 ; lpm_mult.tdf                                ; yes             ; Megafunction                                          ; c:/intelfpga_lite/17.1/quartus/libraries/megafunctions/lpm_mult.tdf                                           ;         ;
@@ -242,31 +251,31 @@ refer to the applicable agreement for further details.
 +---------------------------------------------+----------------------+
 ; Resource                                    ; Usage                ;
 +---------------------------------------------+----------------------+
-; Estimated Total logic elements              ; 5,552                ;
+; Estimated Total logic elements              ; 5,555                ;
 ;                                             ;                      ;
-; Total combinational functions               ; 4540                 ;
+; Total combinational functions               ; 4543                 ;
 ; Logic element usage by number of LUT inputs ;                      ;
-;     -- 4 input functions                    ; 3371                 ;
-;     -- 3 input functions                    ; 1019                 ;
-;     -- <=2 input functions                  ; 150                  ;
+;     -- 4 input functions                    ; 3390                 ;
+;     -- 3 input functions                    ; 999                  ;
+;     -- <=2 input functions                  ; 154                  ;
 ;                                             ;                      ;
 ; Logic elements by mode                      ;                      ;
-;     -- normal mode                          ; 3870                 ;
+;     -- normal mode                          ; 3873                 ;
 ;     -- arithmetic mode                      ; 670                  ;
 ;                                             ;                      ;
 ; Total registers                             ; 1137                 ;
 ;     -- Dedicated logic registers            ; 1137                 ;
 ;     -- I/O registers                        ; 0                    ;
 ;                                             ;                      ;
-; I/O pins                                    ; 81                   ;
-; Total memory bits                           ; 131072               ;
+; I/O pins                                    ; 94                   ;
+; Total memory bits                           ; 66560                ;
 ;                                             ;                      ;
 ; Embedded Multiplier 9-bit elements          ; 6                    ;
 ;                                             ;                      ;
 ; Maximum fan-out node                        ; contato1:C1|count[5] ;
 ; Maximum fan-out                             ; 1142                 ;
-; Total fan-out                               ; 21347                ;
-; Average fan-out                             ; 3.61                 ;
+; Total fan-out                               ; 21200                ;
+; Average fan-out                             ; 3.57                 ;
 +---------------------------------------------+----------------------+
 
 
@@ -275,10 +284,10 @@ refer to the applicable agreement for further details.
 +-------------------------------------------+---------------------+---------------------------+-------------+--------------+---------+-----------+------+--------------+--------------------------------------------------------------------------------------------------------------------------------------+---------------------+--------------+
 ; Compilation Hierarchy Node                ; Combinational ALUTs ; Dedicated Logic Registers ; Memory Bits ; DSP Elements ; DSP 9x9 ; DSP 18x18 ; Pins ; Virtual Pins ; Full Hierarchy Name                                                                                                                  ; Entity Name         ; Library Name ;
 +-------------------------------------------+---------------------+---------------------------+-------------+--------------+---------+-----------+------+--------------+--------------------------------------------------------------------------------------------------------------------------------------+---------------------+--------------+
-; |teste                                    ; 4540 (0)            ; 1137 (0)                  ; 131072      ; 6            ; 0       ; 3         ; 81   ; 0            ; |teste                                                                                                                               ; teste               ; work         ;
+; |teste                                    ; 4543 (0)            ; 1137 (0)                  ; 66560       ; 6            ; 0       ; 3         ; 94   ; 0            ; |teste                                                                                                                               ; teste               ; work         ;
 ;    |BancoRegistradores:BR|                ; 2120 (2120)         ; 1024 (1024)               ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |teste|BancoRegistradores:BR                                                                                                         ; BancoRegistradores  ; work         ;
 ;    |PC:PC|                                ; 86 (86)             ; 32 (32)                   ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |teste|PC:PC                                                                                                                         ; PC                  ; work         ;
-;    |UC:UC|                                ; 28 (28)             ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |teste|UC:UC                                                                                                                         ; UC                  ; work         ;
+;    |UC:UC|                                ; 34 (34)             ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |teste|UC:UC                                                                                                                         ; UC                  ; work         ;
 ;    |ULA:ULA|                              ; 1535 (405)          ; 0 (0)                     ; 0           ; 6            ; 0       ; 3         ; 0    ; 0            ; |teste|ULA:ULA                                                                                                                       ; ULA                 ; work         ;
 ;       |lpm_divide:Div0|                   ; 1102 (0)            ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |teste|ULA:ULA|lpm_divide:Div0                                                                                                       ; lpm_divide          ; work         ;
 ;          |lpm_divide_hkm:auto_generated|  ; 1102 (0)            ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |teste|ULA:ULA|lpm_divide:Div0|lpm_divide_hkm:auto_generated                                                                         ; lpm_divide_hkm      ; work         ;
@@ -288,12 +297,12 @@ refer to the applicable agreement for further details.
 ;       |lpm_mult:Mult0|                    ; 28 (0)              ; 0 (0)                     ; 0           ; 6            ; 0       ; 3         ; 0    ; 0            ; |teste|ULA:ULA|lpm_mult:Mult0                                                                                                        ; lpm_mult            ; work         ;
 ;          |mult_7dt:auto_generated|        ; 28 (28)             ; 0 (0)                     ; 0           ; 6            ; 0       ; 3         ; 0    ; 0            ; |teste|ULA:ULA|lpm_mult:Mult0|mult_7dt:auto_generated                                                                                ; mult_7dt            ; work         ;
 ;    |contato1:C1|                          ; 28 (28)             ; 28 (28)                   ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |teste|contato1:C1                                                                                                                   ; contato1            ; work         ;
-;    |controle_ULA:cULA|                    ; 15 (15)             ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |teste|controle_ULA:cULA                                                                                                             ; controle_ULA        ; work         ;
-;    |dados_RAM:DADO|                       ; 0 (0)               ; 0 (0)                     ; 65536       ; 0            ; 0       ; 0         ; 0    ; 0            ; |teste|dados_RAM:DADO                                                                                                                ; dados_RAM           ; work         ;
-;       |altsyncram:ram_rtl_0|              ; 0 (0)               ; 0 (0)                     ; 65536       ; 0            ; 0       ; 0         ; 0    ; 0            ; |teste|dados_RAM:DADO|altsyncram:ram_rtl_0                                                                                           ; altsyncram          ; work         ;
-;          |altsyncram_09d1:auto_generated| ; 0 (0)               ; 0 (0)                     ; 65536       ; 0            ; 0       ; 0         ; 0    ; 0            ; |teste|dados_RAM:DADO|altsyncram:ram_rtl_0|altsyncram_09d1:auto_generated                                                            ; altsyncram_09d1     ; work         ;
+;    |controle_ULA:cULA|                    ; 14 (14)             ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |teste|controle_ULA:cULA                                                                                                             ; controle_ULA        ; work         ;
+;    |dados_RAM:DADO|                       ; 0 (0)               ; 0 (0)                     ; 1024        ; 0            ; 0       ; 0         ; 0    ; 0            ; |teste|dados_RAM:DADO                                                                                                                ; dados_RAM           ; work         ;
+;       |altsyncram:ram_rtl_0|              ; 0 (0)               ; 0 (0)                     ; 1024        ; 0            ; 0       ; 0         ; 0    ; 0            ; |teste|dados_RAM:DADO|altsyncram:ram_rtl_0                                                                                           ; altsyncram          ; work         ;
+;          |altsyncram_kvc1:auto_generated| ; 0 (0)               ; 0 (0)                     ; 1024        ; 0            ; 0       ; 0         ; 0    ; 0            ; |teste|dados_RAM:DADO|altsyncram:ram_rtl_0|altsyncram_kvc1:auto_generated                                                            ; altsyncram_kvc1     ; work         ;
 ;    |display7seg:Display|                  ; 63 (63)             ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |teste|display7seg:Display                                                                                                           ; display7seg         ; work         ;
-;    |entradaDados:comb_3|                  ; 5 (5)               ; 20 (20)                   ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |teste|entradaDados:comb_3                                                                                                           ; entradaDados        ; work         ;
+;    |entradaDados:comb_5|                  ; 3 (3)               ; 20 (20)                   ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |teste|entradaDados:comb_5                                                                                                           ; entradaDados        ; work         ;
 ;    |extensor_Bit:BIT|                     ; 55 (55)             ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |teste|extensor_Bit:BIT                                                                                                              ; extensor_Bit        ; work         ;
 ;    |instrucoes_RAM:INST|                  ; 0 (0)               ; 0 (0)                     ; 65536       ; 0            ; 0       ; 0         ; 0    ; 0            ; |teste|instrucoes_RAM:INST                                                                                                           ; instrucoes_RAM      ; work         ;
 ;       |altsyncram:inst_ram_rtl_0|         ; 0 (0)               ; 0 (0)                     ; 65536       ; 0            ; 0       ; 0         ; 0    ; 0            ; |teste|instrucoes_RAM:INST|altsyncram:inst_ram_rtl_0                                                                                 ; altsyncram          ; work         ;
@@ -308,7 +317,7 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 +-----------------------------------------------------------------------------------------+------+------------------+--------------+--------------+--------------+--------------+-------+---------------------------------------------+
 ; Name                                                                                    ; Type ; Mode             ; Port A Depth ; Port A Width ; Port B Depth ; Port B Width ; Size  ; MIF                                         ;
 +-----------------------------------------------------------------------------------------+------+------------------+--------------+--------------+--------------+--------------+-------+---------------------------------------------+
-; dados_RAM:DADO|altsyncram:ram_rtl_0|altsyncram_09d1:auto_generated|ALTSYNCRAM           ; AUTO ; Simple Dual Port ; 2048         ; 32           ; 2048         ; 32           ; 65536 ; None                                        ;
+; dados_RAM:DADO|altsyncram:ram_rtl_0|altsyncram_kvc1:auto_generated|ALTSYNCRAM           ; AUTO ; Simple Dual Port ; 32           ; 32           ; 32           ; 32           ; 1024  ; None                                        ;
 ; instrucoes_RAM:INST|altsyncram:inst_ram_rtl_0|altsyncram_5c71:auto_generated|ALTSYNCRAM ; AUTO ; ROM              ; 2048         ; 32           ; --           ; --           ; 65536 ; db/CPU.ram0_instrucoes_RAM_436a63f4.hdl.mif ;
 +-----------------------------------------------------------------------------------------+------+------------------+--------------+--------------+--------------+--------------+-------+---------------------------------------------+
 
@@ -329,6 +338,32 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 ; Dedicated Input Shift Register Chains ; 0           ;
 +---------------------------------------+-------------+
 Note: number of Embedded Multiplier Blocks used is only available after a successful fit.
+
+
+Encoding Type:  One-Hot
++------------------------------------------------------------------------------------+
+; State Machine - |teste|LCD_TEST:u1|mLCD_ST                                         ;
++----------------+----------------+----------------+----------------+----------------+
+; Name           ; mLCD_ST.000011 ; mLCD_ST.000010 ; mLCD_ST.000001 ; mLCD_ST.000000 ;
++----------------+----------------+----------------+----------------+----------------+
+; mLCD_ST.000000 ; 0              ; 0              ; 0              ; 0              ;
+; mLCD_ST.000001 ; 0              ; 0              ; 1              ; 1              ;
+; mLCD_ST.000010 ; 0              ; 1              ; 0              ; 1              ;
+; mLCD_ST.000011 ; 1              ; 0              ; 0              ; 1              ;
++----------------+----------------+----------------+----------------+----------------+
+
+
+Encoding Type:  One-Hot
++---------------------------------------------------------+
+; State Machine - |teste|LCD_TEST:u1|LCD_Controller:u0|ST ;
++-------+-------+-------+-------+-------------------------+
+; Name  ; ST.11 ; ST.10 ; ST.01 ; ST.00                   ;
++-------+-------+-------+-------+-------------------------+
+; ST.00 ; 0     ; 0     ; 0     ; 0                       ;
+; ST.01 ; 0     ; 0     ; 1     ; 1                       ;
+; ST.10 ; 0     ; 1     ; 0     ; 1                       ;
+; ST.11 ; 1     ; 0     ; 0     ; 1                       ;
++-------+-------+-------+-------+-------------------------+
 
 
 +----------------------------------------------------------------------------------------------------------+
@@ -413,10 +448,66 @@ Note: All latches listed above may not be present at the end of synthesis due to
 +-------------------------------------------+----------------------------------------------+
 ; Register name                             ; Reason for Removal                           ;
 +-------------------------------------------+----------------------------------------------+
-; entradaDados:comb_3|controle[1..9,11..31] ; Merged with entradaDados:comb_3|controle[10] ;
-; entradaDados:comb_3|controle[10]          ; Stuck at GND due to stuck port data_in       ;
-; Total Number of Removed Registers = 31    ;                                              ;
+; LCD_TEST:u1|mLCD_RS                       ; Stuck at GND due to stuck port clock         ;
+; LCD_TEST:u1|LUT_INDEX[0..5]               ; Stuck at GND due to stuck port clock         ;
+; LCD_TEST:u1|mDLY[0..17]                   ; Stuck at GND due to stuck port clock         ;
+; LCD_TEST:u1|mLCD_Start                    ; Stuck at GND due to stuck port clock         ;
+; LCD_TEST:u1|mLCD_DATA[0..7]               ; Stuck at GND due to stuck port clock         ;
+; LCD_TEST:u1|LCD_Controller:u0|preStart    ; Lost fanout                                  ;
+; LCD_TEST:u1|LCD_Controller:u0|oDone       ; Stuck at GND due to stuck port clock         ;
+; LCD_TEST:u1|LCD_Controller:u0|LCD_EN      ; Stuck at GND due to stuck port clock         ;
+; LCD_TEST:u1|LCD_Controller:u0|mStart      ; Stuck at GND due to stuck port clock         ;
+; LCD_TEST:u1|LCD_Controller:u0|Cont[0..4]  ; Stuck at GND due to stuck port clock         ;
+; dados_RAM:DADO|offset[0..5,7..31]         ; Stuck at GND due to stuck port data_in       ;
+; Reset_Delay:r0|Cont[0..4]                 ; Stuck at GND due to stuck port clock         ;
+; Reset_Delay:r0|oRESET                     ; Stuck at GND due to stuck port clock         ;
+; Reset_Delay:r0|Cont[5..19]                ; Stuck at GND due to stuck port clock         ;
+; dados_RAM:DADO|offset[6]                  ; Lost fanout                                  ;
+; entradaDados:comb_5|controle[1..9,11..31] ; Merged with entradaDados:comb_5|controle[10] ;
+; entradaDados:comb_5|controle[10]          ; Stuck at GND due to stuck port data_in       ;
+; LCD_TEST:u1|mLCD_ST.000011                ; Lost fanout                                  ;
+; LCD_TEST:u1|mLCD_ST~8                     ; Lost fanout                                  ;
+; LCD_TEST:u1|mLCD_ST~9                     ; Lost fanout                                  ;
+; LCD_TEST:u1|mLCD_ST~10                    ; Lost fanout                                  ;
+; LCD_TEST:u1|mLCD_ST~11                    ; Lost fanout                                  ;
+; LCD_TEST:u1|mLCD_ST~12                    ; Lost fanout                                  ;
+; LCD_TEST:u1|mLCD_ST~13                    ; Lost fanout                                  ;
+; LCD_TEST:u1|mLCD_ST.000000                ; Stuck at GND due to stuck port clear         ;
+; LCD_TEST:u1|mLCD_ST.000001                ; Stuck at GND due to stuck port clear         ;
+; LCD_TEST:u1|mLCD_ST.000010                ; Stuck at GND due to stuck port clear         ;
+; LCD_TEST:u1|LCD_Controller:u0|ST~8        ; Lost fanout                                  ;
+; LCD_TEST:u1|LCD_Controller:u0|ST~9        ; Lost fanout                                  ;
+; LCD_TEST:u1|LCD_Controller:u0|ST.00       ; Stuck at GND due to stuck port clear         ;
+; LCD_TEST:u1|LCD_Controller:u0|ST.01       ; Stuck at GND due to stuck port clear         ;
+; LCD_TEST:u1|LCD_Controller:u0|ST.10       ; Stuck at GND due to stuck port clear         ;
+; LCD_TEST:u1|LCD_Controller:u0|ST.11       ; Stuck at GND due to stuck port clear         ;
+; Total Number of Removed Registers = 143   ;                                              ;
 +-------------------------------------------+----------------------------------------------+
+
+
++--------------------------------------------------------------------------------------------------------------------------------------+
+; Removed Registers Triggering Further Register Optimizations                                                                          ;
++----------------------------+-------------------------+-------------------------------------------------------------------------------+
+; Register name              ; Reason for Removal      ; Registers Removed due to This Register                                        ;
++----------------------------+-------------------------+-------------------------------------------------------------------------------+
+; Reset_Delay:r0|Cont[4]     ; Stuck at GND            ; Reset_Delay:r0|Cont[3], Reset_Delay:r0|Cont[2], Reset_Delay:r0|Cont[1],       ;
+;                            ; due to stuck port clock ; Reset_Delay:r0|Cont[0], Reset_Delay:r0|oRESET, Reset_Delay:r0|Cont[5],        ;
+;                            ;                         ; Reset_Delay:r0|Cont[6], Reset_Delay:r0|Cont[7], Reset_Delay:r0|Cont[8],       ;
+;                            ;                         ; Reset_Delay:r0|Cont[9], Reset_Delay:r0|Cont[10], Reset_Delay:r0|Cont[11],     ;
+;                            ;                         ; Reset_Delay:r0|Cont[12], Reset_Delay:r0|Cont[13], Reset_Delay:r0|Cont[14],    ;
+;                            ;                         ; Reset_Delay:r0|Cont[15], Reset_Delay:r0|Cont[16], Reset_Delay:r0|Cont[17],    ;
+;                            ;                         ; Reset_Delay:r0|Cont[18], Reset_Delay:r0|Cont[19]                              ;
+; LCD_TEST:u1|LUT_INDEX[5]   ; Stuck at GND            ; LCD_TEST:u1|mLCD_DATA[7], LCD_TEST:u1|mLCD_DATA[6], LCD_TEST:u1|mLCD_DATA[5], ;
+;                            ; due to stuck port clock ; LCD_TEST:u1|mLCD_DATA[4], LCD_TEST:u1|mLCD_DATA[3], LCD_TEST:u1|mLCD_DATA[2], ;
+;                            ;                         ; LCD_TEST:u1|mLCD_DATA[0]                                                      ;
+; LCD_TEST:u1|mLCD_Start     ; Stuck at GND            ; LCD_TEST:u1|LCD_Controller:u0|mStart, LCD_TEST:u1|LCD_Controller:u0|Cont[4],  ;
+;                            ; due to stuck port clock ; LCD_TEST:u1|LCD_Controller:u0|Cont[3], LCD_TEST:u1|LCD_Controller:u0|Cont[2], ;
+;                            ;                         ; LCD_TEST:u1|LCD_Controller:u0|Cont[1], LCD_TEST:u1|LCD_Controller:u0|Cont[0]  ;
+; LCD_TEST:u1|LUT_INDEX[4]   ; Stuck at GND            ; LCD_TEST:u1|mLCD_DATA[1]                                                      ;
+;                            ; due to stuck port clock ;                                                                               ;
+; LCD_TEST:u1|mLCD_ST.000000 ; Stuck at GND            ; LCD_TEST:u1|mLCD_ST.000001                                                    ;
+;                            ; due to stuck port clear ;                                                                               ;
++----------------------------+-------------------------+-------------------------------------------------------------------------------+
 
 
 +------------------------------------------------------+
@@ -490,21 +581,21 @@ Note: All latches listed above may not be present at the end of synthesis due to
 +--------------------+-----------+---------------+----------------------+------------------------+------------+-------------------------------------------+
 ; Multiplexer Inputs ; Bus Width ; Baseline Area ; Area if Restructured ; Saving if Restructured ; Registered ; Example Multiplexer Output                ;
 +--------------------+-----------+---------------+----------------------+------------------------+------------+-------------------------------------------+
-; 3:1                ; 32 bits   ; 64 LEs        ; 32 LEs               ; 32 LEs                 ; Yes        ; |teste|BancoRegistradores:BR|regs[31][30] ;
-; 6:1                ; 32 bits   ; 128 LEs       ; 64 LEs               ; 64 LEs                 ; Yes        ; |teste|PC:PC|endereco[21]                 ;
-; 3:1                ; 15 bits   ; 30 LEs        ; 15 LEs               ; 15 LEs                 ; No         ; |teste|extensor_Bit:BIT|Mux8              ;
-; 4:1                ; 2 bits    ; 4 LEs         ; 4 LEs                ; 0 LEs                  ; No         ; |teste|controle_ULA:cULA|Mux0             ;
-; 32:1               ; 32 bits   ; 672 LEs       ; 672 LEs              ; 0 LEs                  ; No         ; |teste|BancoRegistradores:BR|Mux92        ;
-; 32:1               ; 32 bits   ; 672 LEs       ; 672 LEs              ; 0 LEs                  ; No         ; |teste|BancoRegistradores:BR|Mux62        ;
-; 32:1               ; 32 bits   ; 672 LEs       ; 672 LEs              ; 0 LEs                  ; No         ; |teste|BancoRegistradores:BR|Mux1         ;
-; 10:1               ; 32 bits   ; 192 LEs       ; 128 LEs              ; 64 LEs                 ; No         ; |teste|ULA:ULA|result[6]                  ;
+; 3:1                ; 32 bits   ; 64 LEs        ; 32 LEs               ; 32 LEs                 ; Yes        ; |teste|BancoRegistradores:BR|regs[31][14] ;
+; 6:1                ; 32 bits   ; 128 LEs       ; 64 LEs               ; 64 LEs                 ; Yes        ; |teste|PC:PC|endereco[8]                  ;
+; 3:1                ; 15 bits   ; 30 LEs        ; 15 LEs               ; 15 LEs                 ; No         ; |teste|extensor_Bit:BIT|Mux4              ;
+; 4:1                ; 2 bits    ; 4 LEs         ; 4 LEs                ; 0 LEs                  ; No         ; |teste|controle_ULA:cULA|Mux2             ;
+; 32:1               ; 32 bits   ; 672 LEs       ; 672 LEs              ; 0 LEs                  ; No         ; |teste|BancoRegistradores:BR|Mux79        ;
+; 32:1               ; 32 bits   ; 672 LEs       ; 672 LEs              ; 0 LEs                  ; No         ; |teste|BancoRegistradores:BR|Mux57        ;
+; 32:1               ; 32 bits   ; 672 LEs       ; 672 LEs              ; 0 LEs                  ; No         ; |teste|BancoRegistradores:BR|Mux13        ;
+; 10:1               ; 32 bits   ; 192 LEs       ; 128 LEs              ; 64 LEs                 ; No         ; |teste|ULA:ULA|result[2]                  ;
 ; 6:1                ; 32 bits   ; 128 LEs       ; 64 LEs               ; 64 LEs                 ; No         ; |teste|ULA:ULA|Add0                       ;
 ; 7:1                ; 32 bits   ; 128 LEs       ; 128 LEs              ; 0 LEs                  ; No         ; |teste|ULA:ULA|Add0                       ;
 +--------------------+-----------+---------------+----------------------+------------------------+------------+-------------------------------------------+
 
 
 +-------------------------------------------------------------------------------------------+
-; Source assignments for dados_RAM:DADO|altsyncram:ram_rtl_0|altsyncram_09d1:auto_generated ;
+; Source assignments for dados_RAM:DADO|altsyncram:ram_rtl_0|altsyncram_kvc1:auto_generated ;
 +---------------------------------+--------------------+------+-----------------------------+
 ; Assignment                      ; Value              ; From ; To                          ;
 +---------------------------------+--------------------+------+-----------------------------+
@@ -543,6 +634,30 @@ Note: In order to hide this table in the UI and the text report file, please set
 Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
 
 
++----------------------------------------------------------+
+; Parameter Settings for User Entity Instance: LCD_TEST:u1 ;
++----------------+-------+---------------------------------+
+; Parameter Name ; Value ; Type                            ;
++----------------+-------+---------------------------------+
+; LCD_INTIAL     ; 0     ; Signed Integer                  ;
+; LCD_LINE1      ; 5     ; Signed Integer                  ;
+; LCD_CH_LINE    ; 21    ; Signed Integer                  ;
+; LCD_LINE2      ; 22    ; Signed Integer                  ;
+; LUT_SIZE       ; 38    ; Signed Integer                  ;
++----------------+-------+---------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++----------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: LCD_TEST:u1|LCD_Controller:u0 ;
++----------------+-------+---------------------------------------------------+
+; Parameter Name ; Value ; Type                                              ;
++----------------+-------+---------------------------------------------------+
+; CLK_Divide     ; 16    ; Signed Integer                                    ;
++----------------+-------+---------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
 +--------------------------------------------------------------------------------------+
 ; Parameter Settings for Inferred Entity Instance: dados_RAM:DADO|altsyncram:ram_rtl_0 ;
 +------------------------------------+----------------------+--------------------------+
@@ -556,8 +671,8 @@ Note: In order to hide this table in the UI and the text report file, please set
 ; WIDTH_BYTEENA                      ; 1                    ; Untyped                  ;
 ; OPERATION_MODE                     ; DUAL_PORT            ; Untyped                  ;
 ; WIDTH_A                            ; 32                   ; Untyped                  ;
-; WIDTHAD_A                          ; 11                   ; Untyped                  ;
-; NUMWORDS_A                         ; 2048                 ; Untyped                  ;
+; WIDTHAD_A                          ; 5                    ; Untyped                  ;
+; NUMWORDS_A                         ; 32                   ; Untyped                  ;
 ; OUTDATA_REG_A                      ; UNREGISTERED         ; Untyped                  ;
 ; ADDRESS_ACLR_A                     ; NONE                 ; Untyped                  ;
 ; OUTDATA_ACLR_A                     ; NONE                 ; Untyped                  ;
@@ -565,8 +680,8 @@ Note: In order to hide this table in the UI and the text report file, please set
 ; INDATA_ACLR_A                      ; NONE                 ; Untyped                  ;
 ; BYTEENA_ACLR_A                     ; NONE                 ; Untyped                  ;
 ; WIDTH_B                            ; 32                   ; Untyped                  ;
-; WIDTHAD_B                          ; 11                   ; Untyped                  ;
-; NUMWORDS_B                         ; 2048                 ; Untyped                  ;
+; WIDTHAD_B                          ; 5                    ; Untyped                  ;
+; NUMWORDS_B                         ; 32                   ; Untyped                  ;
 ; INDATA_REG_B                       ; CLOCK1               ; Untyped                  ;
 ; WRCONTROL_WRADDRESS_REG_B          ; CLOCK1               ; Untyped                  ;
 ; RDCONTROL_REG_B                    ; CLOCK1               ; Untyped                  ;
@@ -599,7 +714,7 @@ Note: In order to hide this table in the UI and the text report file, please set
 ; ECC_PIPELINE_STAGE_ENABLED         ; FALSE                ; Untyped                  ;
 ; WIDTH_ECCSTATUS                    ; 3                    ; Untyped                  ;
 ; DEVICE_FAMILY                      ; Cyclone IV E         ; Untyped                  ;
-; CBXI_PARAMETER                     ; altsyncram_09d1      ; Untyped                  ;
+; CBXI_PARAMETER                     ; altsyncram_kvc1      ; Untyped                  ;
 +------------------------------------+----------------------+--------------------------+
 Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
 
@@ -732,10 +847,10 @@ Note: In order to hide this table in the UI and the text report file, please set
 ; Entity Instance                           ; dados_RAM:DADO|altsyncram:ram_rtl_0           ;
 ;     -- OPERATION_MODE                     ; DUAL_PORT                                     ;
 ;     -- WIDTH_A                            ; 32                                            ;
-;     -- NUMWORDS_A                         ; 2048                                          ;
+;     -- NUMWORDS_A                         ; 32                                            ;
 ;     -- OUTDATA_REG_A                      ; UNREGISTERED                                  ;
 ;     -- WIDTH_B                            ; 32                                            ;
-;     -- NUMWORDS_B                         ; 2048                                          ;
+;     -- NUMWORDS_B                         ; 32                                            ;
 ;     -- ADDRESS_REG_B                      ; CLOCK1                                        ;
 ;     -- OUTDATA_REG_B                      ; UNREGISTERED                                  ;
 ;     -- RAM_BLOCK_TYPE                     ; AUTO                                          ;
@@ -788,28 +903,29 @@ Note: In order to hide this table in the UI and the text report file, please set
 +-----------------------+-----------------------------+
 ; Type                  ; Count                       ;
 +-----------------------+-----------------------------+
-; boundary_port         ; 81                          ;
+; boundary_port         ; 94                          ;
 ; cycloneiii_ff         ; 1137                        ;
 ;     CLR               ; 28                          ;
 ;     ENA               ; 1075                        ;
 ;     ENA SLD           ; 32                          ;
 ;     plain             ; 2                           ;
-; cycloneiii_lcell_comb ; 4548                        ;
+; cycloneiii_io_obuf    ; 8                           ;
+; cycloneiii_lcell_comb ; 4553                        ;
 ;     arith             ; 670                         ;
 ;         2 data inputs ; 86                          ;
 ;         3 data inputs ; 584                         ;
-;     normal            ; 3878                        ;
-;         0 data inputs ; 30                          ;
+;     normal            ; 3883                        ;
+;         0 data inputs ; 32                          ;
 ;         1 data inputs ; 23                          ;
-;         2 data inputs ; 19                          ;
-;         3 data inputs ; 435                         ;
-;         4 data inputs ; 3371                        ;
+;         2 data inputs ; 23                          ;
+;         3 data inputs ; 415                         ;
+;         4 data inputs ; 3390                        ;
 ; cycloneiii_mac_mult   ; 3                           ;
 ; cycloneiii_mac_out    ; 3                           ;
 ; cycloneiii_ram_block  ; 64                          ;
 ;                       ;                             ;
 ; Max LUT depth         ; 130.50                      ;
-; Average LUT depth     ; 77.89                       ;
+; Average LUT depth     ; 77.74                       ;
 +-----------------------+-----------------------------+
 
 
@@ -818,7 +934,7 @@ Note: In order to hide this table in the UI and the text report file, please set
 +----------------+--------------+
 ; Partition Name ; Elapsed Time ;
 +----------------+--------------+
-; Top            ; 00:00:08     ;
+; Top            ; 00:00:07     ;
 +----------------+--------------+
 
 
@@ -828,7 +944,7 @@ Note: In order to hide this table in the UI and the text report file, please set
 Info: *******************************************************************
 Info: Running Quartus Prime Analysis & Synthesis
     Info: Version 17.1.0 Build 590 10/25/2017 SJ Lite Edition
-    Info: Processing started: Tue Oct 29 18:12:13 2024
+    Info: Processing started: Fri Jan 03 17:18:15 2025
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off CPU -c CPU
 Info (20030): Parallel compilation is enabled and will use 12 of the 12 processors detected
 Info (12021): Found 1 design units, including 1 entities, in source file ula.v
@@ -841,7 +957,7 @@ Info (12021): Found 1 design units, including 1 entities, in source file instruc
     Info (12023): Found entity 1: instrucoes_RAM File: C:/Users/rafae/OneDrive/Documents/Workspace/Faculdade/Processador/instrucoes_RAM.v Line: 1
 Info (12021): Found 1 design units, including 1 entities, in source file pc.v
     Info (12023): Found entity 1: PC File: C:/Users/rafae/OneDrive/Documents/Workspace/Faculdade/Processador/PC.v Line: 1
-Warning (10263): Verilog HDL Event Control warning at UC.v(19): event expression contains "|" or "||" File: C:/Users/rafae/OneDrive/Documents/Workspace/Faculdade/Processador/UC.v Line: 19
+Warning (10263): Verilog HDL Event Control warning at UC.v(20): event expression contains "|" or "||" File: C:/Users/rafae/OneDrive/Documents/Workspace/Faculdade/Processador/UC.v Line: 20
 Info (12021): Found 1 design units, including 1 entities, in source file uc.v
     Info (12023): Found entity 1: UC File: C:/Users/rafae/OneDrive/Documents/Workspace/Faculdade/Processador/UC.v Line: 1
 Info (12021): Found 1 design units, including 1 entities, in source file extensor_bit.v
@@ -863,22 +979,30 @@ Info (12021): Found 1 design units, including 1 entities, in source file display
 Info (12021): Found 0 design units, including 0 entities, in source file contato1.vhd
 Info (12021): Found 1 design units, including 1 entities, in source file contato1.v
     Info (12023): Found entity 1: contato1 File: C:/Users/rafae/OneDrive/Documents/Workspace/Faculdade/Processador/contato1.v Line: 1
-Critical Warning (10846): Verilog HDL Instantiation warning at teste.v(53): instance has no name File: C:/Users/rafae/OneDrive/Documents/Workspace/Faculdade/Processador/teste.v Line: 53
+Info (12021): Found 1 design units, including 1 entities, in source file displaylcd.v
+    Info (12023): Found entity 1: LCD_Controller File: C:/Users/rafae/OneDrive/Documents/Workspace/Faculdade/Processador/displayLCD.v Line: 1
+Info (12021): Found 1 design units, including 1 entities, in source file reset_delay.v
+    Info (12023): Found entity 1: Reset_Delay File: C:/Users/rafae/OneDrive/Documents/Workspace/Faculdade/Processador/Reset_Delay.v Line: 1
+Info (12021): Found 1 design units, including 1 entities, in source file lcd_test.v
+    Info (12023): Found entity 1: LCD_TEST File: C:/Users/rafae/OneDrive/Documents/Workspace/Faculdade/Processador/LCD_TEST.v Line: 1
+Warning (10236): Verilog HDL Implicit Net warning at teste.v(64): created implicit net for "CLOCK_50" File: C:/Users/rafae/OneDrive/Documents/Workspace/Faculdade/Processador/teste.v Line: 64
+Critical Warning (10846): Verilog HDL Instantiation warning at teste.v(68): instance has no name File: C:/Users/rafae/OneDrive/Documents/Workspace/Faculdade/Processador/teste.v Line: 68
 Info (12127): Elaborating entity "teste" for the top level hierarchy
-Info (12128): Elaborating entity "contato1" for hierarchy "contato1:C1" File: C:/Users/rafae/OneDrive/Documents/Workspace/Faculdade/Processador/teste.v Line: 49
+Info (12128): Elaborating entity "contato1" for hierarchy "contato1:C1" File: C:/Users/rafae/OneDrive/Documents/Workspace/Faculdade/Processador/teste.v Line: 60
 Warning (10230): Verilog HDL assignment warning at contato1.v(19): truncated value with size 32 to match size of target (28) File: C:/Users/rafae/OneDrive/Documents/Workspace/Faculdade/Processador/contato1.v Line: 19
-Info (12128): Elaborating entity "PC" for hierarchy "PC:PC" File: C:/Users/rafae/OneDrive/Documents/Workspace/Faculdade/Processador/teste.v Line: 51
-Info (12128): Elaborating entity "entradaDados" for hierarchy "entradaDados:comb_3" File: C:/Users/rafae/OneDrive/Documents/Workspace/Faculdade/Processador/teste.v Line: 53
-Info (12128): Elaborating entity "instrucoes_RAM" for hierarchy "instrucoes_RAM:INST" File: C:/Users/rafae/OneDrive/Documents/Workspace/Faculdade/Processador/teste.v Line: 55
-Warning (10850): Verilog HDL warning at instrucoes_RAM.v(14): number of words (20) in memory file does not match the number of elements in the address range [0:2047] File: C:/Users/rafae/OneDrive/Documents/Workspace/Faculdade/Processador/instrucoes_RAM.v Line: 14
+Info (12128): Elaborating entity "Reset_Delay" for hierarchy "Reset_Delay:r0" File: C:/Users/rafae/OneDrive/Documents/Workspace/Faculdade/Processador/teste.v Line: 64
+Info (12128): Elaborating entity "PC" for hierarchy "PC:PC" File: C:/Users/rafae/OneDrive/Documents/Workspace/Faculdade/Processador/teste.v Line: 66
+Info (12128): Elaborating entity "entradaDados" for hierarchy "entradaDados:comb_5" File: C:/Users/rafae/OneDrive/Documents/Workspace/Faculdade/Processador/teste.v Line: 68
+Info (12128): Elaborating entity "instrucoes_RAM" for hierarchy "instrucoes_RAM:INST" File: C:/Users/rafae/OneDrive/Documents/Workspace/Faculdade/Processador/teste.v Line: 70
+Warning (10850): Verilog HDL warning at instrucoes_RAM.v(14): number of words (112) in memory file does not match the number of elements in the address range [0:2047] File: C:/Users/rafae/OneDrive/Documents/Workspace/Faculdade/Processador/instrucoes_RAM.v Line: 14
 Warning (10030): Net "inst_ram.data_a" at instrucoes_RAM.v(10) has no driver or initial value, using a default initial value '0' File: C:/Users/rafae/OneDrive/Documents/Workspace/Faculdade/Processador/instrucoes_RAM.v Line: 10
 Warning (10030): Net "inst_ram.waddr_a" at instrucoes_RAM.v(10) has no driver or initial value, using a default initial value '0' File: C:/Users/rafae/OneDrive/Documents/Workspace/Faculdade/Processador/instrucoes_RAM.v Line: 10
 Warning (10030): Net "inst_ram.we_a" at instrucoes_RAM.v(10) has no driver or initial value, using a default initial value '0' File: C:/Users/rafae/OneDrive/Documents/Workspace/Faculdade/Processador/instrucoes_RAM.v Line: 10
-Info (12128): Elaborating entity "UC" for hierarchy "UC:UC" File: C:/Users/rafae/OneDrive/Documents/Workspace/Faculdade/Processador/teste.v Line: 57
-Warning (10270): Verilog HDL Case Statement warning at UC.v(33): incomplete case statement has no default case item File: C:/Users/rafae/OneDrive/Documents/Workspace/Faculdade/Processador/UC.v Line: 33
-Info (12128): Elaborating entity "BancoRegistradores" for hierarchy "BancoRegistradores:BR" File: C:/Users/rafae/OneDrive/Documents/Workspace/Faculdade/Processador/teste.v Line: 59
+Info (12128): Elaborating entity "UC" for hierarchy "UC:UC" File: C:/Users/rafae/OneDrive/Documents/Workspace/Faculdade/Processador/teste.v Line: 72
+Warning (10270): Verilog HDL Case Statement warning at UC.v(35): incomplete case statement has no default case item File: C:/Users/rafae/OneDrive/Documents/Workspace/Faculdade/Processador/UC.v Line: 35
+Info (12128): Elaborating entity "BancoRegistradores" for hierarchy "BancoRegistradores:BR" File: C:/Users/rafae/OneDrive/Documents/Workspace/Faculdade/Processador/teste.v Line: 74
 Warning (10855): Verilog HDL warning at BancoRegistradores.v(13): initial value for variable regs should be constant File: C:/Users/rafae/OneDrive/Documents/Workspace/Faculdade/Processador/BancoRegistradores.v Line: 13
-Info (12128): Elaborating entity "extensor_Bit" for hierarchy "extensor_Bit:BIT" File: C:/Users/rafae/OneDrive/Documents/Workspace/Faculdade/Processador/teste.v Line: 61
+Info (12128): Elaborating entity "extensor_Bit" for hierarchy "extensor_Bit:BIT" File: C:/Users/rafae/OneDrive/Documents/Workspace/Faculdade/Processador/teste.v Line: 76
 Warning (10270): Verilog HDL Case Statement warning at extensor_Bit.v(8): incomplete case statement has no default case item File: C:/Users/rafae/OneDrive/Documents/Workspace/Faculdade/Processador/extensor_Bit.v Line: 8
 Warning (10240): Verilog HDL Always Construct warning at extensor_Bit.v(8): inferring latch(es) for variable "imediato", which holds its previous value in one or more paths through the always construct File: C:/Users/rafae/OneDrive/Documents/Workspace/Faculdade/Processador/extensor_Bit.v Line: 8
 Info (10041): Inferred latch for "imediato[0]" at extensor_Bit.v(8) File: C:/Users/rafae/OneDrive/Documents/Workspace/Faculdade/Processador/extensor_Bit.v Line: 8
@@ -913,7 +1037,7 @@ Info (10041): Inferred latch for "imediato[28]" at extensor_Bit.v(8) File: C:/Us
 Info (10041): Inferred latch for "imediato[29]" at extensor_Bit.v(8) File: C:/Users/rafae/OneDrive/Documents/Workspace/Faculdade/Processador/extensor_Bit.v Line: 8
 Info (10041): Inferred latch for "imediato[30]" at extensor_Bit.v(8) File: C:/Users/rafae/OneDrive/Documents/Workspace/Faculdade/Processador/extensor_Bit.v Line: 8
 Info (10041): Inferred latch for "imediato[31]" at extensor_Bit.v(8) File: C:/Users/rafae/OneDrive/Documents/Workspace/Faculdade/Processador/extensor_Bit.v Line: 8
-Info (12128): Elaborating entity "controle_ULA" for hierarchy "controle_ULA:cULA" File: C:/Users/rafae/OneDrive/Documents/Workspace/Faculdade/Processador/teste.v Line: 63
+Info (12128): Elaborating entity "controle_ULA" for hierarchy "controle_ULA:cULA" File: C:/Users/rafae/OneDrive/Documents/Workspace/Faculdade/Processador/teste.v Line: 78
 Warning (10235): Verilog HDL Always Construct warning at controle_ULA.v(9): variable "opULA" is read inside the Always Construct but isn't in the Always Construct's Event Control File: C:/Users/rafae/OneDrive/Documents/Workspace/Faculdade/Processador/controle_ULA.v Line: 9
 Warning (10235): Verilog HDL Always Construct warning at controle_ULA.v(12): variable "instrucao" is read inside the Always Construct but isn't in the Always Construct's Event Control File: C:/Users/rafae/OneDrive/Documents/Workspace/Faculdade/Processador/controle_ULA.v Line: 12
 Warning (10270): Verilog HDL Case Statement warning at controle_ULA.v(12): incomplete case statement has no default case item File: C:/Users/rafae/OneDrive/Documents/Workspace/Faculdade/Processador/controle_ULA.v Line: 12
@@ -921,7 +1045,7 @@ Warning (10240): Verilog HDL Always Construct warning at controle_ULA.v(8): infe
 Info (10041): Inferred latch for "selec[0]" at controle_ULA.v(8) File: C:/Users/rafae/OneDrive/Documents/Workspace/Faculdade/Processador/controle_ULA.v Line: 8
 Info (10041): Inferred latch for "selec[1]" at controle_ULA.v(8) File: C:/Users/rafae/OneDrive/Documents/Workspace/Faculdade/Processador/controle_ULA.v Line: 8
 Info (10041): Inferred latch for "selec[2]" at controle_ULA.v(8) File: C:/Users/rafae/OneDrive/Documents/Workspace/Faculdade/Processador/controle_ULA.v Line: 8
-Info (12128): Elaborating entity "ULA" for hierarchy "ULA:ULA" File: C:/Users/rafae/OneDrive/Documents/Workspace/Faculdade/Processador/teste.v Line: 65
+Info (12128): Elaborating entity "ULA" for hierarchy "ULA:ULA" File: C:/Users/rafae/OneDrive/Documents/Workspace/Faculdade/Processador/teste.v Line: 80
 Warning (10235): Verilog HDL Always Construct warning at ULA.v(11): variable "origULA" is read inside the Always Construct but isn't in the Always Construct's Event Control File: C:/Users/rafae/OneDrive/Documents/Workspace/Faculdade/Processador/ULA.v Line: 11
 Warning (10235): Verilog HDL Always Construct warning at ULA.v(24): variable "origULA" is read inside the Always Construct but isn't in the Always Construct's Event Control File: C:/Users/rafae/OneDrive/Documents/Workspace/Faculdade/Processador/ULA.v Line: 24
 Warning (10270): Verilog HDL Case Statement warning at ULA.v(25): incomplete case statement has no default case item File: C:/Users/rafae/OneDrive/Documents/Workspace/Faculdade/Processador/ULA.v Line: 25
@@ -962,8 +1086,8 @@ Info (10041): Inferred latch for "result[28]" at ULA.v(31) File: C:/Users/rafae/
 Info (10041): Inferred latch for "result[29]" at ULA.v(31) File: C:/Users/rafae/OneDrive/Documents/Workspace/Faculdade/Processador/ULA.v Line: 31
 Info (10041): Inferred latch for "result[30]" at ULA.v(31) File: C:/Users/rafae/OneDrive/Documents/Workspace/Faculdade/Processador/ULA.v Line: 31
 Info (10041): Inferred latch for "result[31]" at ULA.v(31) File: C:/Users/rafae/OneDrive/Documents/Workspace/Faculdade/Processador/ULA.v Line: 31
-Info (12128): Elaborating entity "dados_RAM" for hierarchy "dados_RAM:DADO" File: C:/Users/rafae/OneDrive/Documents/Workspace/Faculdade/Processador/teste.v Line: 67
-Info (12128): Elaborating entity "mux_Mem" for hierarchy "mux_Mem:MUX" File: C:/Users/rafae/OneDrive/Documents/Workspace/Faculdade/Processador/teste.v Line: 71
+Info (12128): Elaborating entity "dados_RAM" for hierarchy "dados_RAM:DADO" File: C:/Users/rafae/OneDrive/Documents/Workspace/Faculdade/Processador/teste.v Line: 82
+Info (12128): Elaborating entity "mux_Mem" for hierarchy "mux_Mem:MUX" File: C:/Users/rafae/OneDrive/Documents/Workspace/Faculdade/Processador/teste.v Line: 84
 Warning (10240): Verilog HDL Always Construct warning at mux_Mem.v(10): inferring latch(es) for variable "saida", which holds its previous value in one or more paths through the always construct File: C:/Users/rafae/OneDrive/Documents/Workspace/Faculdade/Processador/mux_Mem.v Line: 10
 Info (10041): Inferred latch for "saida[0]" at mux_Mem.v(11) File: C:/Users/rafae/OneDrive/Documents/Workspace/Faculdade/Processador/mux_Mem.v Line: 11
 Info (10041): Inferred latch for "saida[1]" at mux_Mem.v(11) File: C:/Users/rafae/OneDrive/Documents/Workspace/Faculdade/Processador/mux_Mem.v Line: 11
@@ -997,7 +1121,7 @@ Info (10041): Inferred latch for "saida[28]" at mux_Mem.v(11) File: C:/Users/raf
 Info (10041): Inferred latch for "saida[29]" at mux_Mem.v(11) File: C:/Users/rafae/OneDrive/Documents/Workspace/Faculdade/Processador/mux_Mem.v Line: 11
 Info (10041): Inferred latch for "saida[30]" at mux_Mem.v(11) File: C:/Users/rafae/OneDrive/Documents/Workspace/Faculdade/Processador/mux_Mem.v Line: 11
 Info (10041): Inferred latch for "saida[31]" at mux_Mem.v(11) File: C:/Users/rafae/OneDrive/Documents/Workspace/Faculdade/Processador/mux_Mem.v Line: 11
-Info (12128): Elaborating entity "saidaDados" for hierarchy "saidaDados:SaidaDados" File: C:/Users/rafae/OneDrive/Documents/Workspace/Faculdade/Processador/teste.v Line: 73
+Info (12128): Elaborating entity "saidaDados" for hierarchy "saidaDados:SaidaDados" File: C:/Users/rafae/OneDrive/Documents/Workspace/Faculdade/Processador/teste.v Line: 86
 Warning (10036): Verilog HDL or VHDL warning at saidaDados.v(9): object "ultSegmentos" assigned a value but never read File: C:/Users/rafae/OneDrive/Documents/Workspace/Faculdade/Processador/saidaDados.v Line: 9
 Warning (10230): Verilog HDL assignment warning at saidaDados.v(39): truncated value with size 33 to match size of target (32) File: C:/Users/rafae/OneDrive/Documents/Workspace/Faculdade/Processador/saidaDados.v Line: 39
 Warning (10230): Verilog HDL assignment warning at saidaDados.v(31): truncated value with size 32 to match size of target (4) File: C:/Users/rafae/OneDrive/Documents/Workspace/Faculdade/Processador/saidaDados.v Line: 31
@@ -1008,7 +1132,7 @@ Warning (10230): Verilog HDL assignment warning at saidaDados.v(35): truncated v
 Warning (10230): Verilog HDL assignment warning at saidaDados.v(36): truncated value with size 32 to match size of target (4) File: C:/Users/rafae/OneDrive/Documents/Workspace/Faculdade/Processador/saidaDados.v Line: 36
 Warning (10230): Verilog HDL assignment warning at saidaDados.v(37): truncated value with size 32 to match size of target (4) File: C:/Users/rafae/OneDrive/Documents/Workspace/Faculdade/Processador/saidaDados.v Line: 37
 Warning (10230): Verilog HDL assignment warning at saidaDados.v(38): truncated value with size 32 to match size of target (4) File: C:/Users/rafae/OneDrive/Documents/Workspace/Faculdade/Processador/saidaDados.v Line: 38
-Info (12128): Elaborating entity "display7seg" for hierarchy "display7seg:Display" File: C:/Users/rafae/OneDrive/Documents/Workspace/Faculdade/Processador/teste.v Line: 75
+Info (12128): Elaborating entity "display7seg" for hierarchy "display7seg:Display" File: C:/Users/rafae/OneDrive/Documents/Workspace/Faculdade/Processador/teste.v Line: 88
 Warning (10059): Verilog HDL Case Statement warning at display7seg.v(27): case item expression never matches the case expression because it contains an 'x' or 'z' value File: C:/Users/rafae/OneDrive/Documents/Workspace/Faculdade/Processador/display7seg.v Line: 27
 Warning (10059): Verilog HDL Case Statement warning at display7seg.v(41): case item expression never matches the case expression because it contains an 'x' or 'z' value File: C:/Users/rafae/OneDrive/Documents/Workspace/Faculdade/Processador/display7seg.v Line: 41
 Warning (10059): Verilog HDL Case Statement warning at display7seg.v(55): case item expression never matches the case expression because it contains an 'x' or 'z' value File: C:/Users/rafae/OneDrive/Documents/Workspace/Faculdade/Processador/display7seg.v Line: 55
@@ -1017,16 +1141,22 @@ Warning (10059): Verilog HDL Case Statement warning at display7seg.v(83): case i
 Warning (10059): Verilog HDL Case Statement warning at display7seg.v(97): case item expression never matches the case expression because it contains an 'x' or 'z' value File: C:/Users/rafae/OneDrive/Documents/Workspace/Faculdade/Processador/display7seg.v Line: 97
 Warning (10059): Verilog HDL Case Statement warning at display7seg.v(111): case item expression never matches the case expression because it contains an 'x' or 'z' value File: C:/Users/rafae/OneDrive/Documents/Workspace/Faculdade/Processador/display7seg.v Line: 111
 Warning (10059): Verilog HDL Case Statement warning at display7seg.v(125): case item expression never matches the case expression because it contains an 'x' or 'z' value File: C:/Users/rafae/OneDrive/Documents/Workspace/Faculdade/Processador/display7seg.v Line: 125
+Info (12128): Elaborating entity "LCD_TEST" for hierarchy "LCD_TEST:u1" File: C:/Users/rafae/OneDrive/Documents/Workspace/Faculdade/Processador/teste.v Line: 99
+Info (12128): Elaborating entity "LCD_Controller" for hierarchy "LCD_TEST:u1|LCD_Controller:u0" File: C:/Users/rafae/OneDrive/Documents/Workspace/Faculdade/Processador/LCD_TEST.v Line: 132
+Warning (12011): Net is missing source, defaulting to GND
+    Warning (12110): Net "CLOCK_50" is missing source, defaulting to GND File: C:/Users/rafae/OneDrive/Documents/Workspace/Faculdade/Processador/teste.v Line: 64
+Warning (12011): Net is missing source, defaulting to GND
+    Warning (12110): Net "CLOCK_50" is missing source, defaulting to GND File: C:/Users/rafae/OneDrive/Documents/Workspace/Faculdade/Processador/teste.v Line: 64
 Warning (276027): Inferred dual-clock RAM node "dados_RAM:DADO|ram_rtl_0" from synchronous design logic.  The read-during-write behavior of a dual-clock RAM is undefined and may not match the behavior of the original design.
 Info (19000): Inferred 2 megafunctions from design logic
     Info (276029): Inferred altsyncram megafunction from the following design logic: "dados_RAM:DADO|ram_rtl_0" 
         Info (286033): Parameter OPERATION_MODE set to DUAL_PORT
         Info (286033): Parameter WIDTH_A set to 32
-        Info (286033): Parameter WIDTHAD_A set to 11
-        Info (286033): Parameter NUMWORDS_A set to 2048
+        Info (286033): Parameter WIDTHAD_A set to 5
+        Info (286033): Parameter NUMWORDS_A set to 32
         Info (286033): Parameter WIDTH_B set to 32
-        Info (286033): Parameter WIDTHAD_B set to 11
-        Info (286033): Parameter NUMWORDS_B set to 2048
+        Info (286033): Parameter WIDTHAD_B set to 5
+        Info (286033): Parameter NUMWORDS_B set to 32
         Info (286033): Parameter ADDRESS_ACLR_A set to NONE
         Info (286033): Parameter OUTDATA_REG_B set to UNREGISTERED
         Info (286033): Parameter ADDRESS_ACLR_B set to NONE
@@ -1052,11 +1182,11 @@ Info (12130): Elaborated megafunction instantiation "dados_RAM:DADO|altsyncram:r
 Info (12133): Instantiated megafunction "dados_RAM:DADO|altsyncram:ram_rtl_0" with the following parameter:
     Info (12134): Parameter "OPERATION_MODE" = "DUAL_PORT"
     Info (12134): Parameter "WIDTH_A" = "32"
-    Info (12134): Parameter "WIDTHAD_A" = "11"
-    Info (12134): Parameter "NUMWORDS_A" = "2048"
+    Info (12134): Parameter "WIDTHAD_A" = "5"
+    Info (12134): Parameter "NUMWORDS_A" = "32"
     Info (12134): Parameter "WIDTH_B" = "32"
-    Info (12134): Parameter "WIDTHAD_B" = "11"
-    Info (12134): Parameter "NUMWORDS_B" = "2048"
+    Info (12134): Parameter "WIDTHAD_B" = "5"
+    Info (12134): Parameter "NUMWORDS_B" = "32"
     Info (12134): Parameter "ADDRESS_ACLR_A" = "NONE"
     Info (12134): Parameter "OUTDATA_REG_B" = "UNREGISTERED"
     Info (12134): Parameter "ADDRESS_ACLR_B" = "NONE"
@@ -1064,8 +1194,8 @@ Info (12133): Instantiated megafunction "dados_RAM:DADO|altsyncram:ram_rtl_0" wi
     Info (12134): Parameter "ADDRESS_REG_B" = "CLOCK1"
     Info (12134): Parameter "INDATA_ACLR_A" = "NONE"
     Info (12134): Parameter "WRCONTROL_ACLR_A" = "NONE"
-Info (12021): Found 1 design units, including 1 entities, in source file db/altsyncram_09d1.tdf
-    Info (12023): Found entity 1: altsyncram_09d1 File: C:/Users/rafae/OneDrive/Documents/Workspace/Faculdade/Processador/db/altsyncram_09d1.tdf Line: 27
+Info (12021): Found 1 design units, including 1 entities, in source file db/altsyncram_kvc1.tdf
+    Info (12023): Found entity 1: altsyncram_kvc1 File: C:/Users/rafae/OneDrive/Documents/Workspace/Faculdade/Processador/db/altsyncram_kvc1.tdf Line: 27
 Info (12130): Elaborated megafunction instantiation "instrucoes_RAM:INST|altsyncram:inst_ram_rtl_0"
 Info (12133): Instantiated megafunction "instrucoes_RAM:INST|altsyncram:inst_ram_rtl_0" with the following parameter:
     Info (12134): Parameter "OPERATION_MODE" = "ROM"
@@ -1117,6 +1247,15 @@ Warning (14284): Synthesized away the following node(s):
         Warning (14320): Synthesized away node "ULA:ULA|lpm_mult:Mult0|mult_7dt:auto_generated|mac_out8" File: C:/Users/rafae/OneDrive/Documents/Workspace/Faculdade/Processador/db/mult_7dt.tdf Line: 90
 Info (13014): Ignored 84 buffer(s)
     Info (13019): Ignored 84 SOFT buffer(s)
+Warning (13032): The following tri-state nodes are fed by constants
+    Warning (13033): The pin "LCD_DATA[0]" is fed by GND File: C:/Users/rafae/OneDrive/Documents/Workspace/Faculdade/Processador/teste.v Line: 53
+    Warning (13033): The pin "LCD_DATA[1]" is fed by GND File: C:/Users/rafae/OneDrive/Documents/Workspace/Faculdade/Processador/teste.v Line: 53
+    Warning (13033): The pin "LCD_DATA[2]" is fed by GND File: C:/Users/rafae/OneDrive/Documents/Workspace/Faculdade/Processador/teste.v Line: 53
+    Warning (13033): The pin "LCD_DATA[3]" is fed by GND File: C:/Users/rafae/OneDrive/Documents/Workspace/Faculdade/Processador/teste.v Line: 53
+    Warning (13033): The pin "LCD_DATA[4]" is fed by GND File: C:/Users/rafae/OneDrive/Documents/Workspace/Faculdade/Processador/teste.v Line: 53
+    Warning (13033): The pin "LCD_DATA[5]" is fed by GND File: C:/Users/rafae/OneDrive/Documents/Workspace/Faculdade/Processador/teste.v Line: 53
+    Warning (13033): The pin "LCD_DATA[6]" is fed by GND File: C:/Users/rafae/OneDrive/Documents/Workspace/Faculdade/Processador/teste.v Line: 53
+    Warning (13033): The pin "LCD_DATA[7]" is fed by GND File: C:/Users/rafae/OneDrive/Documents/Workspace/Faculdade/Processador/teste.v Line: 53
 Info (13025): Duplicate LATCH primitives merged into single LATCH primitive
     Info (13026): Duplicate LATCH primitive "extensor_Bit:BIT|imediato[31]" merged with LATCH primitive "extensor_Bit:BIT|imediato[28]" File: C:/Users/rafae/OneDrive/Documents/Workspace/Faculdade/Processador/extensor_Bit.v Line: 8
     Info (13026): Duplicate LATCH primitive "extensor_Bit:BIT|imediato[30]" merged with LATCH primitive "extensor_Bit:BIT|imediato[28]" File: C:/Users/rafae/OneDrive/Documents/Workspace/Faculdade/Processador/extensor_Bit.v Line: 8
@@ -1189,7 +1328,7 @@ Warning (13012): Latch ULA:ULA|result[29] has unsafe behavior File: C:/Users/raf
 Warning (13012): Latch ULA:ULA|result[30] has unsafe behavior File: C:/Users/rafae/OneDrive/Documents/Workspace/Faculdade/Processador/ULA.v Line: 31
     Warning (13013): Ports D and ENA on the latch are fed by the same signal controle_ULA:cULA|selec[1] File: C:/Users/rafae/OneDrive/Documents/Workspace/Faculdade/Processador/controle_ULA.v Line: 8
 Warning (13012): Latch extensor_Bit:BIT|imediato[0] has unsafe behavior File: C:/Users/rafae/OneDrive/Documents/Workspace/Faculdade/Processador/extensor_Bit.v Line: 8
-    Warning (13013): Ports D and ENA on the latch are fed by the same signal entradaDados:comb_3|sinal File: C:/Users/rafae/OneDrive/Documents/Workspace/Faculdade/Processador/entradaDados.v Line: 10
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal entradaDados:comb_5|sinal File: C:/Users/rafae/OneDrive/Documents/Workspace/Faculdade/Processador/entradaDados.v Line: 10
 Warning (13012): Latch controle_ULA:cULA|selec[0] has unsafe behavior File: C:/Users/rafae/OneDrive/Documents/Workspace/Faculdade/Processador/controle_ULA.v Line: 8
     Warning (13013): Ports D and ENA on the latch are fed by the same signal instrucoes_RAM:INST|altsyncram:inst_ram_rtl_0|altsyncram_5c71:auto_generated|ram_block1a4 File: C:/Users/rafae/OneDrive/Documents/Workspace/Faculdade/Processador/db/altsyncram_5c71.tdf Line: 118
 Warning (13012): Latch controle_ULA:cULA|selec[1] has unsafe behavior File: C:/Users/rafae/OneDrive/Documents/Workspace/Faculdade/Processador/controle_ULA.v Line: 8
@@ -1215,50 +1354,65 @@ Warning (13012): Latch extensor_Bit:BIT|imediato[18] has unsafe behavior File: C
 Warning (13012): Latch extensor_Bit:BIT|imediato[17] has unsafe behavior File: C:/Users/rafae/OneDrive/Documents/Workspace/Faculdade/Processador/extensor_Bit.v Line: 8
     Warning (13013): Ports D and ENA on the latch are fed by the same signal instrucoes_RAM:INST|altsyncram:inst_ram_rtl_0|altsyncram_5c71:auto_generated|ram_block1a30 File: C:/Users/rafae/OneDrive/Documents/Workspace/Faculdade/Processador/db/altsyncram_5c71.tdf Line: 664
 Warning (13012): Latch extensor_Bit:BIT|imediato[16] has unsafe behavior File: C:/Users/rafae/OneDrive/Documents/Workspace/Faculdade/Processador/extensor_Bit.v Line: 8
-    Warning (13013): Ports D and ENA on the latch are fed by the same signal entradaDados:comb_3|sinal File: C:/Users/rafae/OneDrive/Documents/Workspace/Faculdade/Processador/entradaDados.v Line: 10
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal entradaDados:comb_5|sinal File: C:/Users/rafae/OneDrive/Documents/Workspace/Faculdade/Processador/entradaDados.v Line: 10
 Warning (13012): Latch extensor_Bit:BIT|imediato[15] has unsafe behavior File: C:/Users/rafae/OneDrive/Documents/Workspace/Faculdade/Processador/extensor_Bit.v Line: 8
-    Warning (13013): Ports D and ENA on the latch are fed by the same signal entradaDados:comb_3|sinal File: C:/Users/rafae/OneDrive/Documents/Workspace/Faculdade/Processador/entradaDados.v Line: 10
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal entradaDados:comb_5|sinal File: C:/Users/rafae/OneDrive/Documents/Workspace/Faculdade/Processador/entradaDados.v Line: 10
 Warning (13012): Latch extensor_Bit:BIT|imediato[14] has unsafe behavior File: C:/Users/rafae/OneDrive/Documents/Workspace/Faculdade/Processador/extensor_Bit.v Line: 8
-    Warning (13013): Ports D and ENA on the latch are fed by the same signal entradaDados:comb_3|sinal File: C:/Users/rafae/OneDrive/Documents/Workspace/Faculdade/Processador/entradaDados.v Line: 10
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal entradaDados:comb_5|sinal File: C:/Users/rafae/OneDrive/Documents/Workspace/Faculdade/Processador/entradaDados.v Line: 10
 Warning (13012): Latch extensor_Bit:BIT|imediato[13] has unsafe behavior File: C:/Users/rafae/OneDrive/Documents/Workspace/Faculdade/Processador/extensor_Bit.v Line: 8
-    Warning (13013): Ports D and ENA on the latch are fed by the same signal entradaDados:comb_3|sinal File: C:/Users/rafae/OneDrive/Documents/Workspace/Faculdade/Processador/entradaDados.v Line: 10
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal entradaDados:comb_5|sinal File: C:/Users/rafae/OneDrive/Documents/Workspace/Faculdade/Processador/entradaDados.v Line: 10
 Warning (13012): Latch extensor_Bit:BIT|imediato[12] has unsafe behavior File: C:/Users/rafae/OneDrive/Documents/Workspace/Faculdade/Processador/extensor_Bit.v Line: 8
-    Warning (13013): Ports D and ENA on the latch are fed by the same signal entradaDados:comb_3|sinal File: C:/Users/rafae/OneDrive/Documents/Workspace/Faculdade/Processador/entradaDados.v Line: 10
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal entradaDados:comb_5|sinal File: C:/Users/rafae/OneDrive/Documents/Workspace/Faculdade/Processador/entradaDados.v Line: 10
 Warning (13012): Latch extensor_Bit:BIT|imediato[11] has unsafe behavior File: C:/Users/rafae/OneDrive/Documents/Workspace/Faculdade/Processador/extensor_Bit.v Line: 8
-    Warning (13013): Ports D and ENA on the latch are fed by the same signal entradaDados:comb_3|sinal File: C:/Users/rafae/OneDrive/Documents/Workspace/Faculdade/Processador/entradaDados.v Line: 10
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal entradaDados:comb_5|sinal File: C:/Users/rafae/OneDrive/Documents/Workspace/Faculdade/Processador/entradaDados.v Line: 10
 Warning (13012): Latch extensor_Bit:BIT|imediato[10] has unsafe behavior File: C:/Users/rafae/OneDrive/Documents/Workspace/Faculdade/Processador/extensor_Bit.v Line: 8
-    Warning (13013): Ports D and ENA on the latch are fed by the same signal entradaDados:comb_3|sinal File: C:/Users/rafae/OneDrive/Documents/Workspace/Faculdade/Processador/entradaDados.v Line: 10
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal entradaDados:comb_5|sinal File: C:/Users/rafae/OneDrive/Documents/Workspace/Faculdade/Processador/entradaDados.v Line: 10
 Warning (13012): Latch extensor_Bit:BIT|imediato[9] has unsafe behavior File: C:/Users/rafae/OneDrive/Documents/Workspace/Faculdade/Processador/extensor_Bit.v Line: 8
-    Warning (13013): Ports D and ENA on the latch are fed by the same signal entradaDados:comb_3|sinal File: C:/Users/rafae/OneDrive/Documents/Workspace/Faculdade/Processador/entradaDados.v Line: 10
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal entradaDados:comb_5|sinal File: C:/Users/rafae/OneDrive/Documents/Workspace/Faculdade/Processador/entradaDados.v Line: 10
 Warning (13012): Latch extensor_Bit:BIT|imediato[8] has unsafe behavior File: C:/Users/rafae/OneDrive/Documents/Workspace/Faculdade/Processador/extensor_Bit.v Line: 8
-    Warning (13013): Ports D and ENA on the latch are fed by the same signal entradaDados:comb_3|sinal File: C:/Users/rafae/OneDrive/Documents/Workspace/Faculdade/Processador/entradaDados.v Line: 10
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal entradaDados:comb_5|sinal File: C:/Users/rafae/OneDrive/Documents/Workspace/Faculdade/Processador/entradaDados.v Line: 10
 Warning (13012): Latch extensor_Bit:BIT|imediato[7] has unsafe behavior File: C:/Users/rafae/OneDrive/Documents/Workspace/Faculdade/Processador/extensor_Bit.v Line: 8
-    Warning (13013): Ports D and ENA on the latch are fed by the same signal entradaDados:comb_3|sinal File: C:/Users/rafae/OneDrive/Documents/Workspace/Faculdade/Processador/entradaDados.v Line: 10
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal entradaDados:comb_5|sinal File: C:/Users/rafae/OneDrive/Documents/Workspace/Faculdade/Processador/entradaDados.v Line: 10
 Warning (13012): Latch extensor_Bit:BIT|imediato[6] has unsafe behavior File: C:/Users/rafae/OneDrive/Documents/Workspace/Faculdade/Processador/extensor_Bit.v Line: 8
-    Warning (13013): Ports D and ENA on the latch are fed by the same signal entradaDados:comb_3|sinal File: C:/Users/rafae/OneDrive/Documents/Workspace/Faculdade/Processador/entradaDados.v Line: 10
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal entradaDados:comb_5|sinal File: C:/Users/rafae/OneDrive/Documents/Workspace/Faculdade/Processador/entradaDados.v Line: 10
 Warning (13012): Latch extensor_Bit:BIT|imediato[5] has unsafe behavior File: C:/Users/rafae/OneDrive/Documents/Workspace/Faculdade/Processador/extensor_Bit.v Line: 8
-    Warning (13013): Ports D and ENA on the latch are fed by the same signal entradaDados:comb_3|sinal File: C:/Users/rafae/OneDrive/Documents/Workspace/Faculdade/Processador/entradaDados.v Line: 10
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal entradaDados:comb_5|sinal File: C:/Users/rafae/OneDrive/Documents/Workspace/Faculdade/Processador/entradaDados.v Line: 10
 Warning (13012): Latch extensor_Bit:BIT|imediato[4] has unsafe behavior File: C:/Users/rafae/OneDrive/Documents/Workspace/Faculdade/Processador/extensor_Bit.v Line: 8
-    Warning (13013): Ports D and ENA on the latch are fed by the same signal entradaDados:comb_3|sinal File: C:/Users/rafae/OneDrive/Documents/Workspace/Faculdade/Processador/entradaDados.v Line: 10
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal entradaDados:comb_5|sinal File: C:/Users/rafae/OneDrive/Documents/Workspace/Faculdade/Processador/entradaDados.v Line: 10
 Warning (13012): Latch extensor_Bit:BIT|imediato[3] has unsafe behavior File: C:/Users/rafae/OneDrive/Documents/Workspace/Faculdade/Processador/extensor_Bit.v Line: 8
-    Warning (13013): Ports D and ENA on the latch are fed by the same signal entradaDados:comb_3|sinal File: C:/Users/rafae/OneDrive/Documents/Workspace/Faculdade/Processador/entradaDados.v Line: 10
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal entradaDados:comb_5|sinal File: C:/Users/rafae/OneDrive/Documents/Workspace/Faculdade/Processador/entradaDados.v Line: 10
 Warning (13012): Latch extensor_Bit:BIT|imediato[2] has unsafe behavior File: C:/Users/rafae/OneDrive/Documents/Workspace/Faculdade/Processador/extensor_Bit.v Line: 8
-    Warning (13013): Ports D and ENA on the latch are fed by the same signal entradaDados:comb_3|sinal File: C:/Users/rafae/OneDrive/Documents/Workspace/Faculdade/Processador/entradaDados.v Line: 10
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal entradaDados:comb_5|sinal File: C:/Users/rafae/OneDrive/Documents/Workspace/Faculdade/Processador/entradaDados.v Line: 10
 Warning (13012): Latch extensor_Bit:BIT|imediato[1] has unsafe behavior File: C:/Users/rafae/OneDrive/Documents/Workspace/Faculdade/Processador/extensor_Bit.v Line: 8
-    Warning (13013): Ports D and ENA on the latch are fed by the same signal entradaDados:comb_3|sinal File: C:/Users/rafae/OneDrive/Documents/Workspace/Faculdade/Processador/entradaDados.v Line: 10
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal entradaDados:comb_5|sinal File: C:/Users/rafae/OneDrive/Documents/Workspace/Faculdade/Processador/entradaDados.v Line: 10
+Warning (13024): Output pins are stuck at VCC or GND
+    Warning (13410): Pin "LCD_RS" is stuck at GND File: C:/Users/rafae/OneDrive/Documents/Workspace/Faculdade/Processador/teste.v Line: 50
+    Warning (13410): Pin "LCD_RW" is stuck at GND File: C:/Users/rafae/OneDrive/Documents/Workspace/Faculdade/Processador/teste.v Line: 51
+    Warning (13410): Pin "LCD_EN" is stuck at GND File: C:/Users/rafae/OneDrive/Documents/Workspace/Faculdade/Processador/teste.v Line: 52
+    Warning (13410): Pin "LCD_ON" is stuck at VCC File: C:/Users/rafae/OneDrive/Documents/Workspace/Faculdade/Processador/teste.v Line: 54
+    Warning (13410): Pin "LCD_BLON" is stuck at VCC File: C:/Users/rafae/OneDrive/Documents/Workspace/Faculdade/Processador/teste.v Line: 55
 Info (286030): Timing-Driven Synthesis is running
+Info (17049): 11 registers lost all their fanouts during netlist optimizations.
+Info (144001): Generated suppressed messages file C:/Users/rafae/OneDrive/Documents/Workspace/Faculdade/Processador/output_files/CPU.map.smsg
 Info (16010): Generating hard_block partition "hard_block:auto_generated_inst"
     Info (16011): Adding 0 node(s), including 0 DDIO, 0 PLL, 0 transceiver and 0 LCELL
-Info (21057): Implemented 5735 device resources after synthesis - the final resource count might be different
+Info (21057): Implemented 5751 device resources after synthesis - the final resource count might be different
     Info (21058): Implemented 21 input pins
-    Info (21059): Implemented 60 output pins
-    Info (21061): Implemented 5584 logic cells
+    Info (21059): Implemented 65 output pins
+    Info (21060): Implemented 8 bidirectional pins
+    Info (21061): Implemented 5587 logic cells
     Info (21064): Implemented 64 RAM segments
     Info (21062): Implemented 6 DSP elements
-Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 171 warnings
-    Info: Peak virtual memory: 4886 megabytes
-    Info: Processing ended: Tue Oct 29 18:12:32 2024
-    Info: Elapsed time: 00:00:19
+Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 191 warnings
+    Info: Peak virtual memory: 4882 megabytes
+    Info: Processing ended: Fri Jan 03 17:18:32 2025
+    Info: Elapsed time: 00:00:17
     Info: Total CPU time (on all processors): 00:00:10
+
+
++------------------------------------------+
+; Analysis & Synthesis Suppressed Messages ;
++------------------------------------------+
+The suppressed messages can be found in C:/Users/rafae/OneDrive/Documents/Workspace/Faculdade/Processador/output_files/CPU.map.smsg.
 
 

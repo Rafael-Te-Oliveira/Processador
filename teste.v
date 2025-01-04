@@ -1,4 +1,4 @@
-module teste (clock, enter,reset, entrada, seg0, seg1, seg2, seg3, seg4, seg5, seg6, seg7, ledr);
+module teste (clock, enter,reset, entrada, seg0, seg1, seg2, seg3, seg4, seg5, seg6, seg7, ledr, LCD_RS, LCD_RW, LCD_EN, LCD_DATA, LCD_ON, LCD_BLON);
 	
 	input clock;
 	input enter;
@@ -35,6 +35,7 @@ module teste (clock, enter,reset, entrada, seg0, seg1, seg2, seg3, seg4, seg5, s
 	wire [31:0] dados;
 	wire neg;
 	wire divclock;
+	wire offset_register;
 	
 	output [6:0] seg0;
 	output [6:0] seg1;
@@ -46,7 +47,21 @@ module teste (clock, enter,reset, entrada, seg0, seg1, seg2, seg3, seg4, seg5, s
 	output [6:0] seg7;
 	output [3:0] ledr;
 	
+	output LCD_RS;       
+   output LCD_RW;        
+   output LCD_EN;    
+   inout [7:0] LCD_DATA; 
+	output LCD_ON;
+	output LCD_BLON;
+	
+	assign    LCD_ON   = 1'b1;
+	assign    LCD_BLON  = 1'b1;
+	
 	contato1 C1(clock, ledr, reset, divclock);
+	
+	wire DLY_RST;
+	
+	Reset_Delay r0(    .iCLK(CLOCK_50),.oRESET(DLY_RST) );
 	
 	PC PC(imediato, result, desvio, zero, negativo, divclock, endereco, stop, reset);
 	
@@ -54,7 +69,7 @@ module teste (clock, enter,reset, entrada, seg0, seg1, seg2, seg3, seg4, seg5, s
 	
 	instrucoes_RAM INST(endereco, instrucao,  clock , divclock);
 	
-	UC UC(instrucao, divclock, sinal, desvio, memReg, opULA, escreveMem, origULA, escreveReg, ext, out, in, stop, jal);
+	UC UC(instrucao, divclock, sinal, desvio, memReg, opULA, escreveMem, origULA, escreveReg, ext, out, in, stop, jal, offset_register);
 	
 	BancoRegistradores BR(instrucao, divclock, escreveReg, dados, endereco, jal, leRS, leRT, leRD);
 	
@@ -64,15 +79,23 @@ module teste (clock, enter,reset, entrada, seg0, seg1, seg2, seg3, seg4, seg5, s
 	
 	ULA ULA (selec, leRS, leRT, leRD, imediato, origULA, result, zero, negativo);
 	
-	dados_RAM DADO(leRS, result, result, escreveMem, clock , divclock, dadosLidos);
-	
-	//dados_RAM DADO(result, leRS, escreveMem, divclock, dadosLidos);
-	
+	dados_RAM DADO(leRS, result, result, escreveMem, clock , divclock, offset_register, dadosLidos);
+		
 	mux_Mem MUX(dadosLidos, result, memReg, dados);
 	
 	saidaDados SaidaDados(divclock, dados, out, saida, segmentos, neg);
 	
 	display7seg Display(segmentos, neg, seg0, seg1, seg2, seg3, seg4, seg5, seg6, seg7);
 		
+	LCD_TEST u1(
+// Host Side
+   .iCLK(CLOCK_50),
+   .iRST_N(DLY_RST),
+// LCD Side
+   .LCD_DATA(LCD_DATA),
+   .LCD_RW(LCD_RW),
+   .LCD_EN(LCD_EN),
+   .LCD_RS(LCD_RS)
+);
 
 endmodule 

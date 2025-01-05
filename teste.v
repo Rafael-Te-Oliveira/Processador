@@ -40,6 +40,7 @@ module teste (clock, enter,reset, entrada, seg0, seg1, seg2, seg3, seg4, seg5, s
 	wire[31:0] enderecoSpc;
 	wire lpc;
 	wire endProgram;
+	wire nextProgram;
 	
 	output [6:0] seg0;
 	output [6:0] seg1;
@@ -73,7 +74,7 @@ module teste (clock, enter,reset, entrada, seg0, seg1, seg2, seg3, seg4, seg5, s
 	
 	instrucoes_RAM INST(endereco, instrucao,  clock , divclock);
 	
-	UC UC(instrucao, divclock, sinal, desvio, memReg, opULA, escreveMem, origULA, escreveReg, ext, out, in, stop, jal, offset_register, lpc, spc, endProgram);
+	UC UC(instrucao, divclock, sinal, desvio, memReg, opULA, escreveMem, origULA, escreveReg, ext, out, in, stop, jal, offset_register, lpc, spc, nextProgram, endProgram);
 	
 	BancoRegistradores BR(instrucao, divclock, escreveReg, dados, endereco, jal, leRS, leRT, leRD);
 	
@@ -83,7 +84,7 @@ module teste (clock, enter,reset, entrada, seg0, seg1, seg2, seg3, seg4, seg5, s
 	
 	ULA ULA (selec, leRS, leRT, leRD, imediato, origULA, result, zero, negativo);
 	
-	dados_RAM DADO(leRS, result, result, escreveMem, clock , divclock, offset_register, spc, lpc, enderecoSpc, dadosLidos);
+	dados_RAM DADO(leRS, result, result, escreveMem, clock , divclock, offset_register, spc, lpc, nextProgram, enderecoSpc, dadosLidos);
 		
 	mux_Mem MUX(dadosLidos, result, memReg, dados);
 	

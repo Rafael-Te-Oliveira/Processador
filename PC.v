@@ -17,6 +17,7 @@ module PC (lpc, enderecoPc, endProgram, novoEnd, novoEndR, desvio, zero, negativ
 	
 	 reg [31:0] offset;
 	 integer programa = 1;
+	 integer programaAtual = 1;
 	
 	initial begin
 		endereco = 999;
@@ -26,23 +27,24 @@ module PC (lpc, enderecoPc, endProgram, novoEnd, novoEndR, desvio, zero, negativ
 	always @(posedge clock)begin
 		
 		if(lpc)begin
-			programa = 1;
+			programa = programaAtual % 2 + 1;
 		end
 		
 		offset = programa * 1000;
 		
 		if (!stop) begin
 			if((instNum>=quantum && programa != 0)|| endProgram) begin
-				enderecoSpc = endereco;
+				enderecoSpc = endereco + 1;
 				endereco = 0;
 				instNum = 0;
+				programaAtual = programa;
 				programa = 0;
 			end else begin
 				if(programa != 0) begin 
 					instNum = instNum + 1;
 				end
 				if(lpc) begin
-						endereco = enderecoPc + offset + 1;
+						endereco = enderecoPc + offset;
 				end else begin
 					 case (desvio)
 						  3'b000: endereco = endereco + 1;

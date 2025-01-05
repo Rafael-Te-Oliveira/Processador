@@ -1,4 +1,4 @@
-module UC (instrucao, clock, sinal, desvio, memReg, opULA, escreveMem, origULA, escreveReg, ext, out, in, stop, jal, offset_register);
+module UC (instrucao, clock, sinal, desvio, memReg, opULA, escreveMem, origULA, escreveReg, ext, out, in, stop, jal, offset_register, lpc, spc, endProgram);
 
 	input [31:0] instrucao;
 	input clock;
@@ -16,6 +16,9 @@ module UC (instrucao, clock, sinal, desvio, memReg, opULA, escreveMem, origULA, 
 	output reg stop;
 	output reg jal;
 	output reg offset_register;
+	output reg lpc;
+	output reg spc;
+	output reg endProgram;
 	
 	always @ (instrucao[31:26] || sinal) begin
 	
@@ -31,6 +34,9 @@ module UC (instrucao, clock, sinal, desvio, memReg, opULA, escreveMem, origULA, 
 		stop = 1'b0;
 		jal = 1'b0;
 		offset_register = 1'b0;
+		lpc = 1'b0;
+		spc = 1'b0;
+		endProgram = 1'b0;
 				
 		case(instrucao[31:26])
 			6'b000000: begin //arit log
@@ -125,7 +131,7 @@ module UC (instrucao, clock, sinal, desvio, memReg, opULA, escreveMem, origULA, 
 			6'b010000: begin //nop
 				end
 			6'b010001: begin //halt
-				stop = 1'b1;
+				endProgram = 1'b1;
 				end
 			6'b101011: begin //lc
 				memReg = 1'b1;
@@ -139,6 +145,12 @@ module UC (instrucao, clock, sinal, desvio, memReg, opULA, escreveMem, origULA, 
 				origULA = 2'b01;
 				opULA = 2'b11;
 				offset_register = 1'b1;
+				end
+			6'b101111: begin //lpc
+				lpc = 1'b1;
+				end
+			6'b100001: begin //spc
+				spc = 1'b1;
 				end
 		endcase
 	end

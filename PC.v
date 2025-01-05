@@ -1,30 +1,64 @@
-module PC (novoEnd, novoEndR, desvio, zero, negativo, clock, endereco, stop, reset);
-
+module PC (lpc, enderecoPc, endProgram, novoEnd, novoEndR, desvio, zero, negativo, clock, endereco, stop, reset, enderecoSpc);
+ 
+	input lpc;
+	input [31:0] enderecoPc;
+	input endProgram;
 	input clock, stop, reset;
 	input [2:0] desvio;
 	input [31:0] novoEnd;
 	input [31:0] novoEndR;
 	input zero, negativo;
+	
 	output reg [31:0] endereco;
+	output reg [31:0] enderecoSpc;
+	
+	integer quantum = 5;
+	integer instNum = 0;
+	
+	 reg [31:0] offset;
+	 integer programa = 1;
 	
 	initial begin
-		endereco = 32'b11111111111111111111111111111111;
+		endereco = 999;
+		enderecoSpc = 0;
 	end
 	
 	always @(posedge clock)begin
-		if(!stop) begin
-			if(desvio == 3'b000 || (desvio == 3'b010 && !zero) || (desvio == 3'b100 && zero) 
-			|| (desvio == 3'b101 && !negativo) || (desvio == 3'b110 && !negativo && !zero)) begin
-				endereco = endereco + 1;
-			end
-			if(desvio == 3'b001 || (desvio == 3'b010 && zero) || (desvio == 3'b100 && !zero) 
-			|| (desvio == 3'b101 && negativo) || (desvio == 3'b110 && (negativo || zero))) begin
-				endereco = novoEnd;
-			end
-			if(desvio == 3'b011) begin
-				endereco = novoEndR;
+		
+		if(lpc)begin
+			programa = 1;
+		end
+		
+		offset = programa * 1000;
+		
+		if (!stop) begin
+			if((instNum>=quantum && programa != 0)|| endProgram) begin
+				enderecoSpc = endereco;
+				endereco = 0;
+				instNum = 0;
+				programa = 0;
+			end else begin
+				if(programa != 0) begin 
+					instNum = instNum + 1;
+				end
+				if(lpc) begin
+						endereco = enderecoPc + offset + 1;
+				end else begin
+					 case (desvio)
+						  3'b000: endereco = endereco + 1;
+						  3'b001: endereco = novoEnd + offset;
+						  3'b010: endereco = (zero) ? novoEnd + offset : endereco + 1;
+						  3'b100: endereco = (zero) ? endereco + 1 : novoEnd + offset;
+						  3'b101: endereco = (negativo) ? novoEnd + offset : endereco + 1;
+						  3'b110: endereco = (negativo || zero) ? novoEnd + offset : endereco + 1;
+						  3'b011: endereco = novoEndR;
+					 endcase
+				end
 			end
 		end
-		if(~reset) endereco = 32'b11111111111111111111111111111111;
+
+		if (~reset) begin
+			 endereco = 999;
+		end
 	end
 endmodule

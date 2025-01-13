@@ -14,17 +14,16 @@ module dados_RAM
 	 
 	 always @(posedge write_clock) begin
 			if(nextProgram) begin
-				programa = programa % 2 + 1;
+				programa = programa % 5 + 1;
+				//programa = 1;
 			end
 	 end
 	 
     always @(spc || lpc || offset_register) begin
-			if (offset_register) begin
+			if (offset_register || spc || lpc) begin
 				offset = 0;
-			end else if (spc || lpc) begin
-				offset = 32;
 			end else begin
-				offset = 33;
+				offset = 32;
 			end
 			
 			offset = offset + programa * 1000;

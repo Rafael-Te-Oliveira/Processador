@@ -1,6 +1,7 @@
-module display7seg (segmentos, neg, seg0, seg1, seg2, seg3, seg4, seg5, seg6, seg7);
+module display7seg (segmentos, segmentosPrograma, neg, seg0, seg1, seg2, seg3, seg4, seg5, seg6, seg7);
 
 	input[31:0] segmentos;
+	input[31:0] segmentosPrograma;
 	input neg;
 	
 	output reg[6:0] seg0;
@@ -97,7 +98,7 @@ module display7seg (segmentos, neg, seg0, seg1, seg2, seg3, seg4, seg5, seg6, se
 			4'bxxxx: seg5 = 7'b1111111;
 			default: seg5 = 7'b1111111;
 		endcase
-		case (segmentos[27:24])
+		case (segmentosPrograma[15:12])
 			4'b0000: seg6 = 7'b1000000;
 			4'b0001: seg6 = 7'b1111001;
 			4'b0010: seg6 = 7'b0100100;
@@ -111,7 +112,7 @@ module display7seg (segmentos, neg, seg0, seg1, seg2, seg3, seg4, seg5, seg6, se
 			4'bxxxx: seg6 = 7'b1111111;
 			default: seg6 = 7'b1111111;
 		endcase
-		case (segmentos[31:28])
+		case (segmentosPrograma[19:16])
 			4'b0000: seg7 = 7'b1000000;
 			4'b0001: seg7 = 7'b1111001;
 			4'b0010: seg7 = 7'b0100100;

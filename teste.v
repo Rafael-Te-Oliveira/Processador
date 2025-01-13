@@ -41,6 +41,7 @@ module teste (clock, enter,reset, entrada, seg0, seg1, seg2, seg3, seg4, seg5, s
 	wire lpc;
 	wire endProgram;
 	wire nextProgram;
+	wire[31:0] segmentosPrograma;
 	
 	output [6:0] seg0;
 	output [6:0] seg1;
@@ -88,9 +89,9 @@ module teste (clock, enter,reset, entrada, seg0, seg1, seg2, seg3, seg4, seg5, s
 		
 	mux_Mem MUX(dadosLidos, result, memReg, dados);
 	
-	saidaDados SaidaDados(divclock, dados, out, saida, segmentos, neg);
+	saidaDados SaidaDados(divclock, dados, endereco, entrada, out, in, saida, segmentos, segmentosPrograma, neg);
 	
-	display7seg Display(segmentos, neg, seg0, seg1, seg2, seg3, seg4, seg5, seg6, seg7);
+	display7seg Display(segmentos,segmentosPrograma, neg, seg0, seg1, seg2, seg3, seg4, seg5, seg6, seg7);
 		
 	LCD_TEST u1(
 // Host Side

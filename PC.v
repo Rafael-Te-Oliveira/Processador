@@ -27,13 +27,14 @@ module PC (lpc, enderecoPc, endProgram, novoEnd, novoEndR, desvio, zero, negativ
 	always @(posedge clock)begin
 		
 		if(lpc)begin
-			programa = programaAtual % 2 + 1;
+			programa = programaAtual % 5 + 1;
+			//programa = 1;
 		end
 		
 		offset = programa * 1000;
 		
 		if (!stop) begin
-			if((instNum>=quantum && programa != 0)|| endProgram) begin
+			if(((instNum>=quantum && programa != 0)|| endProgram) && !desvio) begin
 				enderecoSpc = endereco + 1;
 				endereco = 0;
 				instNum = 0;

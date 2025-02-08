@@ -1,5 +1,7 @@
-module PC (lpc, enderecoPc, endProgram, novoEnd, novoEndR, desvio, zero, negativo, clock, endereco, stop, reset, enderecoSpc);
+module PC (changeProgram, defquantum, lpc, enderecoPc, endProgram, novoEnd, novoEndR, desvio, zero, negativo, clock, endereco, stop, reset, enderecoSpc);
  
+	input changeProgram;
+	input defquantum;
 	input lpc;
 	input [31:0] enderecoPc;
 	input endProgram;
@@ -12,9 +14,11 @@ module PC (lpc, enderecoPc, endProgram, novoEnd, novoEndR, desvio, zero, negativ
 	output reg [31:0] endereco;
 	output reg [31:0] enderecoSpc;
 	
-	integer quantum = 5;
+	// integer quantum = 5;
 	integer instNum = 0;
 	
+	 reg [31:0] quantum;
+	 reg [31:0] execProgram;
 	 reg [31:0] offset;
 	 integer programa = 1;
 	 integer programaAtual = 1;
@@ -22,23 +26,40 @@ module PC (lpc, enderecoPc, endProgram, novoEnd, novoEndR, desvio, zero, negativ
 	initial begin
 		endereco = 999;
 		enderecoSpc = 0;
+		quantum = 0;
+		execProgram = 0;
 	end
 	
 	always @(posedge clock)begin
 		
+		if(defquantum)begin
+			quantum = novoEndR;
+		end
+		
 		if(lpc)begin
-			programa = programaAtual % 5 + 1;
+			programa = execProgram;
+			//programa = programaAtual % 3 + 1;
 			//programa = 1;
 		end
 		
 		offset = programa * 1000;
 		
 		if (!stop) begin
-			if(((instNum>=quantum && programa != 0)|| endProgram) && !desvio) begin
-				enderecoSpc = endereco + 1;
+			if(((instNum>=quantum && programa != 0 && programa != 1) || endProgram || changeProgram) && !desvio) begin
+				if(endProgram) begin
+					enderecoSpc = endereco;
+				end else begin
+					enderecoSpc = endereco + 1;
+				end
+				
+				if(changeProgram) begin
+					execProgram = novoEndR;
+				end else begin
+					execProgram = 1;
+				end
 				endereco = 0;
 				instNum = 0;
-				programaAtual = programa;
+				//programaAtual = programa;
 				programa = 0;
 			end else begin
 				if(programa != 0) begin 

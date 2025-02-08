@@ -248,6 +248,18 @@
 					"strict" : false
 				},
 				{
+					"name" : "entrada[1]",
+					"strict" : false
+				},
+				{
+					"name" : "entrada[2]",
+					"strict" : false
+				},
+				{
+					"name" : "entrada[3]",
+					"strict" : false
+				},
+				{
 					"name" : "entrada[17]",
 					"strict" : false
 				},
@@ -301,18 +313,6 @@
 				},
 				{
 					"name" : "entrada[4]",
-					"strict" : false
-				},
-				{
-					"name" : "entrada[3]",
-					"strict" : false
-				},
-				{
-					"name" : "entrada[2]",
-					"strict" : false
-				},
-				{
-					"name" : "entrada[1]",
 					"strict" : false
 				},
 				{

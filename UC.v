@@ -1,4 +1,4 @@
-module UC (instrucao, clock, sinal, desvio, memReg, opULA, escreveMem, origULA, escreveReg, ext, out, in, stop, jal, offset_register, lpc, spc, nextProgram, endProgram);
+module UC (instrucao, clock, sinal, desvio, memReg, opULA, escreveMem, origULA, escreveReg, ext, out, in, stop, jal, offset_register, lpc, spc, nextProgram, endProgram, defquantum, changeProgram);
 
 	input [31:0] instrucao;
 	input clock;
@@ -20,6 +20,8 @@ module UC (instrucao, clock, sinal, desvio, memReg, opULA, escreveMem, origULA, 
 	output reg spc;
 	output reg nextProgram;
 	output reg endProgram;
+	output reg defquantum;
+	output reg changeProgram;
 	
 	always @ (instrucao[31:26] || sinal) begin
 	
@@ -39,6 +41,8 @@ module UC (instrucao, clock, sinal, desvio, memReg, opULA, escreveMem, origULA, 
 		spc = 1'b0;
 		endProgram = 1'b0;
 		nextProgram = 1'b0;
+		defquantum = 1'b0;
+		changeProgram = 1'b0;
 				
 		case(instrucao[31:26])
 			6'b000000: begin //arit log
@@ -154,8 +158,14 @@ module UC (instrucao, clock, sinal, desvio, memReg, opULA, escreveMem, origULA, 
 			6'b100001: begin //spc
 				spc = 1'b1;
 				end
-			6'b111111: begin //spc
+			6'b111111: begin //nextprogram
 				nextProgram = 1'b1;
+				end
+			6'b111110: begin //quantum
+				defquantum = 1'b1;
+				end
+			6'b111101: begin //changeprogram
+				changeProgram = 1'b1;
 				end
 		endcase
 	end

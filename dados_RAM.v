@@ -3,18 +3,30 @@ module dados_RAM
 (
     input [(DATA_WIDTH-1):0] data,
     input [(ADDR_WIDTH-1):0] endereco_leitura, endereco_escrita,
-    input we, read_clock, write_clock, offset_register, spc, lpc, nextProgram,
+    input we, read_clock, write_clock, offset_register, spc, lpc, nextProgram, changeProgram,
 	 input [(DATA_WIDTH-1):0] enderecoSpc,
     output reg [(DATA_WIDTH-1):0] q
 );
-    
+
+    reg [31:0] execProgram;
     reg [DATA_WIDTH-1:0] ram[7000];
 	 reg [31:0] offset;
 	 integer programa = 1;
+	 integer i = 1;
 	 
 	 always @(posedge write_clock) begin
+			if(changeProgram)begin
+				execProgram = endereco_leitura;
+			end
+			
 			if(nextProgram) begin
-				programa = programa % 5 + 1;
+				if(i%2)begin
+					programa = execProgram;
+				end else begin
+					programa = 1;
+				end
+				i = i + 1;
+				//programa = programa % 3 + 1;
 				//programa = 1;
 			end
 	 end

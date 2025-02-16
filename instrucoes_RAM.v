@@ -16,8 +16,8 @@ module instrucoes_RAM
 			$readmemb("instrucoes_ram/programa_1.txt", inst_ram, 2000, 2999);
 			$readmemb("instrucoes_ram/programa_2.txt", inst_ram, 3000, 3999);
 			$readmemb("instrucoes_ram/programa_3.txt", inst_ram, 4000, 4999);
-			//$readmemb("instrucoes_ram/programa_4.txt", inst_ram, 5000, 5999);
-			//$readmemb("instrucoes_ram/programa_5.txt", inst_ram, 6000, 6999);
+			$readmemb("instrucoes_ram/programa_4.txt", inst_ram, 5000, 5999);
+			$readmemb("instrucoes_ram/programa_5.txt", inst_ram, 6000, 6999);
 		end
 	 
     

@@ -1,8 +1,8 @@
 v1
 DSP_BALANCING_IMPLEMENTATION,DSP_BLOCKS,ULA:ULA|lpm_mult:Mult0|mult_7dt:auto_generated|mac_out2,
-DSP_BALANCING_IMPLEMENTATION,DSP_BLOCKS,dados_RAM:DADO|lpm_mult:Mult0|mult_jgt:auto_generated|mac_out2,
+DSP_BALANCING_IMPLEMENTATION,DSP_BLOCKS,dados_RAM:DADO|lpm_mult:Mult1|mult_jgt:auto_generated|mac_out2,
 DSP_BALANCING_IMPLEMENTATION,DSP_BLOCKS,PC:PC|lpm_mult:Mult0|mult_i9t:auto_generated|mac_out2,
-DSP_BALANCING_IMPLEMENTATION,DSP_BLOCKS,dados_RAM:DADO|lpm_mult:Mult0|mult_jgt:auto_generated|mac_out4,
+DSP_BALANCING_IMPLEMENTATION,DSP_BLOCKS,dados_RAM:DADO|lpm_mult:Mult1|mult_jgt:auto_generated|mac_out4,
 DSP_BALANCING_IMPLEMENTATION,DSP_BLOCKS,PC:PC|lpm_mult:Mult0|mult_i9t:auto_generated|mac_out4,
 DSP_BALANCING_IMPLEMENTATION,DSP_BLOCKS,ULA:ULA|lpm_mult:Mult0|mult_7dt:auto_generated|mac_out4,
 DSP_BALANCING_IMPLEMENTATION,DSP_BLOCKS,ULA:ULA|lpm_mult:Mult0|mult_7dt:auto_generated|mac_out6,

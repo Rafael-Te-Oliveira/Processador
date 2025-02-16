@@ -5,14 +5,20 @@ module dados_RAM
     input [(ADDR_WIDTH-1):0] endereco_leitura, endereco_escrita,
     input we, read_clock, write_clock, offset_register, spc, lpc, nextProgram, changeProgram,
 	 input [(DATA_WIDTH-1):0] enderecoSpc,
+	 input endprogram,
     output reg [(DATA_WIDTH-1):0] q
 );
 
     reg [31:0] execProgram;
     reg [DATA_WIDTH-1:0] ram[7000];
 	 reg [31:0] offset;
+	 reg [31:0] programasAtivos = 1032;
+	 reg [DATA_WIDTH-1:0] temp_value;
 	 integer programa = 1;
 	 integer i = 1;
+	 reg encerrou = 0;
+	 reg resetou= 0;
+	 
 	 
 	 always @(posedge write_clock) begin
 			if(changeProgram)begin
@@ -26,8 +32,6 @@ module dados_RAM
 					programa = 1;
 				end
 				i = i + 1;
-				//programa = programa % 3 + 1;
-				//programa = 1;
 			end
 	 end
 	 
@@ -44,18 +48,33 @@ module dados_RAM
     always @(posedge write_clock) begin
 		  if (spc) begin
 				ram[offset] <= enderecoSpc - programa * 1000;
+		  end else if (resetou) begin
+				ram[execProgram*1000] <= 0;
+				resetou <= 0;
 		  end else if (we) begin
             ram[endereco_escrita + offset] <= data;
-        end 
-		  
+        end else if (endprogram) begin
+				ram[programasAtivos + execProgram] <= 0;
+				encerrou <= 1;
+		  end else if (encerrou) begin
+				ram[programasAtivos] <= temp_value - 1;
+				encerrou <= 0;
+				resetou <= 1;
+		  end 
     end
 			
     always @(posedge read_clock) begin
-        if (lpc) begin
+		  if (lpc) begin
 				q <= ram[offset];
-		  end else begin
+		  end  else begin
 				q <= ram[endereco_leitura + offset];
 		  end
+    end
+	 
+	always @(posedge read_clock) begin
+		if(endprogram) begin
+				temp_value <= ram[programasAtivos];
+		  end 
     end
     
 endmodule

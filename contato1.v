@@ -21,6 +21,6 @@ begin
   
   assign LEDR = count[27:24];
   //assign divclock = count[5]; //normal
-  assign divclock = count[23]; //depuracao
+  assign divclock = count[22]; //depuracao
 
 endmodule

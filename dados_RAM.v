@@ -10,9 +10,9 @@ module dados_RAM
 );
 
     reg [31:0] execProgram;
-    reg [DATA_WIDTH-1:0] ram[7000];
+    reg [DATA_WIDTH-1:0] ram[2400];
 	 reg [31:0] offset;
-	 reg [31:0] programasAtivos = 1032;
+	 reg [31:0] programasAtivos = 232;
 	 reg [DATA_WIDTH-1:0] temp_value;
 	 integer programa = 1;
 	 integer i = 1;
@@ -22,7 +22,7 @@ module dados_RAM
 	 
 	 always @(posedge write_clock) begin
 			if(changeProgram)begin
-				execProgram = endereco_leitura;
+				execProgram = endereco_leitura + 1;
 			end
 			
 			if(nextProgram) begin
@@ -42,14 +42,14 @@ module dados_RAM
 				offset = 32;
 			end
 			
-			offset = offset + programa * 1000;
+			offset = offset + programa * 200;
     end
 
     always @(posedge write_clock) begin
 		  if (spc) begin
-				ram[offset] <= enderecoSpc - programa * 1000;
+				ram[offset] <= enderecoSpc - programa * 200;
 		  end else if (resetou) begin
-				ram[execProgram*1000] <= 0;
+				ram[execProgram*200] <= 0;
 				resetou <= 0;
 		  end else if (we) begin
             ram[endereco_escrita + offset] <= data;

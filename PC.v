@@ -24,7 +24,7 @@ module PC (changeProgram, defquantum, lpc, enderecoPc, endProgram, novoEnd, novo
 	 integer programaAtual = 1;
 	
 	initial begin
-		endereco = 999;
+		endereco = 199;
 		enderecoSpc = 0;
 		quantum = 0;
 		execProgram = 0;
@@ -42,7 +42,7 @@ module PC (changeProgram, defquantum, lpc, enderecoPc, endProgram, novoEnd, novo
 			//programa = 1;
 		end
 		
-		offset = programa * 1000;
+		offset = programa * 200;
 		
 		if (!stop) begin
 			if(((instNum>=quantum && programa != 0 && programa != 1) || endProgram || changeProgram) && !desvio) begin
@@ -53,7 +53,7 @@ module PC (changeProgram, defquantum, lpc, enderecoPc, endProgram, novoEnd, novo
 				end
 				
 				if(changeProgram) begin
-					execProgram = novoEndR;
+					execProgram = novoEndR + 1;
 				end else begin
 					execProgram = 1;
 				end
@@ -82,7 +82,7 @@ module PC (changeProgram, defquantum, lpc, enderecoPc, endProgram, novoEnd, novo
 		end
 
 		if (~reset) begin
-			 endereco = 999;
+			 endereco = 199;
 		end
 	end
 endmodule

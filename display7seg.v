@@ -98,33 +98,51 @@ module display7seg (segmentos, segmentosPrograma, neg, seg0, seg1, seg2, seg3, s
 			4'bxxxx: seg5 = 7'b1111111;
 			default: seg5 = 7'b1111111;
 		endcase
-		case (segmentosPrograma[15:12])
-			4'b0000: seg6 = 7'b1000000;
-			4'b0001: seg6 = 7'b1111001;
-			4'b0010: seg6 = 7'b0100100;
-			4'b0011: seg6 = 7'b0110000;
-			4'b0100: seg6 = 7'b0011001;
-			4'b0101: seg6 = 7'b0010010;
-			4'b0110: seg6 = 7'b0000010;
-			4'b0111: seg6 = 7'b1111000;
-			4'b1000: seg6 = 7'b0000000;
-			4'b1001: seg6 = 7'b0011000;
-			4'bxxxx: seg6 = 7'b1111111;
-			default: seg6 = 7'b1111111;
-		endcase
-		case (segmentosPrograma[19:16])
-			4'b0000: seg7 = 7'b1000000;
-			4'b0001: seg7 = 7'b1111001;
-			4'b0010: seg7 = 7'b0100100;
-			4'b0011: seg7 = 7'b0110000;
-			4'b0100: seg7 = 7'b0011001;
-			4'b0101: seg7 = 7'b0010010;
-			4'b0110: seg7 = 7'b0000010;
-			4'b0111: seg7 = 7'b1111000;
-			4'b1000: seg7 = 7'b0000000;
-			4'b1001: seg7 = 7'b0011000;
-			4'bxxxx: seg7 = 7'b1111111;
-			default: seg7 = 7'b1111111;
+		case ({segmentosPrograma[15:12], segmentosPrograma[11:8]})
+			 8'b00000000, 8'b00000001: begin
+				  seg7 = 7'b1111111; 
+				  seg6 = 7'b1000000; // 0
+			 end
+			 8'b00000010, 8'b00000011: begin
+				  seg7 = 7'b1111111;
+				  seg6 = 7'b1000000; // 0
+			 end
+			 8'b00000100, 8'b00000101: begin
+				  seg7 = 7'b1111111;
+				  seg6 = 7'b1111001; // 1
+			 end
+			 8'b00000110, 8'b00000111: begin
+				  seg7 = 7'b1111111;
+				  seg6 = 7'b0100100; // 2
+			 end
+			 8'b00001000, 8'b00001001: begin
+				  seg7 = 7'b1111111;
+				  seg6 = 7'b0110000; // 3
+			 end
+			 8'b00010000, 8'b00010001: begin
+				  seg7 = 7'b1111111;
+				  seg6 = 7'b0011001; // 4
+			 end
+			 8'b00010010, 8'b00010011: begin
+				  seg7 = 7'b1111111;
+				  seg6 = 7'b0010010; // 5
+			 end
+			 8'b00010100, 8'b00010101: begin
+				  seg7 = 7'b1111111;
+				  seg6 = 7'b0000010; // 6
+			 end
+			 8'b00010110, 8'b00010111: begin
+				  seg7 = 7'b1111111;
+				  seg6 = 7'b1111000; // 7
+			 end
+			 8'b00011000, 8'b00011001: begin
+				  seg7 = 7'b1111111;
+				  seg6 = 7'b0000000; // 8
+			 end
+			 default: begin
+				  seg7 = 7'b1111111;
+				  seg6 = 7'b1111111; // Caso inválido
+			 end
 		endcase
 		if(neg)begin
 		seg7 = 7'b0111111;

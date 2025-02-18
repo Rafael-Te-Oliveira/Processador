@@ -7,17 +7,30 @@ module instrucoes_RAM
 );
     
     // Declare the RAM variable
-    reg [DATA_WIDTH-1:0] inst_ram[7000];
+    reg [DATA_WIDTH-1:0] inst_ram[2400];
 
     initial
 		begin
-			$readmemb("instrucoes_ram/rotina_troca_contexto.txt", inst_ram, 0, 999);
-			$readmemb("instrucoes_ram/so.txt", inst_ram, 1000, 1999);
-			$readmemb("instrucoes_ram/programa_1.txt", inst_ram, 2000, 2999);
-			$readmemb("instrucoes_ram/programa_2.txt", inst_ram, 3000, 3999);
-			$readmemb("instrucoes_ram/programa_3.txt", inst_ram, 4000, 4999);
-			$readmemb("instrucoes_ram/programa_4.txt", inst_ram, 5000, 5999);
-			$readmemb("instrucoes_ram/programa_5.txt", inst_ram, 6000, 6999);
+			//rotina
+			$readmemb("instrucoes_ram/rotina_troca_contexto.txt", inst_ram, 0, 199);
+			//sistema operacional
+			$readmemb("instrucoes_ram/so.txt", inst_ram, 200, 399);
+			//adicao
+			$readmemb("instrucoes_ram/programa_1.txt", inst_ram, 400, 599);
+			//subtracao
+			$readmemb("instrucoes_ram/programa_2.txt", inst_ram, 600, 799);
+			//maior
+			$readmemb("instrucoes_ram/programa_3.txt", inst_ram, 800, 999);
+			//fibonacci
+			$readmemb("instrucoes_ram/programa_4.txt", inst_ram, 1000, 1199);
+			//perimetro
+			$readmemb("instrucoes_ram/programa_5.txt", inst_ram, 1200, 1399);
+			//gcd
+			$readmemb("instrucoes_ram/programa_6.txt", inst_ram, 1400, 1599);
+			//fatorial
+			$readmemb("instrucoes_ram/programa_7.txt", inst_ram, 1600, 1799);
+			//potencia
+			$readmemb("instrucoes_ram/programa_8.txt", inst_ram, 1800, 1999);
 		end
 	 
     

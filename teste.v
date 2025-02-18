@@ -1,4 +1,4 @@
-module teste (clock, enter,reset, entrada, seg0, seg1, seg2, seg3, seg4, seg5, seg6, seg7, ledr, LCD_RS, LCD_RW, LCD_EN, LCD_DATA, LCD_ON, LCD_BLON);
+module teste (clock, enter,reset, entrada, seg0, seg1, seg2, seg3, seg4, seg5, seg6, seg7, ledr);
 	
 	input clock;
 	input enter;
@@ -55,21 +55,21 @@ module teste (clock, enter,reset, entrada, seg0, seg1, seg2, seg3, seg4, seg5, s
 	output [6:0] seg7;
 	output [3:0] ledr;
 	
-	output LCD_RS;       
-   output LCD_RW;        
-   output LCD_EN;    
-   inout [7:0] LCD_DATA; 
-	output LCD_ON;
-	output LCD_BLON;
+	//output LCD_RS;       
+   //output LCD_RW;        
+   //output LCD_EN;    
+   //inout [7:0] LCD_DATA; 
+	//output LCD_ON;
+	//output LCD_BLON;
 	
-	assign    LCD_ON   = 1'b1;
-	assign    LCD_BLON  = 1'b1;
+	//assign    LCD_ON   = 1'b1;
+	//assign    LCD_BLON  = 1'b1;
 	
 	contato1 C1(clock, ledr, reset, divclock);
 	
-	wire DLY_RST;
+	//wire DLY_RST;
 	
-	Reset_Delay r0(    .iCLK(CLOCK_50),.oRESET(DLY_RST) );
+	//Reset_Delay r0(    .iCLK(CLOCK_50),.oRESET(DLY_RST) );
 	
 	PC PC(changeProgram, defquantum, lpc, dadosLidos, endProgram, imediato, result, desvio, zero, negativo, divclock, endereco, stop, reset, enderecoSpc);
 	
@@ -95,15 +95,15 @@ module teste (clock, enter,reset, entrada, seg0, seg1, seg2, seg3, seg4, seg5, s
 	
 	display7seg Display(segmentos,segmentosPrograma, neg, seg0, seg1, seg2, seg3, seg4, seg5, seg6, seg7);
 		
-	LCD_TEST u1(
+	//LCD_TEST u1(
 // Host Side
-   .iCLK(CLOCK_50),
-   .iRST_N(DLY_RST),
+   //.iCLK(CLOCK_50),
+   //.iRST_N(DLY_RST),
 // LCD Side
-   .LCD_DATA(LCD_DATA),
-   .LCD_RW(LCD_RW),
-   .LCD_EN(LCD_EN),
-   .LCD_RS(LCD_RS)
-);
+  // .LCD_DATA(LCD_DATA),
+   //.LCD_RW(LCD_RW),
+   //.LCD_EN(LCD_EN),
+   //.LCD_RS(LCD_RS)
+//);
 
 endmodule 

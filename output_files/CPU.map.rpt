@@ -1,5 +1,5 @@
 Analysis & Synthesis report for CPU
-Sun Feb 16 13:09:37 2025
+Tue Feb 18 15:15:21 2025
 Quartus Prime Version 17.1.0 Build 590 10/25/2017 SJ Lite Edition
 
 
@@ -15,37 +15,33 @@ Quartus Prime Version 17.1.0 Build 590 10/25/2017 SJ Lite Edition
   7. Analysis & Synthesis Resource Utilization by Entity
   8. Analysis & Synthesis RAM Summary
   9. Analysis & Synthesis DSP Block Usage Summary
- 10. State Machine - |teste|LCD_TEST:u1|mLCD_ST
- 11. State Machine - |teste|LCD_TEST:u1|LCD_Controller:u0|ST
- 12. User-Specified and Inferred Latches
- 13. Registers Removed During Synthesis
- 14. Removed Registers Triggering Further Register Optimizations
- 15. General Register Statistics
- 16. Inverted Register Statistics
- 17. Registers Packed Into Inferred Megafunctions
- 18. Multiplexer Restructuring Statistics (Restructuring Performed)
- 19. Source assignments for dados_RAM:DADO|altsyncram:ram_rtl_0|altsyncram_m8d1:auto_generated
- 20. Source assignments for dados_RAM:DADO|altsyncram:ram_rtl_1|altsyncram_62e1:auto_generated
- 21. Source assignments for instrucoes_RAM:INST|altsyncram:inst_ram_rtl_0|altsyncram_0c71:auto_generated
- 22. Parameter Settings for User Entity Instance: instrucoes_RAM:INST
- 23. Parameter Settings for User Entity Instance: dados_RAM:DADO
- 24. Parameter Settings for User Entity Instance: LCD_TEST:u1
- 25. Parameter Settings for User Entity Instance: LCD_TEST:u1|LCD_Controller:u0
- 26. Parameter Settings for Inferred Entity Instance: dados_RAM:DADO|altsyncram:ram_rtl_0
- 27. Parameter Settings for Inferred Entity Instance: dados_RAM:DADO|altsyncram:ram_rtl_1
- 28. Parameter Settings for Inferred Entity Instance: instrucoes_RAM:INST|altsyncram:inst_ram_rtl_0
- 29. Parameter Settings for Inferred Entity Instance: dados_RAM:DADO|lpm_mult:Mult2
- 30. Parameter Settings for Inferred Entity Instance: dados_RAM:DADO|lpm_mult:Mult1
- 31. Parameter Settings for Inferred Entity Instance: ULA:ULA|lpm_mult:Mult0
- 32. Parameter Settings for Inferred Entity Instance: ULA:ULA|lpm_divide:Div0
- 33. Parameter Settings for Inferred Entity Instance: PC:PC|lpm_mult:Mult0
- 34. altsyncram Parameter Settings by Entity Instance
- 35. lpm_mult Parameter Settings by Entity Instance
- 36. Port Connectivity Checks: "saidaDados:SaidaDados"
- 37. Post-Synthesis Netlist Statistics for Top Partition
- 38. Elapsed Time Per Partition
- 39. Analysis & Synthesis Messages
- 40. Analysis & Synthesis Suppressed Messages
+ 10. User-Specified and Inferred Latches
+ 11. Registers Removed During Synthesis
+ 12. Removed Registers Triggering Further Register Optimizations
+ 13. General Register Statistics
+ 14. Inverted Register Statistics
+ 15. Registers Packed Into Inferred Megafunctions
+ 16. Multiplexer Restructuring Statistics (Restructuring Performed)
+ 17. Source assignments for dados_RAM:DADO|altsyncram:ram_rtl_0|altsyncram_i8d1:auto_generated
+ 18. Source assignments for dados_RAM:DADO|altsyncram:ram_rtl_1|altsyncram_22e1:auto_generated
+ 19. Source assignments for instrucoes_RAM:INST|altsyncram:inst_ram_rtl_0|altsyncram_ub71:auto_generated
+ 20. Parameter Settings for User Entity Instance: instrucoes_RAM:INST
+ 21. Parameter Settings for User Entity Instance: dados_RAM:DADO
+ 22. Parameter Settings for Inferred Entity Instance: dados_RAM:DADO|altsyncram:ram_rtl_0
+ 23. Parameter Settings for Inferred Entity Instance: dados_RAM:DADO|altsyncram:ram_rtl_1
+ 24. Parameter Settings for Inferred Entity Instance: instrucoes_RAM:INST|altsyncram:inst_ram_rtl_0
+ 25. Parameter Settings for Inferred Entity Instance: dados_RAM:DADO|lpm_mult:Mult2
+ 26. Parameter Settings for Inferred Entity Instance: dados_RAM:DADO|lpm_mult:Mult1
+ 27. Parameter Settings for Inferred Entity Instance: ULA:ULA|lpm_mult:Mult0
+ 28. Parameter Settings for Inferred Entity Instance: ULA:ULA|lpm_divide:Div0
+ 29. Parameter Settings for Inferred Entity Instance: PC:PC|lpm_mult:Mult0
+ 30. altsyncram Parameter Settings by Entity Instance
+ 31. lpm_mult Parameter Settings by Entity Instance
+ 32. Port Connectivity Checks: "saidaDados:SaidaDados"
+ 33. Post-Synthesis Netlist Statistics for Top Partition
+ 34. Elapsed Time Per Partition
+ 35. Analysis & Synthesis Messages
+ 36. Analysis & Synthesis Suppressed Messages
 
 
 
@@ -71,18 +67,18 @@ refer to the applicable agreement for further details.
 +----------------------------------------------------------------------------------+
 ; Analysis & Synthesis Summary                                                     ;
 +------------------------------------+---------------------------------------------+
-; Analysis & Synthesis Status        ; Successful - Sun Feb 16 13:09:37 2025       ;
+; Analysis & Synthesis Status        ; Successful - Tue Feb 18 15:15:21 2025       ;
 ; Quartus Prime Version              ; 17.1.0 Build 590 10/25/2017 SJ Lite Edition ;
 ; Revision Name                      ; CPU                                         ;
 ; Top-level Entity Name              ; teste                                       ;
 ; Family                             ; Cyclone IV E                                ;
-; Total logic elements               ; 7,294                                       ;
-;     Total combinational functions  ; 6,283                                       ;
-;     Dedicated logic registers      ; 1,364                                       ;
-; Total registers                    ; 1364                                        ;
-; Total pins                         ; 94                                          ;
+; Total logic elements               ; 7,236                                       ;
+;     Total combinational functions  ; 6,225                                       ;
+;     Dedicated logic registers      ; 1,363                                       ;
+; Total registers                    ; 1363                                        ;
+; Total pins                         ; 81                                          ;
 ; Total virtual pins                 ; 0                                           ;
-; Total memory bits                  ; 672,000                                     ;
+; Total memory bits                  ; 230,400                                     ;
 ; Embedded Multiplier 9-bit elements ; 14                                          ;
 ; Total PLLs                         ; 0                                           ;
 +------------------------------------+---------------------------------------------+
@@ -218,13 +214,13 @@ refer to the applicable agreement for further details.
 ; entradaDados.v                              ; yes             ; User Verilog HDL File                                 ; C:/Users/rafae/OneDrive/Documents/Workspace/Faculdade/Processador/entradaDados.v                              ;         ;
 ; display7seg.v                               ; yes             ; User Verilog HDL File                                 ; C:/Users/rafae/OneDrive/Documents/Workspace/Faculdade/Processador/display7seg.v                               ;         ;
 ; contato1.v                                  ; yes             ; User Verilog HDL File                                 ; C:/Users/rafae/OneDrive/Documents/Workspace/Faculdade/Processador/contato1.v                                  ;         ;
-; displayLCD.v                                ; yes             ; User Verilog HDL File                                 ; C:/Users/rafae/OneDrive/Documents/Workspace/Faculdade/Processador/displayLCD.v                                ;         ;
-; Reset_Delay.v                               ; yes             ; User Verilog HDL File                                 ; C:/Users/rafae/OneDrive/Documents/Workspace/Faculdade/Processador/Reset_Delay.v                               ;         ;
-; LCD_TEST.v                                  ; yes             ; User Verilog HDL File                                 ; C:/Users/rafae/OneDrive/Documents/Workspace/Faculdade/Processador/LCD_TEST.v                                  ;         ;
 ; instrucoes_ram/so.txt                       ; yes             ; Auto-Found File                                       ; C:/Users/rafae/OneDrive/Documents/Workspace/Faculdade/Processador/instrucoes_ram/so.txt                       ;         ;
 ; instrucoes_ram/programa_4.txt               ; yes             ; Auto-Found File                                       ; C:/Users/rafae/OneDrive/Documents/Workspace/Faculdade/Processador/instrucoes_ram/programa_4.txt               ;         ;
 ; instrucoes_ram/programa_1.txt               ; yes             ; Auto-Found File                                       ; C:/Users/rafae/OneDrive/Documents/Workspace/Faculdade/Processador/instrucoes_ram/programa_1.txt               ;         ;
+; instrucoes_ram/programa_8.txt               ; yes             ; Auto-Found File                                       ; C:/Users/rafae/OneDrive/Documents/Workspace/Faculdade/Processador/instrucoes_ram/programa_8.txt               ;         ;
 ; instrucoes_ram/programa_5.txt               ; yes             ; Auto-Found File                                       ; C:/Users/rafae/OneDrive/Documents/Workspace/Faculdade/Processador/instrucoes_ram/programa_5.txt               ;         ;
+; instrucoes_ram/programa_7.txt               ; yes             ; Auto-Found File                                       ; C:/Users/rafae/OneDrive/Documents/Workspace/Faculdade/Processador/instrucoes_ram/programa_7.txt               ;         ;
+; instrucoes_ram/programa_6.txt               ; yes             ; Auto-Found File                                       ; C:/Users/rafae/OneDrive/Documents/Workspace/Faculdade/Processador/instrucoes_ram/programa_6.txt               ;         ;
 ; instrucoes_ram/programa_3.txt               ; yes             ; Auto-Found File                                       ; C:/Users/rafae/OneDrive/Documents/Workspace/Faculdade/Processador/instrucoes_ram/programa_3.txt               ;         ;
 ; instrucoes_ram/programa_2.txt               ; yes             ; Auto-Found File                                       ; C:/Users/rafae/OneDrive/Documents/Workspace/Faculdade/Processador/instrucoes_ram/programa_2.txt               ;         ;
 ; instrucoes_ram/rotina_troca_contexto.txt    ; yes             ; Auto-Found File                                       ; C:/Users/rafae/OneDrive/Documents/Workspace/Faculdade/Processador/instrucoes_ram/rotina_troca_contexto.txt    ;         ;
@@ -237,9 +233,9 @@ refer to the applicable agreement for further details.
 ; altrom.inc                                  ; yes             ; Megafunction                                          ; c:/intelfpga_lite/17.1/quartus/libraries/megafunctions/altrom.inc                                             ;         ;
 ; altram.inc                                  ; yes             ; Megafunction                                          ; c:/intelfpga_lite/17.1/quartus/libraries/megafunctions/altram.inc                                             ;         ;
 ; altdpram.inc                                ; yes             ; Megafunction                                          ; c:/intelfpga_lite/17.1/quartus/libraries/megafunctions/altdpram.inc                                           ;         ;
-; db/altsyncram_m8d1.tdf                      ; yes             ; Auto-Generated Megafunction                           ; C:/Users/rafae/OneDrive/Documents/Workspace/Faculdade/Processador/db/altsyncram_m8d1.tdf                      ;         ;
-; db/altsyncram_62e1.tdf                      ; yes             ; Auto-Generated Megafunction                           ; C:/Users/rafae/OneDrive/Documents/Workspace/Faculdade/Processador/db/altsyncram_62e1.tdf                      ;         ;
-; db/altsyncram_0c71.tdf                      ; yes             ; Auto-Generated Megafunction                           ; C:/Users/rafae/OneDrive/Documents/Workspace/Faculdade/Processador/db/altsyncram_0c71.tdf                      ;         ;
+; db/altsyncram_i8d1.tdf                      ; yes             ; Auto-Generated Megafunction                           ; C:/Users/rafae/OneDrive/Documents/Workspace/Faculdade/Processador/db/altsyncram_i8d1.tdf                      ;         ;
+; db/altsyncram_22e1.tdf                      ; yes             ; Auto-Generated Megafunction                           ; C:/Users/rafae/OneDrive/Documents/Workspace/Faculdade/Processador/db/altsyncram_22e1.tdf                      ;         ;
+; db/altsyncram_ub71.tdf                      ; yes             ; Auto-Generated Megafunction                           ; C:/Users/rafae/OneDrive/Documents/Workspace/Faculdade/Processador/db/altsyncram_ub71.tdf                      ;         ;
 ; db/cpu.ram0_instrucoes_ram_436a63f4.hdl.mif ; yes             ; Auto-Generated Auto-Found Memory Initialization File  ; C:/Users/rafae/OneDrive/Documents/Workspace/Faculdade/Processador/db/cpu.ram0_instrucoes_ram_436a63f4.hdl.mif ;         ;
 ; lpm_mult.tdf                                ; yes             ; Megafunction                                          ; c:/intelfpga_lite/17.1/quartus/libraries/megafunctions/lpm_mult.tdf                                           ;         ;
 ; lpm_add_sub.inc                             ; yes             ; Megafunction                                          ; c:/intelfpga_lite/17.1/quartus/libraries/megafunctions/lpm_add_sub.inc                                        ;         ;
@@ -260,10 +256,10 @@ refer to the applicable agreement for further details.
 ; addcore.inc                                 ; yes             ; Megafunction                                          ; c:/intelfpga_lite/17.1/quartus/libraries/megafunctions/addcore.inc                                            ;         ;
 ; look_add.inc                                ; yes             ; Megafunction                                          ; c:/intelfpga_lite/17.1/quartus/libraries/megafunctions/look_add.inc                                           ;         ;
 ; alt_stratix_add_sub.inc                     ; yes             ; Megafunction                                          ; c:/intelfpga_lite/17.1/quartus/libraries/megafunctions/alt_stratix_add_sub.inc                                ;         ;
-; db/add_sub_ngh.tdf                          ; yes             ; Auto-Generated Megafunction                           ; C:/Users/rafae/OneDrive/Documents/Workspace/Faculdade/Processador/db/add_sub_ngh.tdf                          ;         ;
-; db/add_sub_rgh.tdf                          ; yes             ; Auto-Generated Megafunction                           ; C:/Users/rafae/OneDrive/Documents/Workspace/Faculdade/Processador/db/add_sub_rgh.tdf                          ;         ;
+; db/add_sub_lgh.tdf                          ; yes             ; Auto-Generated Megafunction                           ; C:/Users/rafae/OneDrive/Documents/Workspace/Faculdade/Processador/db/add_sub_lgh.tdf                          ;         ;
+; db/add_sub_pgh.tdf                          ; yes             ; Auto-Generated Megafunction                           ; C:/Users/rafae/OneDrive/Documents/Workspace/Faculdade/Processador/db/add_sub_pgh.tdf                          ;         ;
 ; altshift.tdf                                ; yes             ; Megafunction                                          ; c:/intelfpga_lite/17.1/quartus/libraries/megafunctions/altshift.tdf                                           ;         ;
-; db/mult_jgt.tdf                             ; yes             ; Auto-Generated Megafunction                           ; C:/Users/rafae/OneDrive/Documents/Workspace/Faculdade/Processador/db/mult_jgt.tdf                             ;         ;
+; db/mult_8ft.tdf                             ; yes             ; Auto-Generated Megafunction                           ; C:/Users/rafae/OneDrive/Documents/Workspace/Faculdade/Processador/db/mult_8ft.tdf                             ;         ;
 ; db/mult_7dt.tdf                             ; yes             ; Auto-Generated Megafunction                           ; C:/Users/rafae/OneDrive/Documents/Workspace/Faculdade/Processador/db/mult_7dt.tdf                             ;         ;
 ; lpm_divide.tdf                              ; yes             ; Megafunction                                          ; c:/intelfpga_lite/17.1/quartus/libraries/megafunctions/lpm_divide.tdf                                         ;         ;
 ; abs_divider.inc                             ; yes             ; Megafunction                                          ; c:/intelfpga_lite/17.1/quartus/libraries/megafunctions/abs_divider.inc                                        ;         ;
@@ -273,41 +269,41 @@ refer to the applicable agreement for further details.
 ; db/alt_u_div_6af.tdf                        ; yes             ; Auto-Generated Megafunction                           ; C:/Users/rafae/OneDrive/Documents/Workspace/Faculdade/Processador/db/alt_u_div_6af.tdf                        ;         ;
 ; db/add_sub_7pc.tdf                          ; yes             ; Auto-Generated Megafunction                           ; C:/Users/rafae/OneDrive/Documents/Workspace/Faculdade/Processador/db/add_sub_7pc.tdf                          ;         ;
 ; db/add_sub_8pc.tdf                          ; yes             ; Auto-Generated Megafunction                           ; C:/Users/rafae/OneDrive/Documents/Workspace/Faculdade/Processador/db/add_sub_8pc.tdf                          ;         ;
-; db/mult_i9t.tdf                             ; yes             ; Auto-Generated Megafunction                           ; C:/Users/rafae/OneDrive/Documents/Workspace/Faculdade/Processador/db/mult_i9t.tdf                             ;         ;
+; db/mult_78t.tdf                             ; yes             ; Auto-Generated Megafunction                           ; C:/Users/rafae/OneDrive/Documents/Workspace/Faculdade/Processador/db/mult_78t.tdf                             ;         ;
 +---------------------------------------------+-----------------+-------------------------------------------------------+---------------------------------------------------------------------------------------------------------------+---------+
 
 
-+---------------------------------------------------------------------+
-; Analysis & Synthesis Resource Usage Summary                         ;
-+---------------------------------------------+-----------------------+
-; Resource                                    ; Usage                 ;
-+---------------------------------------------+-----------------------+
-; Estimated Total logic elements              ; 7,294                 ;
-;                                             ;                       ;
-; Total combinational functions               ; 6283                  ;
-; Logic element usage by number of LUT inputs ;                       ;
-;     -- 4 input functions                    ; 4586                  ;
-;     -- 3 input functions                    ; 1424                  ;
-;     -- <=2 input functions                  ; 273                   ;
-;                                             ;                       ;
-; Logic elements by mode                      ;                       ;
-;     -- normal mode                          ; 5376                  ;
-;     -- arithmetic mode                      ; 907                   ;
-;                                             ;                       ;
-; Total registers                             ; 1364                  ;
-;     -- Dedicated logic registers            ; 1364                  ;
-;     -- I/O registers                        ; 0                     ;
-;                                             ;                       ;
-; I/O pins                                    ; 94                    ;
-; Total memory bits                           ; 672000                ;
-;                                             ;                       ;
-; Embedded Multiplier 9-bit elements          ; 14                    ;
-;                                             ;                       ;
-; Maximum fan-out node                        ; contato1:C1|count[22] ;
-; Maximum fan-out                             ; 1401                  ;
-; Total fan-out                               ; 29488                 ;
-; Average fan-out                             ; 3.71                  ;
-+---------------------------------------------+-----------------------+
++--------------------------------------------------------------------+
+; Analysis & Synthesis Resource Usage Summary                        ;
++---------------------------------------------+----------------------+
+; Resource                                    ; Usage                ;
++---------------------------------------------+----------------------+
+; Estimated Total logic elements              ; 7,236                ;
+;                                             ;                      ;
+; Total combinational functions               ; 6225                 ;
+; Logic element usage by number of LUT inputs ;                      ;
+;     -- 4 input functions                    ; 4486                 ;
+;     -- 3 input functions                    ; 1405                 ;
+;     -- <=2 input functions                  ; 334                  ;
+;                                             ;                      ;
+; Logic elements by mode                      ;                      ;
+;     -- normal mode                          ; 5290                 ;
+;     -- arithmetic mode                      ; 935                  ;
+;                                             ;                      ;
+; Total registers                             ; 1363                 ;
+;     -- Dedicated logic registers            ; 1363                 ;
+;     -- I/O registers                        ; 0                    ;
+;                                             ;                      ;
+; I/O pins                                    ; 81                   ;
+; Total memory bits                           ; 230400               ;
+;                                             ;                      ;
+; Embedded Multiplier 9-bit elements          ; 14                   ;
+;                                             ;                      ;
+; Maximum fan-out node                        ; contato1:C1|count[5] ;
+; Maximum fan-out                             ; 1400                 ;
+; Total fan-out                               ; 28998                ;
+; Average fan-out                             ; 3.69                 ;
++---------------------------------------------+----------------------+
 
 
 +------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
@@ -315,11 +311,11 @@ refer to the applicable agreement for further details.
 +---------------------------------------------------+---------------------+---------------------------+-------------+--------------+---------+-----------+------+--------------+----------------------------------------------------------------------------------------------------------------------------------------------+---------------------+--------------+
 ; Compilation Hierarchy Node                        ; Combinational ALUTs ; Dedicated Logic Registers ; Memory Bits ; DSP Elements ; DSP 9x9 ; DSP 18x18 ; Pins ; Virtual Pins ; Full Hierarchy Name                                                                                                                          ; Entity Name         ; Library Name ;
 +---------------------------------------------------+---------------------+---------------------------+-------------+--------------+---------+-----------+------+--------------+----------------------------------------------------------------------------------------------------------------------------------------------+---------------------+--------------+
-; |teste                                            ; 6283 (1)            ; 1364 (0)                  ; 672000      ; 14           ; 0       ; 7         ; 94   ; 0            ; |teste                                                                                                                                       ; teste               ; work         ;
+; |teste                                            ; 6225 (1)            ; 1363 (0)                  ; 230400      ; 14           ; 0       ; 7         ; 81   ; 0            ; |teste                                                                                                                                       ; teste               ; work         ;
 ;    |BancoRegistradores:BR|                        ; 2088 (2088)         ; 1024 (1024)               ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |teste|BancoRegistradores:BR                                                                                                                 ; BancoRegistradores  ; work         ;
-;    |PC:PC|                                        ; 462 (444)           ; 192 (192)                 ; 0           ; 4            ; 0       ; 2         ; 0    ; 0            ; |teste|PC:PC                                                                                                                                 ; PC                  ; work         ;
-;       |lpm_mult:Mult0|                            ; 18 (0)              ; 0 (0)                     ; 0           ; 4            ; 0       ; 2         ; 0    ; 0            ; |teste|PC:PC|lpm_mult:Mult0                                                                                                                  ; lpm_mult            ; work         ;
-;          |mult_i9t:auto_generated|                ; 18 (18)             ; 0 (0)                     ; 0           ; 4            ; 0       ; 2         ; 0    ; 0            ; |teste|PC:PC|lpm_mult:Mult0|mult_i9t:auto_generated                                                                                          ; mult_i9t            ; work         ;
+;    |PC:PC|                                        ; 491 (471)           ; 192 (192)                 ; 0           ; 4            ; 0       ; 2         ; 0    ; 0            ; |teste|PC:PC                                                                                                                                 ; PC                  ; work         ;
+;       |lpm_mult:Mult0|                            ; 20 (0)              ; 0 (0)                     ; 0           ; 4            ; 0       ; 2         ; 0    ; 0            ; |teste|PC:PC|lpm_mult:Mult0                                                                                                                  ; lpm_mult            ; work         ;
+;          |mult_78t:auto_generated|                ; 20 (20)             ; 0 (0)                     ; 0           ; 4            ; 0       ; 2         ; 0    ; 0            ; |teste|PC:PC|lpm_mult:Mult0|mult_78t:auto_generated                                                                                          ; mult_78t            ; work         ;
 ;    |UC:UC|                                        ; 42 (42)             ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |teste|UC:UC                                                                                                                                 ; UC                  ; work         ;
 ;    |ULA:ULA|                                      ; 1535 (405)          ; 0 (0)                     ; 0           ; 6            ; 0       ; 3         ; 0    ; 0            ; |teste|ULA:ULA                                                                                                                               ; ULA                 ; work         ;
 ;       |lpm_divide:Div0|                           ; 1102 (0)            ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |teste|ULA:ULA|lpm_divide:Div0                                                                                                               ; lpm_divide          ; work         ;
@@ -331,41 +327,41 @@ refer to the applicable agreement for further details.
 ;          |mult_7dt:auto_generated|                ; 28 (28)             ; 0 (0)                     ; 0           ; 6            ; 0       ; 3         ; 0    ; 0            ; |teste|ULA:ULA|lpm_mult:Mult0|mult_7dt:auto_generated                                                                                        ; mult_7dt            ; work         ;
 ;    |contato1:C1|                                  ; 28 (28)             ; 28 (28)                   ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |teste|contato1:C1                                                                                                                           ; contato1            ; work         ;
 ;    |controle_ULA:cULA|                            ; 14 (14)             ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |teste|controle_ULA:cULA                                                                                                                     ; controle_ULA        ; work         ;
-;    |dados_RAM:DADO|                               ; 299 (265)           ; 67 (67)                   ; 448000      ; 4            ; 0       ; 2         ; 0    ; 0            ; |teste|dados_RAM:DADO                                                                                                                        ; dados_RAM           ; work         ;
-;       |altsyncram:ram_rtl_0|                      ; 0 (0)               ; 0 (0)                     ; 224000      ; 0            ; 0       ; 0         ; 0    ; 0            ; |teste|dados_RAM:DADO|altsyncram:ram_rtl_0                                                                                                   ; altsyncram          ; work         ;
-;          |altsyncram_m8d1:auto_generated|         ; 0 (0)               ; 0 (0)                     ; 224000      ; 0            ; 0       ; 0         ; 0    ; 0            ; |teste|dados_RAM:DADO|altsyncram:ram_rtl_0|altsyncram_m8d1:auto_generated                                                                    ; altsyncram_m8d1     ; work         ;
-;       |altsyncram:ram_rtl_1|                      ; 0 (0)               ; 0 (0)                     ; 224000      ; 0            ; 0       ; 0         ; 0    ; 0            ; |teste|dados_RAM:DADO|altsyncram:ram_rtl_1                                                                                                   ; altsyncram          ; work         ;
-;          |altsyncram_62e1:auto_generated|         ; 0 (0)               ; 0 (0)                     ; 224000      ; 0            ; 0       ; 0         ; 0    ; 0            ; |teste|dados_RAM:DADO|altsyncram:ram_rtl_1|altsyncram_62e1:auto_generated                                                                    ; altsyncram_62e1     ; work         ;
+;    |dados_RAM:DADO|                               ; 287 (259)           ; 67 (67)                   ; 153600      ; 4            ; 0       ; 2         ; 0    ; 0            ; |teste|dados_RAM:DADO                                                                                                                        ; dados_RAM           ; work         ;
+;       |altsyncram:ram_rtl_0|                      ; 0 (0)               ; 0 (0)                     ; 76800       ; 0            ; 0       ; 0         ; 0    ; 0            ; |teste|dados_RAM:DADO|altsyncram:ram_rtl_0                                                                                                   ; altsyncram          ; work         ;
+;          |altsyncram_i8d1:auto_generated|         ; 0 (0)               ; 0 (0)                     ; 76800       ; 0            ; 0       ; 0         ; 0    ; 0            ; |teste|dados_RAM:DADO|altsyncram:ram_rtl_0|altsyncram_i8d1:auto_generated                                                                    ; altsyncram_i8d1     ; work         ;
+;       |altsyncram:ram_rtl_1|                      ; 0 (0)               ; 0 (0)                     ; 76800       ; 0            ; 0       ; 0         ; 0    ; 0            ; |teste|dados_RAM:DADO|altsyncram:ram_rtl_1                                                                                                   ; altsyncram          ; work         ;
+;          |altsyncram_22e1:auto_generated|         ; 0 (0)               ; 0 (0)                     ; 76800       ; 0            ; 0       ; 0         ; 0    ; 0            ; |teste|dados_RAM:DADO|altsyncram:ram_rtl_1|altsyncram_22e1:auto_generated                                                                    ; altsyncram_22e1     ; work         ;
 ;       |lpm_mult:Mult1|                            ; 14 (0)              ; 0 (0)                     ; 0           ; 4            ; 0       ; 2         ; 0    ; 0            ; |teste|dados_RAM:DADO|lpm_mult:Mult1                                                                                                         ; lpm_mult            ; work         ;
-;          |mult_jgt:auto_generated|                ; 14 (14)             ; 0 (0)                     ; 0           ; 4            ; 0       ; 2         ; 0    ; 0            ; |teste|dados_RAM:DADO|lpm_mult:Mult1|mult_jgt:auto_generated                                                                                 ; mult_jgt            ; work         ;
-;       |lpm_mult:Mult2|                            ; 20 (0)              ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |teste|dados_RAM:DADO|lpm_mult:Mult2                                                                                                         ; lpm_mult            ; work         ;
-;          |multcore:mult_core|                     ; 20 (12)             ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |teste|dados_RAM:DADO|lpm_mult:Mult2|multcore:mult_core                                                                                      ; multcore            ; work         ;
-;             |mpar_add:padder|                     ; 8 (0)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |teste|dados_RAM:DADO|lpm_mult:Mult2|multcore:mult_core|mpar_add:padder                                                                      ; mpar_add            ; work         ;
-;                |lpm_add_sub:adder[0]|             ; 6 (0)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |teste|dados_RAM:DADO|lpm_mult:Mult2|multcore:mult_core|mpar_add:padder|lpm_add_sub:adder[0]                                                 ; lpm_add_sub         ; work         ;
-;                   |add_sub_ngh:auto_generated|    ; 6 (6)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |teste|dados_RAM:DADO|lpm_mult:Mult2|multcore:mult_core|mpar_add:padder|lpm_add_sub:adder[0]|add_sub_ngh:auto_generated                      ; add_sub_ngh         ; work         ;
-;                |mpar_add:sub_par_add|             ; 2 (0)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |teste|dados_RAM:DADO|lpm_mult:Mult2|multcore:mult_core|mpar_add:padder|mpar_add:sub_par_add                                                 ; mpar_add            ; work         ;
-;                   |lpm_add_sub:adder[0]|          ; 2 (0)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |teste|dados_RAM:DADO|lpm_mult:Mult2|multcore:mult_core|mpar_add:padder|mpar_add:sub_par_add|lpm_add_sub:adder[0]                            ; lpm_add_sub         ; work         ;
-;                      |add_sub_rgh:auto_generated| ; 2 (2)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |teste|dados_RAM:DADO|lpm_mult:Mult2|multcore:mult_core|mpar_add:padder|mpar_add:sub_par_add|lpm_add_sub:adder[0]|add_sub_rgh:auto_generated ; add_sub_rgh         ; work         ;
-;    |display7seg:Display|                          ; 63 (63)             ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |teste|display7seg:Display                                                                                                                   ; display7seg         ; work         ;
-;    |entradaDados:comb_5|                          ; 3 (3)               ; 20 (20)                   ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |teste|entradaDados:comb_5                                                                                                                   ; entradaDados        ; work         ;
+;          |mult_8ft:auto_generated|                ; 14 (14)             ; 0 (0)                     ; 0           ; 4            ; 0       ; 2         ; 0    ; 0            ; |teste|dados_RAM:DADO|lpm_mult:Mult1|mult_8ft:auto_generated                                                                                 ; mult_8ft            ; work         ;
+;       |lpm_mult:Mult2|                            ; 14 (0)              ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |teste|dados_RAM:DADO|lpm_mult:Mult2                                                                                                         ; lpm_mult            ; work         ;
+;          |multcore:mult_core|                     ; 14 (8)              ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |teste|dados_RAM:DADO|lpm_mult:Mult2|multcore:mult_core                                                                                      ; multcore            ; work         ;
+;             |mpar_add:padder|                     ; 6 (0)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |teste|dados_RAM:DADO|lpm_mult:Mult2|multcore:mult_core|mpar_add:padder                                                                      ; mpar_add            ; work         ;
+;                |lpm_add_sub:adder[0]|             ; 5 (0)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |teste|dados_RAM:DADO|lpm_mult:Mult2|multcore:mult_core|mpar_add:padder|lpm_add_sub:adder[0]                                                 ; lpm_add_sub         ; work         ;
+;                   |add_sub_lgh:auto_generated|    ; 5 (5)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |teste|dados_RAM:DADO|lpm_mult:Mult2|multcore:mult_core|mpar_add:padder|lpm_add_sub:adder[0]|add_sub_lgh:auto_generated                      ; add_sub_lgh         ; work         ;
+;                |mpar_add:sub_par_add|             ; 1 (0)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |teste|dados_RAM:DADO|lpm_mult:Mult2|multcore:mult_core|mpar_add:padder|mpar_add:sub_par_add                                                 ; mpar_add            ; work         ;
+;                   |lpm_add_sub:adder[0]|          ; 1 (0)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |teste|dados_RAM:DADO|lpm_mult:Mult2|multcore:mult_core|mpar_add:padder|mpar_add:sub_par_add|lpm_add_sub:adder[0]                            ; lpm_add_sub         ; work         ;
+;                      |add_sub_pgh:auto_generated| ; 1 (1)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |teste|dados_RAM:DADO|lpm_mult:Mult2|multcore:mult_core|mpar_add:padder|mpar_add:sub_par_add|lpm_add_sub:adder[0]|add_sub_pgh:auto_generated ; add_sub_pgh         ; work         ;
+;    |display7seg:Display|                          ; 56 (56)             ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |teste|display7seg:Display                                                                                                                   ; display7seg         ; work         ;
+;    |entradaDados:comb_3|                          ; 3 (3)               ; 20 (20)                   ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |teste|entradaDados:comb_3                                                                                                                   ; entradaDados        ; work         ;
 ;    |extensor_Bit:BIT|                             ; 55 (55)             ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |teste|extensor_Bit:BIT                                                                                                                      ; extensor_Bit        ; work         ;
-;    |instrucoes_RAM:INST|                          ; 0 (0)               ; 0 (0)                     ; 224000      ; 0            ; 0       ; 0         ; 0    ; 0            ; |teste|instrucoes_RAM:INST                                                                                                                   ; instrucoes_RAM      ; work         ;
-;       |altsyncram:inst_ram_rtl_0|                 ; 0 (0)               ; 0 (0)                     ; 224000      ; 0            ; 0       ; 0         ; 0    ; 0            ; |teste|instrucoes_RAM:INST|altsyncram:inst_ram_rtl_0                                                                                         ; altsyncram          ; work         ;
-;          |altsyncram_0c71:auto_generated|         ; 0 (0)               ; 0 (0)                     ; 224000      ; 0            ; 0       ; 0         ; 0    ; 0            ; |teste|instrucoes_RAM:INST|altsyncram:inst_ram_rtl_0|altsyncram_0c71:auto_generated                                                          ; altsyncram_0c71     ; work         ;
-;    |saidaDados:SaidaDados|                        ; 1693 (1693)         ; 33 (33)                   ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |teste|saidaDados:SaidaDados                                                                                                                 ; saidaDados          ; work         ;
+;    |instrucoes_RAM:INST|                          ; 0 (0)               ; 0 (0)                     ; 76800       ; 0            ; 0       ; 0         ; 0    ; 0            ; |teste|instrucoes_RAM:INST                                                                                                                   ; instrucoes_RAM      ; work         ;
+;       |altsyncram:inst_ram_rtl_0|                 ; 0 (0)               ; 0 (0)                     ; 76800       ; 0            ; 0       ; 0         ; 0    ; 0            ; |teste|instrucoes_RAM:INST|altsyncram:inst_ram_rtl_0                                                                                         ; altsyncram          ; work         ;
+;          |altsyncram_ub71:auto_generated|         ; 0 (0)               ; 0 (0)                     ; 76800       ; 0            ; 0       ; 0         ; 0    ; 0            ; |teste|instrucoes_RAM:INST|altsyncram:inst_ram_rtl_0|altsyncram_ub71:auto_generated                                                          ; altsyncram_ub71     ; work         ;
+;    |saidaDados:SaidaDados|                        ; 1625 (1625)         ; 32 (32)                   ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |teste|saidaDados:SaidaDados                                                                                                                 ; saidaDados          ; work         ;
 +---------------------------------------------------+---------------------+---------------------------+-------------+--------------+---------+-----------+------+--------------+----------------------------------------------------------------------------------------------------------------------------------------------+---------------------+--------------+
 Note: For table entries with two numbers listed, the numbers in parentheses indicate the number of resources of the given type used by the specific entity alone. The numbers listed outside of parentheses indicate the total resources of the given type used by the specific entity and all of its sub-entities in the hierarchy.
 
 
-+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Analysis & Synthesis RAM Summary                                                                                                                                                                                                     ;
-+-----------------------------------------------------------------------------------------+------+------------------+--------------+--------------+--------------+--------------+--------+---------------------------------------------+
-; Name                                                                                    ; Type ; Mode             ; Port A Depth ; Port A Width ; Port B Depth ; Port B Width ; Size   ; MIF                                         ;
-+-----------------------------------------------------------------------------------------+------+------------------+--------------+--------------+--------------+--------------+--------+---------------------------------------------+
-; dados_RAM:DADO|altsyncram:ram_rtl_0|altsyncram_m8d1:auto_generated|ALTSYNCRAM           ; AUTO ; Simple Dual Port ; 7000         ; 32           ; 7000         ; 32           ; 224000 ; None                                        ;
-; dados_RAM:DADO|altsyncram:ram_rtl_1|altsyncram_62e1:auto_generated|ALTSYNCRAM           ; AUTO ; Simple Dual Port ; 7000         ; 32           ; 7000         ; 32           ; 224000 ; None                                        ;
-; instrucoes_RAM:INST|altsyncram:inst_ram_rtl_0|altsyncram_0c71:auto_generated|ALTSYNCRAM ; AUTO ; ROM              ; 7000         ; 32           ; --           ; --           ; 224000 ; db/CPU.ram0_instrucoes_RAM_436a63f4.hdl.mif ;
-+-----------------------------------------------------------------------------------------+------+------------------+--------------+--------------+--------------+--------------+--------+---------------------------------------------+
++-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis RAM Summary                                                                                                                                                                                                    ;
++-----------------------------------------------------------------------------------------+------+------------------+--------------+--------------+--------------+--------------+-------+---------------------------------------------+
+; Name                                                                                    ; Type ; Mode             ; Port A Depth ; Port A Width ; Port B Depth ; Port B Width ; Size  ; MIF                                         ;
++-----------------------------------------------------------------------------------------+------+------------------+--------------+--------------+--------------+--------------+-------+---------------------------------------------+
+; dados_RAM:DADO|altsyncram:ram_rtl_0|altsyncram_i8d1:auto_generated|ALTSYNCRAM           ; AUTO ; Simple Dual Port ; 2400         ; 32           ; 2400         ; 32           ; 76800 ; None                                        ;
+; dados_RAM:DADO|altsyncram:ram_rtl_1|altsyncram_22e1:auto_generated|ALTSYNCRAM           ; AUTO ; Simple Dual Port ; 2400         ; 32           ; 2400         ; 32           ; 76800 ; None                                        ;
+; instrucoes_RAM:INST|altsyncram:inst_ram_rtl_0|altsyncram_ub71:auto_generated|ALTSYNCRAM ; AUTO ; ROM              ; 2400         ; 32           ; --           ; --           ; 76800 ; db/CPU.ram0_instrucoes_RAM_436a63f4.hdl.mif ;
++-----------------------------------------------------------------------------------------+------+------------------+--------------+--------------+--------------+--------------+-------+---------------------------------------------+
 
 
 +-----------------------------------------------------+
@@ -384,32 +380,6 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 ; Dedicated Input Shift Register Chains ; 0           ;
 +---------------------------------------+-------------+
 Note: number of Embedded Multiplier Blocks used is only available after a successful fit.
-
-
-Encoding Type:  One-Hot
-+------------------------------------------------------------------------------------+
-; State Machine - |teste|LCD_TEST:u1|mLCD_ST                                         ;
-+----------------+----------------+----------------+----------------+----------------+
-; Name           ; mLCD_ST.000011 ; mLCD_ST.000010 ; mLCD_ST.000001 ; mLCD_ST.000000 ;
-+----------------+----------------+----------------+----------------+----------------+
-; mLCD_ST.000000 ; 0              ; 0              ; 0              ; 0              ;
-; mLCD_ST.000001 ; 0              ; 0              ; 1              ; 1              ;
-; mLCD_ST.000010 ; 0              ; 1              ; 0              ; 1              ;
-; mLCD_ST.000011 ; 1              ; 0              ; 0              ; 1              ;
-+----------------+----------------+----------------+----------------+----------------+
-
-
-Encoding Type:  One-Hot
-+---------------------------------------------------------+
-; State Machine - |teste|LCD_TEST:u1|LCD_Controller:u0|ST ;
-+-------+-------+-------+-------+-------------------------+
-; Name  ; ST.11 ; ST.10 ; ST.01 ; ST.00                   ;
-+-------+-------+-------+-------+-------------------------+
-; ST.00 ; 0     ; 0     ; 0     ; 0                       ;
-; ST.01 ; 0     ; 0     ; 1     ; 1                       ;
-; ST.10 ; 0     ; 1     ; 0     ; 1                       ;
-; ST.11 ; 1     ; 0     ; 0     ; 1                       ;
-+-------+-------+-------+-------+-------------------------+
 
 
 +----------------------------------------------------------------------------------------------------------+
@@ -489,71 +459,26 @@ Encoding Type:  One-Hot
 Note: All latches listed above may not be present at the end of synthesis due to various synthesis optimizations.
 
 
-+------------------------------------------------------------------------------------------+
-; Registers Removed During Synthesis                                                       ;
-+-------------------------------------------+----------------------------------------------+
-; Register name                             ; Reason for Removal                           ;
-+-------------------------------------------+----------------------------------------------+
-; LCD_TEST:u1|mLCD_RS                       ; Stuck at GND due to stuck port clock         ;
-; LCD_TEST:u1|LUT_INDEX[0..5]               ; Stuck at GND due to stuck port clock         ;
-; LCD_TEST:u1|mDLY[0..17]                   ; Stuck at GND due to stuck port clock         ;
-; LCD_TEST:u1|mLCD_Start                    ; Stuck at GND due to stuck port clock         ;
-; LCD_TEST:u1|mLCD_DATA[0..7]               ; Stuck at GND due to stuck port clock         ;
-; LCD_TEST:u1|LCD_Controller:u0|preStart    ; Lost fanout                                  ;
-; LCD_TEST:u1|LCD_Controller:u0|oDone       ; Stuck at GND due to stuck port clock         ;
-; LCD_TEST:u1|LCD_Controller:u0|LCD_EN      ; Stuck at GND due to stuck port clock         ;
-; LCD_TEST:u1|LCD_Controller:u0|mStart      ; Stuck at GND due to stuck port clock         ;
-; LCD_TEST:u1|LCD_Controller:u0|Cont[0..4]  ; Stuck at GND due to stuck port clock         ;
-; Reset_Delay:r0|Cont[0..4]                 ; Stuck at GND due to stuck port clock         ;
-; Reset_Delay:r0|oRESET                     ; Stuck at GND due to stuck port clock         ;
-; Reset_Delay:r0|Cont[5..19]                ; Stuck at GND due to stuck port clock         ;
-; entradaDados:comb_5|controle[1..9,11..31] ; Merged with entradaDados:comb_5|controle[10] ;
-; entradaDados:comb_5|controle[10]          ; Stuck at GND due to stuck port data_in       ;
-; dados_RAM:DADO|i[1..31]                   ; Lost fanout                                  ;
-; LCD_TEST:u1|mLCD_ST.000011                ; Lost fanout                                  ;
-; LCD_TEST:u1|mLCD_ST~8                     ; Lost fanout                                  ;
-; LCD_TEST:u1|mLCD_ST~9                     ; Lost fanout                                  ;
-; LCD_TEST:u1|mLCD_ST~10                    ; Lost fanout                                  ;
-; LCD_TEST:u1|mLCD_ST~11                    ; Lost fanout                                  ;
-; LCD_TEST:u1|mLCD_ST~12                    ; Lost fanout                                  ;
-; LCD_TEST:u1|mLCD_ST~13                    ; Lost fanout                                  ;
-; LCD_TEST:u1|mLCD_ST.000000                ; Stuck at GND due to stuck port clear         ;
-; LCD_TEST:u1|mLCD_ST.000001                ; Stuck at GND due to stuck port clear         ;
-; LCD_TEST:u1|mLCD_ST.000010                ; Stuck at GND due to stuck port clear         ;
-; LCD_TEST:u1|LCD_Controller:u0|ST~8        ; Lost fanout                                  ;
-; LCD_TEST:u1|LCD_Controller:u0|ST~9        ; Lost fanout                                  ;
-; LCD_TEST:u1|LCD_Controller:u0|ST.00       ; Stuck at GND due to stuck port clear         ;
-; LCD_TEST:u1|LCD_Controller:u0|ST.01       ; Stuck at GND due to stuck port clear         ;
-; LCD_TEST:u1|LCD_Controller:u0|ST.10       ; Stuck at GND due to stuck port clear         ;
-; LCD_TEST:u1|LCD_Controller:u0|ST.11       ; Stuck at GND due to stuck port clear         ;
-; Total Number of Removed Registers = 142   ;                                              ;
-+-------------------------------------------+----------------------------------------------+
++-------------------------------------------------------------------------------------------+
+; Registers Removed During Synthesis                                                        ;
++--------------------------------------------+----------------------------------------------+
+; Register name                              ; Reason for Removal                           ;
++--------------------------------------------+----------------------------------------------+
+; entradaDados:comb_3|controle[1..9,11..31]  ; Merged with entradaDados:comb_3|controle[10] ;
+; entradaDados:comb_3|controle[10]           ; Stuck at GND due to stuck port data_in       ;
+; dados_RAM:DADO|i[1..31]                    ; Lost fanout                                  ;
+; saidaDados:SaidaDados|segmentosPrograma[8] ; Lost fanout                                  ;
+; Total Number of Removed Registers = 63     ;                                              ;
++--------------------------------------------+----------------------------------------------+
 
 
-+-------------------------------------------------------------------------------------------------------------------------------------------+
-; Removed Registers Triggering Further Register Optimizations                                                                               ;
-+----------------------------+-------------------------+------------------------------------------------------------------------------------+
-; Register name              ; Reason for Removal      ; Registers Removed due to This Register                                             ;
-+----------------------------+-------------------------+------------------------------------------------------------------------------------+
-; Reset_Delay:r0|Cont[4]     ; Stuck at GND            ; Reset_Delay:r0|Cont[3], Reset_Delay:r0|Cont[2], Reset_Delay:r0|Cont[1],            ;
-;                            ; due to stuck port clock ; Reset_Delay:r0|Cont[0], Reset_Delay:r0|oRESET, Reset_Delay:r0|Cont[5],             ;
-;                            ;                         ; Reset_Delay:r0|Cont[6], Reset_Delay:r0|Cont[7], Reset_Delay:r0|Cont[8],            ;
-;                            ;                         ; Reset_Delay:r0|Cont[9], Reset_Delay:r0|Cont[10], Reset_Delay:r0|Cont[11],          ;
-;                            ;                         ; Reset_Delay:r0|Cont[12], Reset_Delay:r0|Cont[13], Reset_Delay:r0|Cont[14],         ;
-;                            ;                         ; Reset_Delay:r0|Cont[15], Reset_Delay:r0|Cont[16], Reset_Delay:r0|Cont[17],         ;
-;                            ;                         ; Reset_Delay:r0|Cont[18], Reset_Delay:r0|Cont[19]                                   ;
-; LCD_TEST:u1|LUT_INDEX[5]   ; Stuck at GND            ; LCD_TEST:u1|mLCD_DATA[7], LCD_TEST:u1|mLCD_DATA[6], LCD_TEST:u1|mLCD_DATA[5],      ;
-;                            ; due to stuck port clock ; LCD_TEST:u1|mLCD_DATA[4], LCD_TEST:u1|mLCD_DATA[3], LCD_TEST:u1|mLCD_DATA[2],      ;
-;                            ;                         ; LCD_TEST:u1|mLCD_DATA[0]                                                           ;
-; LCD_TEST:u1|mLCD_Start     ; Stuck at GND            ; LCD_TEST:u1|LCD_Controller:u0|mStart, LCD_TEST:u1|LCD_Controller:u0|Cont[4],       ;
-;                            ; due to stuck port clock ; LCD_TEST:u1|LCD_Controller:u0|Cont[3], LCD_TEST:u1|LCD_Controller:u0|Cont[2],      ;
-;                            ;                         ; LCD_TEST:u1|LCD_Controller:u0|Cont[1], LCD_TEST:u1|LCD_Controller:u0|Cont[0]       ;
-; dados_RAM:DADO|i[1]        ; Lost Fanouts            ; dados_RAM:DADO|i[2], dados_RAM:DADO|i[3], dados_RAM:DADO|i[4], dados_RAM:DADO|i[5] ;
-; LCD_TEST:u1|LUT_INDEX[4]   ; Stuck at GND            ; LCD_TEST:u1|mLCD_DATA[1]                                                           ;
-;                            ; due to stuck port clock ;                                                                                    ;
-; LCD_TEST:u1|mLCD_ST.000000 ; Stuck at GND            ; LCD_TEST:u1|mLCD_ST.000001                                                         ;
-;                            ; due to stuck port clear ;                                                                                    ;
-+----------------------------+-------------------------+------------------------------------------------------------------------------------+
++-------------------------------------------------------------------------------------------------------------------------------+
+; Removed Registers Triggering Further Register Optimizations                                                                   ;
++---------------------+--------------------+------------------------------------------------------------------------------------+
+; Register name       ; Reason for Removal ; Registers Removed due to This Register                                             ;
++---------------------+--------------------+------------------------------------------------------------------------------------+
+; dados_RAM:DADO|i[1] ; Lost Fanouts       ; dados_RAM:DADO|i[2], dados_RAM:DADO|i[3], dados_RAM:DADO|i[4], dados_RAM:DADO|i[5] ;
++---------------------+--------------------+------------------------------------------------------------------------------------+
 
 
 +------------------------------------------------------+
@@ -561,7 +486,7 @@ Note: All latches listed above may not be present at the end of synthesis due to
 +----------------------------------------------+-------+
 ; Statistic                                    ; Value ;
 +----------------------------------------------+-------+
-; Total registers                              ; 1364  ;
+; Total registers                              ; 1363  ;
 ; Number of registers using Synchronous Clear  ; 33    ;
 ; Number of registers using Synchronous Load   ; 33    ;
 ; Number of registers using Asynchronous Clear ; 28    ;
@@ -571,24 +496,21 @@ Note: All latches listed above may not be present at the end of synthesis due to
 +----------------------------------------------+-------+
 
 
-+---------------------------------------------------+
-; Inverted Register Statistics                      ;
-+-----------------------------------------+---------+
-; Inverted Register                       ; Fan out ;
-+-----------------------------------------+---------+
-; PC:PC|endereco[0]                       ; 4       ;
-; PC:PC|endereco[1]                       ; 5       ;
-; PC:PC|endereco[2]                       ; 4       ;
-; PC:PC|endereco[9]                       ; 8       ;
-; PC:PC|endereco[8]                       ; 8       ;
-; PC:PC|endereco[7]                       ; 8       ;
-; PC:PC|endereco[6]                       ; 8       ;
-; PC:PC|endereco[5]                       ; 8       ;
-; dados_RAM:DADO|programa[0]              ; 5       ;
-; PC:PC|programa[0]                       ; 2       ;
-; dados_RAM:DADO|i[0]                     ; 33      ;
-; Total number of inverted registers = 11 ;         ;
-+-----------------------------------------+---------+
++--------------------------------------------------+
+; Inverted Register Statistics                     ;
++----------------------------------------+---------+
+; Inverted Register                      ; Fan out ;
++----------------------------------------+---------+
+; PC:PC|endereco[0]                      ; 4       ;
+; PC:PC|endereco[1]                      ; 5       ;
+; PC:PC|endereco[2]                      ; 4       ;
+; PC:PC|endereco[7]                      ; 8       ;
+; PC:PC|endereco[6]                      ; 10      ;
+; dados_RAM:DADO|programa[0]             ; 5       ;
+; PC:PC|programa[0]                      ; 1       ;
+; dados_RAM:DADO|i[0]                    ; 33      ;
+; Total number of inverted registers = 8 ;         ;
++----------------------------------------+---------+
 
 
 +------------------------------------------------------------------------------------+
@@ -607,32 +529,32 @@ Note: All latches listed above may not be present at the end of synthesis due to
 +--------------------+-----------+---------------+----------------------+------------------------+------------+--------------------------------------------+
 ; Multiplexer Inputs ; Bus Width ; Baseline Area ; Area if Restructured ; Saving if Restructured ; Registered ; Example Multiplexer Output                 ;
 +--------------------+-----------+---------------+----------------------+------------------------+------------+--------------------------------------------+
-; 3:1                ; 32 bits   ; 64 LEs        ; 32 LEs               ; 32 LEs                 ; Yes        ; |teste|BancoRegistradores:BR|regs[31][14]  ;
-; 3:1                ; 32 bits   ; 64 LEs        ; 32 LEs               ; 32 LEs                 ; Yes        ; |teste|PC:PC|instNum[9]                    ;
-; 4:1                ; 3 bits    ; 6 LEs         ; 6 LEs                ; 0 LEs                  ; Yes        ; |teste|saidaDados:SaidaDados|segmentos[4]  ;
-; 4:1                ; 3 bits    ; 6 LEs         ; 6 LEs                ; 0 LEs                  ; Yes        ; |teste|saidaDados:SaidaDados|segmentos[8]  ;
-; 4:1                ; 3 bits    ; 6 LEs         ; 6 LEs                ; 0 LEs                  ; Yes        ; |teste|saidaDados:SaidaDados|segmentos[12] ;
-; 4:1                ; 3 bits    ; 6 LEs         ; 6 LEs                ; 0 LEs                  ; Yes        ; |teste|saidaDados:SaidaDados|segmentos[16] ;
-; 4:1                ; 3 bits    ; 6 LEs         ; 6 LEs                ; 0 LEs                  ; Yes        ; |teste|saidaDados:SaidaDados|segmentos[20] ;
-; 16:1               ; 24 bits   ; 240 LEs       ; 72 LEs               ; 168 LEs                ; Yes        ; |teste|PC:PC|endereco[4]                   ;
-; 16:1               ; 8 bits    ; 80 LEs        ; 32 LEs               ; 48 LEs                 ; Yes        ; |teste|PC:PC|endereco[2]                   ;
-; 3:1                ; 6 bits    ; 12 LEs        ; 12 LEs               ; 0 LEs                  ; No         ; |teste|saidaDados:SaidaDados|Add138        ;
+; 3:1                ; 32 bits   ; 64 LEs        ; 32 LEs               ; 32 LEs                 ; Yes        ; |teste|BancoRegistradores:BR|regs[31][24]  ;
+; 3:1                ; 32 bits   ; 64 LEs        ; 32 LEs               ; 32 LEs                 ; Yes        ; |teste|PC:PC|instNum[10]                   ;
+; 4:1                ; 3 bits    ; 6 LEs         ; 6 LEs                ; 0 LEs                  ; Yes        ; |teste|saidaDados:SaidaDados|segmentos[2]  ;
+; 4:1                ; 3 bits    ; 6 LEs         ; 6 LEs                ; 0 LEs                  ; Yes        ; |teste|saidaDados:SaidaDados|segmentos[7]  ;
+; 4:1                ; 3 bits    ; 6 LEs         ; 6 LEs                ; 0 LEs                  ; Yes        ; |teste|saidaDados:SaidaDados|segmentos[11] ;
+; 4:1                ; 3 bits    ; 6 LEs         ; 6 LEs                ; 0 LEs                  ; Yes        ; |teste|saidaDados:SaidaDados|segmentos[15] ;
+; 4:1                ; 3 bits    ; 6 LEs         ; 6 LEs                ; 0 LEs                  ; Yes        ; |teste|saidaDados:SaidaDados|segmentos[19] ;
+; 16:1               ; 27 bits   ; 270 LEs       ; 81 LEs               ; 189 LEs                ; Yes        ; |teste|PC:PC|endereco[3]                   ;
+; 16:1               ; 5 bits    ; 50 LEs        ; 20 LEs               ; 30 LEs                 ; Yes        ; |teste|PC:PC|endereco[1]                   ;
+; 3:1                ; 6 bits    ; 12 LEs        ; 12 LEs               ; 0 LEs                  ; No         ; |teste|saidaDados:SaidaDados|Add134        ;
 ; 3:1                ; 15 bits   ; 30 LEs        ; 15 LEs               ; 15 LEs                 ; No         ; |teste|extensor_Bit:BIT|Mux10              ;
-; 4:1                ; 2 bits    ; 4 LEs         ; 4 LEs                ; 0 LEs                  ; No         ; |teste|controle_ULA:cULA|Mux2              ;
+; 4:1                ; 2 bits    ; 4 LEs         ; 4 LEs                ; 0 LEs                  ; No         ; |teste|controle_ULA:cULA|Mux0              ;
 ; 5:1                ; 3 bits    ; 9 LEs         ; 6 LEs                ; 3 LEs                  ; No         ; |teste|dados_RAM:DADO|ram                  ;
-; 5:1                ; 10 bits   ; 30 LEs        ; 20 LEs               ; 10 LEs                 ; No         ; |teste|dados_RAM:DADO|ram                  ;
+; 5:1                ; 9 bits    ; 27 LEs        ; 18 LEs               ; 9 LEs                  ; No         ; |teste|dados_RAM:DADO|ram                  ;
 ; 5:1                ; 32 bits   ; 96 LEs        ; 96 LEs               ; 0 LEs                  ; No         ; |teste|dados_RAM:DADO|ram                  ;
-; 32:1               ; 32 bits   ; 672 LEs       ; 672 LEs              ; 0 LEs                  ; No         ; |teste|BancoRegistradores:BR|Mux92         ;
-; 32:1               ; 32 bits   ; 672 LEs       ; 672 LEs              ; 0 LEs                  ; No         ; |teste|BancoRegistradores:BR|Mux47         ;
-; 32:1               ; 32 bits   ; 672 LEs       ; 672 LEs              ; 0 LEs                  ; No         ; |teste|BancoRegistradores:BR|Mux29         ;
-; 10:1               ; 32 bits   ; 192 LEs       ; 128 LEs              ; 64 LEs                 ; No         ; |teste|ULA:ULA|result[29]                  ;
+; 32:1               ; 32 bits   ; 672 LEs       ; 672 LEs              ; 0 LEs                  ; No         ; |teste|BancoRegistradores:BR|Mux64         ;
+; 32:1               ; 32 bits   ; 672 LEs       ; 672 LEs              ; 0 LEs                  ; No         ; |teste|BancoRegistradores:BR|Mux39         ;
+; 32:1               ; 32 bits   ; 672 LEs       ; 672 LEs              ; 0 LEs                  ; No         ; |teste|BancoRegistradores:BR|Mux21         ;
+; 10:1               ; 32 bits   ; 192 LEs       ; 128 LEs              ; 64 LEs                 ; No         ; |teste|ULA:ULA|result[23]                  ;
 ; 6:1                ; 32 bits   ; 128 LEs       ; 64 LEs               ; 64 LEs                 ; No         ; |teste|ULA:ULA|Add0                        ;
 ; 7:1                ; 32 bits   ; 128 LEs       ; 128 LEs              ; 0 LEs                  ; No         ; |teste|ULA:ULA|Add0                        ;
 +--------------------+-----------+---------------+----------------------+------------------------+------------+--------------------------------------------+
 
 
 +-------------------------------------------------------------------------------------------+
-; Source assignments for dados_RAM:DADO|altsyncram:ram_rtl_0|altsyncram_m8d1:auto_generated ;
+; Source assignments for dados_RAM:DADO|altsyncram:ram_rtl_0|altsyncram_i8d1:auto_generated ;
 +---------------------------------+--------------------+------+-----------------------------+
 ; Assignment                      ; Value              ; From ; To                          ;
 +---------------------------------+--------------------+------+-----------------------------+
@@ -641,7 +563,7 @@ Note: All latches listed above may not be present at the end of synthesis due to
 
 
 +-------------------------------------------------------------------------------------------+
-; Source assignments for dados_RAM:DADO|altsyncram:ram_rtl_1|altsyncram_62e1:auto_generated ;
+; Source assignments for dados_RAM:DADO|altsyncram:ram_rtl_1|altsyncram_22e1:auto_generated ;
 +---------------------------------+--------------------+------+-----------------------------+
 ; Assignment                      ; Value              ; From ; To                          ;
 +---------------------------------+--------------------+------+-----------------------------+
@@ -650,7 +572,7 @@ Note: All latches listed above may not be present at the end of synthesis due to
 
 
 +-----------------------------------------------------------------------------------------------------+
-; Source assignments for instrucoes_RAM:INST|altsyncram:inst_ram_rtl_0|altsyncram_0c71:auto_generated ;
+; Source assignments for instrucoes_RAM:INST|altsyncram:inst_ram_rtl_0|altsyncram_ub71:auto_generated ;
 +---------------------------------+--------------------+------+---------------------------------------+
 ; Assignment                      ; Value              ; From ; To                                    ;
 +---------------------------------+--------------------+------+---------------------------------------+
@@ -680,30 +602,6 @@ Note: In order to hide this table in the UI and the text report file, please set
 Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
 
 
-+----------------------------------------------------------+
-; Parameter Settings for User Entity Instance: LCD_TEST:u1 ;
-+----------------+-------+---------------------------------+
-; Parameter Name ; Value ; Type                            ;
-+----------------+-------+---------------------------------+
-; LCD_INTIAL     ; 0     ; Signed Integer                  ;
-; LCD_LINE1      ; 5     ; Signed Integer                  ;
-; LCD_CH_LINE    ; 21    ; Signed Integer                  ;
-; LCD_LINE2      ; 22    ; Signed Integer                  ;
-; LUT_SIZE       ; 38    ; Signed Integer                  ;
-+----------------+-------+---------------------------------+
-Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
-
-
-+----------------------------------------------------------------------------+
-; Parameter Settings for User Entity Instance: LCD_TEST:u1|LCD_Controller:u0 ;
-+----------------+-------+---------------------------------------------------+
-; Parameter Name ; Value ; Type                                              ;
-+----------------+-------+---------------------------------------------------+
-; CLK_Divide     ; 16    ; Signed Integer                                    ;
-+----------------+-------+---------------------------------------------------+
-Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
-
-
 +--------------------------------------------------------------------------------------+
 ; Parameter Settings for Inferred Entity Instance: dados_RAM:DADO|altsyncram:ram_rtl_0 ;
 +------------------------------------+----------------------+--------------------------+
@@ -717,8 +615,8 @@ Note: In order to hide this table in the UI and the text report file, please set
 ; WIDTH_BYTEENA                      ; 1                    ; Untyped                  ;
 ; OPERATION_MODE                     ; DUAL_PORT            ; Untyped                  ;
 ; WIDTH_A                            ; 32                   ; Untyped                  ;
-; WIDTHAD_A                          ; 13                   ; Untyped                  ;
-; NUMWORDS_A                         ; 7000                 ; Untyped                  ;
+; WIDTHAD_A                          ; 12                   ; Untyped                  ;
+; NUMWORDS_A                         ; 2400                 ; Untyped                  ;
 ; OUTDATA_REG_A                      ; UNREGISTERED         ; Untyped                  ;
 ; ADDRESS_ACLR_A                     ; NONE                 ; Untyped                  ;
 ; OUTDATA_ACLR_A                     ; NONE                 ; Untyped                  ;
@@ -726,8 +624,8 @@ Note: In order to hide this table in the UI and the text report file, please set
 ; INDATA_ACLR_A                      ; NONE                 ; Untyped                  ;
 ; BYTEENA_ACLR_A                     ; NONE                 ; Untyped                  ;
 ; WIDTH_B                            ; 32                   ; Untyped                  ;
-; WIDTHAD_B                          ; 13                   ; Untyped                  ;
-; NUMWORDS_B                         ; 7000                 ; Untyped                  ;
+; WIDTHAD_B                          ; 12                   ; Untyped                  ;
+; NUMWORDS_B                         ; 2400                 ; Untyped                  ;
 ; INDATA_REG_B                       ; CLOCK1               ; Untyped                  ;
 ; WRCONTROL_WRADDRESS_REG_B          ; CLOCK1               ; Untyped                  ;
 ; RDCONTROL_REG_B                    ; CLOCK1               ; Untyped                  ;
@@ -760,7 +658,7 @@ Note: In order to hide this table in the UI and the text report file, please set
 ; ECC_PIPELINE_STAGE_ENABLED         ; FALSE                ; Untyped                  ;
 ; WIDTH_ECCSTATUS                    ; 3                    ; Untyped                  ;
 ; DEVICE_FAMILY                      ; Cyclone IV E         ; Untyped                  ;
-; CBXI_PARAMETER                     ; altsyncram_m8d1      ; Untyped                  ;
+; CBXI_PARAMETER                     ; altsyncram_i8d1      ; Untyped                  ;
 +------------------------------------+----------------------+--------------------------+
 Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
 
@@ -778,8 +676,8 @@ Note: In order to hide this table in the UI and the text report file, please set
 ; WIDTH_BYTEENA                      ; 1                    ; Untyped                  ;
 ; OPERATION_MODE                     ; DUAL_PORT            ; Untyped                  ;
 ; WIDTH_A                            ; 32                   ; Untyped                  ;
-; WIDTHAD_A                          ; 13                   ; Untyped                  ;
-; NUMWORDS_A                         ; 7000                 ; Untyped                  ;
+; WIDTHAD_A                          ; 12                   ; Untyped                  ;
+; NUMWORDS_A                         ; 2400                 ; Untyped                  ;
 ; OUTDATA_REG_A                      ; UNREGISTERED         ; Untyped                  ;
 ; ADDRESS_ACLR_A                     ; NONE                 ; Untyped                  ;
 ; OUTDATA_ACLR_A                     ; NONE                 ; Untyped                  ;
@@ -787,8 +685,8 @@ Note: In order to hide this table in the UI and the text report file, please set
 ; INDATA_ACLR_A                      ; NONE                 ; Untyped                  ;
 ; BYTEENA_ACLR_A                     ; NONE                 ; Untyped                  ;
 ; WIDTH_B                            ; 32                   ; Untyped                  ;
-; WIDTHAD_B                          ; 13                   ; Untyped                  ;
-; NUMWORDS_B                         ; 7000                 ; Untyped                  ;
+; WIDTHAD_B                          ; 12                   ; Untyped                  ;
+; NUMWORDS_B                         ; 2400                 ; Untyped                  ;
 ; INDATA_REG_B                       ; CLOCK1               ; Untyped                  ;
 ; WRCONTROL_WRADDRESS_REG_B          ; CLOCK1               ; Untyped                  ;
 ; RDCONTROL_REG_B                    ; CLOCK1               ; Untyped                  ;
@@ -821,7 +719,7 @@ Note: In order to hide this table in the UI and the text report file, please set
 ; ECC_PIPELINE_STAGE_ENABLED         ; FALSE                ; Untyped                  ;
 ; WIDTH_ECCSTATUS                    ; 3                    ; Untyped                  ;
 ; DEVICE_FAMILY                      ; Cyclone IV E         ; Untyped                  ;
-; CBXI_PARAMETER                     ; altsyncram_62e1      ; Untyped                  ;
+; CBXI_PARAMETER                     ; altsyncram_22e1      ; Untyped                  ;
 +------------------------------------+----------------------+--------------------------+
 Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
 
@@ -839,8 +737,8 @@ Note: In order to hide this table in the UI and the text report file, please set
 ; WIDTH_BYTEENA                      ; 1                                           ; Untyped        ;
 ; OPERATION_MODE                     ; ROM                                         ; Untyped        ;
 ; WIDTH_A                            ; 32                                          ; Untyped        ;
-; WIDTHAD_A                          ; 13                                          ; Untyped        ;
-; NUMWORDS_A                         ; 7000                                        ; Untyped        ;
+; WIDTHAD_A                          ; 12                                          ; Untyped        ;
+; NUMWORDS_A                         ; 2400                                        ; Untyped        ;
 ; OUTDATA_REG_A                      ; UNREGISTERED                                ; Untyped        ;
 ; ADDRESS_ACLR_A                     ; NONE                                        ; Untyped        ;
 ; OUTDATA_ACLR_A                     ; NONE                                        ; Untyped        ;
@@ -882,7 +780,7 @@ Note: In order to hide this table in the UI and the text report file, please set
 ; ECC_PIPELINE_STAGE_ENABLED         ; FALSE                                       ; Untyped        ;
 ; WIDTH_ECCSTATUS                    ; 3                                           ; Untyped        ;
 ; DEVICE_FAMILY                      ; Cyclone IV E                                ; Untyped        ;
-; CBXI_PARAMETER                     ; altsyncram_0c71                             ; Untyped        ;
+; CBXI_PARAMETER                     ; altsyncram_ub71                             ; Untyped        ;
 +------------------------------------+---------------------------------------------+----------------+
 Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
 
@@ -896,10 +794,10 @@ Note: In order to hide this table in the UI and the text report file, please set
 ; IGNORE_CARRY_BUFFERS                           ; OFF          ; IGNORE_CARRY        ;
 ; AUTO_CASCADE_CHAINS                            ; ON           ; AUTO_CASCADE        ;
 ; IGNORE_CASCADE_BUFFERS                         ; OFF          ; IGNORE_CASCADE      ;
-; LPM_WIDTHA                                     ; 13           ; Untyped             ;
-; LPM_WIDTHB                                     ; 10           ; Untyped             ;
-; LPM_WIDTHP                                     ; 23           ; Untyped             ;
-; LPM_WIDTHR                                     ; 23           ; Untyped             ;
+; LPM_WIDTHA                                     ; 12           ; Untyped             ;
+; LPM_WIDTHB                                     ; 8            ; Untyped             ;
+; LPM_WIDTHP                                     ; 20           ; Untyped             ;
+; LPM_WIDTHR                                     ; 20           ; Untyped             ;
 ; LPM_WIDTHS                                     ; 1            ; Untyped             ;
 ; LPM_REPRESENTATION                             ; UNSIGNED     ; Untyped             ;
 ; LPM_PIPELINE                                   ; 0            ; Untyped             ;
@@ -907,7 +805,7 @@ Note: In order to hide this table in the UI and the text report file, please set
 ; INPUT_A_IS_CONSTANT                            ; NO           ; Untyped             ;
 ; INPUT_B_IS_CONSTANT                            ; YES          ; Untyped             ;
 ; USE_EAB                                        ; OFF          ; Untyped             ;
-; MAXIMIZE_SPEED                                 ; 6            ; Untyped             ;
+; MAXIMIZE_SPEED                                 ; 5            ; Untyped             ;
 ; DEVICE_FAMILY                                  ; Cyclone IV E ; Untyped             ;
 ; CARRY_CHAIN                                    ; MANUAL       ; Untyped             ;
 ; APEX20K_TECHNOLOGY_MAPPER                      ; LUT          ; TECH_MAPPER_APEX20K ;
@@ -932,9 +830,9 @@ Note: In order to hide this table in the UI and the text report file, please set
 ; AUTO_CASCADE_CHAINS                            ; ON           ; AUTO_CASCADE        ;
 ; IGNORE_CASCADE_BUFFERS                         ; OFF          ; IGNORE_CASCADE      ;
 ; LPM_WIDTHA                                     ; 32           ; Untyped             ;
-; LPM_WIDTHB                                     ; 10           ; Untyped             ;
-; LPM_WIDTHP                                     ; 42           ; Untyped             ;
-; LPM_WIDTHR                                     ; 42           ; Untyped             ;
+; LPM_WIDTHB                                     ; 8            ; Untyped             ;
+; LPM_WIDTHP                                     ; 40           ; Untyped             ;
+; LPM_WIDTHR                                     ; 40           ; Untyped             ;
 ; LPM_WIDTHS                                     ; 1            ; Untyped             ;
 ; LPM_REPRESENTATION                             ; UNSIGNED     ; Untyped             ;
 ; LPM_PIPELINE                                   ; 0            ; Untyped             ;
@@ -949,7 +847,7 @@ Note: In order to hide this table in the UI and the text report file, please set
 ; DEDICATED_MULTIPLIER_CIRCUITRY                 ; AUTO         ; Untyped             ;
 ; DEDICATED_MULTIPLIER_MIN_INPUT_WIDTH_FOR_AUTO  ; 0            ; Untyped             ;
 ; DEDICATED_MULTIPLIER_MIN_OUTPUT_WIDTH_FOR_AUTO ; 0            ; Untyped             ;
-; CBXI_PARAMETER                                 ; mult_jgt     ; Untyped             ;
+; CBXI_PARAMETER                                 ; mult_8ft     ; Untyped             ;
 ; INPUT_A_FIXED_VALUE                            ; Bx           ; Untyped             ;
 ; INPUT_B_FIXED_VALUE                            ; Bx           ; Untyped             ;
 ; USE_AHDL_IMPLEMENTATION                        ; OFF          ; Untyped             ;
@@ -1025,9 +923,9 @@ Note: In order to hide this table in the UI and the text report file, please set
 ; AUTO_CASCADE_CHAINS                            ; ON           ; AUTO_CASCADE        ;
 ; IGNORE_CASCADE_BUFFERS                         ; OFF          ; IGNORE_CASCADE      ;
 ; LPM_WIDTHA                                     ; 32           ; Untyped             ;
-; LPM_WIDTHB                                     ; 11           ; Untyped             ;
-; LPM_WIDTHP                                     ; 43           ; Untyped             ;
-; LPM_WIDTHR                                     ; 43           ; Untyped             ;
+; LPM_WIDTHB                                     ; 9            ; Untyped             ;
+; LPM_WIDTHP                                     ; 41           ; Untyped             ;
+; LPM_WIDTHR                                     ; 41           ; Untyped             ;
 ; LPM_WIDTHS                                     ; 1            ; Untyped             ;
 ; LPM_REPRESENTATION                             ; SIGNED       ; Untyped             ;
 ; LPM_PIPELINE                                   ; 0            ; Untyped             ;
@@ -1042,7 +940,7 @@ Note: In order to hide this table in the UI and the text report file, please set
 ; DEDICATED_MULTIPLIER_CIRCUITRY                 ; AUTO         ; Untyped             ;
 ; DEDICATED_MULTIPLIER_MIN_INPUT_WIDTH_FOR_AUTO  ; 0            ; Untyped             ;
 ; DEDICATED_MULTIPLIER_MIN_OUTPUT_WIDTH_FOR_AUTO ; 0            ; Untyped             ;
-; CBXI_PARAMETER                                 ; mult_i9t     ; Untyped             ;
+; CBXI_PARAMETER                                 ; mult_78t     ; Untyped             ;
 ; INPUT_A_FIXED_VALUE                            ; Bx           ; Untyped             ;
 ; INPUT_B_FIXED_VALUE                            ; Bx           ; Untyped             ;
 ; USE_AHDL_IMPLEMENTATION                        ; OFF          ; Untyped             ;
@@ -1059,10 +957,10 @@ Note: In order to hide this table in the UI and the text report file, please set
 ; Entity Instance                           ; dados_RAM:DADO|altsyncram:ram_rtl_0           ;
 ;     -- OPERATION_MODE                     ; DUAL_PORT                                     ;
 ;     -- WIDTH_A                            ; 32                                            ;
-;     -- NUMWORDS_A                         ; 7000                                          ;
+;     -- NUMWORDS_A                         ; 2400                                          ;
 ;     -- OUTDATA_REG_A                      ; UNREGISTERED                                  ;
 ;     -- WIDTH_B                            ; 32                                            ;
-;     -- NUMWORDS_B                         ; 7000                                          ;
+;     -- NUMWORDS_B                         ; 2400                                          ;
 ;     -- ADDRESS_REG_B                      ; CLOCK1                                        ;
 ;     -- OUTDATA_REG_B                      ; UNREGISTERED                                  ;
 ;     -- RAM_BLOCK_TYPE                     ; AUTO                                          ;
@@ -1070,10 +968,10 @@ Note: In order to hide this table in the UI and the text report file, please set
 ; Entity Instance                           ; dados_RAM:DADO|altsyncram:ram_rtl_1           ;
 ;     -- OPERATION_MODE                     ; DUAL_PORT                                     ;
 ;     -- WIDTH_A                            ; 32                                            ;
-;     -- NUMWORDS_A                         ; 7000                                          ;
+;     -- NUMWORDS_A                         ; 2400                                          ;
 ;     -- OUTDATA_REG_A                      ; UNREGISTERED                                  ;
 ;     -- WIDTH_B                            ; 32                                            ;
-;     -- NUMWORDS_B                         ; 7000                                          ;
+;     -- NUMWORDS_B                         ; 2400                                          ;
 ;     -- ADDRESS_REG_B                      ; CLOCK1                                        ;
 ;     -- OUTDATA_REG_B                      ; UNREGISTERED                                  ;
 ;     -- RAM_BLOCK_TYPE                     ; AUTO                                          ;
@@ -1081,7 +979,7 @@ Note: In order to hide this table in the UI and the text report file, please set
 ; Entity Instance                           ; instrucoes_RAM:INST|altsyncram:inst_ram_rtl_0 ;
 ;     -- OPERATION_MODE                     ; ROM                                           ;
 ;     -- WIDTH_A                            ; 32                                            ;
-;     -- NUMWORDS_A                         ; 7000                                          ;
+;     -- NUMWORDS_A                         ; 2400                                          ;
 ;     -- OUTDATA_REG_A                      ; UNREGISTERED                                  ;
 ;     -- WIDTH_B                            ; 1                                             ;
 ;     -- NUMWORDS_B                         ; 1                                             ;
@@ -1099,9 +997,9 @@ Note: In order to hide this table in the UI and the text report file, please set
 +---------------------------------------+-------------------------------+
 ; Number of entity instances            ; 4                             ;
 ; Entity Instance                       ; dados_RAM:DADO|lpm_mult:Mult2 ;
-;     -- LPM_WIDTHA                     ; 13                            ;
-;     -- LPM_WIDTHB                     ; 10                            ;
-;     -- LPM_WIDTHP                     ; 23                            ;
+;     -- LPM_WIDTHA                     ; 12                            ;
+;     -- LPM_WIDTHB                     ; 8                             ;
+;     -- LPM_WIDTHP                     ; 20                            ;
 ;     -- LPM_REPRESENTATION             ; UNSIGNED                      ;
 ;     -- INPUT_A_IS_CONSTANT            ; NO                            ;
 ;     -- INPUT_B_IS_CONSTANT            ; YES                           ;
@@ -1111,8 +1009,8 @@ Note: In order to hide this table in the UI and the text report file, please set
 ;     -- INPUT_B_FIXED_VALUE            ; Bx                            ;
 ; Entity Instance                       ; dados_RAM:DADO|lpm_mult:Mult1 ;
 ;     -- LPM_WIDTHA                     ; 32                            ;
-;     -- LPM_WIDTHB                     ; 10                            ;
-;     -- LPM_WIDTHP                     ; 42                            ;
+;     -- LPM_WIDTHB                     ; 8                             ;
+;     -- LPM_WIDTHP                     ; 40                            ;
 ;     -- LPM_REPRESENTATION             ; UNSIGNED                      ;
 ;     -- INPUT_A_IS_CONSTANT            ; NO                            ;
 ;     -- INPUT_B_IS_CONSTANT            ; YES                           ;
@@ -1133,8 +1031,8 @@ Note: In order to hide this table in the UI and the text report file, please set
 ;     -- INPUT_B_FIXED_VALUE            ; Bx                            ;
 ; Entity Instance                       ; PC:PC|lpm_mult:Mult0          ;
 ;     -- LPM_WIDTHA                     ; 32                            ;
-;     -- LPM_WIDTHB                     ; 11                            ;
-;     -- LPM_WIDTHP                     ; 43                            ;
+;     -- LPM_WIDTHB                     ; 9                             ;
+;     -- LPM_WIDTHP                     ; 41                            ;
 ;     -- LPM_REPRESENTATION             ; SIGNED                        ;
 ;     -- INPUT_A_IS_CONSTANT            ; NO                            ;
 ;     -- INPUT_B_IS_CONSTANT            ; YES                           ;
@@ -1160,31 +1058,30 @@ Note: In order to hide this table in the UI and the text report file, please set
 +-----------------------+-----------------------------+
 ; Type                  ; Count                       ;
 +-----------------------+-----------------------------+
-; boundary_port         ; 94                          ;
-; cycloneiii_ff         ; 1364                        ;
+; boundary_port         ; 81                          ;
+; cycloneiii_ff         ; 1363                        ;
 ;     CLR               ; 28                          ;
 ;     ENA               ; 1139                        ;
 ;     ENA SCLR          ; 33                          ;
 ;     ENA SLD           ; 32                          ;
 ;     SLD               ; 1                           ;
-;     plain             ; 131                         ;
-; cycloneiii_io_obuf    ; 8                           ;
-; cycloneiii_lcell_comb ; 6292                        ;
-;     arith             ; 907                         ;
-;         2 data inputs ; 171                         ;
-;         3 data inputs ; 736                         ;
-;     normal            ; 5385                        ;
+;     plain             ; 130                         ;
+; cycloneiii_lcell_comb ; 6233                        ;
+;     arith             ; 935                         ;
+;         2 data inputs ; 206                         ;
+;         3 data inputs ; 729                         ;
+;     normal            ; 5298                        ;
 ;         0 data inputs ; 32                          ;
-;         1 data inputs ; 28                          ;
-;         2 data inputs ; 51                          ;
-;         3 data inputs ; 688                         ;
-;         4 data inputs ; 4586                        ;
+;         1 data inputs ; 25                          ;
+;         2 data inputs ; 79                          ;
+;         3 data inputs ; 676                         ;
+;         4 data inputs ; 4486                        ;
 ; cycloneiii_mac_mult   ; 7                           ;
 ; cycloneiii_mac_out    ; 7                           ;
 ; cycloneiii_ram_block  ; 96                          ;
 ;                       ;                             ;
 ; Max LUT depth         ; 130.50                      ;
-; Average LUT depth     ; 62.08                       ;
+; Average LUT depth     ; 62.25                       ;
 +-----------------------+-----------------------------+
 
 
@@ -1193,7 +1090,7 @@ Note: In order to hide this table in the UI and the text report file, please set
 +----------------+--------------+
 ; Partition Name ; Elapsed Time ;
 +----------------+--------------+
-; Top            ; 00:00:15     ;
+; Top            ; 00:00:17     ;
 +----------------+--------------+
 
 
@@ -1203,7 +1100,7 @@ Note: In order to hide this table in the UI and the text report file, please set
 Info: *******************************************************************
 Info: Running Quartus Prime Analysis & Synthesis
     Info: Version 17.1.0 Build 590 10/25/2017 SJ Lite Edition
-    Info: Processing started: Sun Feb 16 13:09:10 2025
+    Info: Processing started: Tue Feb 18 15:14:52 2025
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off CPU -c CPU
 Info (20030): Parallel compilation is enabled and will use 12 of the 12 processors detected
 Info (12021): Found 1 design units, including 1 entities, in source file ula.v
@@ -1246,24 +1143,25 @@ Info (12021): Found 1 design units, including 1 entities, in source file reset_d
     Info (12023): Found entity 1: Reset_Delay File: C:/Users/rafae/OneDrive/Documents/Workspace/Faculdade/Processador/Reset_Delay.v Line: 1
 Info (12021): Found 1 design units, including 1 entities, in source file lcd_test.v
     Info (12023): Found entity 1: LCD_TEST File: C:/Users/rafae/OneDrive/Documents/Workspace/Faculdade/Processador/LCD_TEST.v Line: 1
-Warning (10236): Verilog HDL Implicit Net warning at teste.v(72): created implicit net for "CLOCK_50" File: C:/Users/rafae/OneDrive/Documents/Workspace/Faculdade/Processador/teste.v Line: 72
 Critical Warning (10846): Verilog HDL Instantiation warning at teste.v(76): instance has no name File: C:/Users/rafae/OneDrive/Documents/Workspace/Faculdade/Processador/teste.v Line: 76
 Warning (10037): Verilog HDL or VHDL warning at saidaDados.v(24): conditional expression evaluates to a constant File: C:/Users/rafae/OneDrive/Documents/Workspace/Faculdade/Processador/saidaDados.v Line: 24
 Info (12127): Elaborating entity "teste" for the top level hierarchy
 Info (12128): Elaborating entity "contato1" for hierarchy "contato1:C1" File: C:/Users/rafae/OneDrive/Documents/Workspace/Faculdade/Processador/teste.v Line: 68
 Warning (10230): Verilog HDL assignment warning at contato1.v(19): truncated value with size 32 to match size of target (28) File: C:/Users/rafae/OneDrive/Documents/Workspace/Faculdade/Processador/contato1.v Line: 19
-Info (12128): Elaborating entity "Reset_Delay" for hierarchy "Reset_Delay:r0" File: C:/Users/rafae/OneDrive/Documents/Workspace/Faculdade/Processador/teste.v Line: 72
 Info (12128): Elaborating entity "PC" for hierarchy "PC:PC" File: C:/Users/rafae/OneDrive/Documents/Workspace/Faculdade/Processador/teste.v Line: 74
 Warning (10036): Verilog HDL or VHDL warning at PC.v(24): object "programaAtual" assigned a value but never read File: C:/Users/rafae/OneDrive/Documents/Workspace/Faculdade/Processador/PC.v Line: 24
-Info (12128): Elaborating entity "entradaDados" for hierarchy "entradaDados:comb_5" File: C:/Users/rafae/OneDrive/Documents/Workspace/Faculdade/Processador/teste.v Line: 76
+Info (12128): Elaborating entity "entradaDados" for hierarchy "entradaDados:comb_3" File: C:/Users/rafae/OneDrive/Documents/Workspace/Faculdade/Processador/teste.v Line: 76
 Info (12128): Elaborating entity "instrucoes_RAM" for hierarchy "instrucoes_RAM:INST" File: C:/Users/rafae/OneDrive/Documents/Workspace/Faculdade/Processador/teste.v Line: 78
-Warning (10850): Verilog HDL warning at instrucoes_RAM.v(14): number of words (65) in memory file does not match the number of elements in the address range [0:999] File: C:/Users/rafae/OneDrive/Documents/Workspace/Faculdade/Processador/instrucoes_RAM.v Line: 14
-Warning (10850): Verilog HDL warning at instrucoes_RAM.v(15): number of words (124) in memory file does not match the number of elements in the address range [1000:1999] File: C:/Users/rafae/OneDrive/Documents/Workspace/Faculdade/Processador/instrucoes_RAM.v Line: 15
-Warning (10850): Verilog HDL warning at instrucoes_RAM.v(16): number of words (20) in memory file does not match the number of elements in the address range [2000:2999] File: C:/Users/rafae/OneDrive/Documents/Workspace/Faculdade/Processador/instrucoes_RAM.v Line: 16
-Warning (10850): Verilog HDL warning at instrucoes_RAM.v(17): number of words (75) in memory file does not match the number of elements in the address range [3000:3999] File: C:/Users/rafae/OneDrive/Documents/Workspace/Faculdade/Processador/instrucoes_RAM.v Line: 17
-Warning (10850): Verilog HDL warning at instrucoes_RAM.v(18): number of words (16) in memory file does not match the number of elements in the address range [4000:4999] File: C:/Users/rafae/OneDrive/Documents/Workspace/Faculdade/Processador/instrucoes_RAM.v Line: 18
-Warning (10850): Verilog HDL warning at instrucoes_RAM.v(19): number of words (50) in memory file does not match the number of elements in the address range [5000:5999] File: C:/Users/rafae/OneDrive/Documents/Workspace/Faculdade/Processador/instrucoes_RAM.v Line: 19
-Warning (10850): Verilog HDL warning at instrucoes_RAM.v(20): number of words (50) in memory file does not match the number of elements in the address range [6000:6999] File: C:/Users/rafae/OneDrive/Documents/Workspace/Faculdade/Processador/instrucoes_RAM.v Line: 20
+Warning (10850): Verilog HDL warning at instrucoes_RAM.v(15): number of words (65) in memory file does not match the number of elements in the address range [0:199] File: C:/Users/rafae/OneDrive/Documents/Workspace/Faculdade/Processador/instrucoes_RAM.v Line: 15
+Warning (10850): Verilog HDL warning at instrucoes_RAM.v(17): number of words (99) in memory file does not match the number of elements in the address range [200:399] File: C:/Users/rafae/OneDrive/Documents/Workspace/Faculdade/Processador/instrucoes_RAM.v Line: 17
+Warning (10850): Verilog HDL warning at instrucoes_RAM.v(19): number of words (20) in memory file does not match the number of elements in the address range [400:599] File: C:/Users/rafae/OneDrive/Documents/Workspace/Faculdade/Processador/instrucoes_RAM.v Line: 19
+Warning (10850): Verilog HDL warning at instrucoes_RAM.v(21): number of words (20) in memory file does not match the number of elements in the address range [600:799] File: C:/Users/rafae/OneDrive/Documents/Workspace/Faculdade/Processador/instrucoes_RAM.v Line: 21
+Warning (10850): Verilog HDL warning at instrucoes_RAM.v(23): number of words (21) in memory file does not match the number of elements in the address range [800:999] File: C:/Users/rafae/OneDrive/Documents/Workspace/Faculdade/Processador/instrucoes_RAM.v Line: 23
+Warning (10850): Verilog HDL warning at instrucoes_RAM.v(25): number of words (75) in memory file does not match the number of elements in the address range [1000:1199] File: C:/Users/rafae/OneDrive/Documents/Workspace/Faculdade/Processador/instrucoes_RAM.v Line: 25
+Warning (10850): Verilog HDL warning at instrucoes_RAM.v(27): number of words (24) in memory file does not match the number of elements in the address range [1200:1399] File: C:/Users/rafae/OneDrive/Documents/Workspace/Faculdade/Processador/instrucoes_RAM.v Line: 27
+Warning (10850): Verilog HDL warning at instrucoes_RAM.v(29): number of words (49) in memory file does not match the number of elements in the address range [1400:1599] File: C:/Users/rafae/OneDrive/Documents/Workspace/Faculdade/Processador/instrucoes_RAM.v Line: 29
+Warning (10850): Verilog HDL warning at instrucoes_RAM.v(31): number of words (50) in memory file does not match the number of elements in the address range [1600:1799] File: C:/Users/rafae/OneDrive/Documents/Workspace/Faculdade/Processador/instrucoes_RAM.v Line: 31
+Warning (10850): Verilog HDL warning at instrucoes_RAM.v(33): number of words (63) in memory file does not match the number of elements in the address range [1800:1999] File: C:/Users/rafae/OneDrive/Documents/Workspace/Faculdade/Processador/instrucoes_RAM.v Line: 33
 Warning (10030): Net "inst_ram.data_a" at instrucoes_RAM.v(10) has no driver or initial value, using a default initial value '0' File: C:/Users/rafae/OneDrive/Documents/Workspace/Faculdade/Processador/instrucoes_RAM.v Line: 10
 Warning (10030): Net "inst_ram.waddr_a" at instrucoes_RAM.v(10) has no driver or initial value, using a default initial value '0' File: C:/Users/rafae/OneDrive/Documents/Workspace/Faculdade/Processador/instrucoes_RAM.v Line: 10
 Warning (10030): Net "inst_ram.we_a" at instrucoes_RAM.v(10) has no driver or initial value, using a default initial value '0' File: C:/Users/rafae/OneDrive/Documents/Workspace/Faculdade/Processador/instrucoes_RAM.v Line: 10
@@ -1436,25 +1334,17 @@ Warning (10059): Verilog HDL Case Statement warning at display7seg.v(56): case i
 Warning (10059): Verilog HDL Case Statement warning at display7seg.v(70): case item expression never matches the case expression because it contains an 'x' or 'z' value File: C:/Users/rafae/OneDrive/Documents/Workspace/Faculdade/Processador/display7seg.v Line: 70
 Warning (10059): Verilog HDL Case Statement warning at display7seg.v(84): case item expression never matches the case expression because it contains an 'x' or 'z' value File: C:/Users/rafae/OneDrive/Documents/Workspace/Faculdade/Processador/display7seg.v Line: 84
 Warning (10059): Verilog HDL Case Statement warning at display7seg.v(98): case item expression never matches the case expression because it contains an 'x' or 'z' value File: C:/Users/rafae/OneDrive/Documents/Workspace/Faculdade/Processador/display7seg.v Line: 98
-Warning (10059): Verilog HDL Case Statement warning at display7seg.v(112): case item expression never matches the case expression because it contains an 'x' or 'z' value File: C:/Users/rafae/OneDrive/Documents/Workspace/Faculdade/Processador/display7seg.v Line: 112
-Warning (10059): Verilog HDL Case Statement warning at display7seg.v(126): case item expression never matches the case expression because it contains an 'x' or 'z' value File: C:/Users/rafae/OneDrive/Documents/Workspace/Faculdade/Processador/display7seg.v Line: 126
-Info (12128): Elaborating entity "LCD_TEST" for hierarchy "LCD_TEST:u1" File: C:/Users/rafae/OneDrive/Documents/Workspace/Faculdade/Processador/teste.v Line: 107
-Info (12128): Elaborating entity "LCD_Controller" for hierarchy "LCD_TEST:u1|LCD_Controller:u0" File: C:/Users/rafae/OneDrive/Documents/Workspace/Faculdade/Processador/LCD_TEST.v Line: 132
-Warning (12011): Net is missing source, defaulting to GND
-    Warning (12110): Net "CLOCK_50" is missing source, defaulting to GND File: C:/Users/rafae/OneDrive/Documents/Workspace/Faculdade/Processador/teste.v Line: 72
-Warning (12011): Net is missing source, defaulting to GND
-    Warning (12110): Net "CLOCK_50" is missing source, defaulting to GND File: C:/Users/rafae/OneDrive/Documents/Workspace/Faculdade/Processador/teste.v Line: 72
 Warning (276027): Inferred dual-clock RAM node "dados_RAM:DADO|ram_rtl_0" from synchronous design logic.  The read-during-write behavior of a dual-clock RAM is undefined and may not match the behavior of the original design.
 Warning (276027): Inferred dual-clock RAM node "dados_RAM:DADO|ram_rtl_1" from synchronous design logic.  The read-during-write behavior of a dual-clock RAM is undefined and may not match the behavior of the original design.
 Info (19000): Inferred 3 megafunctions from design logic
     Info (276029): Inferred altsyncram megafunction from the following design logic: "dados_RAM:DADO|ram_rtl_0" 
         Info (286033): Parameter OPERATION_MODE set to DUAL_PORT
         Info (286033): Parameter WIDTH_A set to 32
-        Info (286033): Parameter WIDTHAD_A set to 13
-        Info (286033): Parameter NUMWORDS_A set to 7000
+        Info (286033): Parameter WIDTHAD_A set to 12
+        Info (286033): Parameter NUMWORDS_A set to 2400
         Info (286033): Parameter WIDTH_B set to 32
-        Info (286033): Parameter WIDTHAD_B set to 13
-        Info (286033): Parameter NUMWORDS_B set to 7000
+        Info (286033): Parameter WIDTHAD_B set to 12
+        Info (286033): Parameter NUMWORDS_B set to 2400
         Info (286033): Parameter ADDRESS_ACLR_A set to NONE
         Info (286033): Parameter OUTDATA_REG_B set to UNREGISTERED
         Info (286033): Parameter ADDRESS_ACLR_B set to NONE
@@ -1465,11 +1355,11 @@ Info (19000): Inferred 3 megafunctions from design logic
     Info (276029): Inferred altsyncram megafunction from the following design logic: "dados_RAM:DADO|ram_rtl_1" 
         Info (286033): Parameter OPERATION_MODE set to DUAL_PORT
         Info (286033): Parameter WIDTH_A set to 32
-        Info (286033): Parameter WIDTHAD_A set to 13
-        Info (286033): Parameter NUMWORDS_A set to 7000
+        Info (286033): Parameter WIDTHAD_A set to 12
+        Info (286033): Parameter NUMWORDS_A set to 2400
         Info (286033): Parameter WIDTH_B set to 32
-        Info (286033): Parameter WIDTHAD_B set to 13
-        Info (286033): Parameter NUMWORDS_B set to 7000
+        Info (286033): Parameter WIDTHAD_B set to 12
+        Info (286033): Parameter NUMWORDS_B set to 2400
         Info (286033): Parameter ADDRESS_ACLR_A set to NONE
         Info (286033): Parameter OUTDATA_REG_B set to UNREGISTERED
         Info (286033): Parameter ADDRESS_ACLR_B set to NONE
@@ -1480,8 +1370,8 @@ Info (19000): Inferred 3 megafunctions from design logic
     Info (276029): Inferred altsyncram megafunction from the following design logic: "instrucoes_RAM:INST|inst_ram_rtl_0" 
         Info (286033): Parameter OPERATION_MODE set to ROM
         Info (286033): Parameter WIDTH_A set to 32
-        Info (286033): Parameter WIDTHAD_A set to 13
-        Info (286033): Parameter NUMWORDS_A set to 7000
+        Info (286033): Parameter WIDTHAD_A set to 12
+        Info (286033): Parameter NUMWORDS_A set to 2400
         Info (286033): Parameter OUTDATA_REG_A set to UNREGISTERED
         Info (286033): Parameter ADDRESS_ACLR_A set to NONE
         Info (286033): Parameter OUTDATA_ACLR_A set to NONE
@@ -1498,11 +1388,11 @@ Info (12130): Elaborated megafunction instantiation "dados_RAM:DADO|altsyncram:r
 Info (12133): Instantiated megafunction "dados_RAM:DADO|altsyncram:ram_rtl_0" with the following parameter:
     Info (12134): Parameter "OPERATION_MODE" = "DUAL_PORT"
     Info (12134): Parameter "WIDTH_A" = "32"
-    Info (12134): Parameter "WIDTHAD_A" = "13"
-    Info (12134): Parameter "NUMWORDS_A" = "7000"
+    Info (12134): Parameter "WIDTHAD_A" = "12"
+    Info (12134): Parameter "NUMWORDS_A" = "2400"
     Info (12134): Parameter "WIDTH_B" = "32"
-    Info (12134): Parameter "WIDTHAD_B" = "13"
-    Info (12134): Parameter "NUMWORDS_B" = "7000"
+    Info (12134): Parameter "WIDTHAD_B" = "12"
+    Info (12134): Parameter "NUMWORDS_B" = "2400"
     Info (12134): Parameter "ADDRESS_ACLR_A" = "NONE"
     Info (12134): Parameter "OUTDATA_REG_B" = "UNREGISTERED"
     Info (12134): Parameter "ADDRESS_ACLR_B" = "NONE"
@@ -1510,17 +1400,17 @@ Info (12133): Instantiated megafunction "dados_RAM:DADO|altsyncram:ram_rtl_0" wi
     Info (12134): Parameter "ADDRESS_REG_B" = "CLOCK1"
     Info (12134): Parameter "INDATA_ACLR_A" = "NONE"
     Info (12134): Parameter "WRCONTROL_ACLR_A" = "NONE"
-Info (12021): Found 1 design units, including 1 entities, in source file db/altsyncram_m8d1.tdf
-    Info (12023): Found entity 1: altsyncram_m8d1 File: C:/Users/rafae/OneDrive/Documents/Workspace/Faculdade/Processador/db/altsyncram_m8d1.tdf Line: 27
+Info (12021): Found 1 design units, including 1 entities, in source file db/altsyncram_i8d1.tdf
+    Info (12023): Found entity 1: altsyncram_i8d1 File: C:/Users/rafae/OneDrive/Documents/Workspace/Faculdade/Processador/db/altsyncram_i8d1.tdf Line: 27
 Info (12130): Elaborated megafunction instantiation "dados_RAM:DADO|altsyncram:ram_rtl_1"
 Info (12133): Instantiated megafunction "dados_RAM:DADO|altsyncram:ram_rtl_1" with the following parameter:
     Info (12134): Parameter "OPERATION_MODE" = "DUAL_PORT"
     Info (12134): Parameter "WIDTH_A" = "32"
-    Info (12134): Parameter "WIDTHAD_A" = "13"
-    Info (12134): Parameter "NUMWORDS_A" = "7000"
+    Info (12134): Parameter "WIDTHAD_A" = "12"
+    Info (12134): Parameter "NUMWORDS_A" = "2400"
     Info (12134): Parameter "WIDTH_B" = "32"
-    Info (12134): Parameter "WIDTHAD_B" = "13"
-    Info (12134): Parameter "NUMWORDS_B" = "7000"
+    Info (12134): Parameter "WIDTHAD_B" = "12"
+    Info (12134): Parameter "NUMWORDS_B" = "2400"
     Info (12134): Parameter "ADDRESS_ACLR_A" = "NONE"
     Info (12134): Parameter "OUTDATA_REG_B" = "UNREGISTERED"
     Info (12134): Parameter "ADDRESS_ACLR_B" = "NONE"
@@ -1528,56 +1418,56 @@ Info (12133): Instantiated megafunction "dados_RAM:DADO|altsyncram:ram_rtl_1" wi
     Info (12134): Parameter "ADDRESS_REG_B" = "CLOCK1"
     Info (12134): Parameter "INDATA_ACLR_A" = "NONE"
     Info (12134): Parameter "WRCONTROL_ACLR_A" = "NONE"
-Info (12021): Found 1 design units, including 1 entities, in source file db/altsyncram_62e1.tdf
-    Info (12023): Found entity 1: altsyncram_62e1 File: C:/Users/rafae/OneDrive/Documents/Workspace/Faculdade/Processador/db/altsyncram_62e1.tdf Line: 27
+Info (12021): Found 1 design units, including 1 entities, in source file db/altsyncram_22e1.tdf
+    Info (12023): Found entity 1: altsyncram_22e1 File: C:/Users/rafae/OneDrive/Documents/Workspace/Faculdade/Processador/db/altsyncram_22e1.tdf Line: 27
 Info (12130): Elaborated megafunction instantiation "instrucoes_RAM:INST|altsyncram:inst_ram_rtl_0"
 Info (12133): Instantiated megafunction "instrucoes_RAM:INST|altsyncram:inst_ram_rtl_0" with the following parameter:
     Info (12134): Parameter "OPERATION_MODE" = "ROM"
     Info (12134): Parameter "WIDTH_A" = "32"
-    Info (12134): Parameter "WIDTHAD_A" = "13"
-    Info (12134): Parameter "NUMWORDS_A" = "7000"
+    Info (12134): Parameter "WIDTHAD_A" = "12"
+    Info (12134): Parameter "NUMWORDS_A" = "2400"
     Info (12134): Parameter "OUTDATA_REG_A" = "UNREGISTERED"
     Info (12134): Parameter "ADDRESS_ACLR_A" = "NONE"
     Info (12134): Parameter "OUTDATA_ACLR_A" = "NONE"
     Info (12134): Parameter "INDATA_ACLR_A" = "NONE"
     Info (12134): Parameter "WRCONTROL_ACLR_A" = "NONE"
     Info (12134): Parameter "INIT_FILE" = "db/CPU.ram0_instrucoes_RAM_436a63f4.hdl.mif"
-Info (12021): Found 1 design units, including 1 entities, in source file db/altsyncram_0c71.tdf
-    Info (12023): Found entity 1: altsyncram_0c71 File: C:/Users/rafae/OneDrive/Documents/Workspace/Faculdade/Processador/db/altsyncram_0c71.tdf Line: 27
+Info (12021): Found 1 design units, including 1 entities, in source file db/altsyncram_ub71.tdf
+    Info (12023): Found entity 1: altsyncram_ub71 File: C:/Users/rafae/OneDrive/Documents/Workspace/Faculdade/Processador/db/altsyncram_ub71.tdf Line: 27
 Info (12130): Elaborated megafunction instantiation "dados_RAM:DADO|lpm_mult:Mult2" File: C:/Users/rafae/OneDrive/Documents/Workspace/Faculdade/Processador/dados_RAM.v Line: 52
 Info (12133): Instantiated megafunction "dados_RAM:DADO|lpm_mult:Mult2" with the following parameter: File: C:/Users/rafae/OneDrive/Documents/Workspace/Faculdade/Processador/dados_RAM.v Line: 52
-    Info (12134): Parameter "LPM_WIDTHA" = "13"
-    Info (12134): Parameter "LPM_WIDTHB" = "10"
-    Info (12134): Parameter "LPM_WIDTHP" = "23"
-    Info (12134): Parameter "LPM_WIDTHR" = "23"
-    Info (12134): Parameter "LPM_WIDTHS" = "1"
-    Info (12134): Parameter "LPM_REPRESENTATION" = "UNSIGNED"
-    Info (12134): Parameter "INPUT_A_IS_CONSTANT" = "NO"
-    Info (12134): Parameter "INPUT_B_IS_CONSTANT" = "YES"
-    Info (12134): Parameter "MAXIMIZE_SPEED" = "6"
-Info (12131): Elaborated megafunction instantiation "dados_RAM:DADO|lpm_mult:Mult2|multcore:mult_core", which is child of megafunction instantiation "dados_RAM:DADO|lpm_mult:Mult2" File: c:/intelfpga_lite/17.1/quartus/libraries/megafunctions/lpm_mult.tdf Line: 308
-Info (12131): Elaborated megafunction instantiation "dados_RAM:DADO|lpm_mult:Mult2|multcore:mult_core|mpar_add:padder", which is child of megafunction instantiation "dados_RAM:DADO|lpm_mult:Mult2" File: c:/intelfpga_lite/17.1/quartus/libraries/megafunctions/multcore.tdf Line: 228
-Info (12131): Elaborated megafunction instantiation "dados_RAM:DADO|lpm_mult:Mult2|multcore:mult_core|mpar_add:padder|lpm_add_sub:adder[1]", which is child of megafunction instantiation "dados_RAM:DADO|lpm_mult:Mult2" File: c:/intelfpga_lite/17.1/quartus/libraries/megafunctions/mpar_add.tdf Line: 78
-Info (12021): Found 1 design units, including 1 entities, in source file db/add_sub_ngh.tdf
-    Info (12023): Found entity 1: add_sub_ngh File: C:/Users/rafae/OneDrive/Documents/Workspace/Faculdade/Processador/db/add_sub_ngh.tdf Line: 22
-Info (12131): Elaborated megafunction instantiation "dados_RAM:DADO|lpm_mult:Mult2|multcore:mult_core|mpar_add:padder|mpar_add:sub_par_add", which is child of megafunction instantiation "dados_RAM:DADO|lpm_mult:Mult2" File: c:/intelfpga_lite/17.1/quartus/libraries/megafunctions/mpar_add.tdf Line: 138
-Info (12131): Elaborated megafunction instantiation "dados_RAM:DADO|lpm_mult:Mult2|multcore:mult_core|mpar_add:padder|mpar_add:sub_par_add|lpm_add_sub:adder[0]", which is child of megafunction instantiation "dados_RAM:DADO|lpm_mult:Mult2" File: c:/intelfpga_lite/17.1/quartus/libraries/megafunctions/mpar_add.tdf Line: 78
-Info (12021): Found 1 design units, including 1 entities, in source file db/add_sub_rgh.tdf
-    Info (12023): Found entity 1: add_sub_rgh File: C:/Users/rafae/OneDrive/Documents/Workspace/Faculdade/Processador/db/add_sub_rgh.tdf Line: 22
-Info (12131): Elaborated megafunction instantiation "dados_RAM:DADO|lpm_mult:Mult2|altshift:external_latency_ffs", which is child of megafunction instantiation "dados_RAM:DADO|lpm_mult:Mult2" File: c:/intelfpga_lite/17.1/quartus/libraries/megafunctions/lpm_mult.tdf Line: 351
-Info (12130): Elaborated megafunction instantiation "dados_RAM:DADO|lpm_mult:Mult1" File: C:/Users/rafae/OneDrive/Documents/Workspace/Faculdade/Processador/dados_RAM.v Line: 50
-Info (12133): Instantiated megafunction "dados_RAM:DADO|lpm_mult:Mult1" with the following parameter: File: C:/Users/rafae/OneDrive/Documents/Workspace/Faculdade/Processador/dados_RAM.v Line: 50
-    Info (12134): Parameter "LPM_WIDTHA" = "32"
-    Info (12134): Parameter "LPM_WIDTHB" = "10"
-    Info (12134): Parameter "LPM_WIDTHP" = "42"
-    Info (12134): Parameter "LPM_WIDTHR" = "42"
+    Info (12134): Parameter "LPM_WIDTHA" = "12"
+    Info (12134): Parameter "LPM_WIDTHB" = "8"
+    Info (12134): Parameter "LPM_WIDTHP" = "20"
+    Info (12134): Parameter "LPM_WIDTHR" = "20"
     Info (12134): Parameter "LPM_WIDTHS" = "1"
     Info (12134): Parameter "LPM_REPRESENTATION" = "UNSIGNED"
     Info (12134): Parameter "INPUT_A_IS_CONSTANT" = "NO"
     Info (12134): Parameter "INPUT_B_IS_CONSTANT" = "YES"
     Info (12134): Parameter "MAXIMIZE_SPEED" = "5"
-Info (12021): Found 1 design units, including 1 entities, in source file db/mult_jgt.tdf
-    Info (12023): Found entity 1: mult_jgt File: C:/Users/rafae/OneDrive/Documents/Workspace/Faculdade/Processador/db/mult_jgt.tdf Line: 30
+Info (12131): Elaborated megafunction instantiation "dados_RAM:DADO|lpm_mult:Mult2|multcore:mult_core", which is child of megafunction instantiation "dados_RAM:DADO|lpm_mult:Mult2" File: c:/intelfpga_lite/17.1/quartus/libraries/megafunctions/lpm_mult.tdf Line: 308
+Info (12131): Elaborated megafunction instantiation "dados_RAM:DADO|lpm_mult:Mult2|multcore:mult_core|mpar_add:padder", which is child of megafunction instantiation "dados_RAM:DADO|lpm_mult:Mult2" File: c:/intelfpga_lite/17.1/quartus/libraries/megafunctions/multcore.tdf Line: 228
+Info (12131): Elaborated megafunction instantiation "dados_RAM:DADO|lpm_mult:Mult2|multcore:mult_core|mpar_add:padder|lpm_add_sub:adder[0]", which is child of megafunction instantiation "dados_RAM:DADO|lpm_mult:Mult2" File: c:/intelfpga_lite/17.1/quartus/libraries/megafunctions/mpar_add.tdf Line: 78
+Info (12021): Found 1 design units, including 1 entities, in source file db/add_sub_lgh.tdf
+    Info (12023): Found entity 1: add_sub_lgh File: C:/Users/rafae/OneDrive/Documents/Workspace/Faculdade/Processador/db/add_sub_lgh.tdf Line: 22
+Info (12131): Elaborated megafunction instantiation "dados_RAM:DADO|lpm_mult:Mult2|multcore:mult_core|mpar_add:padder|mpar_add:sub_par_add", which is child of megafunction instantiation "dados_RAM:DADO|lpm_mult:Mult2" File: c:/intelfpga_lite/17.1/quartus/libraries/megafunctions/mpar_add.tdf Line: 138
+Info (12131): Elaborated megafunction instantiation "dados_RAM:DADO|lpm_mult:Mult2|multcore:mult_core|mpar_add:padder|mpar_add:sub_par_add|lpm_add_sub:adder[0]", which is child of megafunction instantiation "dados_RAM:DADO|lpm_mult:Mult2" File: c:/intelfpga_lite/17.1/quartus/libraries/megafunctions/mpar_add.tdf Line: 78
+Info (12021): Found 1 design units, including 1 entities, in source file db/add_sub_pgh.tdf
+    Info (12023): Found entity 1: add_sub_pgh File: C:/Users/rafae/OneDrive/Documents/Workspace/Faculdade/Processador/db/add_sub_pgh.tdf Line: 22
+Info (12131): Elaborated megafunction instantiation "dados_RAM:DADO|lpm_mult:Mult2|altshift:external_latency_ffs", which is child of megafunction instantiation "dados_RAM:DADO|lpm_mult:Mult2" File: c:/intelfpga_lite/17.1/quartus/libraries/megafunctions/lpm_mult.tdf Line: 351
+Info (12130): Elaborated megafunction instantiation "dados_RAM:DADO|lpm_mult:Mult1" File: C:/Users/rafae/OneDrive/Documents/Workspace/Faculdade/Processador/dados_RAM.v Line: 50
+Info (12133): Instantiated megafunction "dados_RAM:DADO|lpm_mult:Mult1" with the following parameter: File: C:/Users/rafae/OneDrive/Documents/Workspace/Faculdade/Processador/dados_RAM.v Line: 50
+    Info (12134): Parameter "LPM_WIDTHA" = "32"
+    Info (12134): Parameter "LPM_WIDTHB" = "8"
+    Info (12134): Parameter "LPM_WIDTHP" = "40"
+    Info (12134): Parameter "LPM_WIDTHR" = "40"
+    Info (12134): Parameter "LPM_WIDTHS" = "1"
+    Info (12134): Parameter "LPM_REPRESENTATION" = "UNSIGNED"
+    Info (12134): Parameter "INPUT_A_IS_CONSTANT" = "NO"
+    Info (12134): Parameter "INPUT_B_IS_CONSTANT" = "YES"
+    Info (12134): Parameter "MAXIMIZE_SPEED" = "5"
+Info (12021): Found 1 design units, including 1 entities, in source file db/mult_8ft.tdf
+    Info (12023): Found entity 1: mult_8ft File: C:/Users/rafae/OneDrive/Documents/Workspace/Faculdade/Processador/db/mult_8ft.tdf Line: 30
 Info (12130): Elaborated megafunction instantiation "ULA:ULA|lpm_mult:Mult0" File: C:/Users/rafae/OneDrive/Documents/Workspace/Faculdade/Processador/ULA.v Line: 16
 Info (12133): Instantiated megafunction "ULA:ULA|lpm_mult:Mult0" with the following parameter: File: C:/Users/rafae/OneDrive/Documents/Workspace/Faculdade/Processador/ULA.v Line: 16
     Info (12134): Parameter "LPM_WIDTHA" = "32"
@@ -1610,16 +1500,16 @@ Info (12021): Found 1 design units, including 1 entities, in source file db/add_
 Info (12130): Elaborated megafunction instantiation "PC:PC|lpm_mult:Mult0" File: C:/Users/rafae/OneDrive/Documents/Workspace/Faculdade/Processador/PC.v Line: 45
 Info (12133): Instantiated megafunction "PC:PC|lpm_mult:Mult0" with the following parameter: File: C:/Users/rafae/OneDrive/Documents/Workspace/Faculdade/Processador/PC.v Line: 45
     Info (12134): Parameter "LPM_WIDTHA" = "32"
-    Info (12134): Parameter "LPM_WIDTHB" = "11"
-    Info (12134): Parameter "LPM_WIDTHP" = "43"
-    Info (12134): Parameter "LPM_WIDTHR" = "43"
+    Info (12134): Parameter "LPM_WIDTHB" = "9"
+    Info (12134): Parameter "LPM_WIDTHP" = "41"
+    Info (12134): Parameter "LPM_WIDTHR" = "41"
     Info (12134): Parameter "LPM_WIDTHS" = "1"
     Info (12134): Parameter "LPM_REPRESENTATION" = "SIGNED"
     Info (12134): Parameter "INPUT_A_IS_CONSTANT" = "NO"
     Info (12134): Parameter "INPUT_B_IS_CONSTANT" = "YES"
     Info (12134): Parameter "MAXIMIZE_SPEED" = "5"
-Info (12021): Found 1 design units, including 1 entities, in source file db/mult_i9t.tdf
-    Info (12023): Found entity 1: mult_i9t File: C:/Users/rafae/OneDrive/Documents/Workspace/Faculdade/Processador/db/mult_i9t.tdf Line: 30
+Info (12021): Found 1 design units, including 1 entities, in source file db/mult_78t.tdf
+    Info (12023): Found entity 1: mult_78t File: C:/Users/rafae/OneDrive/Documents/Workspace/Faculdade/Processador/db/mult_78t.tdf Line: 30
 Warning (14284): Synthesized away the following node(s):
     Warning (14285): Synthesized away the following DSP element node(s):
         Warning (14320): Synthesized away node "ULA:ULA|lpm_mult:Mult0|mult_7dt:auto_generated|mac_mult7" File: C:/Users/rafae/OneDrive/Documents/Workspace/Faculdade/Processador/db/mult_7dt.tdf Line: 66
@@ -1627,15 +1517,6 @@ Warning (14284): Synthesized away the following node(s):
 Warning (12241): 1 hierarchies have connectivity warnings - see the Connectivity Checks report folder
 Info (13014): Ignored 169 buffer(s)
     Info (13019): Ignored 169 SOFT buffer(s)
-Warning (13032): The following tri-state nodes are fed by constants
-    Warning (13033): The pin "LCD_DATA[0]" is fed by GND File: C:/Users/rafae/OneDrive/Documents/Workspace/Faculdade/Processador/teste.v Line: 61
-    Warning (13033): The pin "LCD_DATA[1]" is fed by GND File: C:/Users/rafae/OneDrive/Documents/Workspace/Faculdade/Processador/teste.v Line: 61
-    Warning (13033): The pin "LCD_DATA[2]" is fed by GND File: C:/Users/rafae/OneDrive/Documents/Workspace/Faculdade/Processador/teste.v Line: 61
-    Warning (13033): The pin "LCD_DATA[3]" is fed by GND File: C:/Users/rafae/OneDrive/Documents/Workspace/Faculdade/Processador/teste.v Line: 61
-    Warning (13033): The pin "LCD_DATA[4]" is fed by GND File: C:/Users/rafae/OneDrive/Documents/Workspace/Faculdade/Processador/teste.v Line: 61
-    Warning (13033): The pin "LCD_DATA[5]" is fed by GND File: C:/Users/rafae/OneDrive/Documents/Workspace/Faculdade/Processador/teste.v Line: 61
-    Warning (13033): The pin "LCD_DATA[6]" is fed by GND File: C:/Users/rafae/OneDrive/Documents/Workspace/Faculdade/Processador/teste.v Line: 61
-    Warning (13033): The pin "LCD_DATA[7]" is fed by GND File: C:/Users/rafae/OneDrive/Documents/Workspace/Faculdade/Processador/teste.v Line: 61
 Info (13025): Duplicate LATCH primitives merged into single LATCH primitive
     Info (13026): Duplicate LATCH primitive "extensor_Bit:BIT|imediato[30]" merged with LATCH primitive "extensor_Bit:BIT|imediato[31]" File: C:/Users/rafae/OneDrive/Documents/Workspace/Faculdade/Processador/extensor_Bit.v Line: 8
     Info (13026): Duplicate LATCH primitive "extensor_Bit:BIT|imediato[29]" merged with LATCH primitive "extensor_Bit:BIT|imediato[31]" File: C:/Users/rafae/OneDrive/Documents/Workspace/Faculdade/Processador/extensor_Bit.v Line: 8
@@ -1708,86 +1589,86 @@ Warning (13012): Latch ULA:ULA|result[29] has unsafe behavior File: C:/Users/raf
 Warning (13012): Latch ULA:ULA|result[30] has unsafe behavior File: C:/Users/rafae/OneDrive/Documents/Workspace/Faculdade/Processador/ULA.v Line: 31
     Warning (13013): Ports D and ENA on the latch are fed by the same signal controle_ULA:cULA|selec[1] File: C:/Users/rafae/OneDrive/Documents/Workspace/Faculdade/Processador/controle_ULA.v Line: 8
 Warning (13012): Latch extensor_Bit:BIT|imediato[0] has unsafe behavior File: C:/Users/rafae/OneDrive/Documents/Workspace/Faculdade/Processador/extensor_Bit.v Line: 8
-    Warning (13013): Ports D and ENA on the latch are fed by the same signal entradaDados:comb_5|sinal File: C:/Users/rafae/OneDrive/Documents/Workspace/Faculdade/Processador/entradaDados.v Line: 10
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal entradaDados:comb_3|sinal File: C:/Users/rafae/OneDrive/Documents/Workspace/Faculdade/Processador/entradaDados.v Line: 10
 Warning (13012): Latch controle_ULA:cULA|selec[0] has unsafe behavior File: C:/Users/rafae/OneDrive/Documents/Workspace/Faculdade/Processador/controle_ULA.v Line: 8
-    Warning (13013): Ports D and ENA on the latch are fed by the same signal instrucoes_RAM:INST|altsyncram:inst_ram_rtl_0|altsyncram_0c71:auto_generated|ram_block1a4 File: C:/Users/rafae/OneDrive/Documents/Workspace/Faculdade/Processador/db/altsyncram_0c71.tdf Line: 118
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal instrucoes_RAM:INST|altsyncram:inst_ram_rtl_0|altsyncram_ub71:auto_generated|ram_block1a4 File: C:/Users/rafae/OneDrive/Documents/Workspace/Faculdade/Processador/db/altsyncram_ub71.tdf Line: 118
 Warning (13012): Latch controle_ULA:cULA|selec[1] has unsafe behavior File: C:/Users/rafae/OneDrive/Documents/Workspace/Faculdade/Processador/controle_ULA.v Line: 8
-    Warning (13013): Ports D and ENA on the latch are fed by the same signal instrucoes_RAM:INST|altsyncram:inst_ram_rtl_0|altsyncram_0c71:auto_generated|ram_block1a4 File: C:/Users/rafae/OneDrive/Documents/Workspace/Faculdade/Processador/db/altsyncram_0c71.tdf Line: 118
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal instrucoes_RAM:INST|altsyncram:inst_ram_rtl_0|altsyncram_ub71:auto_generated|ram_block1a4 File: C:/Users/rafae/OneDrive/Documents/Workspace/Faculdade/Processador/db/altsyncram_ub71.tdf Line: 118
 Warning (13012): Latch controle_ULA:cULA|selec[2] has unsafe behavior File: C:/Users/rafae/OneDrive/Documents/Workspace/Faculdade/Processador/controle_ULA.v Line: 8
-    Warning (13013): Ports D and ENA on the latch are fed by the same signal instrucoes_RAM:INST|altsyncram:inst_ram_rtl_0|altsyncram_0c71:auto_generated|ram_block1a4 File: C:/Users/rafae/OneDrive/Documents/Workspace/Faculdade/Processador/db/altsyncram_0c71.tdf Line: 118
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal instrucoes_RAM:INST|altsyncram:inst_ram_rtl_0|altsyncram_ub71:auto_generated|ram_block1a4 File: C:/Users/rafae/OneDrive/Documents/Workspace/Faculdade/Processador/db/altsyncram_ub71.tdf Line: 118
 Warning (13012): Latch extensor_Bit:BIT|imediato[31] has unsafe behavior File: C:/Users/rafae/OneDrive/Documents/Workspace/Faculdade/Processador/extensor_Bit.v Line: 8
-    Warning (13013): Ports D and ENA on the latch are fed by the same signal instrucoes_RAM:INST|altsyncram:inst_ram_rtl_0|altsyncram_0c71:auto_generated|ram_block1a30 File: C:/Users/rafae/OneDrive/Documents/Workspace/Faculdade/Processador/db/altsyncram_0c71.tdf Line: 664
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal instrucoes_RAM:INST|altsyncram:inst_ram_rtl_0|altsyncram_ub71:auto_generated|ram_block1a30 File: C:/Users/rafae/OneDrive/Documents/Workspace/Faculdade/Processador/db/altsyncram_ub71.tdf Line: 664
 Warning (13012): Latch extensor_Bit:BIT|imediato[24] has unsafe behavior File: C:/Users/rafae/OneDrive/Documents/Workspace/Faculdade/Processador/extensor_Bit.v Line: 8
-    Warning (13013): Ports D and ENA on the latch are fed by the same signal instrucoes_RAM:INST|altsyncram:inst_ram_rtl_0|altsyncram_0c71:auto_generated|ram_block1a30 File: C:/Users/rafae/OneDrive/Documents/Workspace/Faculdade/Processador/db/altsyncram_0c71.tdf Line: 664
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal instrucoes_RAM:INST|altsyncram:inst_ram_rtl_0|altsyncram_ub71:auto_generated|ram_block1a30 File: C:/Users/rafae/OneDrive/Documents/Workspace/Faculdade/Processador/db/altsyncram_ub71.tdf Line: 664
 Warning (13012): Latch extensor_Bit:BIT|imediato[23] has unsafe behavior File: C:/Users/rafae/OneDrive/Documents/Workspace/Faculdade/Processador/extensor_Bit.v Line: 8
-    Warning (13013): Ports D and ENA on the latch are fed by the same signal instrucoes_RAM:INST|altsyncram:inst_ram_rtl_0|altsyncram_0c71:auto_generated|ram_block1a30 File: C:/Users/rafae/OneDrive/Documents/Workspace/Faculdade/Processador/db/altsyncram_0c71.tdf Line: 664
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal instrucoes_RAM:INST|altsyncram:inst_ram_rtl_0|altsyncram_ub71:auto_generated|ram_block1a30 File: C:/Users/rafae/OneDrive/Documents/Workspace/Faculdade/Processador/db/altsyncram_ub71.tdf Line: 664
 Warning (13012): Latch extensor_Bit:BIT|imediato[22] has unsafe behavior File: C:/Users/rafae/OneDrive/Documents/Workspace/Faculdade/Processador/extensor_Bit.v Line: 8
-    Warning (13013): Ports D and ENA on the latch are fed by the same signal instrucoes_RAM:INST|altsyncram:inst_ram_rtl_0|altsyncram_0c71:auto_generated|ram_block1a30 File: C:/Users/rafae/OneDrive/Documents/Workspace/Faculdade/Processador/db/altsyncram_0c71.tdf Line: 664
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal instrucoes_RAM:INST|altsyncram:inst_ram_rtl_0|altsyncram_ub71:auto_generated|ram_block1a30 File: C:/Users/rafae/OneDrive/Documents/Workspace/Faculdade/Processador/db/altsyncram_ub71.tdf Line: 664
 Warning (13012): Latch extensor_Bit:BIT|imediato[21] has unsafe behavior File: C:/Users/rafae/OneDrive/Documents/Workspace/Faculdade/Processador/extensor_Bit.v Line: 8
-    Warning (13013): Ports D and ENA on the latch are fed by the same signal instrucoes_RAM:INST|altsyncram:inst_ram_rtl_0|altsyncram_0c71:auto_generated|ram_block1a30 File: C:/Users/rafae/OneDrive/Documents/Workspace/Faculdade/Processador/db/altsyncram_0c71.tdf Line: 664
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal instrucoes_RAM:INST|altsyncram:inst_ram_rtl_0|altsyncram_ub71:auto_generated|ram_block1a30 File: C:/Users/rafae/OneDrive/Documents/Workspace/Faculdade/Processador/db/altsyncram_ub71.tdf Line: 664
 Warning (13012): Latch extensor_Bit:BIT|imediato[20] has unsafe behavior File: C:/Users/rafae/OneDrive/Documents/Workspace/Faculdade/Processador/extensor_Bit.v Line: 8
-    Warning (13013): Ports D and ENA on the latch are fed by the same signal instrucoes_RAM:INST|altsyncram:inst_ram_rtl_0|altsyncram_0c71:auto_generated|ram_block1a30 File: C:/Users/rafae/OneDrive/Documents/Workspace/Faculdade/Processador/db/altsyncram_0c71.tdf Line: 664
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal instrucoes_RAM:INST|altsyncram:inst_ram_rtl_0|altsyncram_ub71:auto_generated|ram_block1a30 File: C:/Users/rafae/OneDrive/Documents/Workspace/Faculdade/Processador/db/altsyncram_ub71.tdf Line: 664
 Warning (13012): Latch extensor_Bit:BIT|imediato[19] has unsafe behavior File: C:/Users/rafae/OneDrive/Documents/Workspace/Faculdade/Processador/extensor_Bit.v Line: 8
-    Warning (13013): Ports D and ENA on the latch are fed by the same signal instrucoes_RAM:INST|altsyncram:inst_ram_rtl_0|altsyncram_0c71:auto_generated|ram_block1a30 File: C:/Users/rafae/OneDrive/Documents/Workspace/Faculdade/Processador/db/altsyncram_0c71.tdf Line: 664
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal instrucoes_RAM:INST|altsyncram:inst_ram_rtl_0|altsyncram_ub71:auto_generated|ram_block1a30 File: C:/Users/rafae/OneDrive/Documents/Workspace/Faculdade/Processador/db/altsyncram_ub71.tdf Line: 664
 Warning (13012): Latch extensor_Bit:BIT|imediato[18] has unsafe behavior File: C:/Users/rafae/OneDrive/Documents/Workspace/Faculdade/Processador/extensor_Bit.v Line: 8
-    Warning (13013): Ports D and ENA on the latch are fed by the same signal instrucoes_RAM:INST|altsyncram:inst_ram_rtl_0|altsyncram_0c71:auto_generated|ram_block1a30 File: C:/Users/rafae/OneDrive/Documents/Workspace/Faculdade/Processador/db/altsyncram_0c71.tdf Line: 664
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal instrucoes_RAM:INST|altsyncram:inst_ram_rtl_0|altsyncram_ub71:auto_generated|ram_block1a30 File: C:/Users/rafae/OneDrive/Documents/Workspace/Faculdade/Processador/db/altsyncram_ub71.tdf Line: 664
 Warning (13012): Latch extensor_Bit:BIT|imediato[17] has unsafe behavior File: C:/Users/rafae/OneDrive/Documents/Workspace/Faculdade/Processador/extensor_Bit.v Line: 8
-    Warning (13013): Ports D and ENA on the latch are fed by the same signal instrucoes_RAM:INST|altsyncram:inst_ram_rtl_0|altsyncram_0c71:auto_generated|ram_block1a30 File: C:/Users/rafae/OneDrive/Documents/Workspace/Faculdade/Processador/db/altsyncram_0c71.tdf Line: 664
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal instrucoes_RAM:INST|altsyncram:inst_ram_rtl_0|altsyncram_ub71:auto_generated|ram_block1a30 File: C:/Users/rafae/OneDrive/Documents/Workspace/Faculdade/Processador/db/altsyncram_ub71.tdf Line: 664
 Warning (13012): Latch extensor_Bit:BIT|imediato[16] has unsafe behavior File: C:/Users/rafae/OneDrive/Documents/Workspace/Faculdade/Processador/extensor_Bit.v Line: 8
-    Warning (13013): Ports D and ENA on the latch are fed by the same signal entradaDados:comb_5|sinal File: C:/Users/rafae/OneDrive/Documents/Workspace/Faculdade/Processador/entradaDados.v Line: 10
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal entradaDados:comb_3|sinal File: C:/Users/rafae/OneDrive/Documents/Workspace/Faculdade/Processador/entradaDados.v Line: 10
 Warning (13012): Latch extensor_Bit:BIT|imediato[15] has unsafe behavior File: C:/Users/rafae/OneDrive/Documents/Workspace/Faculdade/Processador/extensor_Bit.v Line: 8
-    Warning (13013): Ports D and ENA on the latch are fed by the same signal entradaDados:comb_5|sinal File: C:/Users/rafae/OneDrive/Documents/Workspace/Faculdade/Processador/entradaDados.v Line: 10
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal entradaDados:comb_3|sinal File: C:/Users/rafae/OneDrive/Documents/Workspace/Faculdade/Processador/entradaDados.v Line: 10
 Warning (13012): Latch extensor_Bit:BIT|imediato[14] has unsafe behavior File: C:/Users/rafae/OneDrive/Documents/Workspace/Faculdade/Processador/extensor_Bit.v Line: 8
-    Warning (13013): Ports D and ENA on the latch are fed by the same signal entradaDados:comb_5|sinal File: C:/Users/rafae/OneDrive/Documents/Workspace/Faculdade/Processador/entradaDados.v Line: 10
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal entradaDados:comb_3|sinal File: C:/Users/rafae/OneDrive/Documents/Workspace/Faculdade/Processador/entradaDados.v Line: 10
 Warning (13012): Latch extensor_Bit:BIT|imediato[13] has unsafe behavior File: C:/Users/rafae/OneDrive/Documents/Workspace/Faculdade/Processador/extensor_Bit.v Line: 8
-    Warning (13013): Ports D and ENA on the latch are fed by the same signal entradaDados:comb_5|sinal File: C:/Users/rafae/OneDrive/Documents/Workspace/Faculdade/Processador/entradaDados.v Line: 10
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal entradaDados:comb_3|sinal File: C:/Users/rafae/OneDrive/Documents/Workspace/Faculdade/Processador/entradaDados.v Line: 10
 Warning (13012): Latch extensor_Bit:BIT|imediato[12] has unsafe behavior File: C:/Users/rafae/OneDrive/Documents/Workspace/Faculdade/Processador/extensor_Bit.v Line: 8
-    Warning (13013): Ports D and ENA on the latch are fed by the same signal entradaDados:comb_5|sinal File: C:/Users/rafae/OneDrive/Documents/Workspace/Faculdade/Processador/entradaDados.v Line: 10
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal entradaDados:comb_3|sinal File: C:/Users/rafae/OneDrive/Documents/Workspace/Faculdade/Processador/entradaDados.v Line: 10
 Warning (13012): Latch extensor_Bit:BIT|imediato[11] has unsafe behavior File: C:/Users/rafae/OneDrive/Documents/Workspace/Faculdade/Processador/extensor_Bit.v Line: 8
-    Warning (13013): Ports D and ENA on the latch are fed by the same signal entradaDados:comb_5|sinal File: C:/Users/rafae/OneDrive/Documents/Workspace/Faculdade/Processador/entradaDados.v Line: 10
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal entradaDados:comb_3|sinal File: C:/Users/rafae/OneDrive/Documents/Workspace/Faculdade/Processador/entradaDados.v Line: 10
 Warning (13012): Latch extensor_Bit:BIT|imediato[10] has unsafe behavior File: C:/Users/rafae/OneDrive/Documents/Workspace/Faculdade/Processador/extensor_Bit.v Line: 8
-    Warning (13013): Ports D and ENA on the latch are fed by the same signal entradaDados:comb_5|sinal File: C:/Users/rafae/OneDrive/Documents/Workspace/Faculdade/Processador/entradaDados.v Line: 10
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal entradaDados:comb_3|sinal File: C:/Users/rafae/OneDrive/Documents/Workspace/Faculdade/Processador/entradaDados.v Line: 10
 Warning (13012): Latch extensor_Bit:BIT|imediato[9] has unsafe behavior File: C:/Users/rafae/OneDrive/Documents/Workspace/Faculdade/Processador/extensor_Bit.v Line: 8
-    Warning (13013): Ports D and ENA on the latch are fed by the same signal entradaDados:comb_5|sinal File: C:/Users/rafae/OneDrive/Documents/Workspace/Faculdade/Processador/entradaDados.v Line: 10
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal entradaDados:comb_3|sinal File: C:/Users/rafae/OneDrive/Documents/Workspace/Faculdade/Processador/entradaDados.v Line: 10
 Warning (13012): Latch extensor_Bit:BIT|imediato[8] has unsafe behavior File: C:/Users/rafae/OneDrive/Documents/Workspace/Faculdade/Processador/extensor_Bit.v Line: 8
-    Warning (13013): Ports D and ENA on the latch are fed by the same signal entradaDados:comb_5|sinal File: C:/Users/rafae/OneDrive/Documents/Workspace/Faculdade/Processador/entradaDados.v Line: 10
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal entradaDados:comb_3|sinal File: C:/Users/rafae/OneDrive/Documents/Workspace/Faculdade/Processador/entradaDados.v Line: 10
 Warning (13012): Latch extensor_Bit:BIT|imediato[7] has unsafe behavior File: C:/Users/rafae/OneDrive/Documents/Workspace/Faculdade/Processador/extensor_Bit.v Line: 8
-    Warning (13013): Ports D and ENA on the latch are fed by the same signal entradaDados:comb_5|sinal File: C:/Users/rafae/OneDrive/Documents/Workspace/Faculdade/Processador/entradaDados.v Line: 10
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal entradaDados:comb_3|sinal File: C:/Users/rafae/OneDrive/Documents/Workspace/Faculdade/Processador/entradaDados.v Line: 10
 Warning (13012): Latch extensor_Bit:BIT|imediato[6] has unsafe behavior File: C:/Users/rafae/OneDrive/Documents/Workspace/Faculdade/Processador/extensor_Bit.v Line: 8
-    Warning (13013): Ports D and ENA on the latch are fed by the same signal entradaDados:comb_5|sinal File: C:/Users/rafae/OneDrive/Documents/Workspace/Faculdade/Processador/entradaDados.v Line: 10
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal entradaDados:comb_3|sinal File: C:/Users/rafae/OneDrive/Documents/Workspace/Faculdade/Processador/entradaDados.v Line: 10
 Warning (13012): Latch extensor_Bit:BIT|imediato[5] has unsafe behavior File: C:/Users/rafae/OneDrive/Documents/Workspace/Faculdade/Processador/extensor_Bit.v Line: 8
-    Warning (13013): Ports D and ENA on the latch are fed by the same signal entradaDados:comb_5|sinal File: C:/Users/rafae/OneDrive/Documents/Workspace/Faculdade/Processador/entradaDados.v Line: 10
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal entradaDados:comb_3|sinal File: C:/Users/rafae/OneDrive/Documents/Workspace/Faculdade/Processador/entradaDados.v Line: 10
 Warning (13012): Latch extensor_Bit:BIT|imediato[4] has unsafe behavior File: C:/Users/rafae/OneDrive/Documents/Workspace/Faculdade/Processador/extensor_Bit.v Line: 8
-    Warning (13013): Ports D and ENA on the latch are fed by the same signal entradaDados:comb_5|sinal File: C:/Users/rafae/OneDrive/Documents/Workspace/Faculdade/Processador/entradaDados.v Line: 10
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal entradaDados:comb_3|sinal File: C:/Users/rafae/OneDrive/Documents/Workspace/Faculdade/Processador/entradaDados.v Line: 10
 Warning (13012): Latch extensor_Bit:BIT|imediato[3] has unsafe behavior File: C:/Users/rafae/OneDrive/Documents/Workspace/Faculdade/Processador/extensor_Bit.v Line: 8
-    Warning (13013): Ports D and ENA on the latch are fed by the same signal entradaDados:comb_5|sinal File: C:/Users/rafae/OneDrive/Documents/Workspace/Faculdade/Processador/entradaDados.v Line: 10
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal entradaDados:comb_3|sinal File: C:/Users/rafae/OneDrive/Documents/Workspace/Faculdade/Processador/entradaDados.v Line: 10
 Warning (13012): Latch extensor_Bit:BIT|imediato[2] has unsafe behavior File: C:/Users/rafae/OneDrive/Documents/Workspace/Faculdade/Processador/extensor_Bit.v Line: 8
-    Warning (13013): Ports D and ENA on the latch are fed by the same signal entradaDados:comb_5|sinal File: C:/Users/rafae/OneDrive/Documents/Workspace/Faculdade/Processador/entradaDados.v Line: 10
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal entradaDados:comb_3|sinal File: C:/Users/rafae/OneDrive/Documents/Workspace/Faculdade/Processador/entradaDados.v Line: 10
 Warning (13012): Latch extensor_Bit:BIT|imediato[1] has unsafe behavior File: C:/Users/rafae/OneDrive/Documents/Workspace/Faculdade/Processador/extensor_Bit.v Line: 8
-    Warning (13013): Ports D and ENA on the latch are fed by the same signal entradaDados:comb_5|sinal File: C:/Users/rafae/OneDrive/Documents/Workspace/Faculdade/Processador/entradaDados.v Line: 10
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal entradaDados:comb_3|sinal File: C:/Users/rafae/OneDrive/Documents/Workspace/Faculdade/Processador/entradaDados.v Line: 10
 Warning (13024): Output pins are stuck at VCC or GND
-    Warning (13410): Pin "LCD_RS" is stuck at GND File: C:/Users/rafae/OneDrive/Documents/Workspace/Faculdade/Processador/teste.v Line: 58
-    Warning (13410): Pin "LCD_RW" is stuck at GND File: C:/Users/rafae/OneDrive/Documents/Workspace/Faculdade/Processador/teste.v Line: 59
-    Warning (13410): Pin "LCD_EN" is stuck at GND File: C:/Users/rafae/OneDrive/Documents/Workspace/Faculdade/Processador/teste.v Line: 60
-    Warning (13410): Pin "LCD_ON" is stuck at VCC File: C:/Users/rafae/OneDrive/Documents/Workspace/Faculdade/Processador/teste.v Line: 62
-    Warning (13410): Pin "LCD_BLON" is stuck at VCC File: C:/Users/rafae/OneDrive/Documents/Workspace/Faculdade/Processador/teste.v Line: 63
+    Warning (13410): Pin "seg7[0]" is stuck at VCC File: C:/Users/rafae/OneDrive/Documents/Workspace/Faculdade/Processador/teste.v Line: 55
+    Warning (13410): Pin "seg7[1]" is stuck at VCC File: C:/Users/rafae/OneDrive/Documents/Workspace/Faculdade/Processador/teste.v Line: 55
+    Warning (13410): Pin "seg7[2]" is stuck at VCC File: C:/Users/rafae/OneDrive/Documents/Workspace/Faculdade/Processador/teste.v Line: 55
+    Warning (13410): Pin "seg7[3]" is stuck at VCC File: C:/Users/rafae/OneDrive/Documents/Workspace/Faculdade/Processador/teste.v Line: 55
+    Warning (13410): Pin "seg7[4]" is stuck at VCC File: C:/Users/rafae/OneDrive/Documents/Workspace/Faculdade/Processador/teste.v Line: 55
+    Warning (13410): Pin "seg7[5]" is stuck at VCC File: C:/Users/rafae/OneDrive/Documents/Workspace/Faculdade/Processador/teste.v Line: 55
 Info (286030): Timing-Driven Synthesis is running
-Info (17049): 41 registers lost all their fanouts during netlist optimizations.
+Info (17049): 32 registers lost all their fanouts during netlist optimizations.
 Info (144001): Generated suppressed messages file C:/Users/rafae/OneDrive/Documents/Workspace/Faculdade/Processador/output_files/CPU.map.smsg
 Info (16010): Generating hard_block partition "hard_block:auto_generated_inst"
     Info (16011): Adding 0 node(s), including 0 DDIO, 0 PLL, 0 transceiver and 0 LCELL
-Info (21057): Implemented 7562 device resources after synthesis - the final resource count might be different
+Info (21057): Implemented 7491 device resources after synthesis - the final resource count might be different
     Info (21058): Implemented 21 input pins
-    Info (21059): Implemented 65 output pins
-    Info (21060): Implemented 8 bidirectional pins
-    Info (21061): Implemented 7358 logic cells
+    Info (21059): Implemented 60 output pins
+    Info (21061): Implemented 7300 logic cells
     Info (21064): Implemented 96 RAM segments
     Info (21062): Implemented 14 DSP elements
-Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 229 warnings
-    Info: Peak virtual memory: 4905 megabytes
-    Info: Processing ended: Sun Feb 16 13:09:37 2025
-    Info: Elapsed time: 00:00:27
-    Info: Total CPU time (on all processors): 00:00:36
+Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 217 warnings
+    Info: Peak virtual memory: 4901 megabytes
+    Info: Processing ended: Tue Feb 18 15:15:21 2025
+    Info: Elapsed time: 00:00:29
+    Info: Total CPU time (on all processors): 00:00:34
 
 
 +------------------------------------------+

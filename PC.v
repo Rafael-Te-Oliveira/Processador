@@ -13,8 +13,7 @@ module PC (changeProgram, defquantum, lpc, enderecoPc, endProgram, novoEnd, novo
 	
 	output reg [31:0] endereco;
 	output reg [31:0] enderecoSpc;
-	
-	// integer quantum = 5;
+
 	integer instNum = 0;
 	
 	 reg [31:0] quantum;
@@ -38,8 +37,6 @@ module PC (changeProgram, defquantum, lpc, enderecoPc, endProgram, novoEnd, novo
 		
 		if(lpc)begin
 			programa = execProgram;
-			//programa = programaAtual % 3 + 1;
-			//programa = 1;
 		end
 		
 		offset = programa * 200;
@@ -59,7 +56,6 @@ module PC (changeProgram, defquantum, lpc, enderecoPc, endProgram, novoEnd, novo
 				end
 				endereco = 0;
 				instNum = 0;
-				//programaAtual = programa;
 				programa = 0;
 			end else begin
 				if(programa != 0) begin 

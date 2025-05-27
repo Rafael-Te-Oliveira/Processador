@@ -7,7 +7,7 @@ module instrucoes_RAM
 );
     
     // Declare the RAM variable
-    reg [DATA_WIDTH-1:0] inst_ram[2400];
+    reg [DATA_WIDTH-1:0] inst_ram[800];
 
     initial
 		begin
@@ -20,17 +20,17 @@ module instrucoes_RAM
 			//subtracao
 			$readmemb("instrucoes_ram/programa_2.txt", inst_ram, 600, 799);
 			//maior
-			$readmemb("instrucoes_ram/programa_3.txt", inst_ram, 800, 999);
+			//$readmemb("instrucoes_ram/programa_3.txt", inst_ram, 800, 999);
 			//fibonacci
-			$readmemb("instrucoes_ram/programa_4.txt", inst_ram, 1000, 1199);
+			//$readmemb("instrucoes_ram/programa_4.txt", inst_ram, 1000, 1199);
 			//perimetro
-			$readmemb("instrucoes_ram/programa_5.txt", inst_ram, 1200, 1399);
+			//$readmemb("instrucoes_ram/programa_5.txt", inst_ram, 1200, 1399);
 			//gcd
-			$readmemb("instrucoes_ram/programa_6.txt", inst_ram, 1400, 1599);
+			//$readmemb("instrucoes_ram/programa_6.txt", inst_ram, 1400, 1599);
 			//fatorial
-			$readmemb("instrucoes_ram/programa_7.txt", inst_ram, 1600, 1799);
+			//$readmemb("instrucoes_ram/programa_7.txt", inst_ram, 1600, 1799);
 			//potencia
-			$readmemb("instrucoes_ram/programa_8.txt", inst_ram, 1800, 1999);
+			//$readmemb("instrucoes_ram/programa_8.txt", inst_ram, 1800, 1999);
 		end
 	 
     

@@ -1,0 +1,24 @@
+module vga_test (
+    input wire clk_25mhz,
+    output wire hsync,
+    output wire vsync,
+    output wire [3:0] red,
+    output wire [3:0] green,
+    output wire [3:0] blue
+);
+
+    wire video_on;
+
+    vga_sync_minimal syncgen (
+        .clk(clk_25mhz),
+        .hsync(hsync),
+        .vsync(vsync),
+        .video_on(video_on)
+    );
+
+    // Exibir uma cor sólida quando video_on estiver ativo
+    assign red   = video_on ? 4'hF : 4'h0;
+    assign green = video_on ? 4'h0 : 4'h0;
+    assign blue  = video_on ? 4'h0 : 4'h0;
+
+endmodule

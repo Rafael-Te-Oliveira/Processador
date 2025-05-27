@@ -10,7 +10,7 @@ module dados_RAM
 );
 
     reg [31:0] execProgram;
-    reg [DATA_WIDTH-1:0] ram[2400];
+    reg [DATA_WIDTH-1:0] ram[800];
 	 reg [31:0] offset;
 	 reg [31:0] programasAtivos = 232;
 	 reg [DATA_WIDTH-1:0] temp_value;

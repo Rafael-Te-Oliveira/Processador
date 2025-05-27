@@ -1,9 +1,11 @@
-module teste (clock, enter,reset, entrada, seg0, seg1, seg2, seg3, seg4, seg5, seg6, seg7, ledr);
+module teste (clock, enter,reset, entrada, ps2_clk, ps2_data, seg0, seg1, seg2, seg3, seg4, seg5, seg6, seg7, ledr, hsync, vsync, red, green, blue, direcao);
 	
 	input clock;
 	input enter;
 	input reset;
 	input[17:0] entrada;
+	input ps2_clk;
+	input ps2_data;
 	
 	wire[17:0] valor;
 	wire sinal;
@@ -35,6 +37,7 @@ module teste (clock, enter,reset, entrada, seg0, seg1, seg2, seg3, seg4, seg5, s
 	wire [31:0] dados;
 	wire neg;
 	wire divclock;
+	wire vgaclock;
 	wire offset_register;
 	wire spc;
 	wire[31:0] enderecoSpc;
@@ -44,6 +47,8 @@ module teste (clock, enter,reset, entrada, seg0, seg1, seg2, seg3, seg4, seg5, s
 	wire[31:0] segmentosPrograma;
 	wire defquantum;
 	wire changeProgram;
+	wire scan_code;
+	wire scan_ready;
 	
 	output [6:0] seg0;
 	output [6:0] seg1;
@@ -55,21 +60,14 @@ module teste (clock, enter,reset, entrada, seg0, seg1, seg2, seg3, seg4, seg5, s
 	output [6:0] seg7;
 	output [3:0] ledr;
 	
-	//output LCD_RS;       
-   //output LCD_RW;        
-   //output LCD_EN;    
-   //inout [7:0] LCD_DATA; 
-	//output LCD_ON;
-	//output LCD_BLON;
-	
-	//assign    LCD_ON   = 1'b1;
-	//assign    LCD_BLON  = 1'b1;
-	
-	contato1 C1(clock, ledr, reset, divclock);
-	
-	//wire DLY_RST;
-	
-	//Reset_Delay r0(    .iCLK(CLOCK_50),.oRESET(DLY_RST) );
+	output hsync;
+   output vsync;
+   output [7:0] red;
+   output [7:0] green;
+   output [7:0] blue;
+	output [4:0] direcao;
+	 
+	contato1 C1(clock, ledr, reset, divclock, vgaclock);
 	
 	PC PC(changeProgram, defquantum, lpc, dadosLidos, endProgram, imediato, result, desvio, zero, negativo, divclock, endereco, stop, reset, enderecoSpc);
 	
@@ -94,16 +92,9 @@ module teste (clock, enter,reset, entrada, seg0, seg1, seg2, seg3, seg4, seg5, s
 	saidaDados SaidaDados(divclock, dados, endereco, entrada, out, in, saida, segmentos, segmentosPrograma, neg);
 	
 	display7seg Display(segmentos,segmentosPrograma, neg, seg0, seg1, seg2, seg3, seg4, seg5, seg6, seg7);
-		
-	//LCD_TEST u1(
-// Host Side
-   //.iCLK(CLOCK_50),
-   //.iRST_N(DLY_RST),
-// LCD Side
-  // .LCD_DATA(LCD_DATA),
-   //.LCD_RW(LCD_RW),
-   //.LCD_EN(LCD_EN),
-   //.LCD_RS(LCD_RS)
-//);
-
+	
+	vga_test Test(vgaclock, hsync, vsync, red, green, blue);
+	
+	ps2_receiver PS2( ps2_clk, ps2_data, scan_code, scan_ready, direcao);
+	
 endmodule 

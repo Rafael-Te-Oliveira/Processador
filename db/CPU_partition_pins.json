@@ -220,7 +220,47 @@
 					"strict" : false
 				},
 				{
+					"name" : "hsync",
+					"strict" : false
+				},
+				{
+					"name" : "vsync",
+					"strict" : false
+				},
+				{
+					"name" : "direcao[0]",
+					"strict" : false
+				},
+				{
+					"name" : "direcao[1]",
+					"strict" : false
+				},
+				{
+					"name" : "direcao[2]",
+					"strict" : false
+				},
+				{
+					"name" : "direcao[3]",
+					"strict" : false
+				},
+				{
+					"name" : "direcao[4]",
+					"strict" : false
+				},
+				{
 					"name" : "entrada[0]",
+					"strict" : false
+				},
+				{
+					"name" : "entrada[1]",
+					"strict" : false
+				},
+				{
+					"name" : "entrada[2]",
+					"strict" : false
+				},
+				{
+					"name" : "entrada[3]",
 					"strict" : false
 				},
 				{
@@ -280,18 +320,6 @@
 					"strict" : false
 				},
 				{
-					"name" : "entrada[3]",
-					"strict" : false
-				},
-				{
-					"name" : "entrada[2]",
-					"strict" : false
-				},
-				{
-					"name" : "entrada[1]",
-					"strict" : false
-				},
-				{
 					"name" : "clock",
 					"strict" : false
 				},
@@ -301,6 +329,14 @@
 				},
 				{
 					"name" : "enter",
+					"strict" : false
+				},
+				{
+					"name" : "ps2_data",
+					"strict" : false
+				},
+				{
+					"name" : "ps2_clk",
 					"strict" : false
 				}
 			]

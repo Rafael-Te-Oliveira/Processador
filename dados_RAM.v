@@ -6,6 +6,7 @@ module dados_RAM
     input we, read_clock, write_clock, offset_register, spc, lpc, nextProgram, changeProgram,
 	 input [(DATA_WIDTH-1):0] enderecoSpc,
 	 input endprogram,
+	 input [4:0] acoes,
     output reg [(DATA_WIDTH-1):0] q
 );
 
@@ -13,6 +14,13 @@ module dados_RAM
     reg [DATA_WIDTH-1:0] ram[800];
 	 reg [31:0] offset;
 	 reg [31:0] programasAtivos = 232;
+	 
+	 reg [31:0] cima = 432;
+	 reg [31:0] esquerda = 433;
+	 reg [31:0] baixo = 434;
+	 reg [31:0] direita = 435;
+	 reg [31:0] acao = 436;
+	 
 	 reg [DATA_WIDTH-1:0] temp_value;
 	 integer programa = 1;
 	 integer i = 1;
@@ -61,6 +69,12 @@ module dados_RAM
 				encerrou <= 0;
 				resetou <= 1;
 		  end 
+		  
+		  ram[cima] <= acoes[0];
+		  ram[esquerda] <= acoes[1];
+		  ram[baixo] <= acoes[2];
+		  ram[direita] <= acoes[3];
+		  ram[acao] <= acoes[4];
     end
 			
     always @(posedge read_clock) begin

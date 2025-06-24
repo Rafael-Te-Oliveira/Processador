@@ -1,0 +1,43 @@
+module Draw_Fill_Screen (
+    input wire clk,           // Clock lento (Slow_Clock)
+    input wire reset,         // Reset
+    output reg [31:0] Draw_X,
+    output reg [31:0] Draw_Y,
+    output reg [31:0] Draw_Color,
+    output reg Enable_Draw
+);
+
+    // Framebuffer size
+    localparam FB_WIDTH = 160;
+    localparam FB_HEIGHT = 120;
+
+    reg [7:0] x;
+    reg [6:0] y;
+
+    always @(posedge clk or posedge reset) begin
+        if (reset) begin
+            x <= 0;
+            y <= 0;
+            Enable_Draw <= 0;
+        end else begin
+            Enable_Draw <= 1;  // Sempre ativo enquanto varre
+
+            if (x == FB_WIDTH - 1) begin
+                x <= 0;
+                if (y == FB_HEIGHT - 1)
+                    y <= 0; // reinicia após preencher tudo
+                else
+                    y <= y + 1;
+            end else begin
+                x <= x + 1;
+            end
+        end
+    end
+
+    always @(*) begin
+        Draw_X = x;
+        Draw_Y = y;
+        Draw_Color = 32'h1C0; // vermelho em 9 bits (111000000)
+    end
+
+endmodule

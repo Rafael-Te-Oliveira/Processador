@@ -4,206 +4,6 @@
 			"name" : "Top",
 			"pins" : [
 				{
-					"name" : "seg0[0]",
-					"strict" : false
-				},
-				{
-					"name" : "seg0[1]",
-					"strict" : false
-				},
-				{
-					"name" : "seg0[2]",
-					"strict" : false
-				},
-				{
-					"name" : "seg0[3]",
-					"strict" : false
-				},
-				{
-					"name" : "seg0[4]",
-					"strict" : false
-				},
-				{
-					"name" : "seg0[5]",
-					"strict" : false
-				},
-				{
-					"name" : "seg0[6]",
-					"strict" : false
-				},
-				{
-					"name" : "seg1[0]",
-					"strict" : false
-				},
-				{
-					"name" : "seg1[1]",
-					"strict" : false
-				},
-				{
-					"name" : "seg1[2]",
-					"strict" : false
-				},
-				{
-					"name" : "seg1[3]",
-					"strict" : false
-				},
-				{
-					"name" : "seg1[4]",
-					"strict" : false
-				},
-				{
-					"name" : "seg1[5]",
-					"strict" : false
-				},
-				{
-					"name" : "seg1[6]",
-					"strict" : false
-				},
-				{
-					"name" : "seg2[0]",
-					"strict" : false
-				},
-				{
-					"name" : "seg2[1]",
-					"strict" : false
-				},
-				{
-					"name" : "seg2[2]",
-					"strict" : false
-				},
-				{
-					"name" : "seg2[3]",
-					"strict" : false
-				},
-				{
-					"name" : "seg2[4]",
-					"strict" : false
-				},
-				{
-					"name" : "seg2[5]",
-					"strict" : false
-				},
-				{
-					"name" : "seg2[6]",
-					"strict" : false
-				},
-				{
-					"name" : "seg3[0]",
-					"strict" : false
-				},
-				{
-					"name" : "seg3[1]",
-					"strict" : false
-				},
-				{
-					"name" : "seg3[2]",
-					"strict" : false
-				},
-				{
-					"name" : "seg3[3]",
-					"strict" : false
-				},
-				{
-					"name" : "seg3[4]",
-					"strict" : false
-				},
-				{
-					"name" : "seg3[5]",
-					"strict" : false
-				},
-				{
-					"name" : "seg3[6]",
-					"strict" : false
-				},
-				{
-					"name" : "seg4[0]",
-					"strict" : false
-				},
-				{
-					"name" : "seg4[1]",
-					"strict" : false
-				},
-				{
-					"name" : "seg4[2]",
-					"strict" : false
-				},
-				{
-					"name" : "seg4[3]",
-					"strict" : false
-				},
-				{
-					"name" : "seg4[4]",
-					"strict" : false
-				},
-				{
-					"name" : "seg4[5]",
-					"strict" : false
-				},
-				{
-					"name" : "seg4[6]",
-					"strict" : false
-				},
-				{
-					"name" : "seg5[0]",
-					"strict" : false
-				},
-				{
-					"name" : "seg5[1]",
-					"strict" : false
-				},
-				{
-					"name" : "seg5[2]",
-					"strict" : false
-				},
-				{
-					"name" : "seg5[3]",
-					"strict" : false
-				},
-				{
-					"name" : "seg5[4]",
-					"strict" : false
-				},
-				{
-					"name" : "seg5[5]",
-					"strict" : false
-				},
-				{
-					"name" : "seg5[6]",
-					"strict" : false
-				},
-				{
-					"name" : "seg6[0]",
-					"strict" : false
-				},
-				{
-					"name" : "seg6[1]",
-					"strict" : false
-				},
-				{
-					"name" : "seg6[2]",
-					"strict" : false
-				},
-				{
-					"name" : "seg6[3]",
-					"strict" : false
-				},
-				{
-					"name" : "seg6[4]",
-					"strict" : false
-				},
-				{
-					"name" : "seg6[5]",
-					"strict" : false
-				},
-				{
-					"name" : "seg6[6]",
-					"strict" : false
-				},
-				{
-					"name" : "seg7[6]",
-					"strict" : false
-				},
-				{
 					"name" : "ledr[0]",
 					"strict" : false
 				},
@@ -228,95 +28,79 @@
 					"strict" : false
 				},
 				{
-					"name" : "direcao[0]",
+					"name" : "red[2]",
 					"strict" : false
 				},
 				{
-					"name" : "direcao[1]",
+					"name" : "red[3]",
 					"strict" : false
 				},
 				{
-					"name" : "direcao[2]",
+					"name" : "red[4]",
 					"strict" : false
 				},
 				{
-					"name" : "direcao[3]",
+					"name" : "red[5]",
 					"strict" : false
 				},
 				{
-					"name" : "direcao[4]",
+					"name" : "red[6]",
 					"strict" : false
 				},
 				{
-					"name" : "entrada[0]",
+					"name" : "red[7]",
 					"strict" : false
 				},
 				{
-					"name" : "entrada[1]",
+					"name" : "green[2]",
 					"strict" : false
 				},
 				{
-					"name" : "entrada[2]",
+					"name" : "green[3]",
 					"strict" : false
 				},
 				{
-					"name" : "entrada[3]",
+					"name" : "green[4]",
 					"strict" : false
 				},
 				{
-					"name" : "entrada[17]",
+					"name" : "green[5]",
 					"strict" : false
 				},
 				{
-					"name" : "entrada[16]",
+					"name" : "green[6]",
 					"strict" : false
 				},
 				{
-					"name" : "entrada[15]",
+					"name" : "green[7]",
 					"strict" : false
 				},
 				{
-					"name" : "entrada[14]",
+					"name" : "blue[2]",
 					"strict" : false
 				},
 				{
-					"name" : "entrada[13]",
+					"name" : "blue[3]",
 					"strict" : false
 				},
 				{
-					"name" : "entrada[12]",
+					"name" : "blue[4]",
 					"strict" : false
 				},
 				{
-					"name" : "entrada[11]",
+					"name" : "blue[5]",
 					"strict" : false
 				},
 				{
-					"name" : "entrada[10]",
+					"name" : "blue[6]",
 					"strict" : false
 				},
 				{
-					"name" : "entrada[9]",
+					"name" : "blue[7]",
 					"strict" : false
 				},
 				{
-					"name" : "entrada[8]",
-					"strict" : false
-				},
-				{
-					"name" : "entrada[7]",
-					"strict" : false
-				},
-				{
-					"name" : "entrada[6]",
-					"strict" : false
-				},
-				{
-					"name" : "entrada[5]",
-					"strict" : false
-				},
-				{
-					"name" : "entrada[4]",
+					"name" : "vga_blank",
 					"strict" : false
 				},
 				{
@@ -325,18 +109,6 @@
 				},
 				{
 					"name" : "reset",
-					"strict" : false
-				},
-				{
-					"name" : "enter",
-					"strict" : false
-				},
-				{
-					"name" : "ps2_data",
-					"strict" : false
-				},
-				{
-					"name" : "ps2_clk",
 					"strict" : false
 				}
 			]

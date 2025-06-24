@@ -1,6 +1,6 @@
- -- Copyright (C) 2020  Intel Corporation. All rights reserved.
+ -- Copyright (C) 2017  Intel Corporation. All rights reserved.
  -- Your use of Intel Corporation's design tools, logic functions 
- -- and other software and tools, and any partner logic 
+ -- and other software and tools, and its AMPP partner logic 
  -- functions, and any output files from any of the foregoing 
  -- (including device programming or simulation files), and any 
  -- associated documentation or information are expressly subject 
@@ -10,8 +10,7 @@
  -- agreement, including, without limitation, that your use is for
  -- the sole purpose of programming logic devices manufactured by
  -- Intel and sold by Intel or its authorized distributors.  Please
- -- refer to the applicable agreement for further details, at
- -- https://fpgasoftware.intel.com/eula.
+ -- refer to the applicable agreement for further details.
  -- 
  -- This is a Quartus Prime output file. It is for reporting purposes only, and is
  -- not intended for use as a Quartus Prime input file. This file cannot be used
@@ -64,7 +63,7 @@
  -- Pin directions (input, output or bidir) are based on device operating in user mode.
  ---------------------------------------------------------------------------------
 
-Quartus Prime Version 20.1.0 Build 711 06/05/2020 SJ Standard Edition
+Quartus Prime Version 17.1.0 Build 590 10/25/2017 SJ Lite Edition
 CHIP  "CPU"  ASSIGNED TO AN: EP4CE115F29C7
 
 Pin Name/Usage               : Location  : Dir.   : I/O Standard      : Voltage : I/O Bank  : User Assignment
@@ -79,7 +78,7 @@ RESERVED_INPUT               : A8        :        :                   :         
 VCCIO8                       : A9        : power  :                   : 2.5V    : 8         :                
 blue[1]                      : A10       : output : 2.5 V             :         : 8         : Y              
 blue[4]                      : A11       : output : 2.5 V             :         : 8         : Y              
-RESERVED_INPUT               : A12       :        :                   :         : 8         :                
+vga_clock                    : A12       : output : 2.5 V             :         : 8         : Y              
 VCCIO8                       : A13       : power  :                   : 2.5V    : 8         :                
 GND+                         : A14       :        :                   :         : 8         :                
 GND+                         : A15       :        :                   :         : 7         :                
@@ -354,7 +353,7 @@ RESERVED_INPUT               : C6        :        :                   :         
 RESERVED_INPUT               : C7        :        :                   :         : 8         :                
 green[4]                     : C8        : output : 2.5 V             :         : 8         : Y              
 green[7]                     : C9        : output : 2.5 V             :         : 8         : Y              
-RESERVED_INPUT               : C10       :        :                   :         : 8         :                
+vga_sync                     : C10       : output : 2.5 V             :         : 8         : Y              
 blue[2]                      : C11       : output : 2.5 V             :         : 8         : Y              
 blue[5]                      : C12       : output : 2.5 V             :         : 8         : Y              
 vsync                        : C13       : output : 2.5 V             :         : 8         : Y              
@@ -421,11 +420,11 @@ seg0[2]                      : E17       : output : 2.5 V             :         
 RESERVED_INPUT               : E18       :        :                   :         : 7         :                
 ledr[2]                      : E19       : output : 2.5 V             :         : 7         : Y              
 VCCIO7                       : E20       : power  :                   : 2.5V    : 7         :                
-direcao[0]                   : E21       : output : 2.5 V             :         : 7         : Y              
-direcao[1]                   : E22       : output : 2.5 V             :         : 7         : Y              
+RESERVED_INPUT               : E21       :        :                   :         : 7         :                
+RESERVED_INPUT               : E22       :        :                   :         : 7         :                
 VCCIO7                       : E23       : power  :                   : 2.5V    : 7         :                
-direcao[3]                   : E24       : output : 2.5 V             :         : 7         : Y              
-direcao[2]                   : E25       : output : 2.5 V             :         : 7         : Y              
+RESERVED_INPUT               : E24       :        :                   :         : 7         :                
+RESERVED_INPUT               : E25       :        :                   :         : 7         :                
 RESERVED_INPUT               : E26       :        :                   :         : 6         :                
 RESERVED_INPUT               : E27       :        :                   :         : 6         :                
 RESERVED_INPUT               : E28       :        :                   :         : 6         :                
@@ -439,7 +438,7 @@ RESERVED_INPUT               : F7        :        :                   :         
 green[2]                     : F8        : output : 2.5 V             :         : 8         : Y              
 GND                          : F9        : gnd    :                   :         :           :                
 green[6]                     : F10       : output : 2.5 V             :         : 8         : Y              
-RESERVED_INPUT               : F11       :        :                   :         : 8         :                
+vga_blank                    : F11       : output : 2.5 V             :         : 8         : Y              
 red[3]                       : F12       : output : 2.5 V             :         : 8         : Y              
 GND                          : F13       : gnd    :                   :         :           :                
 RESERVED_INPUT               : F14       :        :                   :         : 8         :                
@@ -505,7 +504,7 @@ RESERVED_INPUT               : H17       :        :                   :         
 VCCIO7                       : H18       : power  :                   : 2.5V    : 7         :                
 RESERVED_INPUT               : H19       :        :                   :         : 7         :                
 GNDA2                        : H20       : gnd    :                   :         :           :                
-direcao[4]                   : H21       : output : 2.5 V             :         : 7         : Y              
+RESERVED_INPUT               : H21       :        :                   :         : 7         :                
 seg0[6]                      : H22       : output : 2.5 V             :         : 6         : Y              
 RESERVED_INPUT               : H23       :        :                   :         : 6         :                
 RESERVED_INPUT               : H24       :        :                   :         : 6         :                

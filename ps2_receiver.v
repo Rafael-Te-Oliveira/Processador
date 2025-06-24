@@ -3,38 +3,48 @@ module ps2_receiver (
     input ps2_data,
     output reg [7:0] scan_code,
     output reg scan_ready,
-	 //output reg teste_ps2,
-	 output reg [4:0] direcao
+    output reg [4:0] acoes
 );
-	reg [10:0] key_data;
-	reg [7:0] auxCode;
-	integer count = 0;
-	 
-	always @( negedge ps2_clk )
-		begin
-			key_data [ count ] = ps2_data ;
-			count = count + 1;
-			if( count == 11) // Recebendo os 11 bits do teclado
-				begin
-				if( auxCode == 8'hF0 ) // hF0 scancode que indica que a tecla foi "solta "
-					scan_code <= key_data [8:1];
-				auxCode = key_data [8:1];
-				count = 0;
-				end
-	end
-	
-	always@ ( scan_code )
-		begin
-		if( scan_code == 8'h75 || scan_code == 8'h1d ) // Cima ou W
-			direcao = 5'b00010 ;
-		else if( scan_code == 8'h6b || scan_code == 8'h1c ) // Esq ou A
-			direcao = 5'b00100 ;
-		else if( scan_code == 8'h72 || scan_code == 8'h1b ) // Baixo ou S
-			direcao = 5'b01000 ;
-		else if( scan_code == 8'h74 || scan_code == 8'h23 ) // Dir ou D
-			direcao = 5'b10000 ;
-		else if( scan_code == 8'h29 ) // Space
-			direcao = 5'b00111 ;
-		else direcao <= direcao ;
-	end
+    reg [10:0] key_data;
+    reg [7:0] last_code;
+    reg break_code = 0;
+    integer count = 0;
+
+    always @(negedge ps2_clk) begin
+        key_data[count] = ps2_data;
+        count = count + 1;
+
+        if (count == 11) begin
+            scan_code <= key_data[8:1];
+            scan_ready <= 1;
+            count = 0;
+
+            if (key_data[8:1] == 8'hF0) begin
+                break_code <= 1;
+            end else begin
+                if (break_code) begin
+                    // Tecla liberada
+                    case (key_data[8:1])
+                        8'h1C, 8'h6B: acoes[1] <= 0; // A ou seta esquerda
+                        8'h1D, 8'h75: acoes[0] <= 0; // W ou seta cima
+                        8'h1B, 8'h72: acoes[2] <= 0; // S ou seta baixo
+                        8'h23, 8'h74: acoes[3] <= 0; // D ou seta direita
+                        8'h29:        acoes[4] <= 0; // Espaço
+                    endcase
+                    break_code <= 0;
+                end else begin
+                    // Tecla pressionada
+                    case (key_data[8:1])
+                        8'h1C, 8'h6B: acoes[1] <= 1; // A ou seta esquerda
+                        8'h1D, 8'h75: acoes[0] <= 1; // W ou seta cima
+                        8'h1B, 8'h72: acoes[2] <= 1; // S ou seta baixo
+                        8'h23, 8'h74: acoes[3] <= 1; // D ou seta direita
+                        8'h29:        acoes[4] <= 1; // Espaço
+                    endcase
+                end
+            end
+        end else begin
+            scan_ready <= 0;
+        end
+    end
 endmodule

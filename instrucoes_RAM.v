@@ -15,8 +15,8 @@ module instrucoes_RAM
 			$readmemb("instrucoes_ram/rotina_troca_contexto.txt", inst_ram, 0, 199);
 			//sistema operacional
 			$readmemb("instrucoes_ram/so.txt", inst_ram, 200, 399);
-			//adicao
-			$readmemb("instrucoes_ram/programa_1.txt", inst_ram, 400, 599);
+			//jogador
+			$readmemb("instrucoes_ram/jogador.txt", inst_ram, 400, 599);
 			//subtracao
 			$readmemb("instrucoes_ram/programa_2.txt", inst_ram, 600, 799);
 			//maior

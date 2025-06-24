@@ -1,11 +1,11 @@
-module contato1(CLOCK_50, LEDR, Key, divclock, vgaclock);
+module contato1(CLOCK_50, LEDR, Key, divclock, depclock);
 
 input CLOCK_50;
 input Key;
 
 output [3:0]LEDR;
 output divclock;
-output vgaclock;
+output depclock;
 
 reg [27:0]count;
 wire reset_n;
@@ -22,8 +22,6 @@ begin
   
   assign LEDR = count[27:24];
   assign divclock = count[5]; //normal
-  //assign divclock = count[22]; //depuracao
+  assign depclock = count[24]; //depuracao
   
-  assign vgaclock = count[0];
-
 endmodule

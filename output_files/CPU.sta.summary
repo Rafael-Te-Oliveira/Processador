@@ -1,281 +1,77 @@
 ------------------------------------------------------------
-Timing Analyzer Summary
+TimeQuest Timing Analyzer Summary
 ------------------------------------------------------------
 
-Type  : Slow 1200mV 85C Model Setup 'controle_ULA:cULA|selec[0]'
-Slack : -144.689
-TNS   : -2442.123
-
-Type  : Slow 1200mV 85C Model Setup 'entradaDados:comb_3|sinal'
-Slack : -144.478
-TNS   : -2697.765
-
-Type  : Slow 1200mV 85C Model Setup 'contato1:C1|count[5]'
-Slack : -39.275
-TNS   : -16764.221
-
 Type  : Slow 1200mV 85C Model Setup 'clock'
-Slack : -8.620
-TNS   : -133.311
+Slack : -2.275
+TNS   : -39.625
 
-Type  : Slow 1200mV 85C Model Setup 'instrucoes_RAM:INST|altsyncram:inst_ram_rtl_0|altsyncram_ea71:auto_generated|ram_block1a0~porta_address_reg0'
-Slack : -8.452
-TNS   : -20.944
-
-Type  : Slow 1200mV 85C Model Setup 'ps2_clk'
-Slack : -5.915
-TNS   : -196.231
-
-Type  : Slow 1200mV 85C Model Setup 'contato1:C1|count[0]'
-Slack : -2.028
-TNS   : -30.793
-
-Type  : Slow 1200mV 85C Model Hold 'entradaDados:comb_3|sinal'
-Slack : -2.165
-TNS   : -62.815
-
-Type  : Slow 1200mV 85C Model Hold 'controle_ULA:cULA|selec[0]'
-Slack : -2.015
-TNS   : -57.250
-
-Type  : Slow 1200mV 85C Model Hold 'contato1:C1|count[5]'
-Slack : -0.706
-TNS   : -0.968
-
-Type  : Slow 1200mV 85C Model Hold 'ps2_clk'
-Slack : 0.440
+Type  : Slow 1200mV 85C Model Setup 'inst_vga_test|vga_sync_inst|vga_pll|altpll_component|auto_generated|pll1|clk[0]'
+Slack : 14.951
 TNS   : 0.000
 
 Type  : Slow 1200mV 85C Model Hold 'clock'
-Slack : 0.634
+Slack : 0.379
 TNS   : 0.000
 
-Type  : Slow 1200mV 85C Model Hold 'contato1:C1|count[0]'
-Slack : 0.640
+Type  : Slow 1200mV 85C Model Hold 'inst_vga_test|vga_sync_inst|vga_pll|altpll_component|auto_generated|pll1|clk[0]'
+Slack : 0.402
 TNS   : 0.000
-
-Type  : Slow 1200mV 85C Model Hold 'instrucoes_RAM:INST|altsyncram:inst_ram_rtl_0|altsyncram_ea71:auto_generated|ram_block1a0~porta_address_reg0'
-Slack : 0.681
-TNS   : 0.000
-
-Type  : Slow 1200mV 85C Model Recovery 'instrucoes_RAM:INST|altsyncram:inst_ram_rtl_0|altsyncram_ea71:auto_generated|ram_block1a0~porta_address_reg0'
-Slack : -8.395
-TNS   : -8.395
-
-Type  : Slow 1200mV 85C Model Removal 'instrucoes_RAM:INST|altsyncram:inst_ram_rtl_0|altsyncram_ea71:auto_generated|ram_block1a0~porta_address_reg0'
-Slack : 1.378
-TNS   : 0.000
-
-Type  : Slow 1200mV 85C Model Minimum Pulse Width 'contato1:C1|count[5]'
-Slack : -3.000
-TNS   : -1804.117
-
-Type  : Slow 1200mV 85C Model Minimum Pulse Width 'ps2_clk'
-Slack : -3.000
-TNS   : -74.960
 
 Type  : Slow 1200mV 85C Model Minimum Pulse Width 'clock'
-Slack : -3.000
-TNS   : -73.989
-
-Type  : Slow 1200mV 85C Model Minimum Pulse Width 'contato1:C1|count[0]'
-Slack : -1.285
-TNS   : -25.700
-
-Type  : Slow 1200mV 85C Model Minimum Pulse Width 'controle_ULA:cULA|selec[0]'
-Slack : 0.381
+Slack : 9.628
 TNS   : 0.000
 
-Type  : Slow 1200mV 85C Model Minimum Pulse Width 'entradaDados:comb_3|sinal'
-Slack : 0.411
+Type  : Slow 1200mV 85C Model Minimum Pulse Width 'inst_vga_test|vga_sync_inst|vga_pll|altpll_component|auto_generated|pll1|clk[0]'
+Slack : 19.572
 TNS   : 0.000
-
-Type  : Slow 1200mV 85C Model Minimum Pulse Width 'instrucoes_RAM:INST|altsyncram:inst_ram_rtl_0|altsyncram_ea71:auto_generated|ram_block1a0~porta_address_reg0'
-Slack : 0.467
-TNS   : 0.000
-
-Type  : Slow 1200mV 0C Model Setup 'controle_ULA:cULA|selec[0]'
-Slack : -130.614
-TNS   : -2211.816
-
-Type  : Slow 1200mV 0C Model Setup 'entradaDados:comb_3|sinal'
-Slack : -130.439
-TNS   : -2447.555
-
-Type  : Slow 1200mV 0C Model Setup 'contato1:C1|count[5]'
-Slack : -35.968
-TNS   : -15356.381
 
 Type  : Slow 1200mV 0C Model Setup 'clock'
-Slack : -7.812
-TNS   : -116.707
+Slack : -0.142
+TNS   : -0.281
 
-Type  : Slow 1200mV 0C Model Setup 'instrucoes_RAM:INST|altsyncram:inst_ram_rtl_0|altsyncram_ea71:auto_generated|ram_block1a0~porta_address_reg0'
-Slack : -7.787
-TNS   : -19.211
+Type  : Slow 1200mV 0C Model Setup 'inst_vga_test|vga_sync_inst|vga_pll|altpll_component|auto_generated|pll1|clk[0]'
+Slack : 15.310
+TNS   : 0.000
 
-Type  : Slow 1200mV 0C Model Setup 'ps2_clk'
-Slack : -5.243
-TNS   : -171.065
-
-Type  : Slow 1200mV 0C Model Setup 'contato1:C1|count[0]'
-Slack : -1.780
-TNS   : -26.199
-
-Type  : Slow 1200mV 0C Model Hold 'entradaDados:comb_3|sinal'
-Slack : -1.951
-TNS   : -56.771
-
-Type  : Slow 1200mV 0C Model Hold 'controle_ULA:cULA|selec[0]'
-Slack : -1.834
-TNS   : -52.323
-
-Type  : Slow 1200mV 0C Model Hold 'contato1:C1|count[5]'
-Slack : -0.662
-TNS   : -0.967
-
-Type  : Slow 1200mV 0C Model Hold 'ps2_clk'
-Slack : 0.387
+Type  : Slow 1200mV 0C Model Hold 'inst_vga_test|vga_sync_inst|vga_pll|altpll_component|auto_generated|pll1|clk[0]'
+Slack : 0.353
 TNS   : 0.000
 
 Type  : Slow 1200mV 0C Model Hold 'clock'
-Slack : 0.579
+Slack : 0.365
 TNS   : 0.000
-
-Type  : Slow 1200mV 0C Model Hold 'contato1:C1|count[0]'
-Slack : 0.585
-TNS   : 0.000
-
-Type  : Slow 1200mV 0C Model Hold 'instrucoes_RAM:INST|altsyncram:inst_ram_rtl_0|altsyncram_ea71:auto_generated|ram_block1a0~porta_address_reg0'
-Slack : 0.603
-TNS   : 0.000
-
-Type  : Slow 1200mV 0C Model Recovery 'instrucoes_RAM:INST|altsyncram:inst_ram_rtl_0|altsyncram_ea71:auto_generated|ram_block1a0~porta_address_reg0'
-Slack : -7.716
-TNS   : -7.716
-
-Type  : Slow 1200mV 0C Model Removal 'instrucoes_RAM:INST|altsyncram:inst_ram_rtl_0|altsyncram_ea71:auto_generated|ram_block1a0~porta_address_reg0'
-Slack : 1.398
-TNS   : 0.000
-
-Type  : Slow 1200mV 0C Model Minimum Pulse Width 'contato1:C1|count[5]'
-Slack : -3.000
-TNS   : -1803.061
-
-Type  : Slow 1200mV 0C Model Minimum Pulse Width 'ps2_clk'
-Slack : -3.000
-TNS   : -74.960
 
 Type  : Slow 1200mV 0C Model Minimum Pulse Width 'clock'
-Slack : -3.000
-TNS   : -73.417
-
-Type  : Slow 1200mV 0C Model Minimum Pulse Width 'contato1:C1|count[0]'
-Slack : -1.285
-TNS   : -25.700
-
-Type  : Slow 1200mV 0C Model Minimum Pulse Width 'entradaDados:comb_3|sinal'
-Slack : 0.281
+Slack : 9.647
 TNS   : 0.000
 
-Type  : Slow 1200mV 0C Model Minimum Pulse Width 'controle_ULA:cULA|selec[0]'
-Slack : 0.369
+Type  : Slow 1200mV 0C Model Minimum Pulse Width 'inst_vga_test|vga_sync_inst|vga_pll|altpll_component|auto_generated|pll1|clk[0]'
+Slack : 19.574
 TNS   : 0.000
-
-Type  : Slow 1200mV 0C Model Minimum Pulse Width 'instrucoes_RAM:INST|altsyncram:inst_ram_rtl_0|altsyncram_ea71:auto_generated|ram_block1a0~porta_address_reg0'
-Slack : 0.370
-TNS   : 0.000
-
-Type  : Fast 1200mV 0C Model Setup 'controle_ULA:cULA|selec[0]'
-Slack : -72.053
-TNS   : -1204.740
-
-Type  : Fast 1200mV 0C Model Setup 'entradaDados:comb_3|sinal'
-Slack : -71.936
-TNS   : -1316.525
-
-Type  : Fast 1200mV 0C Model Setup 'contato1:C1|count[5]'
-Slack : -18.908
-TNS   : -7758.005
-
-Type  : Fast 1200mV 0C Model Setup 'instrucoes_RAM:INST|altsyncram:inst_ram_rtl_0|altsyncram_ea71:auto_generated|ram_block1a0~porta_address_reg0'
-Slack : -4.168
-TNS   : -10.100
 
 Type  : Fast 1200mV 0C Model Setup 'clock'
-Slack : -4.093
-TNS   : -56.504
+Slack : 9.093
+TNS   : 0.000
 
-Type  : Fast 1200mV 0C Model Setup 'ps2_clk'
-Slack : -2.355
-TNS   : -67.143
-
-Type  : Fast 1200mV 0C Model Setup 'contato1:C1|count[0]'
-Slack : -0.474
-TNS   : -5.575
-
-Type  : Fast 1200mV 0C Model Hold 'entradaDados:comb_3|sinal'
-Slack : -1.419
-TNS   : -42.434
-
-Type  : Fast 1200mV 0C Model Hold 'controle_ULA:cULA|selec[0]'
-Slack : -1.319
-TNS   : -37.442
-
-Type  : Fast 1200mV 0C Model Hold 'contato1:C1|count[5]'
-Slack : -0.394
-TNS   : -0.522
+Type  : Fast 1200mV 0C Model Setup 'inst_vga_test|vga_sync_inst|vga_pll|altpll_component|auto_generated|pll1|clk[0]'
+Slack : 17.329
+TNS   : 0.000
 
 Type  : Fast 1200mV 0C Model Hold 'clock'
-Slack : 0.166
+Slack : 0.157
 TNS   : 0.000
 
-Type  : Fast 1200mV 0C Model Hold 'ps2_clk'
-Slack : 0.199
+Type  : Fast 1200mV 0C Model Hold 'inst_vga_test|vga_sync_inst|vga_pll|altpll_component|auto_generated|pll1|clk[0]'
+Slack : 0.181
 TNS   : 0.000
-
-Type  : Fast 1200mV 0C Model Hold 'contato1:C1|count[0]'
-Slack : 0.292
-TNS   : 0.000
-
-Type  : Fast 1200mV 0C Model Hold 'instrucoes_RAM:INST|altsyncram:inst_ram_rtl_0|altsyncram_ea71:auto_generated|ram_block1a0~porta_address_reg0'
-Slack : 0.392
-TNS   : 0.000
-
-Type  : Fast 1200mV 0C Model Recovery 'instrucoes_RAM:INST|altsyncram:inst_ram_rtl_0|altsyncram_ea71:auto_generated|ram_block1a0~porta_address_reg0'
-Slack : -4.188
-TNS   : -4.188
-
-Type  : Fast 1200mV 0C Model Removal 'instrucoes_RAM:INST|altsyncram:inst_ram_rtl_0|altsyncram_ea71:auto_generated|ram_block1a0~porta_address_reg0'
-Slack : 0.880
-TNS   : 0.000
-
-Type  : Fast 1200mV 0C Model Minimum Pulse Width 'ps2_clk'
-Slack : -3.000
-TNS   : -67.872
 
 Type  : Fast 1200mV 0C Model Minimum Pulse Width 'clock'
-Slack : -3.000
-TNS   : -47.137
-
-Type  : Fast 1200mV 0C Model Minimum Pulse Width 'contato1:C1|count[5]'
-Slack : -1.000
-TNS   : -1359.000
-
-Type  : Fast 1200mV 0C Model Minimum Pulse Width 'contato1:C1|count[0]'
-Slack : -1.000
-TNS   : -20.000
-
-Type  : Fast 1200mV 0C Model Minimum Pulse Width 'entradaDados:comb_3|sinal'
-Slack : 0.277
+Slack : 9.372
 TNS   : 0.000
 
-Type  : Fast 1200mV 0C Model Minimum Pulse Width 'instrucoes_RAM:INST|altsyncram:inst_ram_rtl_0|altsyncram_ea71:auto_generated|ram_block1a0~porta_address_reg0'
-Slack : 0.288
-TNS   : 0.000
-
-Type  : Fast 1200mV 0C Model Minimum Pulse Width 'controle_ULA:cULA|selec[0]'
-Slack : 0.376
+Type  : Fast 1200mV 0C Model Minimum Pulse Width 'inst_vga_test|vga_sync_inst|vga_pll|altpll_component|auto_generated|pll1|clk[0]'
+Slack : 19.620
 TNS   : 0.000
 
 ------------------------------------------------------------

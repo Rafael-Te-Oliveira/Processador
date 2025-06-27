@@ -3,7 +3,7 @@ module vga_test
 	input Fast_Clock,
 	input Slow_Clock,
 	input Reset,
-	input [4:0] acoes,
+	input [5:0] acoes,
 	output reg VGA_HS,
 	output reg VGA_VS,
 	output reg VGA_Clk,

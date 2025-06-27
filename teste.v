@@ -70,7 +70,7 @@ module teste (clock, enter,reset, entrada, ps2_clk, ps2_data, seg0, seg1, seg2, 
 	output vga_sync;
 	
 	
-	wire [4:0] acoes;
+	wire [5:0] acoes;
 	
 	wire [31:0] draw_x;
 	wire [31:0] draw_y;
@@ -103,7 +103,7 @@ module teste (clock, enter,reset, entrada, ps2_clk, ps2_data, seg0, seg1, seg2, 
 	
 	//display7seg Display(segmentos,segmentosPrograma, neg, seg0, seg1, seg2, seg3, seg4, seg5, seg6, seg7);
 	
-	red_screen rs(clock, !reset, draw_x, draw_y, draw_color, enable_draw);
+	red_screen rs(clock, !reset, acoes, draw_x, draw_y, draw_color, enable_draw);
 	
 	vga_test inst_vga_test (
     .Fast_Clock(clock),

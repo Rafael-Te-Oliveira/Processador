@@ -1,0 +1,22 @@
+module random_enemy (
+    input  logic clk,
+    input  logic reset,
+    input  logic enable, // ativa a geração de novo valor
+    output logic [1:0] enemy_x
+);
+
+    logic [1:0] lfsr;
+
+    always_ff @(posedge clk or posedge reset) begin
+        if (reset) begin
+            lfsr <= 2'b01; // valor inicial não-nulo
+        end else if (enable) begin
+            // Geração pseudoaleatória com tap simples: x^2 + x + 1
+            lfsr[0] <= lfsr[1];
+            lfsr[1] <= lfsr[0] ^ lfsr[1];
+        end
+    end
+
+    // Usa o valor da LFSR como "aleatório"
+    assign enemy_x = (lfsr == 2'b11) ? 2'b00 : lfsr; // ignora 3 e volta pra 0
+endmodule

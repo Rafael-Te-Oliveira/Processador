@@ -2,36 +2,68 @@
 TimeQuest Timing Analyzer Summary
 ------------------------------------------------------------
 
+Type  : Slow 1200mV 85C Model Setup 'red_screen:rs|game_process:game_process|trigger'
+Slack : -25.217
+TNS   : -50.434
+
 Type  : Slow 1200mV 85C Model Setup 'clock'
-Slack : -2.275
-TNS   : -39.625
+Slack : -9.549
+TNS   : -881.865
+
+Type  : Slow 1200mV 85C Model Setup 'ps2_clk'
+Slack : -6.917
+TNS   : -157.789
 
 Type  : Slow 1200mV 85C Model Setup 'inst_vga_test|vga_sync_inst|vga_pll|altpll_component|auto_generated|pll1|clk[0]'
-Slack : 14.951
+Slack : 14.885
 TNS   : 0.000
 
 Type  : Slow 1200mV 85C Model Hold 'clock'
-Slack : 0.379
+Slack : 0.402
 TNS   : 0.000
 
 Type  : Slow 1200mV 85C Model Hold 'inst_vga_test|vga_sync_inst|vga_pll|altpll_component|auto_generated|pll1|clk[0]'
 Slack : 0.402
 TNS   : 0.000
 
+Type  : Slow 1200mV 85C Model Hold 'ps2_clk'
+Slack : 0.440
+TNS   : 0.000
+
+Type  : Slow 1200mV 85C Model Hold 'red_screen:rs|game_process:game_process|trigger'
+Slack : 0.617
+TNS   : 0.000
+
+Type  : Slow 1200mV 85C Model Minimum Pulse Width 'ps2_clk'
+Slack : -3.000
+TNS   : -67.373
+
+Type  : Slow 1200mV 85C Model Minimum Pulse Width 'red_screen:rs|game_process:game_process|trigger'
+Slack : -1.285
+TNS   : -2.570
+
 Type  : Slow 1200mV 85C Model Minimum Pulse Width 'clock'
-Slack : 9.628
+Slack : 9.624
 TNS   : 0.000
 
 Type  : Slow 1200mV 85C Model Minimum Pulse Width 'inst_vga_test|vga_sync_inst|vga_pll|altpll_component|auto_generated|pll1|clk[0]'
 Slack : 19.572
 TNS   : 0.000
 
+Type  : Slow 1200mV 0C Model Setup 'red_screen:rs|game_process:game_process|trigger'
+Slack : -22.688
+TNS   : -45.376
+
 Type  : Slow 1200mV 0C Model Setup 'clock'
-Slack : -0.142
-TNS   : -0.281
+Slack : -8.754
+TNS   : -804.044
+
+Type  : Slow 1200mV 0C Model Setup 'ps2_clk'
+Slack : -6.186
+TNS   : -137.010
 
 Type  : Slow 1200mV 0C Model Setup 'inst_vga_test|vga_sync_inst|vga_pll|altpll_component|auto_generated|pll1|clk[0]'
-Slack : 15.310
+Slack : 15.197
 TNS   : 0.000
 
 Type  : Slow 1200mV 0C Model Hold 'inst_vga_test|vga_sync_inst|vga_pll|altpll_component|auto_generated|pll1|clk[0]'
@@ -39,32 +71,72 @@ Slack : 0.353
 TNS   : 0.000
 
 Type  : Slow 1200mV 0C Model Hold 'clock'
-Slack : 0.365
+Slack : 0.354
 TNS   : 0.000
 
+Type  : Slow 1200mV 0C Model Hold 'ps2_clk'
+Slack : 0.387
+TNS   : 0.000
+
+Type  : Slow 1200mV 0C Model Hold 'red_screen:rs|game_process:game_process|trigger'
+Slack : 0.583
+TNS   : 0.000
+
+Type  : Slow 1200mV 0C Model Minimum Pulse Width 'ps2_clk'
+Slack : -3.000
+TNS   : -67.329
+
+Type  : Slow 1200mV 0C Model Minimum Pulse Width 'red_screen:rs|game_process:game_process|trigger'
+Slack : -1.285
+TNS   : -2.570
+
 Type  : Slow 1200mV 0C Model Minimum Pulse Width 'clock'
-Slack : 9.647
+Slack : 9.644
 TNS   : 0.000
 
 Type  : Slow 1200mV 0C Model Minimum Pulse Width 'inst_vga_test|vga_sync_inst|vga_pll|altpll_component|auto_generated|pll1|clk[0]'
-Slack : 19.574
+Slack : 19.573
 TNS   : 0.000
+
+Type  : Fast 1200mV 0C Model Setup 'red_screen:rs|game_process:game_process|trigger'
+Slack : -11.518
+TNS   : -23.035
 
 Type  : Fast 1200mV 0C Model Setup 'clock'
-Slack : 9.093
-TNS   : 0.000
+Slack : -4.619
+TNS   : -450.411
+
+Type  : Fast 1200mV 0C Model Setup 'ps2_clk'
+Slack : -2.923
+TNS   : -53.125
 
 Type  : Fast 1200mV 0C Model Setup 'inst_vga_test|vga_sync_inst|vga_pll|altpll_component|auto_generated|pll1|clk[0]'
-Slack : 17.329
+Slack : 17.256
 TNS   : 0.000
 
 Type  : Fast 1200mV 0C Model Hold 'clock'
-Slack : 0.157
+Slack : 0.179
 TNS   : 0.000
 
 Type  : Fast 1200mV 0C Model Hold 'inst_vga_test|vga_sync_inst|vga_pll|altpll_component|auto_generated|pll1|clk[0]'
 Slack : 0.181
 TNS   : 0.000
+
+Type  : Fast 1200mV 0C Model Hold 'ps2_clk'
+Slack : 0.199
+TNS   : 0.000
+
+Type  : Fast 1200mV 0C Model Hold 'red_screen:rs|game_process:game_process|trigger'
+Slack : 0.271
+TNS   : 0.000
+
+Type  : Fast 1200mV 0C Model Minimum Pulse Width 'ps2_clk'
+Slack : -3.000
+TNS   : -67.526
+
+Type  : Fast 1200mV 0C Model Minimum Pulse Width 'red_screen:rs|game_process:game_process|trigger'
+Slack : -1.000
+TNS   : -2.000
 
 Type  : Fast 1200mV 0C Model Minimum Pulse Width 'clock'
 Slack : 9.372

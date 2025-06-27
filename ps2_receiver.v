@@ -3,7 +3,7 @@ module ps2_receiver (
     input ps2_data,
     output reg [7:0] scan_code,
     output reg scan_ready,
-    output reg [4:0] acoes
+    output reg [5:0] acoes // agora 6 bits
 );
     reg [10:0] key_data;
     reg [7:0] last_code;
@@ -30,6 +30,7 @@ module ps2_receiver (
                         8'h1B, 8'h72: acoes[2] <= 0; // S ou seta baixo
                         8'h23, 8'h74: acoes[3] <= 0; // D ou seta direita
                         8'h29:        acoes[4] <= 0; // Espaço
+                        8'h5A:        acoes[5] <= 0; // Enter
                     endcase
                     break_code <= 0;
                 end else begin
@@ -40,6 +41,7 @@ module ps2_receiver (
                         8'h1B, 8'h72: acoes[2] <= 1; // S ou seta baixo
                         8'h23, 8'h74: acoes[3] <= 1; // D ou seta direita
                         8'h29:        acoes[4] <= 1; // Espaço
+                        8'h5A:        acoes[5] <= 1; // Enter
                     endcase
                 end
             end

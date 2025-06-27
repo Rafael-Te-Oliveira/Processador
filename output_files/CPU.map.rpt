@@ -1,5 +1,5 @@
 Analysis & Synthesis report for CPU
-Tue Jun 17 17:34:15 2025
+Thu Jun 26 20:43:45 2025
 Quartus Prime Version 17.1.0 Build 590 10/25/2017 SJ Lite Edition
 
 
@@ -17,22 +17,38 @@ Quartus Prime Version 17.1.0 Build 590 10/25/2017 SJ Lite Edition
   9. Analysis & Synthesis IP Cores Summary
  10. Registers Removed During Synthesis
  11. General Register Statistics
- 12. Multiplexer Restructuring Statistics (Restructuring Performed)
- 13. Source assignments for red_screen:rs|VRAM:VR|altsyncram:altsyncram_component|altsyncram_r9a1:auto_generated
- 14. Source assignments for vga_test:inst_vga_test|FrameBuffer:FB|altsyncram:altsyncram_component|altsyncram_aoj1:auto_generated
- 15. Parameter Settings for User Entity Instance: red_screen:rs|VRAM:VR|altsyncram:altsyncram_component
- 16. Parameter Settings for User Entity Instance: vga_test:inst_vga_test|vga_sync:vga_sync_inst|vga_pll:vga_pll|altpll:altpll_component
- 17. Parameter Settings for User Entity Instance: vga_test:inst_vga_test|FrameBuffer:FB|altsyncram:altsyncram_component
- 18. Parameter Settings for Inferred Entity Instance: red_screen:rs|lpm_divide:Mod0
- 19. altsyncram Parameter Settings by Entity Instance
- 20. altpll Parameter Settings by Entity Instance
- 21. Port Connectivity Checks: "ps2_receiver:PS2"
- 22. Port Connectivity Checks: "vga_test:inst_vga_test|vga_sync:vga_sync_inst"
- 23. Port Connectivity Checks: "contato1:C1"
- 24. Post-Synthesis Netlist Statistics for Top Partition
- 25. Elapsed Time Per Partition
- 26. Analysis & Synthesis Messages
- 27. Analysis & Synthesis Suppressed Messages
+ 12. Inverted Register Statistics
+ 13. Registers Packed Into Inferred Megafunctions
+ 14. Multiplexer Restructuring Statistics (Restructuring Performed)
+ 15. Source assignments for red_screen:rs|VRAM:VR|altsyncram:altsyncram_component|altsyncram_r9a1:auto_generated
+ 16. Source assignments for vga_test:inst_vga_test|FrameBuffer:FB|altsyncram:altsyncram_component|altsyncram_aoj1:auto_generated
+ 17. Source assignments for ps2_receiver:PS2|altsyncram:acoes_rtl_0|altsyncram_fpv:auto_generated
+ 18. Parameter Settings for User Entity Instance: red_screen:rs|VRAM:VR|altsyncram:altsyncram_component
+ 19. Parameter Settings for User Entity Instance: vga_test:inst_vga_test|vga_sync:vga_sync_inst|vga_pll:vga_pll|altpll:altpll_component
+ 20. Parameter Settings for User Entity Instance: vga_test:inst_vga_test|FrameBuffer:FB|altsyncram:altsyncram_component
+ 21. Parameter Settings for Inferred Entity Instance: ps2_receiver:PS2|altsyncram:acoes_rtl_0
+ 22. Parameter Settings for Inferred Entity Instance: red_screen:rs|game_process:game_process|lpm_divide:Mod9
+ 23. Parameter Settings for Inferred Entity Instance: red_screen:rs|game_process:game_process|lpm_divide:Div9
+ 24. Parameter Settings for Inferred Entity Instance: red_screen:rs|game_process:game_process|lpm_divide:Div7
+ 25. Parameter Settings for Inferred Entity Instance: red_screen:rs|game_process:game_process|lpm_divide:Mod5
+ 26. Parameter Settings for Inferred Entity Instance: red_screen:rs|game_process:game_process|lpm_divide:Div5
+ 27. Parameter Settings for Inferred Entity Instance: red_screen:rs|game_process:game_process|lpm_divide:Mod3
+ 28. Parameter Settings for Inferred Entity Instance: red_screen:rs|game_process:game_process|lpm_divide:Div3
+ 29. Parameter Settings for Inferred Entity Instance: red_screen:rs|game_process:game_process|lpm_divide:Mod1
+ 30. Parameter Settings for Inferred Entity Instance: red_screen:rs|game_process:game_process|lpm_divide:Div1
+ 31. Parameter Settings for Inferred Entity Instance: red_screen:rs|game_process:game_process|lpm_divide:Mod7
+ 32. Parameter Settings for Inferred Entity Instance: red_screen:rs|lpm_divide:Mod0
+ 33. Parameter Settings for Inferred Entity Instance: red_screen:rs|game_process:game_process|random_enemy:re|lpm_divide:Mod0
+ 34. Parameter Settings for Inferred Entity Instance: red_screen:rs|game_process:game_process|random_enemy:re|lpm_divide:Div0
+ 35. altsyncram Parameter Settings by Entity Instance
+ 36. altpll Parameter Settings by Entity Instance
+ 37. Port Connectivity Checks: "ps2_receiver:PS2"
+ 38. Port Connectivity Checks: "vga_test:inst_vga_test|vga_sync:vga_sync_inst"
+ 39. Port Connectivity Checks: "contato1:C1"
+ 40. Post-Synthesis Netlist Statistics for Top Partition
+ 41. Elapsed Time Per Partition
+ 42. Analysis & Synthesis Messages
+ 43. Analysis & Synthesis Suppressed Messages
 
 
 
@@ -58,18 +74,18 @@ refer to the applicable agreement for further details.
 +----------------------------------------------------------------------------------+
 ; Analysis & Synthesis Summary                                                     ;
 +------------------------------------+---------------------------------------------+
-; Analysis & Synthesis Status        ; Successful - Tue Jun 17 17:34:15 2025       ;
+; Analysis & Synthesis Status        ; Successful - Thu Jun 26 20:43:45 2025       ;
 ; Quartus Prime Version              ; 17.1.0 Build 590 10/25/2017 SJ Lite Edition ;
 ; Revision Name                      ; CPU                                         ;
 ; Top-level Entity Name              ; teste                                       ;
 ; Family                             ; Cyclone IV E                                ;
-; Total logic elements               ; 606                                         ;
-;     Total combinational functions  ; 574                                         ;
-;     Dedicated logic registers      ; 178                                         ;
-; Total registers                    ; 178                                         ;
+; Total logic elements               ; 1,762                                       ;
+;     Total combinational functions  ; 1,725                                       ;
+;     Dedicated logic registers      ; 378                                         ;
+; Total registers                    ; 378                                         ;
 ; Total pins                         ; 112                                         ;
 ; Total virtual pins                 ; 0                                           ;
-; Total memory bits                  ; 762,624                                     ;
+; Total memory bits                  ; 763,648                                     ;
 ; Embedded Multiplier 9-bit elements ; 0                                           ;
 ; Total PLLs                         ; 1                                           ;
 +------------------------------------+---------------------------------------------+
@@ -176,57 +192,74 @@ refer to the applicable agreement for further details.
 ; Usage by Processor         ; % Time Used ;
 ;     Processor 1            ; 100.0%      ;
 ;     Processor 2            ;   0.0%      ;
-;     Processors 3-12        ;   0.0%      ;
+;     Processor 3            ;   0.0%      ;
+;     Processor 4            ;   0.0%      ;
+;     Processor 5            ;   0.0%      ;
+;     Processor 6            ;   0.0%      ;
+;     Processor 7            ;   0.0%      ;
+;     Processor 8            ;   0.0%      ;
+;     Processors 9-12        ;   0.0%      ;
 +----------------------------+-------------+
 
 
-+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Analysis & Synthesis Source Files Read                                                                                                                                                           ;
-+----------------------------------+-----------------+----------------------------------------+------------------------------------------------------------------------------------------+---------+
-; File Name with User-Entered Path ; Used in Netlist ; File Type                              ; File Name with Absolute Path                                                             ; Library ;
-+----------------------------------+-----------------+----------------------------------------+------------------------------------------------------------------------------------------+---------+
-; teste.v                          ; yes             ; User Verilog HDL File                  ; C:/Users/rafae/OneDrive/Documents/Workspace/Faculdade/Processador/teste.v                ;         ;
-; contato1.v                       ; yes             ; User Verilog HDL File                  ; C:/Users/rafae/OneDrive/Documents/Workspace/Faculdade/Processador/contato1.v             ;         ;
-; vga_sync.v                       ; yes             ; User Verilog HDL File                  ; C:/Users/rafae/OneDrive/Documents/Workspace/Faculdade/Processador/vga_sync.v             ;         ;
-; vga_test.v                       ; yes             ; User Verilog HDL File                  ; C:/Users/rafae/OneDrive/Documents/Workspace/Faculdade/Processador/vga_test.v             ;         ;
-; ps2_receiver.v                   ; yes             ; User Verilog HDL File                  ; C:/Users/rafae/OneDrive/Documents/Workspace/Faculdade/Processador/ps2_receiver.v         ;         ;
-; vga_pll.v                        ; yes             ; User Wizard-Generated File             ; C:/Users/rafae/OneDrive/Documents/Workspace/Faculdade/Processador/vga_pll.v              ;         ;
-; FrameBuffer.v                    ; yes             ; User Wizard-Generated File             ; C:/Users/rafae/OneDrive/Documents/Workspace/Faculdade/Processador/FrameBuffer.v          ;         ;
-; red_screen.v                     ; yes             ; User Verilog HDL File                  ; C:/Users/rafae/OneDrive/Documents/Workspace/Faculdade/Processador/red_screen.v           ;         ;
-; VRAM.v                           ; yes             ; User Wizard-Generated File             ; C:/Users/rafae/OneDrive/Documents/Workspace/Faculdade/Processador/VRAM.v                 ;         ;
-; altsyncram.tdf                   ; yes             ; Megafunction                           ; c:/intelfpga_lite/17.1/quartus/libraries/megafunctions/altsyncram.tdf                    ;         ;
-; stratix_ram_block.inc            ; yes             ; Megafunction                           ; c:/intelfpga_lite/17.1/quartus/libraries/megafunctions/stratix_ram_block.inc             ;         ;
-; lpm_mux.inc                      ; yes             ; Megafunction                           ; c:/intelfpga_lite/17.1/quartus/libraries/megafunctions/lpm_mux.inc                       ;         ;
-; lpm_decode.inc                   ; yes             ; Megafunction                           ; c:/intelfpga_lite/17.1/quartus/libraries/megafunctions/lpm_decode.inc                    ;         ;
-; aglobal171.inc                   ; yes             ; Megafunction                           ; c:/intelfpga_lite/17.1/quartus/libraries/megafunctions/aglobal171.inc                    ;         ;
-; a_rdenreg.inc                    ; yes             ; Megafunction                           ; c:/intelfpga_lite/17.1/quartus/libraries/megafunctions/a_rdenreg.inc                     ;         ;
-; altrom.inc                       ; yes             ; Megafunction                           ; c:/intelfpga_lite/17.1/quartus/libraries/megafunctions/altrom.inc                        ;         ;
-; altram.inc                       ; yes             ; Megafunction                           ; c:/intelfpga_lite/17.1/quartus/libraries/megafunctions/altram.inc                        ;         ;
-; altdpram.inc                     ; yes             ; Megafunction                           ; c:/intelfpga_lite/17.1/quartus/libraries/megafunctions/altdpram.inc                      ;         ;
-; db/altsyncram_r9a1.tdf           ; yes             ; Auto-Generated Megafunction            ; C:/Users/rafae/OneDrive/Documents/Workspace/Faculdade/Processador/db/altsyncram_r9a1.tdf ;         ;
-; framebuffer_red.mif              ; yes             ; Auto-Found Memory Initialization File  ; C:/Users/rafae/OneDrive/Documents/Workspace/Faculdade/Processador/framebuffer_red.mif    ;         ;
-; db/decode_k8a.tdf                ; yes             ; Auto-Generated Megafunction            ; C:/Users/rafae/OneDrive/Documents/Workspace/Faculdade/Processador/db/decode_k8a.tdf      ;         ;
-; db/mux_cnb.tdf                   ; yes             ; Auto-Generated Megafunction            ; C:/Users/rafae/OneDrive/Documents/Workspace/Faculdade/Processador/db/mux_cnb.tdf         ;         ;
-; altpll.tdf                       ; yes             ; Megafunction                           ; c:/intelfpga_lite/17.1/quartus/libraries/megafunctions/altpll.tdf                        ;         ;
-; stratix_pll.inc                  ; yes             ; Megafunction                           ; c:/intelfpga_lite/17.1/quartus/libraries/megafunctions/stratix_pll.inc                   ;         ;
-; stratixii_pll.inc                ; yes             ; Megafunction                           ; c:/intelfpga_lite/17.1/quartus/libraries/megafunctions/stratixii_pll.inc                 ;         ;
-; cycloneii_pll.inc                ; yes             ; Megafunction                           ; c:/intelfpga_lite/17.1/quartus/libraries/megafunctions/cycloneii_pll.inc                 ;         ;
-; db/vga_pll_altpll.v              ; yes             ; Auto-Generated Megafunction            ; C:/Users/rafae/OneDrive/Documents/Workspace/Faculdade/Processador/db/vga_pll_altpll.v    ;         ;
-; db/altsyncram_aoj1.tdf           ; yes             ; Auto-Generated Megafunction            ; C:/Users/rafae/OneDrive/Documents/Workspace/Faculdade/Processador/db/altsyncram_aoj1.tdf ;         ;
-; db/decode_lsa.tdf                ; yes             ; Auto-Generated Megafunction            ; C:/Users/rafae/OneDrive/Documents/Workspace/Faculdade/Processador/db/decode_lsa.tdf      ;         ;
-; db/decode_e8a.tdf                ; yes             ; Auto-Generated Megafunction            ; C:/Users/rafae/OneDrive/Documents/Workspace/Faculdade/Processador/db/decode_e8a.tdf      ;         ;
-; db/mux_6nb.tdf                   ; yes             ; Auto-Generated Megafunction            ; C:/Users/rafae/OneDrive/Documents/Workspace/Faculdade/Processador/db/mux_6nb.tdf         ;         ;
-; lpm_divide.tdf                   ; yes             ; Megafunction                           ; c:/intelfpga_lite/17.1/quartus/libraries/megafunctions/lpm_divide.tdf                    ;         ;
-; abs_divider.inc                  ; yes             ; Megafunction                           ; c:/intelfpga_lite/17.1/quartus/libraries/megafunctions/abs_divider.inc                   ;         ;
-; sign_div_unsign.inc              ; yes             ; Megafunction                           ; c:/intelfpga_lite/17.1/quartus/libraries/megafunctions/sign_div_unsign.inc               ;         ;
-; db/lpm_divide_cqo.tdf            ; yes             ; Auto-Generated Megafunction            ; C:/Users/rafae/OneDrive/Documents/Workspace/Faculdade/Processador/db/lpm_divide_cqo.tdf  ;         ;
-; db/abs_divider_4dg.tdf           ; yes             ; Auto-Generated Megafunction            ; C:/Users/rafae/OneDrive/Documents/Workspace/Faculdade/Processador/db/abs_divider_4dg.tdf ;         ;
-; db/alt_u_div_7af.tdf             ; yes             ; Auto-Generated Megafunction            ; C:/Users/rafae/OneDrive/Documents/Workspace/Faculdade/Processador/db/alt_u_div_7af.tdf   ;         ;
-; db/add_sub_7pc.tdf               ; yes             ; Auto-Generated Megafunction            ; C:/Users/rafae/OneDrive/Documents/Workspace/Faculdade/Processador/db/add_sub_7pc.tdf     ;         ;
-; db/add_sub_8pc.tdf               ; yes             ; Auto-Generated Megafunction            ; C:/Users/rafae/OneDrive/Documents/Workspace/Faculdade/Processador/db/add_sub_8pc.tdf     ;         ;
-; db/lpm_abs_j0a.tdf               ; yes             ; Auto-Generated Megafunction            ; C:/Users/rafae/OneDrive/Documents/Workspace/Faculdade/Processador/db/lpm_abs_j0a.tdf     ;         ;
-; db/lpm_abs_i0a.tdf               ; yes             ; Auto-Generated Megafunction            ; C:/Users/rafae/OneDrive/Documents/Workspace/Faculdade/Processador/db/lpm_abs_i0a.tdf     ;         ;
-+----------------------------------+-----------------+----------------------------------------+------------------------------------------------------------------------------------------+---------+
++------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Source Files Read                                                                                                                                                               ;
++----------------------------------+-----------------+----------------------------------------+----------------------------------------------------------------------------------------------+---------+
+; File Name with User-Entered Path ; Used in Netlist ; File Type                              ; File Name with Absolute Path                                                                 ; Library ;
++----------------------------------+-----------------+----------------------------------------+----------------------------------------------------------------------------------------------+---------+
+; teste.v                          ; yes             ; User Verilog HDL File                  ; C:/Users/rafae/OneDrive/Documents/Workspace/Faculdade/Processador/teste.v                    ;         ;
+; contato1.v                       ; yes             ; User Verilog HDL File                  ; C:/Users/rafae/OneDrive/Documents/Workspace/Faculdade/Processador/contato1.v                 ;         ;
+; vga_sync.v                       ; yes             ; User Verilog HDL File                  ; C:/Users/rafae/OneDrive/Documents/Workspace/Faculdade/Processador/vga_sync.v                 ;         ;
+; vga_test.v                       ; yes             ; User Verilog HDL File                  ; C:/Users/rafae/OneDrive/Documents/Workspace/Faculdade/Processador/vga_test.v                 ;         ;
+; ps2_receiver.v                   ; yes             ; User Verilog HDL File                  ; C:/Users/rafae/OneDrive/Documents/Workspace/Faculdade/Processador/ps2_receiver.v             ;         ;
+; vga_pll.v                        ; yes             ; User Wizard-Generated File             ; C:/Users/rafae/OneDrive/Documents/Workspace/Faculdade/Processador/vga_pll.v                  ;         ;
+; FrameBuffer.v                    ; yes             ; User Wizard-Generated File             ; C:/Users/rafae/OneDrive/Documents/Workspace/Faculdade/Processador/FrameBuffer.v              ;         ;
+; red_screen.v                     ; yes             ; User Verilog HDL File                  ; C:/Users/rafae/OneDrive/Documents/Workspace/Faculdade/Processador/red_screen.v               ;         ;
+; VRAM.v                           ; yes             ; User Wizard-Generated File             ; C:/Users/rafae/OneDrive/Documents/Workspace/Faculdade/Processador/VRAM.v                     ;         ;
+; random_enemy.sv                  ; yes             ; User SystemVerilog HDL File            ; C:/Users/rafae/OneDrive/Documents/Workspace/Faculdade/Processador/random_enemy.sv            ;         ;
+; game_process.sv                  ; yes             ; Auto-Found SystemVerilog HDL File      ; C:/Users/rafae/OneDrive/Documents/Workspace/Faculdade/Processador/game_process.sv            ;         ;
+; altsyncram.tdf                   ; yes             ; Megafunction                           ; c:/intelfpga_lite/17.1/quartus/libraries/megafunctions/altsyncram.tdf                        ;         ;
+; stratix_ram_block.inc            ; yes             ; Megafunction                           ; c:/intelfpga_lite/17.1/quartus/libraries/megafunctions/stratix_ram_block.inc                 ;         ;
+; lpm_mux.inc                      ; yes             ; Megafunction                           ; c:/intelfpga_lite/17.1/quartus/libraries/megafunctions/lpm_mux.inc                           ;         ;
+; lpm_decode.inc                   ; yes             ; Megafunction                           ; c:/intelfpga_lite/17.1/quartus/libraries/megafunctions/lpm_decode.inc                        ;         ;
+; aglobal171.inc                   ; yes             ; Megafunction                           ; c:/intelfpga_lite/17.1/quartus/libraries/megafunctions/aglobal171.inc                        ;         ;
+; a_rdenreg.inc                    ; yes             ; Megafunction                           ; c:/intelfpga_lite/17.1/quartus/libraries/megafunctions/a_rdenreg.inc                         ;         ;
+; altrom.inc                       ; yes             ; Megafunction                           ; c:/intelfpga_lite/17.1/quartus/libraries/megafunctions/altrom.inc                            ;         ;
+; altram.inc                       ; yes             ; Megafunction                           ; c:/intelfpga_lite/17.1/quartus/libraries/megafunctions/altram.inc                            ;         ;
+; altdpram.inc                     ; yes             ; Megafunction                           ; c:/intelfpga_lite/17.1/quartus/libraries/megafunctions/altdpram.inc                          ;         ;
+; db/altsyncram_r9a1.tdf           ; yes             ; Auto-Generated Megafunction            ; C:/Users/rafae/OneDrive/Documents/Workspace/Faculdade/Processador/db/altsyncram_r9a1.tdf     ;         ;
+; framebuffer_red.mif              ; yes             ; Auto-Found Memory Initialization File  ; C:/Users/rafae/OneDrive/Documents/Workspace/Faculdade/Processador/framebuffer_red.mif        ;         ;
+; db/decode_k8a.tdf                ; yes             ; Auto-Generated Megafunction            ; C:/Users/rafae/OneDrive/Documents/Workspace/Faculdade/Processador/db/decode_k8a.tdf          ;         ;
+; db/mux_cnb.tdf                   ; yes             ; Auto-Generated Megafunction            ; C:/Users/rafae/OneDrive/Documents/Workspace/Faculdade/Processador/db/mux_cnb.tdf             ;         ;
+; altpll.tdf                       ; yes             ; Megafunction                           ; c:/intelfpga_lite/17.1/quartus/libraries/megafunctions/altpll.tdf                            ;         ;
+; stratix_pll.inc                  ; yes             ; Megafunction                           ; c:/intelfpga_lite/17.1/quartus/libraries/megafunctions/stratix_pll.inc                       ;         ;
+; stratixii_pll.inc                ; yes             ; Megafunction                           ; c:/intelfpga_lite/17.1/quartus/libraries/megafunctions/stratixii_pll.inc                     ;         ;
+; cycloneii_pll.inc                ; yes             ; Megafunction                           ; c:/intelfpga_lite/17.1/quartus/libraries/megafunctions/cycloneii_pll.inc                     ;         ;
+; db/vga_pll_altpll.v              ; yes             ; Auto-Generated Megafunction            ; C:/Users/rafae/OneDrive/Documents/Workspace/Faculdade/Processador/db/vga_pll_altpll.v        ;         ;
+; db/altsyncram_aoj1.tdf           ; yes             ; Auto-Generated Megafunction            ; C:/Users/rafae/OneDrive/Documents/Workspace/Faculdade/Processador/db/altsyncram_aoj1.tdf     ;         ;
+; db/decode_lsa.tdf                ; yes             ; Auto-Generated Megafunction            ; C:/Users/rafae/OneDrive/Documents/Workspace/Faculdade/Processador/db/decode_lsa.tdf          ;         ;
+; db/decode_e8a.tdf                ; yes             ; Auto-Generated Megafunction            ; C:/Users/rafae/OneDrive/Documents/Workspace/Faculdade/Processador/db/decode_e8a.tdf          ;         ;
+; db/mux_6nb.tdf                   ; yes             ; Auto-Generated Megafunction            ; C:/Users/rafae/OneDrive/Documents/Workspace/Faculdade/Processador/db/mux_6nb.tdf             ;         ;
+; db/altsyncram_fpv.tdf            ; yes             ; Auto-Generated Megafunction            ; C:/Users/rafae/OneDrive/Documents/Workspace/Faculdade/Processador/db/altsyncram_fpv.tdf      ;         ;
+; lpm_divide.tdf                   ; yes             ; Megafunction                           ; c:/intelfpga_lite/17.1/quartus/libraries/megafunctions/lpm_divide.tdf                        ;         ;
+; abs_divider.inc                  ; yes             ; Megafunction                           ; c:/intelfpga_lite/17.1/quartus/libraries/megafunctions/abs_divider.inc                       ;         ;
+; sign_div_unsign.inc              ; yes             ; Megafunction                           ; c:/intelfpga_lite/17.1/quartus/libraries/megafunctions/sign_div_unsign.inc                   ;         ;
+; db/lpm_divide_m9m.tdf            ; yes             ; Auto-Generated Megafunction            ; C:/Users/rafae/OneDrive/Documents/Workspace/Faculdade/Processador/db/lpm_divide_m9m.tdf      ;         ;
+; db/sign_div_unsign_bkh.tdf       ; yes             ; Auto-Generated Megafunction            ; C:/Users/rafae/OneDrive/Documents/Workspace/Faculdade/Processador/db/sign_div_unsign_bkh.tdf ;         ;
+; db/alt_u_div_a4f.tdf             ; yes             ; Auto-Generated Megafunction            ; C:/Users/rafae/OneDrive/Documents/Workspace/Faculdade/Processador/db/alt_u_div_a4f.tdf       ;         ;
+; db/add_sub_7pc.tdf               ; yes             ; Auto-Generated Megafunction            ; C:/Users/rafae/OneDrive/Documents/Workspace/Faculdade/Processador/db/add_sub_7pc.tdf         ;         ;
+; db/add_sub_8pc.tdf               ; yes             ; Auto-Generated Megafunction            ; C:/Users/rafae/OneDrive/Documents/Workspace/Faculdade/Processador/db/add_sub_8pc.tdf         ;         ;
+; db/lpm_divide_jhm.tdf            ; yes             ; Auto-Generated Megafunction            ; C:/Users/rafae/OneDrive/Documents/Workspace/Faculdade/Processador/db/lpm_divide_jhm.tdf      ;         ;
+; db/lpm_divide_lcm.tdf            ; yes             ; Auto-Generated Megafunction            ; C:/Users/rafae/OneDrive/Documents/Workspace/Faculdade/Processador/db/lpm_divide_lcm.tdf      ;         ;
+; db/sign_div_unsign_anh.tdf       ; yes             ; Auto-Generated Megafunction            ; C:/Users/rafae/OneDrive/Documents/Workspace/Faculdade/Processador/db/sign_div_unsign_anh.tdf ;         ;
+; db/alt_u_div_8af.tdf             ; yes             ; Auto-Generated Megafunction            ; C:/Users/rafae/OneDrive/Documents/Workspace/Faculdade/Processador/db/alt_u_div_8af.tdf       ;         ;
+; db/lpm_divide_l9m.tdf            ; yes             ; Auto-Generated Megafunction            ; C:/Users/rafae/OneDrive/Documents/Workspace/Faculdade/Processador/db/lpm_divide_l9m.tdf      ;         ;
+; db/sign_div_unsign_akh.tdf       ; yes             ; Auto-Generated Megafunction            ; C:/Users/rafae/OneDrive/Documents/Workspace/Faculdade/Processador/db/sign_div_unsign_akh.tdf ;         ;
+; db/alt_u_div_84f.tdf             ; yes             ; Auto-Generated Megafunction            ; C:/Users/rafae/OneDrive/Documents/Workspace/Faculdade/Processador/db/alt_u_div_84f.tdf       ;         ;
+; db/lpm_divide_hhm.tdf            ; yes             ; Auto-Generated Megafunction            ; C:/Users/rafae/OneDrive/Documents/Workspace/Faculdade/Processador/db/lpm_divide_hhm.tdf      ;         ;
+; db/sign_div_unsign_9kh.tdf       ; yes             ; Auto-Generated Megafunction            ; C:/Users/rafae/OneDrive/Documents/Workspace/Faculdade/Processador/db/sign_div_unsign_9kh.tdf ;         ;
+; db/alt_u_div_64f.tdf             ; yes             ; Auto-Generated Megafunction            ; C:/Users/rafae/OneDrive/Documents/Workspace/Faculdade/Processador/db/alt_u_div_64f.tdf       ;         ;
++----------------------------------+-----------------+----------------------------------------+----------------------------------------------------------------------------------------------+---------+
 
 
 +-----------------------------------------------------------+
@@ -234,24 +267,24 @@ refer to the applicable agreement for further details.
 +---------------------------------------------+-------------+
 ; Resource                                    ; Usage       ;
 +---------------------------------------------+-------------+
-; Estimated Total logic elements              ; 606         ;
+; Estimated Total logic elements              ; 1,762       ;
 ;                                             ;             ;
-; Total combinational functions               ; 574         ;
+; Total combinational functions               ; 1725        ;
 ; Logic element usage by number of LUT inputs ;             ;
-;     -- 4 input functions                    ; 213         ;
-;     -- 3 input functions                    ; 109         ;
-;     -- <=2 input functions                  ; 252         ;
+;     -- 4 input functions                    ; 549         ;
+;     -- 3 input functions                    ; 363         ;
+;     -- <=2 input functions                  ; 813         ;
 ;                                             ;             ;
 ; Logic elements by mode                      ;             ;
-;     -- normal mode                          ; 352         ;
-;     -- arithmetic mode                      ; 222         ;
+;     -- normal mode                          ; 1146        ;
+;     -- arithmetic mode                      ; 579         ;
 ;                                             ;             ;
-; Total registers                             ; 178         ;
-;     -- Dedicated logic registers            ; 178         ;
+; Total registers                             ; 378         ;
+;     -- Dedicated logic registers            ; 378         ;
 ;     -- I/O registers                        ; 0           ;
 ;                                             ;             ;
 ; I/O pins                                    ; 112         ;
-; Total memory bits                           ; 762624      ;
+; Total memory bits                           ; 763648      ;
 ;                                             ;             ;
 ; Embedded Multiplier 9-bit elements          ; 0           ;
 ;                                             ;             ;
@@ -259,41 +292,94 @@ refer to the applicable agreement for further details.
 ;     -- PLLs                                 ; 1           ;
 ;                                             ;             ;
 ; Maximum fan-out node                        ; clock~input ;
-; Maximum fan-out                             ; 230         ;
-; Total fan-out                               ; 4211        ;
-; Average fan-out                             ; 3.91        ;
+; Maximum fan-out                             ; 380         ;
+; Total fan-out                               ; 7968        ;
+; Average fan-out                             ; 3.27        ;
 +---------------------------------------------+-------------+
 
 
-+---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Analysis & Synthesis Resource Utilization by Entity                                                                                                                                                                                                                                                                                               ;
-+------------------------------------------------+---------------------+---------------------------+-------------+--------------+---------+-----------+------+--------------+--------------------------------------------------------------------------------------------------------------------------------------+-----------------+--------------+
-; Compilation Hierarchy Node                     ; Combinational ALUTs ; Dedicated Logic Registers ; Memory Bits ; DSP Elements ; DSP 9x9 ; DSP 18x18 ; Pins ; Virtual Pins ; Full Hierarchy Name                                                                                                                  ; Entity Name     ; Library Name ;
-+------------------------------------------------+---------------------+---------------------------+-------------+--------------+---------+-----------+------+--------------+--------------------------------------------------------------------------------------------------------------------------------------+-----------------+--------------+
-; |teste                                         ; 574 (1)             ; 178 (0)                   ; 762624      ; 0            ; 0       ; 0         ; 112  ; 0            ; |teste                                                                                                                               ; teste           ; work         ;
-;    |contato1:C1|                               ; 28 (28)             ; 28 (28)                   ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |teste|contato1:C1                                                                                                                   ; contato1        ; work         ;
-;    |red_screen:rs|                             ; 435 (204)           ; 102 (96)                  ; 589824      ; 0            ; 0       ; 0         ; 0    ; 0            ; |teste|red_screen:rs                                                                                                                 ; red_screen      ; work         ;
-;       |VRAM:VR|                                ; 53 (0)              ; 6 (0)                     ; 589824      ; 0            ; 0       ; 0         ; 0    ; 0            ; |teste|red_screen:rs|VRAM:VR                                                                                                         ; VRAM            ; work         ;
-;          |altsyncram:altsyncram_component|     ; 53 (0)              ; 6 (0)                     ; 589824      ; 0            ; 0       ; 0         ; 0    ; 0            ; |teste|red_screen:rs|VRAM:VR|altsyncram:altsyncram_component                                                                         ; altsyncram      ; work         ;
-;             |altsyncram_r9a1:auto_generated|   ; 53 (0)              ; 6 (6)                     ; 589824      ; 0            ; 0       ; 0         ; 0    ; 0            ; |teste|red_screen:rs|VRAM:VR|altsyncram:altsyncram_component|altsyncram_r9a1:auto_generated                                          ; altsyncram_r9a1 ; work         ;
-;                |decode_k8a:rden_decode|        ; 8 (8)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |teste|red_screen:rs|VRAM:VR|altsyncram:altsyncram_component|altsyncram_r9a1:auto_generated|decode_k8a:rden_decode                   ; decode_k8a      ; work         ;
-;                |mux_cnb:mux2|                  ; 45 (45)             ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |teste|red_screen:rs|VRAM:VR|altsyncram:altsyncram_component|altsyncram_r9a1:auto_generated|mux_cnb:mux2                             ; mux_cnb         ; work         ;
-;       |lpm_divide:Mod0|                        ; 178 (0)             ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |teste|red_screen:rs|lpm_divide:Mod0                                                                                                 ; lpm_divide      ; work         ;
-;          |lpm_divide_cqo:auto_generated|       ; 178 (0)             ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |teste|red_screen:rs|lpm_divide:Mod0|lpm_divide_cqo:auto_generated                                                                   ; lpm_divide_cqo  ; work         ;
-;             |abs_divider_4dg:divider|          ; 178 (28)            ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |teste|red_screen:rs|lpm_divide:Mod0|lpm_divide_cqo:auto_generated|abs_divider_4dg:divider                                           ; abs_divider_4dg ; work         ;
-;                |alt_u_div_7af:divider|         ; 124 (124)           ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |teste|red_screen:rs|lpm_divide:Mod0|lpm_divide_cqo:auto_generated|abs_divider_4dg:divider|alt_u_div_7af:divider                     ; alt_u_div_7af   ; work         ;
-;                |lpm_abs_i0a:my_abs_num|        ; 26 (26)             ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |teste|red_screen:rs|lpm_divide:Mod0|lpm_divide_cqo:auto_generated|abs_divider_4dg:divider|lpm_abs_i0a:my_abs_num                    ; lpm_abs_i0a     ; work         ;
-;    |vga_test:inst_vga_test|                    ; 110 (56)            ; 48 (18)                   ; 172800      ; 0            ; 0       ; 0         ; 0    ; 0            ; |teste|vga_test:inst_vga_test                                                                                                        ; vga_test        ; work         ;
-;       |FrameBuffer:FB|                         ; 6 (0)               ; 4 (0)                     ; 172800      ; 0            ; 0       ; 0         ; 0    ; 0            ; |teste|vga_test:inst_vga_test|FrameBuffer:FB                                                                                         ; FrameBuffer     ; work         ;
-;          |altsyncram:altsyncram_component|     ; 6 (0)               ; 4 (0)                     ; 172800      ; 0            ; 0       ; 0         ; 0    ; 0            ; |teste|vga_test:inst_vga_test|FrameBuffer:FB|altsyncram:altsyncram_component                                                         ; altsyncram      ; work         ;
-;             |altsyncram_aoj1:auto_generated|   ; 6 (0)               ; 4 (4)                     ; 172800      ; 0            ; 0       ; 0         ; 0    ; 0            ; |teste|vga_test:inst_vga_test|FrameBuffer:FB|altsyncram:altsyncram_component|altsyncram_aoj1:auto_generated                          ; altsyncram_aoj1 ; work         ;
-;                |decode_e8a:rden_decode_b|      ; 3 (3)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |teste|vga_test:inst_vga_test|FrameBuffer:FB|altsyncram:altsyncram_component|altsyncram_aoj1:auto_generated|decode_e8a:rden_decode_b ; decode_e8a      ; work         ;
-;                |decode_lsa:decode2|            ; 3 (3)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |teste|vga_test:inst_vga_test|FrameBuffer:FB|altsyncram:altsyncram_component|altsyncram_aoj1:auto_generated|decode_lsa:decode2       ; decode_lsa      ; work         ;
-;       |vga_sync:vga_sync_inst|                 ; 48 (48)             ; 26 (26)                   ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |teste|vga_test:inst_vga_test|vga_sync:vga_sync_inst                                                                                 ; vga_sync        ; work         ;
-;          |vga_pll:vga_pll|                     ; 0 (0)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |teste|vga_test:inst_vga_test|vga_sync:vga_sync_inst|vga_pll:vga_pll                                                                 ; vga_pll         ; work         ;
-;             |altpll:altpll_component|          ; 0 (0)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |teste|vga_test:inst_vga_test|vga_sync:vga_sync_inst|vga_pll:vga_pll|altpll:altpll_component                                         ; altpll          ; work         ;
-;                |vga_pll_altpll:auto_generated| ; 0 (0)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |teste|vga_test:inst_vga_test|vga_sync:vga_sync_inst|vga_pll:vga_pll|altpll:altpll_component|vga_pll_altpll:auto_generated           ; vga_pll_altpll  ; work         ;
-+------------------------------------------------+---------------------+---------------------------+-------------+--------------+---------+-----------+------+--------------+--------------------------------------------------------------------------------------------------------------------------------------+-----------------+--------------+
++--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Resource Utilization by Entity                                                                                                                                                                                                                                                                                                                                                    ;
++-------------------------------------------------+---------------------+---------------------------+-------------+--------------+---------+-----------+------+--------------+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+---------------------+--------------+
+; Compilation Hierarchy Node                      ; Combinational ALUTs ; Dedicated Logic Registers ; Memory Bits ; DSP Elements ; DSP 9x9 ; DSP 18x18 ; Pins ; Virtual Pins ; Full Hierarchy Name                                                                                                                                                                  ; Entity Name         ; Library Name ;
++-------------------------------------------------+---------------------+---------------------------+-------------+--------------+---------+-----------+------+--------------+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+---------------------+--------------+
+; |teste                                          ; 1725 (0)            ; 378 (0)                   ; 763648      ; 0            ; 0       ; 0         ; 112  ; 0            ; |teste                                                                                                                                                                               ; teste               ; work         ;
+;    |contato1:C1|                                ; 28 (28)             ; 28 (28)                   ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |teste|contato1:C1                                                                                                                                                                   ; contato1            ; work         ;
+;    |ps2_receiver:PS2|                           ; 86 (86)             ; 48 (48)                   ; 1024        ; 0            ; 0       ; 0         ; 0    ; 0            ; |teste|ps2_receiver:PS2                                                                                                                                                              ; ps2_receiver        ; work         ;
+;       |altsyncram:acoes_rtl_0|                  ; 0 (0)               ; 0 (0)                     ; 1024        ; 0            ; 0       ; 0         ; 0    ; 0            ; |teste|ps2_receiver:PS2|altsyncram:acoes_rtl_0                                                                                                                                       ; altsyncram          ; work         ;
+;          |altsyncram_fpv:auto_generated|        ; 0 (0)               ; 0 (0)                     ; 1024        ; 0            ; 0       ; 0         ; 0    ; 0            ; |teste|ps2_receiver:PS2|altsyncram:acoes_rtl_0|altsyncram_fpv:auto_generated                                                                                                         ; altsyncram_fpv      ; work         ;
+;    |red_screen:rs|                              ; 1501 (153)          ; 254 (89)                  ; 589824      ; 0            ; 0       ; 0         ; 0    ; 0            ; |teste|red_screen:rs                                                                                                                                                                 ; red_screen          ; work         ;
+;       |VRAM:VR|                                 ; 53 (0)              ; 6 (0)                     ; 589824      ; 0            ; 0       ; 0         ; 0    ; 0            ; |teste|red_screen:rs|VRAM:VR                                                                                                                                                         ; VRAM                ; work         ;
+;          |altsyncram:altsyncram_component|      ; 53 (0)              ; 6 (0)                     ; 589824      ; 0            ; 0       ; 0         ; 0    ; 0            ; |teste|red_screen:rs|VRAM:VR|altsyncram:altsyncram_component                                                                                                                         ; altsyncram          ; work         ;
+;             |altsyncram_r9a1:auto_generated|    ; 53 (0)              ; 6 (6)                     ; 589824      ; 0            ; 0       ; 0         ; 0    ; 0            ; |teste|red_screen:rs|VRAM:VR|altsyncram:altsyncram_component|altsyncram_r9a1:auto_generated                                                                                          ; altsyncram_r9a1     ; work         ;
+;                |decode_k8a:rden_decode|         ; 8 (8)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |teste|red_screen:rs|VRAM:VR|altsyncram:altsyncram_component|altsyncram_r9a1:auto_generated|decode_k8a:rden_decode                                                                   ; decode_k8a          ; work         ;
+;                |mux_cnb:mux2|                   ; 45 (45)             ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |teste|red_screen:rs|VRAM:VR|altsyncram:altsyncram_component|altsyncram_r9a1:auto_generated|mux_cnb:mux2                                                                             ; mux_cnb             ; work         ;
+;       |game_process:game_process|               ; 1225 (543)          ; 159 (157)                 ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |teste|red_screen:rs|game_process:game_process                                                                                                                                       ; game_process        ; work         ;
+;          |lpm_divide:Div1|                      ; 56 (0)              ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |teste|red_screen:rs|game_process:game_process|lpm_divide:Div1                                                                                                                       ; lpm_divide          ; work         ;
+;             |lpm_divide_jhm:auto_generated|     ; 56 (0)              ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |teste|red_screen:rs|game_process:game_process|lpm_divide:Div1|lpm_divide_jhm:auto_generated                                                                                         ; lpm_divide_jhm      ; work         ;
+;                |sign_div_unsign_bkh:divider|    ; 56 (0)              ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |teste|red_screen:rs|game_process:game_process|lpm_divide:Div1|lpm_divide_jhm:auto_generated|sign_div_unsign_bkh:divider                                                             ; sign_div_unsign_bkh ; work         ;
+;                   |alt_u_div_a4f:divider|       ; 56 (56)             ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |teste|red_screen:rs|game_process:game_process|lpm_divide:Div1|lpm_divide_jhm:auto_generated|sign_div_unsign_bkh:divider|alt_u_div_a4f:divider                                       ; alt_u_div_a4f       ; work         ;
+;          |lpm_divide:Div3|                      ; 56 (0)              ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |teste|red_screen:rs|game_process:game_process|lpm_divide:Div3                                                                                                                       ; lpm_divide          ; work         ;
+;             |lpm_divide_jhm:auto_generated|     ; 56 (0)              ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |teste|red_screen:rs|game_process:game_process|lpm_divide:Div3|lpm_divide_jhm:auto_generated                                                                                         ; lpm_divide_jhm      ; work         ;
+;                |sign_div_unsign_bkh:divider|    ; 56 (0)              ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |teste|red_screen:rs|game_process:game_process|lpm_divide:Div3|lpm_divide_jhm:auto_generated|sign_div_unsign_bkh:divider                                                             ; sign_div_unsign_bkh ; work         ;
+;                   |alt_u_div_a4f:divider|       ; 56 (56)             ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |teste|red_screen:rs|game_process:game_process|lpm_divide:Div3|lpm_divide_jhm:auto_generated|sign_div_unsign_bkh:divider|alt_u_div_a4f:divider                                       ; alt_u_div_a4f       ; work         ;
+;          |lpm_divide:Div5|                      ; 56 (0)              ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |teste|red_screen:rs|game_process:game_process|lpm_divide:Div5                                                                                                                       ; lpm_divide          ; work         ;
+;             |lpm_divide_jhm:auto_generated|     ; 56 (0)              ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |teste|red_screen:rs|game_process:game_process|lpm_divide:Div5|lpm_divide_jhm:auto_generated                                                                                         ; lpm_divide_jhm      ; work         ;
+;                |sign_div_unsign_bkh:divider|    ; 56 (0)              ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |teste|red_screen:rs|game_process:game_process|lpm_divide:Div5|lpm_divide_jhm:auto_generated|sign_div_unsign_bkh:divider                                                             ; sign_div_unsign_bkh ; work         ;
+;                   |alt_u_div_a4f:divider|       ; 56 (56)             ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |teste|red_screen:rs|game_process:game_process|lpm_divide:Div5|lpm_divide_jhm:auto_generated|sign_div_unsign_bkh:divider|alt_u_div_a4f:divider                                       ; alt_u_div_a4f       ; work         ;
+;          |lpm_divide:Div7|                      ; 56 (0)              ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |teste|red_screen:rs|game_process:game_process|lpm_divide:Div7                                                                                                                       ; lpm_divide          ; work         ;
+;             |lpm_divide_jhm:auto_generated|     ; 56 (0)              ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |teste|red_screen:rs|game_process:game_process|lpm_divide:Div7|lpm_divide_jhm:auto_generated                                                                                         ; lpm_divide_jhm      ; work         ;
+;                |sign_div_unsign_bkh:divider|    ; 56 (0)              ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |teste|red_screen:rs|game_process:game_process|lpm_divide:Div7|lpm_divide_jhm:auto_generated|sign_div_unsign_bkh:divider                                                             ; sign_div_unsign_bkh ; work         ;
+;                   |alt_u_div_a4f:divider|       ; 56 (56)             ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |teste|red_screen:rs|game_process:game_process|lpm_divide:Div7|lpm_divide_jhm:auto_generated|sign_div_unsign_bkh:divider|alt_u_div_a4f:divider                                       ; alt_u_div_a4f       ; work         ;
+;          |lpm_divide:Div9|                      ; 56 (0)              ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |teste|red_screen:rs|game_process:game_process|lpm_divide:Div9                                                                                                                       ; lpm_divide          ; work         ;
+;             |lpm_divide_jhm:auto_generated|     ; 56 (0)              ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |teste|red_screen:rs|game_process:game_process|lpm_divide:Div9|lpm_divide_jhm:auto_generated                                                                                         ; lpm_divide_jhm      ; work         ;
+;                |sign_div_unsign_bkh:divider|    ; 56 (0)              ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |teste|red_screen:rs|game_process:game_process|lpm_divide:Div9|lpm_divide_jhm:auto_generated|sign_div_unsign_bkh:divider                                                             ; sign_div_unsign_bkh ; work         ;
+;                   |alt_u_div_a4f:divider|       ; 56 (56)             ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |teste|red_screen:rs|game_process:game_process|lpm_divide:Div9|lpm_divide_jhm:auto_generated|sign_div_unsign_bkh:divider|alt_u_div_a4f:divider                                       ; alt_u_div_a4f       ; work         ;
+;          |lpm_divide:Mod1|                      ; 60 (0)              ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |teste|red_screen:rs|game_process:game_process|lpm_divide:Mod1                                                                                                                       ; lpm_divide          ; work         ;
+;             |lpm_divide_m9m:auto_generated|     ; 60 (0)              ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |teste|red_screen:rs|game_process:game_process|lpm_divide:Mod1|lpm_divide_m9m:auto_generated                                                                                         ; lpm_divide_m9m      ; work         ;
+;                |sign_div_unsign_bkh:divider|    ; 60 (0)              ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |teste|red_screen:rs|game_process:game_process|lpm_divide:Mod1|lpm_divide_m9m:auto_generated|sign_div_unsign_bkh:divider                                                             ; sign_div_unsign_bkh ; work         ;
+;                   |alt_u_div_a4f:divider|       ; 60 (60)             ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |teste|red_screen:rs|game_process:game_process|lpm_divide:Mod1|lpm_divide_m9m:auto_generated|sign_div_unsign_bkh:divider|alt_u_div_a4f:divider                                       ; alt_u_div_a4f       ; work         ;
+;          |lpm_divide:Mod3|                      ; 59 (0)              ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |teste|red_screen:rs|game_process:game_process|lpm_divide:Mod3                                                                                                                       ; lpm_divide          ; work         ;
+;             |lpm_divide_m9m:auto_generated|     ; 59 (0)              ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |teste|red_screen:rs|game_process:game_process|lpm_divide:Mod3|lpm_divide_m9m:auto_generated                                                                                         ; lpm_divide_m9m      ; work         ;
+;                |sign_div_unsign_bkh:divider|    ; 59 (0)              ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |teste|red_screen:rs|game_process:game_process|lpm_divide:Mod3|lpm_divide_m9m:auto_generated|sign_div_unsign_bkh:divider                                                             ; sign_div_unsign_bkh ; work         ;
+;                   |alt_u_div_a4f:divider|       ; 59 (59)             ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |teste|red_screen:rs|game_process:game_process|lpm_divide:Mod3|lpm_divide_m9m:auto_generated|sign_div_unsign_bkh:divider|alt_u_div_a4f:divider                                       ; alt_u_div_a4f       ; work         ;
+;          |lpm_divide:Mod5|                      ; 59 (0)              ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |teste|red_screen:rs|game_process:game_process|lpm_divide:Mod5                                                                                                                       ; lpm_divide          ; work         ;
+;             |lpm_divide_m9m:auto_generated|     ; 59 (0)              ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |teste|red_screen:rs|game_process:game_process|lpm_divide:Mod5|lpm_divide_m9m:auto_generated                                                                                         ; lpm_divide_m9m      ; work         ;
+;                |sign_div_unsign_bkh:divider|    ; 59 (0)              ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |teste|red_screen:rs|game_process:game_process|lpm_divide:Mod5|lpm_divide_m9m:auto_generated|sign_div_unsign_bkh:divider                                                             ; sign_div_unsign_bkh ; work         ;
+;                   |alt_u_div_a4f:divider|       ; 59 (59)             ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |teste|red_screen:rs|game_process:game_process|lpm_divide:Mod5|lpm_divide_m9m:auto_generated|sign_div_unsign_bkh:divider|alt_u_div_a4f:divider                                       ; alt_u_div_a4f       ; work         ;
+;          |lpm_divide:Mod7|                      ; 59 (0)              ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |teste|red_screen:rs|game_process:game_process|lpm_divide:Mod7                                                                                                                       ; lpm_divide          ; work         ;
+;             |lpm_divide_m9m:auto_generated|     ; 59 (0)              ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |teste|red_screen:rs|game_process:game_process|lpm_divide:Mod7|lpm_divide_m9m:auto_generated                                                                                         ; lpm_divide_m9m      ; work         ;
+;                |sign_div_unsign_bkh:divider|    ; 59 (0)              ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |teste|red_screen:rs|game_process:game_process|lpm_divide:Mod7|lpm_divide_m9m:auto_generated|sign_div_unsign_bkh:divider                                                             ; sign_div_unsign_bkh ; work         ;
+;                   |alt_u_div_a4f:divider|       ; 59 (59)             ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |teste|red_screen:rs|game_process:game_process|lpm_divide:Mod7|lpm_divide_m9m:auto_generated|sign_div_unsign_bkh:divider|alt_u_div_a4f:divider                                       ; alt_u_div_a4f       ; work         ;
+;          |lpm_divide:Mod9|                      ; 59 (0)              ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |teste|red_screen:rs|game_process:game_process|lpm_divide:Mod9                                                                                                                       ; lpm_divide          ; work         ;
+;             |lpm_divide_m9m:auto_generated|     ; 59 (0)              ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |teste|red_screen:rs|game_process:game_process|lpm_divide:Mod9|lpm_divide_m9m:auto_generated                                                                                         ; lpm_divide_m9m      ; work         ;
+;                |sign_div_unsign_bkh:divider|    ; 59 (0)              ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |teste|red_screen:rs|game_process:game_process|lpm_divide:Mod9|lpm_divide_m9m:auto_generated|sign_div_unsign_bkh:divider                                                             ; sign_div_unsign_bkh ; work         ;
+;                   |alt_u_div_a4f:divider|       ; 59 (59)             ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |teste|red_screen:rs|game_process:game_process|lpm_divide:Mod9|lpm_divide_m9m:auto_generated|sign_div_unsign_bkh:divider|alt_u_div_a4f:divider                                       ; alt_u_div_a4f       ; work         ;
+;          |random_enemy:re|                      ; 106 (8)             ; 2 (2)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |teste|red_screen:rs|game_process:game_process|random_enemy:re                                                                                                                       ; random_enemy        ; work         ;
+;             |lpm_divide:Div0|                   ; 45 (0)              ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |teste|red_screen:rs|game_process:game_process|random_enemy:re|lpm_divide:Div0                                                                                                       ; lpm_divide          ; work         ;
+;                |lpm_divide_hhm:auto_generated|  ; 45 (0)              ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |teste|red_screen:rs|game_process:game_process|random_enemy:re|lpm_divide:Div0|lpm_divide_hhm:auto_generated                                                                         ; lpm_divide_hhm      ; work         ;
+;                   |sign_div_unsign_9kh:divider| ; 45 (0)              ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |teste|red_screen:rs|game_process:game_process|random_enemy:re|lpm_divide:Div0|lpm_divide_hhm:auto_generated|sign_div_unsign_9kh:divider                                             ; sign_div_unsign_9kh ; work         ;
+;                      |alt_u_div_64f:divider|    ; 45 (44)             ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |teste|red_screen:rs|game_process:game_process|random_enemy:re|lpm_divide:Div0|lpm_divide_hhm:auto_generated|sign_div_unsign_9kh:divider|alt_u_div_64f:divider                       ; alt_u_div_64f       ; work         ;
+;                         |add_sub_8pc:add_sub_1| ; 1 (1)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |teste|red_screen:rs|game_process:game_process|random_enemy:re|lpm_divide:Div0|lpm_divide_hhm:auto_generated|sign_div_unsign_9kh:divider|alt_u_div_64f:divider|add_sub_8pc:add_sub_1 ; add_sub_8pc         ; work         ;
+;             |lpm_divide:Mod0|                   ; 53 (0)              ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |teste|red_screen:rs|game_process:game_process|random_enemy:re|lpm_divide:Mod0                                                                                                       ; lpm_divide          ; work         ;
+;                |lpm_divide_l9m:auto_generated|  ; 53 (0)              ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |teste|red_screen:rs|game_process:game_process|random_enemy:re|lpm_divide:Mod0|lpm_divide_l9m:auto_generated                                                                         ; lpm_divide_l9m      ; work         ;
+;                   |sign_div_unsign_akh:divider| ; 53 (0)              ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |teste|red_screen:rs|game_process:game_process|random_enemy:re|lpm_divide:Mod0|lpm_divide_l9m:auto_generated|sign_div_unsign_akh:divider                                             ; sign_div_unsign_akh ; work         ;
+;                      |alt_u_div_84f:divider|    ; 53 (53)             ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |teste|red_screen:rs|game_process:game_process|random_enemy:re|lpm_divide:Mod0|lpm_divide_l9m:auto_generated|sign_div_unsign_akh:divider|alt_u_div_84f:divider                       ; alt_u_div_84f       ; work         ;
+;       |lpm_divide:Mod0|                         ; 70 (0)              ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |teste|red_screen:rs|lpm_divide:Mod0                                                                                                                                                 ; lpm_divide          ; work         ;
+;          |lpm_divide_lcm:auto_generated|        ; 70 (0)              ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |teste|red_screen:rs|lpm_divide:Mod0|lpm_divide_lcm:auto_generated                                                                                                                   ; lpm_divide_lcm      ; work         ;
+;             |sign_div_unsign_anh:divider|       ; 70 (0)              ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |teste|red_screen:rs|lpm_divide:Mod0|lpm_divide_lcm:auto_generated|sign_div_unsign_anh:divider                                                                                       ; sign_div_unsign_anh ; work         ;
+;                |alt_u_div_8af:divider|          ; 70 (70)             ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |teste|red_screen:rs|lpm_divide:Mod0|lpm_divide_lcm:auto_generated|sign_div_unsign_anh:divider|alt_u_div_8af:divider                                                                 ; alt_u_div_8af       ; work         ;
+;    |vga_test:inst_vga_test|                     ; 110 (56)            ; 48 (18)                   ; 172800      ; 0            ; 0       ; 0         ; 0    ; 0            ; |teste|vga_test:inst_vga_test                                                                                                                                                        ; vga_test            ; work         ;
+;       |FrameBuffer:FB|                          ; 6 (0)               ; 4 (0)                     ; 172800      ; 0            ; 0       ; 0         ; 0    ; 0            ; |teste|vga_test:inst_vga_test|FrameBuffer:FB                                                                                                                                         ; FrameBuffer         ; work         ;
+;          |altsyncram:altsyncram_component|      ; 6 (0)               ; 4 (0)                     ; 172800      ; 0            ; 0       ; 0         ; 0    ; 0            ; |teste|vga_test:inst_vga_test|FrameBuffer:FB|altsyncram:altsyncram_component                                                                                                         ; altsyncram          ; work         ;
+;             |altsyncram_aoj1:auto_generated|    ; 6 (0)               ; 4 (4)                     ; 172800      ; 0            ; 0       ; 0         ; 0    ; 0            ; |teste|vga_test:inst_vga_test|FrameBuffer:FB|altsyncram:altsyncram_component|altsyncram_aoj1:auto_generated                                                                          ; altsyncram_aoj1     ; work         ;
+;                |decode_e8a:rden_decode_b|       ; 3 (3)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |teste|vga_test:inst_vga_test|FrameBuffer:FB|altsyncram:altsyncram_component|altsyncram_aoj1:auto_generated|decode_e8a:rden_decode_b                                                 ; decode_e8a          ; work         ;
+;                |decode_lsa:decode2|             ; 3 (3)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |teste|vga_test:inst_vga_test|FrameBuffer:FB|altsyncram:altsyncram_component|altsyncram_aoj1:auto_generated|decode_lsa:decode2                                                       ; decode_lsa          ; work         ;
+;       |vga_sync:vga_sync_inst|                  ; 48 (48)             ; 26 (26)                   ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |teste|vga_test:inst_vga_test|vga_sync:vga_sync_inst                                                                                                                                 ; vga_sync            ; work         ;
+;          |vga_pll:vga_pll|                      ; 0 (0)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |teste|vga_test:inst_vga_test|vga_sync:vga_sync_inst|vga_pll:vga_pll                                                                                                                 ; vga_pll             ; work         ;
+;             |altpll:altpll_component|           ; 0 (0)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |teste|vga_test:inst_vga_test|vga_sync:vga_sync_inst|vga_pll:vga_pll|altpll:altpll_component                                                                                         ; altpll              ; work         ;
+;                |vga_pll_altpll:auto_generated|  ; 0 (0)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |teste|vga_test:inst_vga_test|vga_sync:vga_sync_inst|vga_pll:vga_pll|altpll:altpll_component|vga_pll_altpll:auto_generated                                                           ; vga_pll_altpll      ; work         ;
++-------------------------------------------------+---------------------+---------------------------+-------------+--------------+---------+-----------+------+--------------+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+---------------------+--------------+
 Note: For table entries with two numbers listed, the numbers in parentheses indicate the number of resources of the given type used by the specific entity alone. The numbers listed outside of parentheses indicate the total resources of the given type used by the specific entity and all of its sub-entities in the hierarchy.
 
 
@@ -302,6 +388,7 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 +-----------------------------------------------------------------------------------------------------------------+------+------------------+--------------+--------------+--------------+--------------+--------+---------------------+
 ; Name                                                                                                            ; Type ; Mode             ; Port A Depth ; Port A Width ; Port B Depth ; Port B Width ; Size   ; MIF                 ;
 +-----------------------------------------------------------------------------------------------------------------+------+------------------+--------------+--------------+--------------+--------------+--------+---------------------+
+; ps2_receiver:PS2|altsyncram:acoes_rtl_0|altsyncram_fpv:auto_generated|ALTSYNCRAM                                ; AUTO ; ROM              ; 256          ; 4            ; --           ; --           ; 1024   ; CPU.teste0.rtl.mif  ;
 ; red_screen:rs|VRAM:VR|altsyncram:altsyncram_component|altsyncram_r9a1:auto_generated|ALTSYNCRAM                 ; AUTO ; ROM              ; 65536        ; 9            ; --           ; --           ; 589824 ; framebuffer_red.mif ;
 ; vga_test:inst_vga_test|FrameBuffer:FB|altsyncram:altsyncram_component|altsyncram_aoj1:auto_generated|ALTSYNCRAM ; AUTO ; Simple Dual Port ; 19200        ; 9            ; 19200        ; 9            ; 172800 ; None                ;
 +-----------------------------------------------------------------------------------------------------------------+------+------------------+--------------+--------------+--------------+--------------+--------+---------------------+
@@ -318,26 +405,44 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 +--------+--------------+---------+--------------+--------------+----------------------------------------------------------------------+-----------------+
 
 
-+------------------------------------------------------------------------------------+
-; Registers Removed During Synthesis                                                 ;
-+-----------------------------------------+------------------------------------------+
-; Register name                           ; Reason for Removal                       ;
-+-----------------------------------------+------------------------------------------+
-; vga_test:inst_vga_test|VGA_Blue[0,1]    ; Stuck at GND due to stuck port data_in   ;
-; vga_test:inst_vga_test|VGA_Green[0,1]   ; Stuck at GND due to stuck port data_in   ;
-; vga_test:inst_vga_test|VGA_Red[0,1]     ; Stuck at GND due to stuck port data_in   ;
-; red_screen:rs|inicio_X[1,2,7..31]       ; Stuck at GND due to stuck port data_in   ;
-; red_screen:rs|inicio_Y[1,3,9..31]       ; Stuck at GND due to stuck port data_in   ;
-; red_screen:rs|VGA_X_d[8,9]              ; Lost fanout                              ;
-; red_screen:rs|inicio_Y[7,8]             ; Lost fanout                              ;
-; red_screen:rs|VGA_Y_d[7..9]             ; Lost fanout                              ;
-; red_screen:rs|prev_layer[13..30]        ; Merged with red_screen:rs|prev_layer[31] ;
-; red_screen:rs|inicio_Y[5]               ; Merged with red_screen:rs|inicio_Y[4]    ;
-; red_screen:rs|layer[15..31]             ; Merged with red_screen:rs|layer[14]      ;
-; red_screen:rs|inicio_X[5]               ; Merged with red_screen:rs|inicio_X[3]    ;
-; red_screen:rs|inicio_X[6]               ; Merged with red_screen:rs|inicio_X[4]    ;
-; Total Number of Removed Registers = 103 ;                                          ;
-+-----------------------------------------+------------------------------------------+
++-----------------------------------------------------------------------------------------------+
+; Registers Removed During Synthesis                                                            ;
++----------------------------------------------------+------------------------------------------+
+; Register name                                      ; Reason for Removal                       ;
++----------------------------------------------------+------------------------------------------+
+; vga_test:inst_vga_test|VGA_Blue[0,1]               ; Stuck at GND due to stuck port data_in   ;
+; vga_test:inst_vga_test|VGA_Green[0,1]              ; Stuck at GND due to stuck port data_in   ;
+; vga_test:inst_vga_test|VGA_Red[0,1]                ; Stuck at GND due to stuck port data_in   ;
+; red_screen:rs|layer[14..32]                        ; Stuck at GND due to stuck port data_in   ;
+; red_screen:rs|game_process:game_process|enemy_x[2] ; Stuck at GND due to stuck port data_in   ;
+; red_screen:rs|game_process:game_process|hp[0]      ; Stuck at GND due to stuck port data_in   ;
+; red_screen:rs|VGA_X_d[8,9]                         ; Lost fanout                              ;
+; red_screen:rs|VGA_Y_d[7..9]                        ; Lost fanout                              ;
+; red_screen:rs|prev_layer[14]                       ; Merged with red_screen:rs|prev_layer[15] ;
+; red_screen:rs|prev_layer[15]                       ; Merged with red_screen:rs|prev_layer[16] ;
+; red_screen:rs|prev_layer[16]                       ; Merged with red_screen:rs|prev_layer[17] ;
+; red_screen:rs|prev_layer[17]                       ; Merged with red_screen:rs|prev_layer[18] ;
+; red_screen:rs|prev_layer[18]                       ; Merged with red_screen:rs|prev_layer[19] ;
+; red_screen:rs|prev_layer[19]                       ; Merged with red_screen:rs|prev_layer[20] ;
+; red_screen:rs|prev_layer[20]                       ; Merged with red_screen:rs|prev_layer[21] ;
+; red_screen:rs|prev_layer[21]                       ; Merged with red_screen:rs|prev_layer[22] ;
+; red_screen:rs|prev_layer[22]                       ; Merged with red_screen:rs|prev_layer[23] ;
+; red_screen:rs|prev_layer[23]                       ; Merged with red_screen:rs|prev_layer[24] ;
+; red_screen:rs|prev_layer[24]                       ; Merged with red_screen:rs|prev_layer[25] ;
+; red_screen:rs|prev_layer[25]                       ; Merged with red_screen:rs|prev_layer[26] ;
+; red_screen:rs|prev_layer[26]                       ; Merged with red_screen:rs|prev_layer[27] ;
+; red_screen:rs|prev_layer[27]                       ; Merged with red_screen:rs|prev_layer[28] ;
+; red_screen:rs|prev_layer[28]                       ; Merged with red_screen:rs|prev_layer[29] ;
+; red_screen:rs|prev_layer[29]                       ; Merged with red_screen:rs|prev_layer[30] ;
+; red_screen:rs|prev_layer[30]                       ; Merged with red_screen:rs|prev_layer[31] ;
+; red_screen:rs|prev_layer[31]                       ; Merged with red_screen:rs|prev_layer[32] ;
+; ps2_receiver:PS2|acoes[0..3]                       ; Lost fanout                              ;
+; red_screen:rs|game_process:game_process|enemy_y[2] ; Stuck at GND due to stuck port data_in   ;
+; ps2_receiver:PS2|acoes[2]~1                        ; Merged with ps2_receiver:PS2|acoes[0]~7  ;
+; ps2_receiver:PS2|acoes[1]~4                        ; Merged with ps2_receiver:PS2|acoes[0]~7  ;
+; ps2_receiver:PS2|acoes[3]~10                       ; Merged with ps2_receiver:PS2|acoes[0]~7  ;
+; Total Number of Removed Registers = 58             ;                                          ;
++----------------------------------------------------+------------------------------------------+
 
 
 +------------------------------------------------------+
@@ -345,14 +450,63 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 +----------------------------------------------+-------+
 ; Statistic                                    ; Value ;
 +----------------------------------------------+-------+
-; Total registers                              ; 178   ;
-; Number of registers using Synchronous Clear  ; 0     ;
-; Number of registers using Synchronous Load   ; 20    ;
-; Number of registers using Asynchronous Clear ; 97    ;
+; Total registers                              ; 378   ;
+; Number of registers using Synchronous Clear  ; 104   ;
+; Number of registers using Synchronous Load   ; 0     ;
+; Number of registers using Asynchronous Clear ; 99    ;
 ; Number of registers using Asynchronous Load  ; 0     ;
-; Number of registers using Clock Enable       ; 31    ;
+; Number of registers using Clock Enable       ; 193   ;
 ; Number of registers using Preset             ; 0     ;
 +----------------------------------------------+-------+
+
+
++---------------------------------------------------------------------------+
+; Inverted Register Statistics                                              ;
++-----------------------------------------------------------------+---------+
+; Inverted Register                                               ; Fan out ;
++-----------------------------------------------------------------+---------+
+; red_screen:rs|game_process:game_process|tm[5]                   ; 11      ;
+; red_screen:rs|game_process:game_process|tm[4]                   ; 13      ;
+; red_screen:rs|game_process:game_process|tm[3]                   ; 13      ;
+; red_screen:rs|game_process:game_process|tm[2]                   ; 11      ;
+; red_screen:rs|game_process:game_process|ammo[5]                 ; 9       ;
+; red_screen:rs|game_process:game_process|ammo[4]                 ; 11      ;
+; red_screen:rs|game_process:game_process|ammo[3]                 ; 11      ;
+; red_screen:rs|game_process:game_process|ammo[2]                 ; 9       ;
+; red_screen:rs|game_process:game_process|hp[6]                   ; 8       ;
+; red_screen:rs|game_process:game_process|hp[4]                   ; 10      ;
+; red_screen:rs|game_process:game_process|gun_y[0]                ; 7       ;
+; red_screen:rs|game_process:game_process|menu                    ; 53      ;
+; red_screen:rs|prev_layer[1]                                     ; 1       ;
+; red_screen:rs|prev_layer[0]                                     ; 1       ;
+; red_screen:rs|prev_layer[2]                                     ; 1       ;
+; red_screen:rs|prev_layer[3]                                     ; 1       ;
+; red_screen:rs|prev_layer[5]                                     ; 1       ;
+; red_screen:rs|prev_layer[4]                                     ; 1       ;
+; red_screen:rs|prev_layer[7]                                     ; 1       ;
+; red_screen:rs|prev_layer[6]                                     ; 1       ;
+; red_screen:rs|prev_layer[9]                                     ; 1       ;
+; red_screen:rs|prev_layer[8]                                     ; 1       ;
+; red_screen:rs|prev_layer[11]                                    ; 1       ;
+; red_screen:rs|prev_layer[10]                                    ; 1       ;
+; red_screen:rs|prev_layer[32]                                    ; 1       ;
+; red_screen:rs|prev_layer[13]                                    ; 1       ;
+; red_screen:rs|prev_layer[12]                                    ; 1       ;
+; red_screen:rs|game_process:game_process|random_enemy:re|lfsr[0] ; 1       ;
+; Total number of inverted registers = 28                         ;         ;
++-----------------------------------------------------------------+---------+
+
+
++--------------------------------------------------------------------+
+; Registers Packed Into Inferred Megafunctions                       ;
++------------------------------+------------------------------+------+
+; Register Name                ; Megafunction                 ; Type ;
++------------------------------+------------------------------+------+
+; ps2_receiver:PS2|acoes[2]~2  ; ps2_receiver:PS2|acoes_rtl_0 ; ROM  ;
+; ps2_receiver:PS2|acoes[1]~5  ; ps2_receiver:PS2|acoes_rtl_0 ; ROM  ;
+; ps2_receiver:PS2|acoes[0]~8  ; ps2_receiver:PS2|acoes_rtl_0 ; ROM  ;
+; ps2_receiver:PS2|acoes[3]~11 ; ps2_receiver:PS2|acoes_rtl_0 ; ROM  ;
++------------------------------+------------------------------+------+
 
 
 +---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
@@ -360,16 +514,27 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 +--------------------+-----------+---------------+----------------------+------------------------+------------+-------------------------------------------------------------------+
 ; Multiplexer Inputs ; Bus Width ; Baseline Area ; Area if Restructured ; Saving if Restructured ; Registered ; Example Multiplexer Output                                        ;
 +--------------------+-----------+---------------+----------------------+------------------------+------------+-------------------------------------------------------------------+
-; 3:1                ; 10 bits   ; 20 LEs        ; 10 LEs               ; 10 LEs                 ; Yes        ; |teste|vga_test:inst_vga_test|vga_sync:vga_sync_inst|Counter_Y[7] ;
-; 3:1                ; 5 bits    ; 10 LEs        ; 5 LEs                ; 5 LEs                  ; Yes        ; |teste|red_screen:rs|VGA_X[2]                                     ;
-; 4:1                ; 3 bits    ; 6 LEs         ; 3 LEs                ; 3 LEs                  ; Yes        ; |teste|red_screen:rs|VGA_Y[1]                                     ;
-; 4:1                ; 7 bits    ; 14 LEs        ; 7 LEs                ; 7 LEs                  ; Yes        ; |teste|red_screen:rs|VGA_Y[2]                                     ;
-; 5:1                ; 3 bits    ; 9 LEs         ; 6 LEs                ; 3 LEs                  ; Yes        ; |teste|red_screen:rs|Draw_X[2]                                    ;
-; 5:1                ; 5 bits    ; 15 LEs        ; 15 LEs               ; 0 LEs                  ; Yes        ; |teste|red_screen:rs|Draw_X[3]                                    ;
-; 6:1                ; 2 bits    ; 8 LEs         ; 4 LEs                ; 4 LEs                  ; Yes        ; |teste|red_screen:rs|Draw_Y[0]                                    ;
-; 6:1                ; 2 bits    ; 8 LEs         ; 4 LEs                ; 4 LEs                  ; Yes        ; |teste|red_screen:rs|Draw_Y[3]                                    ;
-; 6:1                ; 3 bits    ; 12 LEs        ; 9 LEs                ; 3 LEs                  ; Yes        ; |teste|red_screen:rs|Draw_Y[6]                                    ;
-; 4:1                ; 9 bits    ; 18 LEs        ; 18 LEs               ; 0 LEs                  ; No         ; |teste|vga_test:inst_vga_test|VGA_Red                             ;
+; 3:1                ; 10 bits   ; 20 LEs        ; 10 LEs               ; 10 LEs                 ; Yes        ; |teste|vga_test:inst_vga_test|vga_sync:vga_sync_inst|Counter_Y[6] ;
+; 3:1                ; 5 bits    ; 10 LEs        ; 5 LEs                ; 5 LEs                  ; Yes        ; |teste|red_screen:rs|game_process:game_process|hp[5]              ;
+; 3:1                ; 4 bits    ; 8 LEs         ; 4 LEs                ; 4 LEs                  ; Yes        ; |teste|red_screen:rs|game_process:game_process|tm[1]              ;
+; 3:1                ; 4 bits    ; 8 LEs         ; 4 LEs                ; 4 LEs                  ; Yes        ; |teste|red_screen:rs|game_process:game_process|ammo[7]            ;
+; 3:1                ; 8 bits    ; 16 LEs        ; 8 LEs                ; 8 LEs                  ; Yes        ; |teste|red_screen:rs|game_process:game_process|pts[7]             ;
+; 3:1                ; 3 bits    ; 6 LEs         ; 3 LEs                ; 3 LEs                  ; Yes        ; |teste|red_screen:rs|VGA_X[7]                                     ;
+; 4:1                ; 3 bits    ; 6 LEs         ; 3 LEs                ; 3 LEs                  ; Yes        ; |teste|red_screen:rs|game_process:game_process|enemy_y[2]         ;
+; 4:1                ; 26 bits   ; 52 LEs        ; 26 LEs               ; 26 LEs                 ; Yes        ; |teste|red_screen:rs|game_process:game_process|scenario_timer[19] ;
+; 4:1                ; 26 bits   ; 52 LEs        ; 26 LEs               ; 26 LEs                 ; Yes        ; |teste|red_screen:rs|game_process:game_process|enemy_timer[4]     ;
+; 4:1                ; 26 bits   ; 52 LEs        ; 26 LEs               ; 26 LEs                 ; Yes        ; |teste|red_screen:rs|game_process:game_process|timer[6]           ;
+; 4:1                ; 8 bits    ; 16 LEs        ; 8 LEs                ; 8 LEs                  ; Yes        ; |teste|red_screen:rs|VGA_Y[1]                                     ;
+; 5:1                ; 26 bits   ; 78 LEs        ; 26 LEs               ; 52 LEs                 ; Yes        ; |teste|red_screen:rs|game_process:game_process|gun_timer[25]      ;
+; 3:1                ; 2 bits    ; 4 LEs         ; 2 LEs                ; 2 LEs                  ; Yes        ; |teste|red_screen:rs|game_process:game_process|hp[6]              ;
+; 3:1                ; 4 bits    ; 8 LEs         ; 4 LEs                ; 4 LEs                  ; Yes        ; |teste|red_screen:rs|game_process:game_process|tm[5]              ;
+; 3:1                ; 4 bits    ; 8 LEs         ; 4 LEs                ; 4 LEs                  ; Yes        ; |teste|red_screen:rs|game_process:game_process|ammo[2]            ;
+; 4:1                ; 9 bits    ; 18 LEs        ; 18 LEs               ; 0 LEs                  ; No         ; |teste|vga_test:inst_vga_test|VGA_Green                           ;
+; 4:1                ; 2 bits    ; 4 LEs         ; 4 LEs                ; 0 LEs                  ; No         ; |teste|red_screen:rs|game_process:game_process|enemy_y            ;
+; 14:1               ; 3 bits    ; 27 LEs        ; 24 LEs               ; 3 LEs                  ; No         ; |teste|red_screen:rs|game_process:game_process|Selector41         ;
+; 15:1               ; 2 bits    ; 20 LEs        ; 20 LEs               ; 0 LEs                  ; No         ; |teste|red_screen:rs|game_process:game_process|Selector11         ;
+; 15:1               ; 5 bits    ; 50 LEs        ; 45 LEs               ; 5 LEs                  ; No         ; |teste|red_screen:rs|game_process:game_process|Selector15         ;
+; 15:1               ; 9 bits    ; 90 LEs        ; 81 LEs               ; 9 LEs                  ; No         ; |teste|red_screen:rs|game_process:game_process|Selector19         ;
 +--------------------+-----------+---------------+----------------------+------------------------+------------+-------------------------------------------------------------------+
 
 
@@ -389,6 +554,15 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 +---------------------------------+--------------------+------+---------------------------------------------------------------+
 ; OPTIMIZE_POWER_DURING_SYNTHESIS ; NORMAL_COMPILATION ; -    ; -                                                             ;
 +---------------------------------+--------------------+------+---------------------------------------------------------------+
+
+
++----------------------------------------------------------------------------------------------+
+; Source assignments for ps2_receiver:PS2|altsyncram:acoes_rtl_0|altsyncram_fpv:auto_generated ;
++---------------------------------+--------------------+------+--------------------------------+
+; Assignment                      ; Value              ; From ; To                             ;
++---------------------------------+--------------------+------+--------------------------------+
+; OPTIMIZE_POWER_DURING_SYNTHESIS ; NORMAL_COMPILATION ; -    ; -                              ;
++---------------------------------+--------------------+------+--------------------------------+
 
 
 +----------------------------------------------------------------------------------------------------+
@@ -887,19 +1061,310 @@ Note: In order to hide this table in the UI and the text report file, please set
 Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
 
 
++------------------------------------------------------------------------------------------+
+; Parameter Settings for Inferred Entity Instance: ps2_receiver:PS2|altsyncram:acoes_rtl_0 ;
++------------------------------------+----------------------+------------------------------+
+; Parameter Name                     ; Value                ; Type                         ;
++------------------------------------+----------------------+------------------------------+
+; BYTE_SIZE_BLOCK                    ; 8                    ; Untyped                      ;
+; AUTO_CARRY_CHAINS                  ; ON                   ; AUTO_CARRY                   ;
+; IGNORE_CARRY_BUFFERS               ; OFF                  ; IGNORE_CARRY                 ;
+; AUTO_CASCADE_CHAINS                ; ON                   ; AUTO_CASCADE                 ;
+; IGNORE_CASCADE_BUFFERS             ; OFF                  ; IGNORE_CASCADE               ;
+; WIDTH_BYTEENA                      ; 1                    ; Untyped                      ;
+; OPERATION_MODE                     ; ROM                  ; Untyped                      ;
+; WIDTH_A                            ; 4                    ; Untyped                      ;
+; WIDTHAD_A                          ; 8                    ; Untyped                      ;
+; NUMWORDS_A                         ; 256                  ; Untyped                      ;
+; OUTDATA_REG_A                      ; UNREGISTERED         ; Untyped                      ;
+; ADDRESS_ACLR_A                     ; NONE                 ; Untyped                      ;
+; OUTDATA_ACLR_A                     ; NONE                 ; Untyped                      ;
+; WRCONTROL_ACLR_A                   ; NONE                 ; Untyped                      ;
+; INDATA_ACLR_A                      ; NONE                 ; Untyped                      ;
+; BYTEENA_ACLR_A                     ; NONE                 ; Untyped                      ;
+; WIDTH_B                            ; 1                    ; Untyped                      ;
+; WIDTHAD_B                          ; 1                    ; Untyped                      ;
+; NUMWORDS_B                         ; 1                    ; Untyped                      ;
+; INDATA_REG_B                       ; CLOCK1               ; Untyped                      ;
+; WRCONTROL_WRADDRESS_REG_B          ; CLOCK1               ; Untyped                      ;
+; RDCONTROL_REG_B                    ; CLOCK1               ; Untyped                      ;
+; ADDRESS_REG_B                      ; CLOCK1               ; Untyped                      ;
+; OUTDATA_REG_B                      ; UNREGISTERED         ; Untyped                      ;
+; BYTEENA_REG_B                      ; CLOCK1               ; Untyped                      ;
+; INDATA_ACLR_B                      ; NONE                 ; Untyped                      ;
+; WRCONTROL_ACLR_B                   ; NONE                 ; Untyped                      ;
+; ADDRESS_ACLR_B                     ; NONE                 ; Untyped                      ;
+; OUTDATA_ACLR_B                     ; NONE                 ; Untyped                      ;
+; RDCONTROL_ACLR_B                   ; NONE                 ; Untyped                      ;
+; BYTEENA_ACLR_B                     ; NONE                 ; Untyped                      ;
+; WIDTH_BYTEENA_A                    ; 1                    ; Untyped                      ;
+; WIDTH_BYTEENA_B                    ; 1                    ; Untyped                      ;
+; RAM_BLOCK_TYPE                     ; AUTO                 ; Untyped                      ;
+; BYTE_SIZE                          ; 8                    ; Untyped                      ;
+; READ_DURING_WRITE_MODE_MIXED_PORTS ; DONT_CARE            ; Untyped                      ;
+; READ_DURING_WRITE_MODE_PORT_A      ; NEW_DATA_NO_NBE_READ ; Untyped                      ;
+; READ_DURING_WRITE_MODE_PORT_B      ; NEW_DATA_NO_NBE_READ ; Untyped                      ;
+; INIT_FILE                          ; CPU.teste0.rtl.mif   ; Untyped                      ;
+; INIT_FILE_LAYOUT                   ; PORT_A               ; Untyped                      ;
+; MAXIMUM_DEPTH                      ; 0                    ; Untyped                      ;
+; CLOCK_ENABLE_INPUT_A               ; NORMAL               ; Untyped                      ;
+; CLOCK_ENABLE_INPUT_B               ; NORMAL               ; Untyped                      ;
+; CLOCK_ENABLE_OUTPUT_A              ; NORMAL               ; Untyped                      ;
+; CLOCK_ENABLE_OUTPUT_B              ; NORMAL               ; Untyped                      ;
+; CLOCK_ENABLE_CORE_A                ; USE_INPUT_CLKEN      ; Untyped                      ;
+; CLOCK_ENABLE_CORE_B                ; USE_INPUT_CLKEN      ; Untyped                      ;
+; ENABLE_ECC                         ; FALSE                ; Untyped                      ;
+; ECC_PIPELINE_STAGE_ENABLED         ; FALSE                ; Untyped                      ;
+; WIDTH_ECCSTATUS                    ; 3                    ; Untyped                      ;
+; DEVICE_FAMILY                      ; Cyclone IV E         ; Untyped                      ;
+; CBXI_PARAMETER                     ; altsyncram_fpv       ; Untyped                      ;
++------------------------------------+----------------------+------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++----------------------------------------------------------------------------------------------------------+
+; Parameter Settings for Inferred Entity Instance: red_screen:rs|game_process:game_process|lpm_divide:Mod9 ;
++------------------------+----------------+----------------------------------------------------------------+
+; Parameter Name         ; Value          ; Type                                                           ;
++------------------------+----------------+----------------------------------------------------------------+
+; LPM_WIDTHN             ; 8              ; Untyped                                                        ;
+; LPM_WIDTHD             ; 4              ; Untyped                                                        ;
+; LPM_NREPRESENTATION    ; UNSIGNED       ; Untyped                                                        ;
+; LPM_DREPRESENTATION    ; UNSIGNED       ; Untyped                                                        ;
+; LPM_PIPELINE           ; 0              ; Untyped                                                        ;
+; LPM_REMAINDERPOSITIVE  ; TRUE           ; Untyped                                                        ;
+; MAXIMIZE_SPEED         ; 5              ; Untyped                                                        ;
+; CBXI_PARAMETER         ; lpm_divide_m9m ; Untyped                                                        ;
+; CARRY_CHAIN            ; MANUAL         ; Untyped                                                        ;
+; OPTIMIZE_FOR_SPEED     ; 5              ; Untyped                                                        ;
+; AUTO_CARRY_CHAINS      ; ON             ; AUTO_CARRY                                                     ;
+; IGNORE_CARRY_BUFFERS   ; OFF            ; IGNORE_CARRY                                                   ;
+; AUTO_CASCADE_CHAINS    ; ON             ; AUTO_CASCADE                                                   ;
+; IGNORE_CASCADE_BUFFERS ; OFF            ; IGNORE_CASCADE                                                 ;
++------------------------+----------------+----------------------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++----------------------------------------------------------------------------------------------------------+
+; Parameter Settings for Inferred Entity Instance: red_screen:rs|game_process:game_process|lpm_divide:Div9 ;
++------------------------+----------------+----------------------------------------------------------------+
+; Parameter Name         ; Value          ; Type                                                           ;
++------------------------+----------------+----------------------------------------------------------------+
+; LPM_WIDTHN             ; 8              ; Untyped                                                        ;
+; LPM_WIDTHD             ; 4              ; Untyped                                                        ;
+; LPM_NREPRESENTATION    ; UNSIGNED       ; Untyped                                                        ;
+; LPM_DREPRESENTATION    ; UNSIGNED       ; Untyped                                                        ;
+; LPM_PIPELINE           ; 0              ; Untyped                                                        ;
+; LPM_REMAINDERPOSITIVE  ; TRUE           ; Untyped                                                        ;
+; MAXIMIZE_SPEED         ; 5              ; Untyped                                                        ;
+; CBXI_PARAMETER         ; lpm_divide_jhm ; Untyped                                                        ;
+; CARRY_CHAIN            ; MANUAL         ; Untyped                                                        ;
+; OPTIMIZE_FOR_SPEED     ; 5              ; Untyped                                                        ;
+; AUTO_CARRY_CHAINS      ; ON             ; AUTO_CARRY                                                     ;
+; IGNORE_CARRY_BUFFERS   ; OFF            ; IGNORE_CARRY                                                   ;
+; AUTO_CASCADE_CHAINS    ; ON             ; AUTO_CASCADE                                                   ;
+; IGNORE_CASCADE_BUFFERS ; OFF            ; IGNORE_CASCADE                                                 ;
++------------------------+----------------+----------------------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++----------------------------------------------------------------------------------------------------------+
+; Parameter Settings for Inferred Entity Instance: red_screen:rs|game_process:game_process|lpm_divide:Div7 ;
++------------------------+----------------+----------------------------------------------------------------+
+; Parameter Name         ; Value          ; Type                                                           ;
++------------------------+----------------+----------------------------------------------------------------+
+; LPM_WIDTHN             ; 8              ; Untyped                                                        ;
+; LPM_WIDTHD             ; 4              ; Untyped                                                        ;
+; LPM_NREPRESENTATION    ; UNSIGNED       ; Untyped                                                        ;
+; LPM_DREPRESENTATION    ; UNSIGNED       ; Untyped                                                        ;
+; LPM_PIPELINE           ; 0              ; Untyped                                                        ;
+; LPM_REMAINDERPOSITIVE  ; TRUE           ; Untyped                                                        ;
+; MAXIMIZE_SPEED         ; 5              ; Untyped                                                        ;
+; CBXI_PARAMETER         ; lpm_divide_jhm ; Untyped                                                        ;
+; CARRY_CHAIN            ; MANUAL         ; Untyped                                                        ;
+; OPTIMIZE_FOR_SPEED     ; 5              ; Untyped                                                        ;
+; AUTO_CARRY_CHAINS      ; ON             ; AUTO_CARRY                                                     ;
+; IGNORE_CARRY_BUFFERS   ; OFF            ; IGNORE_CARRY                                                   ;
+; AUTO_CASCADE_CHAINS    ; ON             ; AUTO_CASCADE                                                   ;
+; IGNORE_CASCADE_BUFFERS ; OFF            ; IGNORE_CASCADE                                                 ;
++------------------------+----------------+----------------------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++----------------------------------------------------------------------------------------------------------+
+; Parameter Settings for Inferred Entity Instance: red_screen:rs|game_process:game_process|lpm_divide:Mod5 ;
++------------------------+----------------+----------------------------------------------------------------+
+; Parameter Name         ; Value          ; Type                                                           ;
++------------------------+----------------+----------------------------------------------------------------+
+; LPM_WIDTHN             ; 8              ; Untyped                                                        ;
+; LPM_WIDTHD             ; 4              ; Untyped                                                        ;
+; LPM_NREPRESENTATION    ; UNSIGNED       ; Untyped                                                        ;
+; LPM_DREPRESENTATION    ; UNSIGNED       ; Untyped                                                        ;
+; LPM_PIPELINE           ; 0              ; Untyped                                                        ;
+; LPM_REMAINDERPOSITIVE  ; TRUE           ; Untyped                                                        ;
+; MAXIMIZE_SPEED         ; 5              ; Untyped                                                        ;
+; CBXI_PARAMETER         ; lpm_divide_m9m ; Untyped                                                        ;
+; CARRY_CHAIN            ; MANUAL         ; Untyped                                                        ;
+; OPTIMIZE_FOR_SPEED     ; 5              ; Untyped                                                        ;
+; AUTO_CARRY_CHAINS      ; ON             ; AUTO_CARRY                                                     ;
+; IGNORE_CARRY_BUFFERS   ; OFF            ; IGNORE_CARRY                                                   ;
+; AUTO_CASCADE_CHAINS    ; ON             ; AUTO_CASCADE                                                   ;
+; IGNORE_CASCADE_BUFFERS ; OFF            ; IGNORE_CASCADE                                                 ;
++------------------------+----------------+----------------------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++----------------------------------------------------------------------------------------------------------+
+; Parameter Settings for Inferred Entity Instance: red_screen:rs|game_process:game_process|lpm_divide:Div5 ;
++------------------------+----------------+----------------------------------------------------------------+
+; Parameter Name         ; Value          ; Type                                                           ;
++------------------------+----------------+----------------------------------------------------------------+
+; LPM_WIDTHN             ; 8              ; Untyped                                                        ;
+; LPM_WIDTHD             ; 4              ; Untyped                                                        ;
+; LPM_NREPRESENTATION    ; UNSIGNED       ; Untyped                                                        ;
+; LPM_DREPRESENTATION    ; UNSIGNED       ; Untyped                                                        ;
+; LPM_PIPELINE           ; 0              ; Untyped                                                        ;
+; LPM_REMAINDERPOSITIVE  ; TRUE           ; Untyped                                                        ;
+; MAXIMIZE_SPEED         ; 5              ; Untyped                                                        ;
+; CBXI_PARAMETER         ; lpm_divide_jhm ; Untyped                                                        ;
+; CARRY_CHAIN            ; MANUAL         ; Untyped                                                        ;
+; OPTIMIZE_FOR_SPEED     ; 5              ; Untyped                                                        ;
+; AUTO_CARRY_CHAINS      ; ON             ; AUTO_CARRY                                                     ;
+; IGNORE_CARRY_BUFFERS   ; OFF            ; IGNORE_CARRY                                                   ;
+; AUTO_CASCADE_CHAINS    ; ON             ; AUTO_CASCADE                                                   ;
+; IGNORE_CASCADE_BUFFERS ; OFF            ; IGNORE_CASCADE                                                 ;
++------------------------+----------------+----------------------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++----------------------------------------------------------------------------------------------------------+
+; Parameter Settings for Inferred Entity Instance: red_screen:rs|game_process:game_process|lpm_divide:Mod3 ;
++------------------------+----------------+----------------------------------------------------------------+
+; Parameter Name         ; Value          ; Type                                                           ;
++------------------------+----------------+----------------------------------------------------------------+
+; LPM_WIDTHN             ; 8              ; Untyped                                                        ;
+; LPM_WIDTHD             ; 4              ; Untyped                                                        ;
+; LPM_NREPRESENTATION    ; UNSIGNED       ; Untyped                                                        ;
+; LPM_DREPRESENTATION    ; UNSIGNED       ; Untyped                                                        ;
+; LPM_PIPELINE           ; 0              ; Untyped                                                        ;
+; LPM_REMAINDERPOSITIVE  ; TRUE           ; Untyped                                                        ;
+; MAXIMIZE_SPEED         ; 5              ; Untyped                                                        ;
+; CBXI_PARAMETER         ; lpm_divide_m9m ; Untyped                                                        ;
+; CARRY_CHAIN            ; MANUAL         ; Untyped                                                        ;
+; OPTIMIZE_FOR_SPEED     ; 5              ; Untyped                                                        ;
+; AUTO_CARRY_CHAINS      ; ON             ; AUTO_CARRY                                                     ;
+; IGNORE_CARRY_BUFFERS   ; OFF            ; IGNORE_CARRY                                                   ;
+; AUTO_CASCADE_CHAINS    ; ON             ; AUTO_CASCADE                                                   ;
+; IGNORE_CASCADE_BUFFERS ; OFF            ; IGNORE_CASCADE                                                 ;
++------------------------+----------------+----------------------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++----------------------------------------------------------------------------------------------------------+
+; Parameter Settings for Inferred Entity Instance: red_screen:rs|game_process:game_process|lpm_divide:Div3 ;
++------------------------+----------------+----------------------------------------------------------------+
+; Parameter Name         ; Value          ; Type                                                           ;
++------------------------+----------------+----------------------------------------------------------------+
+; LPM_WIDTHN             ; 8              ; Untyped                                                        ;
+; LPM_WIDTHD             ; 4              ; Untyped                                                        ;
+; LPM_NREPRESENTATION    ; UNSIGNED       ; Untyped                                                        ;
+; LPM_DREPRESENTATION    ; UNSIGNED       ; Untyped                                                        ;
+; LPM_PIPELINE           ; 0              ; Untyped                                                        ;
+; LPM_REMAINDERPOSITIVE  ; TRUE           ; Untyped                                                        ;
+; MAXIMIZE_SPEED         ; 5              ; Untyped                                                        ;
+; CBXI_PARAMETER         ; lpm_divide_jhm ; Untyped                                                        ;
+; CARRY_CHAIN            ; MANUAL         ; Untyped                                                        ;
+; OPTIMIZE_FOR_SPEED     ; 5              ; Untyped                                                        ;
+; AUTO_CARRY_CHAINS      ; ON             ; AUTO_CARRY                                                     ;
+; IGNORE_CARRY_BUFFERS   ; OFF            ; IGNORE_CARRY                                                   ;
+; AUTO_CASCADE_CHAINS    ; ON             ; AUTO_CASCADE                                                   ;
+; IGNORE_CASCADE_BUFFERS ; OFF            ; IGNORE_CASCADE                                                 ;
++------------------------+----------------+----------------------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++----------------------------------------------------------------------------------------------------------+
+; Parameter Settings for Inferred Entity Instance: red_screen:rs|game_process:game_process|lpm_divide:Mod1 ;
++------------------------+----------------+----------------------------------------------------------------+
+; Parameter Name         ; Value          ; Type                                                           ;
++------------------------+----------------+----------------------------------------------------------------+
+; LPM_WIDTHN             ; 8              ; Untyped                                                        ;
+; LPM_WIDTHD             ; 4              ; Untyped                                                        ;
+; LPM_NREPRESENTATION    ; UNSIGNED       ; Untyped                                                        ;
+; LPM_DREPRESENTATION    ; UNSIGNED       ; Untyped                                                        ;
+; LPM_PIPELINE           ; 0              ; Untyped                                                        ;
+; LPM_REMAINDERPOSITIVE  ; TRUE           ; Untyped                                                        ;
+; MAXIMIZE_SPEED         ; 5              ; Untyped                                                        ;
+; CBXI_PARAMETER         ; lpm_divide_m9m ; Untyped                                                        ;
+; CARRY_CHAIN            ; MANUAL         ; Untyped                                                        ;
+; OPTIMIZE_FOR_SPEED     ; 5              ; Untyped                                                        ;
+; AUTO_CARRY_CHAINS      ; ON             ; AUTO_CARRY                                                     ;
+; IGNORE_CARRY_BUFFERS   ; OFF            ; IGNORE_CARRY                                                   ;
+; AUTO_CASCADE_CHAINS    ; ON             ; AUTO_CASCADE                                                   ;
+; IGNORE_CASCADE_BUFFERS ; OFF            ; IGNORE_CASCADE                                                 ;
++------------------------+----------------+----------------------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++----------------------------------------------------------------------------------------------------------+
+; Parameter Settings for Inferred Entity Instance: red_screen:rs|game_process:game_process|lpm_divide:Div1 ;
++------------------------+----------------+----------------------------------------------------------------+
+; Parameter Name         ; Value          ; Type                                                           ;
++------------------------+----------------+----------------------------------------------------------------+
+; LPM_WIDTHN             ; 8              ; Untyped                                                        ;
+; LPM_WIDTHD             ; 4              ; Untyped                                                        ;
+; LPM_NREPRESENTATION    ; UNSIGNED       ; Untyped                                                        ;
+; LPM_DREPRESENTATION    ; UNSIGNED       ; Untyped                                                        ;
+; LPM_PIPELINE           ; 0              ; Untyped                                                        ;
+; LPM_REMAINDERPOSITIVE  ; TRUE           ; Untyped                                                        ;
+; MAXIMIZE_SPEED         ; 5              ; Untyped                                                        ;
+; CBXI_PARAMETER         ; lpm_divide_jhm ; Untyped                                                        ;
+; CARRY_CHAIN            ; MANUAL         ; Untyped                                                        ;
+; OPTIMIZE_FOR_SPEED     ; 5              ; Untyped                                                        ;
+; AUTO_CARRY_CHAINS      ; ON             ; AUTO_CARRY                                                     ;
+; IGNORE_CARRY_BUFFERS   ; OFF            ; IGNORE_CARRY                                                   ;
+; AUTO_CASCADE_CHAINS    ; ON             ; AUTO_CASCADE                                                   ;
+; IGNORE_CASCADE_BUFFERS ; OFF            ; IGNORE_CASCADE                                                 ;
++------------------------+----------------+----------------------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++----------------------------------------------------------------------------------------------------------+
+; Parameter Settings for Inferred Entity Instance: red_screen:rs|game_process:game_process|lpm_divide:Mod7 ;
++------------------------+----------------+----------------------------------------------------------------+
+; Parameter Name         ; Value          ; Type                                                           ;
++------------------------+----------------+----------------------------------------------------------------+
+; LPM_WIDTHN             ; 8              ; Untyped                                                        ;
+; LPM_WIDTHD             ; 4              ; Untyped                                                        ;
+; LPM_NREPRESENTATION    ; UNSIGNED       ; Untyped                                                        ;
+; LPM_DREPRESENTATION    ; UNSIGNED       ; Untyped                                                        ;
+; LPM_PIPELINE           ; 0              ; Untyped                                                        ;
+; LPM_REMAINDERPOSITIVE  ; TRUE           ; Untyped                                                        ;
+; MAXIMIZE_SPEED         ; 5              ; Untyped                                                        ;
+; CBXI_PARAMETER         ; lpm_divide_m9m ; Untyped                                                        ;
+; CARRY_CHAIN            ; MANUAL         ; Untyped                                                        ;
+; OPTIMIZE_FOR_SPEED     ; 5              ; Untyped                                                        ;
+; AUTO_CARRY_CHAINS      ; ON             ; AUTO_CARRY                                                     ;
+; IGNORE_CARRY_BUFFERS   ; OFF            ; IGNORE_CARRY                                                   ;
+; AUTO_CASCADE_CHAINS    ; ON             ; AUTO_CASCADE                                                   ;
+; IGNORE_CASCADE_BUFFERS ; OFF            ; IGNORE_CASCADE                                                 ;
++------------------------+----------------+----------------------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
 +--------------------------------------------------------------------------------+
 ; Parameter Settings for Inferred Entity Instance: red_screen:rs|lpm_divide:Mod0 ;
 +------------------------+----------------+--------------------------------------+
 ; Parameter Name         ; Value          ; Type                                 ;
 +------------------------+----------------+--------------------------------------+
-; LPM_WIDTHN             ; 32             ; Untyped                              ;
+; LPM_WIDTHN             ; 33             ; Untyped                              ;
 ; LPM_WIDTHD             ; 14             ; Untyped                              ;
-; LPM_NREPRESENTATION    ; SIGNED         ; Untyped                              ;
-; LPM_DREPRESENTATION    ; SIGNED         ; Untyped                              ;
+; LPM_NREPRESENTATION    ; UNSIGNED       ; Untyped                              ;
+; LPM_DREPRESENTATION    ; UNSIGNED       ; Untyped                              ;
 ; LPM_PIPELINE           ; 0              ; Untyped                              ;
-; LPM_REMAINDERPOSITIVE  ; FALSE          ; Untyped                              ;
+; LPM_REMAINDERPOSITIVE  ; TRUE           ; Untyped                              ;
 ; MAXIMIZE_SPEED         ; 5              ; Untyped                              ;
-; CBXI_PARAMETER         ; lpm_divide_cqo ; Untyped                              ;
+; CBXI_PARAMETER         ; lpm_divide_lcm ; Untyped                              ;
 ; CARRY_CHAIN            ; MANUAL         ; Untyped                              ;
 ; OPTIMIZE_FOR_SPEED     ; 5              ; Untyped                              ;
 ; AUTO_CARRY_CHAINS      ; ON             ; AUTO_CARRY                           ;
@@ -910,12 +1375,58 @@ Note: In order to hide this table in the UI and the text report file, please set
 Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
 
 
++--------------------------------------------------------------------------------------------------------------------------+
+; Parameter Settings for Inferred Entity Instance: red_screen:rs|game_process:game_process|random_enemy:re|lpm_divide:Mod0 ;
++------------------------+----------------+--------------------------------------------------------------------------------+
+; Parameter Name         ; Value          ; Type                                                                           ;
++------------------------+----------------+--------------------------------------------------------------------------------+
+; LPM_WIDTHN             ; 9              ; Untyped                                                                        ;
+; LPM_WIDTHD             ; 2              ; Untyped                                                                        ;
+; LPM_NREPRESENTATION    ; UNSIGNED       ; Untyped                                                                        ;
+; LPM_DREPRESENTATION    ; UNSIGNED       ; Untyped                                                                        ;
+; LPM_PIPELINE           ; 0              ; Untyped                                                                        ;
+; LPM_REMAINDERPOSITIVE  ; TRUE           ; Untyped                                                                        ;
+; MAXIMIZE_SPEED         ; 5              ; Untyped                                                                        ;
+; CBXI_PARAMETER         ; lpm_divide_l9m ; Untyped                                                                        ;
+; CARRY_CHAIN            ; MANUAL         ; Untyped                                                                        ;
+; OPTIMIZE_FOR_SPEED     ; 5              ; Untyped                                                                        ;
+; AUTO_CARRY_CHAINS      ; ON             ; AUTO_CARRY                                                                     ;
+; IGNORE_CARRY_BUFFERS   ; OFF            ; IGNORE_CARRY                                                                   ;
+; AUTO_CASCADE_CHAINS    ; ON             ; AUTO_CASCADE                                                                   ;
+; IGNORE_CASCADE_BUFFERS ; OFF            ; IGNORE_CASCADE                                                                 ;
++------------------------+----------------+--------------------------------------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++--------------------------------------------------------------------------------------------------------------------------+
+; Parameter Settings for Inferred Entity Instance: red_screen:rs|game_process:game_process|random_enemy:re|lpm_divide:Div0 ;
++------------------------+----------------+--------------------------------------------------------------------------------+
+; Parameter Name         ; Value          ; Type                                                                           ;
++------------------------+----------------+--------------------------------------------------------------------------------+
+; LPM_WIDTHN             ; 8              ; Untyped                                                                        ;
+; LPM_WIDTHD             ; 2              ; Untyped                                                                        ;
+; LPM_NREPRESENTATION    ; UNSIGNED       ; Untyped                                                                        ;
+; LPM_DREPRESENTATION    ; UNSIGNED       ; Untyped                                                                        ;
+; LPM_PIPELINE           ; 0              ; Untyped                                                                        ;
+; LPM_REMAINDERPOSITIVE  ; TRUE           ; Untyped                                                                        ;
+; MAXIMIZE_SPEED         ; 5              ; Untyped                                                                        ;
+; CBXI_PARAMETER         ; lpm_divide_hhm ; Untyped                                                                        ;
+; CARRY_CHAIN            ; MANUAL         ; Untyped                                                                        ;
+; OPTIMIZE_FOR_SPEED     ; 5              ; Untyped                                                                        ;
+; AUTO_CARRY_CHAINS      ; ON             ; AUTO_CARRY                                                                     ;
+; IGNORE_CARRY_BUFFERS   ; OFF            ; IGNORE_CARRY                                                                   ;
+; AUTO_CASCADE_CHAINS    ; ON             ; AUTO_CASCADE                                                                   ;
+; IGNORE_CASCADE_BUFFERS ; OFF            ; IGNORE_CASCADE                                                                 ;
++------------------------+----------------+--------------------------------------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
 +-------------------------------------------------------------------------------------------------------------------+
 ; altsyncram Parameter Settings by Entity Instance                                                                  ;
 +-------------------------------------------+-----------------------------------------------------------------------+
 ; Name                                      ; Value                                                                 ;
 +-------------------------------------------+-----------------------------------------------------------------------+
-; Number of entity instances                ; 2                                                                     ;
+; Number of entity instances                ; 3                                                                     ;
 ; Entity Instance                           ; red_screen:rs|VRAM:VR|altsyncram:altsyncram_component                 ;
 ;     -- OPERATION_MODE                     ; ROM                                                                   ;
 ;     -- WIDTH_A                            ; 9                                                                     ;
@@ -936,6 +1447,17 @@ Note: In order to hide this table in the UI and the text report file, please set
 ;     -- NUMWORDS_B                         ; 19200                                                                 ;
 ;     -- ADDRESS_REG_B                      ; CLOCK1                                                                ;
 ;     -- OUTDATA_REG_B                      ; CLOCK1                                                                ;
+;     -- RAM_BLOCK_TYPE                     ; AUTO                                                                  ;
+;     -- READ_DURING_WRITE_MODE_MIXED_PORTS ; DONT_CARE                                                             ;
+; Entity Instance                           ; ps2_receiver:PS2|altsyncram:acoes_rtl_0                               ;
+;     -- OPERATION_MODE                     ; ROM                                                                   ;
+;     -- WIDTH_A                            ; 4                                                                     ;
+;     -- NUMWORDS_A                         ; 256                                                                   ;
+;     -- OUTDATA_REG_A                      ; UNREGISTERED                                                          ;
+;     -- WIDTH_B                            ; 1                                                                     ;
+;     -- NUMWORDS_B                         ; 1                                                                     ;
+;     -- ADDRESS_REG_B                      ; CLOCK1                                                                ;
+;     -- OUTDATA_REG_B                      ; UNREGISTERED                                                          ;
 ;     -- RAM_BLOCK_TYPE                     ; AUTO                                                                  ;
 ;     -- READ_DURING_WRITE_MODE_MIXED_PORTS ; DONT_CARE                                                             ;
 +-------------------------------------------+-----------------------------------------------------------------------+
@@ -995,29 +1517,28 @@ Note: In order to hide this table in the UI and the text report file, please set
 ; Type                  ; Count                       ;
 +-----------------------+-----------------------------+
 ; boundary_port         ; 112                         ;
-; cycloneiii_ff         ; 178                         ;
-;     CLR               ; 63                          ;
-;     CLR SLD           ; 10                          ;
-;     ENA               ; 7                           ;
-;     ENA CLR           ; 14                          ;
-;     ENA CLR SLD       ; 10                          ;
-;     plain             ; 74                          ;
-; cycloneiii_lcell_comb ; 576                         ;
-;     arith             ; 222                         ;
-;         1 data inputs ; 2                           ;
-;         2 data inputs ; 147                         ;
-;         3 data inputs ; 73                          ;
-;     normal            ; 354                         ;
-;         0 data inputs ; 7                           ;
-;         1 data inputs ; 23                          ;
-;         2 data inputs ; 75                          ;
-;         3 data inputs ; 36                          ;
-;         4 data inputs ; 213                         ;
+; cycloneiii_ff         ; 378                         ;
+;     CLR               ; 60                          ;
+;     ENA               ; 50                          ;
+;     ENA CLR           ; 39                          ;
+;     ENA SCLR          ; 104                         ;
+;     plain             ; 125                         ;
+; cycloneiii_lcell_comb ; 1730                        ;
+;     arith             ; 579                         ;
+;         1 data inputs ; 1                           ;
+;         2 data inputs ; 310                         ;
+;         3 data inputs ; 268                         ;
+;     normal            ; 1151                        ;
+;         0 data inputs ; 71                          ;
+;         1 data inputs ; 40                          ;
+;         2 data inputs ; 396                         ;
+;         3 data inputs ; 95                          ;
+;         4 data inputs ; 549                         ;
 ; cycloneiii_pll        ; 1                           ;
-; cycloneiii_ram_block  ; 99                          ;
+; cycloneiii_ram_block  ; 103                         ;
 ;                       ;                             ;
-; Max LUT depth         ; 25.90                       ;
-; Average LUT depth     ; 9.53                        ;
+; Max LUT depth         ; 30.20                       ;
+; Average LUT depth     ; 11.94                       ;
 +-----------------------+-----------------------------+
 
 
@@ -1026,7 +1547,7 @@ Note: In order to hide this table in the UI and the text report file, please set
 +----------------+--------------+
 ; Partition Name ; Elapsed Time ;
 +----------------+--------------+
-; Top            ; 00:00:01     ;
+; Top            ; 00:00:03     ;
 +----------------+--------------+
 
 
@@ -1036,7 +1557,7 @@ Note: In order to hide this table in the UI and the text report file, please set
 Info: *******************************************************************
 Info: Running Quartus Prime Analysis & Synthesis
     Info: Version 17.1.0 Build 590 10/25/2017 SJ Lite Edition
-    Info: Processing started: Tue Jun 17 17:34:03 2025
+    Info: Processing started: Thu Jun 26 20:43:31 2025
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off CPU -c CPU
 Warning (125092): Tcl Script File testevram.qip not found
     Info (125063): set_global_assignment -name QIP_FILE testevram.qip
@@ -1094,6 +1615,9 @@ Info (12021): Found 1 design units, including 1 entities, in source file red_scr
     Info (12023): Found entity 1: red_screen File: C:/Users/rafae/OneDrive/Documents/Workspace/Faculdade/Processador/red_screen.v Line: 1
 Info (12021): Found 1 design units, including 1 entities, in source file vram.v
     Info (12023): Found entity 1: VRAM File: C:/Users/rafae/OneDrive/Documents/Workspace/Faculdade/Processador/VRAM.v Line: 39
+Warning (12019): Can't analyze file -- file game_process.v is missing
+Info (12021): Found 1 design units, including 1 entities, in source file random_enemy.sv
+    Info (12023): Found entity 1: random_enemy File: C:/Users/rafae/OneDrive/Documents/Workspace/Faculdade/Processador/random_enemy.sv Line: 1
 Warning (10037): Verilog HDL or VHDL warning at saidaDados.v(24): conditional expression evaluates to a constant File: C:/Users/rafae/OneDrive/Documents/Workspace/Faculdade/Processador/saidaDados.v Line: 24
 Info (12127): Elaborating entity "teste" for the top level hierarchy
 Warning (10034): Output port "seg0" at teste.v(53) has no driver File: C:/Users/rafae/OneDrive/Documents/Workspace/Faculdade/Processador/teste.v Line: 53
@@ -1107,16 +1631,39 @@ Warning (10034): Output port "seg7" at teste.v(60) has no driver File: C:/Users/
 Info (12128): Elaborating entity "contato1" for hierarchy "contato1:C1" File: C:/Users/rafae/OneDrive/Documents/Workspace/Faculdade/Processador/teste.v Line: 80
 Warning (10230): Verilog HDL assignment warning at contato1.v(20): truncated value with size 32 to match size of target (28) File: C:/Users/rafae/OneDrive/Documents/Workspace/Faculdade/Processador/contato1.v Line: 20
 Info (12128): Elaborating entity "red_screen" for hierarchy "red_screen:rs" File: C:/Users/rafae/OneDrive/Documents/Workspace/Faculdade/Processador/teste.v Line: 106
-Warning (10230): Verilog HDL assignment warning at red_screen.v(32): truncated value with size 10 to match size of target (8) File: C:/Users/rafae/OneDrive/Documents/Workspace/Faculdade/Processador/red_screen.v Line: 32
-Warning (10230): Verilog HDL assignment warning at red_screen.v(33): truncated value with size 10 to match size of target (9) File: C:/Users/rafae/OneDrive/Documents/Workspace/Faculdade/Processador/red_screen.v Line: 33
-Warning (10230): Verilog HDL assignment warning at red_screen.v(90): truncated value with size 32 to match size of target (10) File: C:/Users/rafae/OneDrive/Documents/Workspace/Faculdade/Processador/red_screen.v Line: 90
-Warning (10230): Verilog HDL assignment warning at red_screen.v(91): truncated value with size 32 to match size of target (10) File: C:/Users/rafae/OneDrive/Documents/Workspace/Faculdade/Processador/red_screen.v Line: 91
-Warning (10230): Verilog HDL assignment warning at red_screen.v(94): truncated value with size 32 to match size of target (10) File: C:/Users/rafae/OneDrive/Documents/Workspace/Faculdade/Processador/red_screen.v Line: 94
-Warning (10230): Verilog HDL assignment warning at red_screen.v(96): truncated value with size 32 to match size of target (10) File: C:/Users/rafae/OneDrive/Documents/Workspace/Faculdade/Processador/red_screen.v Line: 96
-Warning (10230): Verilog HDL assignment warning at red_screen.v(99): truncated value with size 32 to match size of target (10) File: C:/Users/rafae/OneDrive/Documents/Workspace/Faculdade/Processador/red_screen.v Line: 99
-Warning (10230): Verilog HDL assignment warning at red_screen.v(102): truncated value with size 32 to match size of target (10) File: C:/Users/rafae/OneDrive/Documents/Workspace/Faculdade/Processador/red_screen.v Line: 102
-Warning (10762): Verilog HDL Case Statement warning at red_screen.v(121): can't check case statement for completeness because the case expression has too many possible states File: C:/Users/rafae/OneDrive/Documents/Workspace/Faculdade/Processador/red_screen.v Line: 121
-Info (12128): Elaborating entity "VRAM" for hierarchy "red_screen:rs|VRAM:VR" File: C:/Users/rafae/OneDrive/Documents/Workspace/Faculdade/Processador/red_screen.v Line: 113
+Warning (10036): Verilog HDL or VHDL warning at red_screen.v(37): object "inicio_X_d" assigned a value but never read File: C:/Users/rafae/OneDrive/Documents/Workspace/Faculdade/Processador/red_screen.v Line: 37
+Warning (10036): Verilog HDL or VHDL warning at red_screen.v(38): object "inicio_Y_d" assigned a value but never read File: C:/Users/rafae/OneDrive/Documents/Workspace/Faculdade/Processador/red_screen.v Line: 38
+Warning (10036): Verilog HDL or VHDL warning at red_screen.v(39): object "FB_X_d" assigned a value but never read File: C:/Users/rafae/OneDrive/Documents/Workspace/Faculdade/Processador/red_screen.v Line: 39
+Warning (10036): Verilog HDL or VHDL warning at red_screen.v(40): object "FB_Y_d" assigned a value but never read File: C:/Users/rafae/OneDrive/Documents/Workspace/Faculdade/Processador/red_screen.v Line: 40
+Warning (10230): Verilog HDL assignment warning at red_screen.v(44): truncated value with size 10 to match size of target (8) File: C:/Users/rafae/OneDrive/Documents/Workspace/Faculdade/Processador/red_screen.v Line: 44
+Warning (10230): Verilog HDL assignment warning at red_screen.v(45): truncated value with size 10 to match size of target (9) File: C:/Users/rafae/OneDrive/Documents/Workspace/Faculdade/Processador/red_screen.v Line: 45
+Warning (10230): Verilog HDL assignment warning at red_screen.v(86): truncated value with size 32 to match size of target (10) File: C:/Users/rafae/OneDrive/Documents/Workspace/Faculdade/Processador/red_screen.v Line: 86
+Warning (10230): Verilog HDL assignment warning at red_screen.v(89): truncated value with size 32 to match size of target (10) File: C:/Users/rafae/OneDrive/Documents/Workspace/Faculdade/Processador/red_screen.v Line: 89
+Warning (12125): Using design file game_process.sv, which is not specified as a design file for the current project, but contains definitions for 1 design units and 1 entities in project
+    Info (12023): Found entity 1: game_process File: C:/Users/rafae/OneDrive/Documents/Workspace/Faculdade/Processador/game_process.sv Line: 1
+Info (12128): Elaborating entity "game_process" for hierarchy "red_screen:rs|game_process:game_process" File: C:/Users/rafae/OneDrive/Documents/Workspace/Faculdade/Processador/red_screen.v Line: 65
+Warning (10230): Verilog HDL assignment warning at game_process.sv(136): truncated value with size 32 to match size of target (2) File: C:/Users/rafae/OneDrive/Documents/Workspace/Faculdade/Processador/game_process.sv Line: 136
+Warning (10230): Verilog HDL assignment warning at game_process.sv(139): truncated value with size 32 to match size of target (2) File: C:/Users/rafae/OneDrive/Documents/Workspace/Faculdade/Processador/game_process.sv Line: 139
+Warning (10230): Verilog HDL assignment warning at game_process.sv(141): truncated value with size 6 to match size of target (5) File: C:/Users/rafae/OneDrive/Documents/Workspace/Faculdade/Processador/game_process.sv Line: 141
+Warning (10230): Verilog HDL assignment warning at game_process.sv(168): truncated value with size 32 to match size of target (8) File: C:/Users/rafae/OneDrive/Documents/Workspace/Faculdade/Processador/game_process.sv Line: 168
+Warning (10230): Verilog HDL assignment warning at game_process.sv(171): truncated value with size 32 to match size of target (8) File: C:/Users/rafae/OneDrive/Documents/Workspace/Faculdade/Processador/game_process.sv Line: 171
+Warning (10230): Verilog HDL assignment warning at game_process.sv(180): truncated value with size 32 to match size of target (26) File: C:/Users/rafae/OneDrive/Documents/Workspace/Faculdade/Processador/game_process.sv Line: 180
+Warning (10230): Verilog HDL assignment warning at game_process.sv(189): truncated value with size 32 to match size of target (3) File: C:/Users/rafae/OneDrive/Documents/Workspace/Faculdade/Processador/game_process.sv Line: 189
+Warning (10230): Verilog HDL assignment warning at game_process.sv(191): truncated value with size 32 to match size of target (3) File: C:/Users/rafae/OneDrive/Documents/Workspace/Faculdade/Processador/game_process.sv Line: 191
+Warning (10230): Verilog HDL assignment warning at game_process.sv(193): truncated value with size 32 to match size of target (26) File: C:/Users/rafae/OneDrive/Documents/Workspace/Faculdade/Processador/game_process.sv Line: 193
+Warning (10230): Verilog HDL assignment warning at game_process.sv(199): truncated value with size 32 to match size of target (3) File: C:/Users/rafae/OneDrive/Documents/Workspace/Faculdade/Processador/game_process.sv Line: 199
+Warning (10230): Verilog HDL assignment warning at game_process.sv(201): truncated value with size 32 to match size of target (26) File: C:/Users/rafae/OneDrive/Documents/Workspace/Faculdade/Processador/game_process.sv Line: 201
+Warning (10230): Verilog HDL assignment warning at game_process.sv(206): truncated value with size 32 to match size of target (8) File: C:/Users/rafae/OneDrive/Documents/Workspace/Faculdade/Processador/game_process.sv Line: 206
+Warning (10230): Verilog HDL assignment warning at game_process.sv(208): truncated value with size 32 to match size of target (26) File: C:/Users/rafae/OneDrive/Documents/Workspace/Faculdade/Processador/game_process.sv Line: 208
+Warning (10230): Verilog HDL assignment warning at game_process.sv(214): truncated value with size 32 to match size of target (8) File: C:/Users/rafae/OneDrive/Documents/Workspace/Faculdade/Processador/game_process.sv Line: 214
+Warning (10762): Verilog HDL Case Statement warning at game_process.sv(230): can't check case statement for completeness because the case expression has too many possible states File: C:/Users/rafae/OneDrive/Documents/Workspace/Faculdade/Processador/game_process.sv Line: 230
+Info (10008): Verilog HDL or VHDL information: EDA Netlist Writer cannot regroup multidimensional array "vram_enemy" into its bus
+Info (10008): Verilog HDL or VHDL information: EDA Netlist Writer cannot regroup multidimensional array "fb_number" into its bus
+Info (10008): Verilog HDL or VHDL information: EDA Netlist Writer cannot regroup multidimensional array "fb_enemy" into its bus
+Info (12128): Elaborating entity "random_enemy" for hierarchy "red_screen:rs|game_process:game_process|random_enemy:re" File: C:/Users/rafae/OneDrive/Documents/Workspace/Faculdade/Processador/game_process.sv Line: 129
+Warning (10230): Verilog HDL assignment warning at random_enemy.sv(15): truncated value with size 32 to match size of target (8) File: C:/Users/rafae/OneDrive/Documents/Workspace/Faculdade/Processador/random_enemy.sv Line: 15
+Warning (10230): Verilog HDL assignment warning at random_enemy.sv(19): truncated value with size 8 to match size of target (2) File: C:/Users/rafae/OneDrive/Documents/Workspace/Faculdade/Processador/random_enemy.sv Line: 19
+Info (12128): Elaborating entity "VRAM" for hierarchy "red_screen:rs|VRAM:VR" File: C:/Users/rafae/OneDrive/Documents/Workspace/Faculdade/Processador/red_screen.v Line: 99
 Info (12128): Elaborating entity "altsyncram" for hierarchy "red_screen:rs|VRAM:VR|altsyncram:altsyncram_component" File: C:/Users/rafae/OneDrive/Documents/Workspace/Faculdade/Processador/VRAM.v Line: 81
 Info (12130): Elaborated megafunction instantiation "red_screen:rs|VRAM:VR|altsyncram:altsyncram_component" File: C:/Users/rafae/OneDrive/Documents/Workspace/Faculdade/Processador/VRAM.v Line: 81
 Info (12133): Instantiated megafunction "red_screen:rs|VRAM:VR|altsyncram:altsyncram_component" with the following parameter: File: C:/Users/rafae/OneDrive/Documents/Workspace/Faculdade/Processador/VRAM.v Line: 81
@@ -1246,32 +1793,115 @@ Info (12021): Found 1 design units, including 1 entities, in source file db/mux_
     Info (12023): Found entity 1: mux_6nb File: C:/Users/rafae/OneDrive/Documents/Workspace/Faculdade/Processador/db/mux_6nb.tdf Line: 22
 Info (12128): Elaborating entity "mux_6nb" for hierarchy "vga_test:inst_vga_test|FrameBuffer:FB|altsyncram:altsyncram_component|altsyncram_aoj1:auto_generated|mux_6nb:mux3" File: C:/Users/rafae/OneDrive/Documents/Workspace/Faculdade/Processador/db/altsyncram_aoj1.tdf Line: 49
 Info (12128): Elaborating entity "ps2_receiver" for hierarchy "ps2_receiver:PS2" File: C:/Users/rafae/OneDrive/Documents/Workspace/Faculdade/Processador/teste.v Line: 128
-Info (278001): Inferred 1 megafunctions from design logic
-    Info (278004): Inferred divider/modulo megafunction ("lpm_divide") from the following logic: "red_screen:rs|Mod0" File: C:/Users/rafae/OneDrive/Documents/Workspace/Faculdade/Processador/red_screen.v Line: 48
-Info (12130): Elaborated megafunction instantiation "red_screen:rs|lpm_divide:Mod0" File: C:/Users/rafae/OneDrive/Documents/Workspace/Faculdade/Processador/red_screen.v Line: 48
-Info (12133): Instantiated megafunction "red_screen:rs|lpm_divide:Mod0" with the following parameter: File: C:/Users/rafae/OneDrive/Documents/Workspace/Faculdade/Processador/red_screen.v Line: 48
-    Info (12134): Parameter "LPM_WIDTHN" = "32"
-    Info (12134): Parameter "LPM_WIDTHD" = "14"
-    Info (12134): Parameter "LPM_NREPRESENTATION" = "SIGNED"
-    Info (12134): Parameter "LPM_DREPRESENTATION" = "SIGNED"
-    Info (12134): Parameter "LPM_HINT" = "LPM_REMAINDERPOSITIVE=FALSE"
-Info (12021): Found 1 design units, including 1 entities, in source file db/lpm_divide_cqo.tdf
-    Info (12023): Found entity 1: lpm_divide_cqo File: C:/Users/rafae/OneDrive/Documents/Workspace/Faculdade/Processador/db/lpm_divide_cqo.tdf Line: 24
-Info (12021): Found 1 design units, including 1 entities, in source file db/abs_divider_4dg.tdf
-    Info (12023): Found entity 1: abs_divider_4dg File: C:/Users/rafae/OneDrive/Documents/Workspace/Faculdade/Processador/db/abs_divider_4dg.tdf Line: 28
-Info (12021): Found 1 design units, including 1 entities, in source file db/alt_u_div_7af.tdf
-    Info (12023): Found entity 1: alt_u_div_7af File: C:/Users/rafae/OneDrive/Documents/Workspace/Faculdade/Processador/db/alt_u_div_7af.tdf Line: 26
+Info (19000): Inferred 1 megafunctions from design logic
+    Info (276031): Inferred altsyncram megafunction from the following design logic: "ps2_receiver:PS2|acoes_rtl_0"
+        Info (286033): Parameter OPERATION_MODE set to ROM
+        Info (286033): Parameter WIDTH_A set to 4
+        Info (286033): Parameter WIDTHAD_A set to 8
+        Info (286033): Parameter NUMWORDS_A set to 256
+        Info (286033): Parameter OUTDATA_REG_A set to UNREGISTERED
+        Info (286033): Parameter RAM_BLOCK_TYPE set to AUTO
+        Info (286033): Parameter INIT_FILE set to CPU.teste0.rtl.mif
+Info (278001): Inferred 13 megafunctions from design logic
+    Info (278004): Inferred divider/modulo megafunction ("lpm_divide") from the following logic: "red_screen:rs|game_process:game_process|Mod9" File: C:/Users/rafae/OneDrive/Documents/Workspace/Faculdade/Processador/game_process.sv Line: 337
+    Info (278004): Inferred divider/modulo megafunction ("lpm_divide") from the following logic: "red_screen:rs|game_process:game_process|Div9" File: C:/Users/rafae/OneDrive/Documents/Workspace/Faculdade/Processador/game_process.sv Line: 329
+    Info (278004): Inferred divider/modulo megafunction ("lpm_divide") from the following logic: "red_screen:rs|game_process:game_process|Div7" File: C:/Users/rafae/OneDrive/Documents/Workspace/Faculdade/Processador/game_process.sv Line: 313
+    Info (278004): Inferred divider/modulo megafunction ("lpm_divide") from the following logic: "red_screen:rs|game_process:game_process|Mod5" File: C:/Users/rafae/OneDrive/Documents/Workspace/Faculdade/Processador/game_process.sv Line: 305
+    Info (278004): Inferred divider/modulo megafunction ("lpm_divide") from the following logic: "red_screen:rs|game_process:game_process|Div5" File: C:/Users/rafae/OneDrive/Documents/Workspace/Faculdade/Processador/game_process.sv Line: 297
+    Info (278004): Inferred divider/modulo megafunction ("lpm_divide") from the following logic: "red_screen:rs|game_process:game_process|Mod3" File: C:/Users/rafae/OneDrive/Documents/Workspace/Faculdade/Processador/game_process.sv Line: 289
+    Info (278004): Inferred divider/modulo megafunction ("lpm_divide") from the following logic: "red_screen:rs|game_process:game_process|Div3" File: C:/Users/rafae/OneDrive/Documents/Workspace/Faculdade/Processador/game_process.sv Line: 281
+    Info (278004): Inferred divider/modulo megafunction ("lpm_divide") from the following logic: "red_screen:rs|game_process:game_process|Mod1" File: C:/Users/rafae/OneDrive/Documents/Workspace/Faculdade/Processador/game_process.sv Line: 273
+    Info (278004): Inferred divider/modulo megafunction ("lpm_divide") from the following logic: "red_screen:rs|game_process:game_process|Div1" File: C:/Users/rafae/OneDrive/Documents/Workspace/Faculdade/Processador/game_process.sv Line: 265
+    Info (278004): Inferred divider/modulo megafunction ("lpm_divide") from the following logic: "red_screen:rs|game_process:game_process|Mod7" File: C:/Users/rafae/OneDrive/Documents/Workspace/Faculdade/Processador/game_process.sv Line: 321
+    Info (278004): Inferred divider/modulo megafunction ("lpm_divide") from the following logic: "red_screen:rs|Mod0" File: C:/Users/rafae/OneDrive/Documents/Workspace/Faculdade/Processador/red_screen.v Line: 84
+    Info (278004): Inferred divider/modulo megafunction ("lpm_divide") from the following logic: "red_screen:rs|game_process:game_process|random_enemy:re|Mod0" File: C:/Users/rafae/OneDrive/Documents/Workspace/Faculdade/Processador/random_enemy.sv Line: 15
+    Info (278004): Inferred divider/modulo megafunction ("lpm_divide") from the following logic: "red_screen:rs|game_process:game_process|random_enemy:re|Div0" File: C:/Users/rafae/OneDrive/Documents/Workspace/Faculdade/Processador/random_enemy.sv Line: 15
+Info (12130): Elaborated megafunction instantiation "ps2_receiver:PS2|altsyncram:acoes_rtl_0"
+Info (12133): Instantiated megafunction "ps2_receiver:PS2|altsyncram:acoes_rtl_0" with the following parameter:
+    Info (12134): Parameter "OPERATION_MODE" = "ROM"
+    Info (12134): Parameter "WIDTH_A" = "4"
+    Info (12134): Parameter "WIDTHAD_A" = "8"
+    Info (12134): Parameter "NUMWORDS_A" = "256"
+    Info (12134): Parameter "OUTDATA_REG_A" = "UNREGISTERED"
+    Info (12134): Parameter "RAM_BLOCK_TYPE" = "AUTO"
+    Info (12134): Parameter "INIT_FILE" = "CPU.teste0.rtl.mif"
+Info (12021): Found 1 design units, including 1 entities, in source file db/altsyncram_fpv.tdf
+    Info (12023): Found entity 1: altsyncram_fpv File: C:/Users/rafae/OneDrive/Documents/Workspace/Faculdade/Processador/db/altsyncram_fpv.tdf Line: 27
+Info (12130): Elaborated megafunction instantiation "red_screen:rs|game_process:game_process|lpm_divide:Mod9" File: C:/Users/rafae/OneDrive/Documents/Workspace/Faculdade/Processador/game_process.sv Line: 337
+Info (12133): Instantiated megafunction "red_screen:rs|game_process:game_process|lpm_divide:Mod9" with the following parameter: File: C:/Users/rafae/OneDrive/Documents/Workspace/Faculdade/Processador/game_process.sv Line: 337
+    Info (12134): Parameter "LPM_WIDTHN" = "8"
+    Info (12134): Parameter "LPM_WIDTHD" = "4"
+    Info (12134): Parameter "LPM_NREPRESENTATION" = "UNSIGNED"
+    Info (12134): Parameter "LPM_DREPRESENTATION" = "UNSIGNED"
+Info (12021): Found 1 design units, including 1 entities, in source file db/lpm_divide_m9m.tdf
+    Info (12023): Found entity 1: lpm_divide_m9m File: C:/Users/rafae/OneDrive/Documents/Workspace/Faculdade/Processador/db/lpm_divide_m9m.tdf Line: 24
+Info (12021): Found 1 design units, including 1 entities, in source file db/sign_div_unsign_bkh.tdf
+    Info (12023): Found entity 1: sign_div_unsign_bkh File: C:/Users/rafae/OneDrive/Documents/Workspace/Faculdade/Processador/db/sign_div_unsign_bkh.tdf Line: 24
+Info (12021): Found 1 design units, including 1 entities, in source file db/alt_u_div_a4f.tdf
+    Info (12023): Found entity 1: alt_u_div_a4f File: C:/Users/rafae/OneDrive/Documents/Workspace/Faculdade/Processador/db/alt_u_div_a4f.tdf Line: 26
 Info (12021): Found 1 design units, including 1 entities, in source file db/add_sub_7pc.tdf
     Info (12023): Found entity 1: add_sub_7pc File: C:/Users/rafae/OneDrive/Documents/Workspace/Faculdade/Processador/db/add_sub_7pc.tdf Line: 22
 Info (12021): Found 1 design units, including 1 entities, in source file db/add_sub_8pc.tdf
     Info (12023): Found entity 1: add_sub_8pc File: C:/Users/rafae/OneDrive/Documents/Workspace/Faculdade/Processador/db/add_sub_8pc.tdf Line: 22
-Info (12021): Found 1 design units, including 1 entities, in source file db/lpm_abs_j0a.tdf
-    Info (12023): Found entity 1: lpm_abs_j0a File: C:/Users/rafae/OneDrive/Documents/Workspace/Faculdade/Processador/db/lpm_abs_j0a.tdf Line: 24
-Info (12021): Found 1 design units, including 1 entities, in source file db/lpm_abs_i0a.tdf
-    Info (12023): Found entity 1: lpm_abs_i0a File: C:/Users/rafae/OneDrive/Documents/Workspace/Faculdade/Processador/db/lpm_abs_i0a.tdf Line: 24
+Info (12130): Elaborated megafunction instantiation "red_screen:rs|game_process:game_process|lpm_divide:Div9" File: C:/Users/rafae/OneDrive/Documents/Workspace/Faculdade/Processador/game_process.sv Line: 329
+Info (12133): Instantiated megafunction "red_screen:rs|game_process:game_process|lpm_divide:Div9" with the following parameter: File: C:/Users/rafae/OneDrive/Documents/Workspace/Faculdade/Processador/game_process.sv Line: 329
+    Info (12134): Parameter "LPM_WIDTHN" = "8"
+    Info (12134): Parameter "LPM_WIDTHD" = "4"
+    Info (12134): Parameter "LPM_NREPRESENTATION" = "UNSIGNED"
+    Info (12134): Parameter "LPM_DREPRESENTATION" = "UNSIGNED"
+Info (12021): Found 1 design units, including 1 entities, in source file db/lpm_divide_jhm.tdf
+    Info (12023): Found entity 1: lpm_divide_jhm File: C:/Users/rafae/OneDrive/Documents/Workspace/Faculdade/Processador/db/lpm_divide_jhm.tdf Line: 24
+Info (12130): Elaborated megafunction instantiation "red_screen:rs|game_process:game_process|lpm_divide:Mod1" File: C:/Users/rafae/OneDrive/Documents/Workspace/Faculdade/Processador/game_process.sv Line: 273
+Info (12133): Instantiated megafunction "red_screen:rs|game_process:game_process|lpm_divide:Mod1" with the following parameter: File: C:/Users/rafae/OneDrive/Documents/Workspace/Faculdade/Processador/game_process.sv Line: 273
+    Info (12134): Parameter "LPM_WIDTHN" = "8"
+    Info (12134): Parameter "LPM_WIDTHD" = "4"
+    Info (12134): Parameter "LPM_NREPRESENTATION" = "UNSIGNED"
+    Info (12134): Parameter "LPM_DREPRESENTATION" = "UNSIGNED"
+Info (12130): Elaborated megafunction instantiation "red_screen:rs|game_process:game_process|lpm_divide:Div1" File: C:/Users/rafae/OneDrive/Documents/Workspace/Faculdade/Processador/game_process.sv Line: 265
+Info (12133): Instantiated megafunction "red_screen:rs|game_process:game_process|lpm_divide:Div1" with the following parameter: File: C:/Users/rafae/OneDrive/Documents/Workspace/Faculdade/Processador/game_process.sv Line: 265
+    Info (12134): Parameter "LPM_WIDTHN" = "8"
+    Info (12134): Parameter "LPM_WIDTHD" = "4"
+    Info (12134): Parameter "LPM_NREPRESENTATION" = "UNSIGNED"
+    Info (12134): Parameter "LPM_DREPRESENTATION" = "UNSIGNED"
+Info (12130): Elaborated megafunction instantiation "red_screen:rs|lpm_divide:Mod0" File: C:/Users/rafae/OneDrive/Documents/Workspace/Faculdade/Processador/red_screen.v Line: 84
+Info (12133): Instantiated megafunction "red_screen:rs|lpm_divide:Mod0" with the following parameter: File: C:/Users/rafae/OneDrive/Documents/Workspace/Faculdade/Processador/red_screen.v Line: 84
+    Info (12134): Parameter "LPM_WIDTHN" = "33"
+    Info (12134): Parameter "LPM_WIDTHD" = "14"
+    Info (12134): Parameter "LPM_NREPRESENTATION" = "UNSIGNED"
+    Info (12134): Parameter "LPM_DREPRESENTATION" = "UNSIGNED"
+Info (12021): Found 1 design units, including 1 entities, in source file db/lpm_divide_lcm.tdf
+    Info (12023): Found entity 1: lpm_divide_lcm File: C:/Users/rafae/OneDrive/Documents/Workspace/Faculdade/Processador/db/lpm_divide_lcm.tdf Line: 24
+Info (12021): Found 1 design units, including 1 entities, in source file db/sign_div_unsign_anh.tdf
+    Info (12023): Found entity 1: sign_div_unsign_anh File: C:/Users/rafae/OneDrive/Documents/Workspace/Faculdade/Processador/db/sign_div_unsign_anh.tdf Line: 24
+Info (12021): Found 1 design units, including 1 entities, in source file db/alt_u_div_8af.tdf
+    Info (12023): Found entity 1: alt_u_div_8af File: C:/Users/rafae/OneDrive/Documents/Workspace/Faculdade/Processador/db/alt_u_div_8af.tdf Line: 26
+Info (12130): Elaborated megafunction instantiation "red_screen:rs|game_process:game_process|random_enemy:re|lpm_divide:Mod0" File: C:/Users/rafae/OneDrive/Documents/Workspace/Faculdade/Processador/random_enemy.sv Line: 15
+Info (12133): Instantiated megafunction "red_screen:rs|game_process:game_process|random_enemy:re|lpm_divide:Mod0" with the following parameter: File: C:/Users/rafae/OneDrive/Documents/Workspace/Faculdade/Processador/random_enemy.sv Line: 15
+    Info (12134): Parameter "LPM_WIDTHN" = "9"
+    Info (12134): Parameter "LPM_WIDTHD" = "2"
+    Info (12134): Parameter "LPM_NREPRESENTATION" = "UNSIGNED"
+    Info (12134): Parameter "LPM_DREPRESENTATION" = "UNSIGNED"
+Info (12021): Found 1 design units, including 1 entities, in source file db/lpm_divide_l9m.tdf
+    Info (12023): Found entity 1: lpm_divide_l9m File: C:/Users/rafae/OneDrive/Documents/Workspace/Faculdade/Processador/db/lpm_divide_l9m.tdf Line: 24
+Info (12021): Found 1 design units, including 1 entities, in source file db/sign_div_unsign_akh.tdf
+    Info (12023): Found entity 1: sign_div_unsign_akh File: C:/Users/rafae/OneDrive/Documents/Workspace/Faculdade/Processador/db/sign_div_unsign_akh.tdf Line: 24
+Info (12021): Found 1 design units, including 1 entities, in source file db/alt_u_div_84f.tdf
+    Info (12023): Found entity 1: alt_u_div_84f File: C:/Users/rafae/OneDrive/Documents/Workspace/Faculdade/Processador/db/alt_u_div_84f.tdf Line: 26
+Info (12130): Elaborated megafunction instantiation "red_screen:rs|game_process:game_process|random_enemy:re|lpm_divide:Div0" File: C:/Users/rafae/OneDrive/Documents/Workspace/Faculdade/Processador/random_enemy.sv Line: 15
+Info (12133): Instantiated megafunction "red_screen:rs|game_process:game_process|random_enemy:re|lpm_divide:Div0" with the following parameter: File: C:/Users/rafae/OneDrive/Documents/Workspace/Faculdade/Processador/random_enemy.sv Line: 15
+    Info (12134): Parameter "LPM_WIDTHN" = "8"
+    Info (12134): Parameter "LPM_WIDTHD" = "2"
+    Info (12134): Parameter "LPM_NREPRESENTATION" = "UNSIGNED"
+    Info (12134): Parameter "LPM_DREPRESENTATION" = "UNSIGNED"
+Info (12021): Found 1 design units, including 1 entities, in source file db/lpm_divide_hhm.tdf
+    Info (12023): Found entity 1: lpm_divide_hhm File: C:/Users/rafae/OneDrive/Documents/Workspace/Faculdade/Processador/db/lpm_divide_hhm.tdf Line: 24
+Info (12021): Found 1 design units, including 1 entities, in source file db/sign_div_unsign_9kh.tdf
+    Info (12023): Found entity 1: sign_div_unsign_9kh File: C:/Users/rafae/OneDrive/Documents/Workspace/Faculdade/Processador/db/sign_div_unsign_9kh.tdf Line: 24
+Info (12021): Found 1 design units, including 1 entities, in source file db/alt_u_div_64f.tdf
+    Info (12023): Found entity 1: alt_u_div_64f File: C:/Users/rafae/OneDrive/Documents/Workspace/Faculdade/Processador/db/alt_u_div_64f.tdf Line: 26
 Warning (12241): 1 hierarchies have connectivity warnings - see the Connectivity Checks report folder
-Info (13014): Ignored 14 buffer(s)
-    Info (13016): Ignored 14 CARRY_SUM buffer(s)
+Info (13000): Registers with preset signals will power-up high File: C:/Users/rafae/OneDrive/Documents/Workspace/Faculdade/Processador/red_screen.v Line: 76
+Info (13003): DEV_CLRn pin will set, and not reset, register with preset signal due to NOT Gate Push-Back
 Warning (13024): Output pins are stuck at VCC or GND
     Warning (13410): Pin "seg0[0]" is stuck at GND File: C:/Users/rafae/OneDrive/Documents/Workspace/Faculdade/Processador/teste.v Line: 53
     Warning (13410): Pin "seg0[1]" is stuck at GND File: C:/Users/rafae/OneDrive/Documents/Workspace/Faculdade/Processador/teste.v Line: 53
@@ -1337,13 +1967,16 @@ Warning (13024): Output pins are stuck at VCC or GND
     Warning (13410): Pin "blue[1]" is stuck at GND File: C:/Users/rafae/OneDrive/Documents/Workspace/Faculdade/Processador/teste.v Line: 67
     Warning (13410): Pin "vga_sync" is stuck at VCC File: C:/Users/rafae/OneDrive/Documents/Workspace/Faculdade/Processador/teste.v Line: 70
 Info (286030): Timing-Driven Synthesis is running
-Info (17049): 7 registers lost all their fanouts during netlist optimizations.
+Info (17049): 9 registers lost all their fanouts during netlist optimizations.
 Info (17016): Found the following redundant logic cells in design
-    Info (17048): Logic cell "red_screen:rs|lpm_divide:Mod0|lpm_divide_cqo:auto_generated|abs_divider_4dg:divider|alt_u_div_7af:divider|add_sub_29_result_int[1]~26" File: C:/Users/rafae/OneDrive/Documents/Workspace/Faculdade/Processador/db/alt_u_div_7af.tdf Line: 136
+    Info (17048): Logic cell "red_screen:rs|lpm_divide:Mod0|lpm_divide_lcm:auto_generated|sign_div_unsign_anh:divider|alt_u_div_8af:divider|add_sub_31_result_int[3]~24" File: C:/Users/rafae/OneDrive/Documents/Workspace/Faculdade/Processador/db/alt_u_div_8af.tdf Line: 151
+    Info (17048): Logic cell "red_screen:rs|lpm_divide:Mod0|lpm_divide_lcm:auto_generated|sign_div_unsign_anh:divider|alt_u_div_8af:divider|add_sub_31_result_int[1]~26" File: C:/Users/rafae/OneDrive/Documents/Workspace/Faculdade/Processador/db/alt_u_div_8af.tdf Line: 151
+    Info (17048): Logic cell "red_screen:rs|lpm_divide:Mod0|lpm_divide_lcm:auto_generated|sign_div_unsign_anh:divider|alt_u_div_8af:divider|add_sub_31_result_int[2]~28" File: C:/Users/rafae/OneDrive/Documents/Workspace/Faculdade/Processador/db/alt_u_div_8af.tdf Line: 151
+    Info (17048): Logic cell "red_screen:rs|lpm_divide:Mod0|lpm_divide_lcm:auto_generated|sign_div_unsign_anh:divider|alt_u_div_8af:divider|add_sub_32_result_int[0]~30" File: C:/Users/rafae/OneDrive/Documents/Workspace/Faculdade/Processador/db/alt_u_div_8af.tdf Line: 156
 Info (144001): Generated suppressed messages file C:/Users/rafae/OneDrive/Documents/Workspace/Faculdade/Processador/output_files/CPU.map.smsg
 Info (16010): Generating hard_block partition "hard_block:auto_generated_inst"
     Info (16011): Adding 1 node(s), including 0 DDIO, 1 PLL, 0 transceiver and 0 LCELL
-Warning (21074): Design contains 21 input pin(s) that do not drive logic
+Warning (21074): Design contains 19 input pin(s) that do not drive logic
     Warning (15610): No output dependent on input pin "enter" File: C:/Users/rafae/OneDrive/Documents/Workspace/Faculdade/Processador/teste.v Line: 4
     Warning (15610): No output dependent on input pin "entrada[0]" File: C:/Users/rafae/OneDrive/Documents/Workspace/Faculdade/Processador/teste.v Line: 6
     Warning (15610): No output dependent on input pin "entrada[1]" File: C:/Users/rafae/OneDrive/Documents/Workspace/Faculdade/Processador/teste.v Line: 6
@@ -1363,19 +1996,17 @@ Warning (21074): Design contains 21 input pin(s) that do not drive logic
     Warning (15610): No output dependent on input pin "entrada[15]" File: C:/Users/rafae/OneDrive/Documents/Workspace/Faculdade/Processador/teste.v Line: 6
     Warning (15610): No output dependent on input pin "entrada[16]" File: C:/Users/rafae/OneDrive/Documents/Workspace/Faculdade/Processador/teste.v Line: 6
     Warning (15610): No output dependent on input pin "entrada[17]" File: C:/Users/rafae/OneDrive/Documents/Workspace/Faculdade/Processador/teste.v Line: 6
-    Warning (15610): No output dependent on input pin "ps2_clk" File: C:/Users/rafae/OneDrive/Documents/Workspace/Faculdade/Processador/teste.v Line: 7
-    Warning (15610): No output dependent on input pin "ps2_data" File: C:/Users/rafae/OneDrive/Documents/Workspace/Faculdade/Processador/teste.v Line: 8
-Info (21057): Implemented 861 device resources after synthesis - the final resource count might be different
+Info (21057): Implemented 2054 device resources after synthesis - the final resource count might be different
     Info (21058): Implemented 23 input pins
     Info (21059): Implemented 89 output pins
-    Info (21061): Implemented 649 logic cells
-    Info (21064): Implemented 99 RAM segments
+    Info (21061): Implemented 1838 logic cells
+    Info (21064): Implemented 103 RAM segments
     Info (21065): Implemented 1 PLLs
-Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 118 warnings
-    Info: Peak virtual memory: 4884 megabytes
-    Info: Processing ended: Tue Jun 17 17:34:15 2025
-    Info: Elapsed time: 00:00:12
-    Info: Total CPU time (on all processors): 00:00:20
+Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 134 warnings
+    Info: Peak virtual memory: 4888 megabytes
+    Info: Processing ended: Thu Jun 26 20:43:45 2025
+    Info: Elapsed time: 00:00:14
+    Info: Total CPU time (on all processors): 00:00:23
 
 
 +------------------------------------------+

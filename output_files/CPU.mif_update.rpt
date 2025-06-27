@@ -1,5 +1,5 @@
 MIF/HEX Update report for CPU
-Tue Jun 10 19:01:51 2025
+Thu Jun 26 12:43:10 2025
 Quartus Prime Version 17.1.0 Build 590 10/25/2017 SJ Lite Edition
 
 
@@ -35,7 +35,7 @@ refer to the applicable agreement for further details.
 +---------------------------------------------------------------+
 ; MIF/HEX Update Summary                                        ;
 +-----------------------+---------------------------------------+
-; MIF/HEX Update Status ; Successful - Tue Jun 10 19:01:51 2025 ;
+; MIF/HEX Update Status ; Successful - Thu Jun 26 12:43:10 2025 ;
 ; Revision Name         ; CPU                                   ;
 ; Top-level Entity Name ; teste                                 ;
 ; Family                ; Cyclone IV E                          ;
@@ -43,32 +43,34 @@ refer to the applicable agreement for further details.
 +-----------------------+---------------------------------------+
 
 
-+---------------------------------------------------------------------------------------+
-; MIF/HEX Update Processed Files                                                        ;
-+---------------------------------------------------------------------------------------+
-; File Name                                                                             ;
-+---------------------------------------------------------------------------------------+
-; C:/Users/rafae/OneDrive/Documents/Workspace/Faculdade/Processador/framebuffer_red.mif ;
-+---------------------------------------------------------------------------------------+
++-----------------------------------------------------------------------------------------+
+; MIF/HEX Update Processed Files                                                          ;
++-----------------------------------------------------------------------------------------+
+; File Name                                                                               ;
++-----------------------------------------------------------------------------------------+
+; C:/Users/rafae/OneDrive/Documents/Workspace/Faculdade/Processador/db/cpu.teste0.rtl.mif ;
+; C:/Users/rafae/OneDrive/Documents/Workspace/Faculdade/Processador/framebuffer_red.mif   ;
++-----------------------------------------------------------------------------------------+
 
 
 +-------------------------+
 ; MIF/HEX Update Messages ;
 +-------------------------+
-Warning (125092): Tcl Script File framebuffer.qip not found
-    Info (125063): set_global_assignment -name QIP_FILE framebuffer.qip
+Warning (125092): Tcl Script File testevram.qip not found
+    Info (125063): set_global_assignment -name QIP_FILE testevram.qip
 Info: *******************************************************************
 Info: Running Quartus Prime MIF/HEX Update
     Info: Version 17.1.0 Build 590 10/25/2017 SJ Lite Edition
-    Info: Processing started: Tue Jun 10 19:01:49 2025
+    Info: Processing started: Thu Jun 26 12:43:08 2025
 Info: Command: quartus_cdb CPU -c CPU --update_mif
-Warning (113028): 153600 out of 192000 addresses are uninitialized. The Quartus Prime software will initialize them to "0". There are 1 warnings found, and 1 warnings are reported. File: C:/Users/rafae/OneDrive/Documents/Workspace/Faculdade/Processador/framebuffer_red.mif Line: 1
-    Warning (113027): Addresses ranging from 38400 to 191999 are not initialized File: C:/Users/rafae/OneDrive/Documents/Workspace/Faculdade/Processador/framebuffer_red.mif Line: 1
+Warning (113028): 12896 out of 65536 addresses are uninitialized. The Quartus Prime software will initialize them to "0". There are 1 warnings found, and 1 warnings are reported. File: C:/Users/rafae/OneDrive/Documents/Workspace/Faculdade/Processador/framebuffer_red.mif Line: 1
+    Warning (113027): Addresses ranging from 52640 to 65535 are not initialized File: C:/Users/rafae/OneDrive/Documents/Workspace/Faculdade/Processador/framebuffer_red.mif Line: 1
 Info (39024): Processed the following Memory Initialization File(s)
+    Info (39025): Processed Memory Initialization File C:/Users/rafae/OneDrive/Documents/Workspace/Faculdade/Processador/db/cpu.teste0.rtl.mif File: C:/Users/rafae/OneDrive/Documents/Workspace/Faculdade/Processador/db/cpu.teste0.rtl.mif Line: 0
     Info (39025): Processed Memory Initialization File C:/Users/rafae/OneDrive/Documents/Workspace/Faculdade/Processador/framebuffer_red.mif File: C:/Users/rafae/OneDrive/Documents/Workspace/Faculdade/Processador/framebuffer_red.mif Line: 0
 Info: Quartus Prime MIF/HEX Update was successful. 0 errors, 3 warnings
-    Info: Peak virtual memory: 4803 megabytes
-    Info: Processing ended: Tue Jun 10 19:01:51 2025
+    Info: Peak virtual memory: 4798 megabytes
+    Info: Processing ended: Thu Jun 26 12:43:10 2025
     Info: Elapsed time: 00:00:02
     Info: Total CPU time (on all processors): 00:00:01
 

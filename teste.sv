@@ -76,40 +76,52 @@ module teste (clock, enter,reset, entrada, ps2_clk, ps2_data, seg0, seg1, seg2, 
 	wire [31:0] draw_y;
 	wire [31:0] draw_color;
 	wire enable_draw;
+	
+	wire enter_sync, reset_sync;
+	wire [5:0] acoes_sync;
+
+	synchronizer sync_inst (
+		 .clk(clock),
+		 .enter(enter),
+		 .reset(reset),
+		 .acoes(acoes),
+		 .enter_sync(enter_sync),
+		 .reset_sync(reset_sync),
+		 .acoes_sync(acoes_sync)
+	);
 	 
-	contato1 C1(clock, ledr, reset, divclock, depclock);
+	contato1 C1(clock, ledr, !reset_sync, divclock, depclock);
 	
-	//PC PC(changeProgram, defquantum, lpc, dadosLidos, endProgram, imediato, result, desvio, zero, negativo, divclock, endereco, stop, reset, enderecoSpc);
+	PC PC(changeProgram, defquantum, lpc, dadosLidos, endProgram, imediato, result, desvio, zero, negativo, divclock, endereco, stop, !reset_sync, enderecoSpc);
 	
-	//entradaDados(divclock, entrada, in, out, enter, sinal, valor);
+	entradaDados(divclock, entrada, in, out, !enter_sync, sinal, valor);
 	
-	//instrucoes_RAM INST(endereco, instrucao,  clock , divclock);
+	instrucoes_RAM INST(endereco, clock, instrucao);
 	
-	//UC UC(instrucao, divclock, sinal, desvio, memReg, opULA, escreveMem, origULA, escreveReg, ext, out, in, stop, jal, offset_register, lpc, spc, nextProgram, endProgram, defquantum, changeProgram);
+	UC UC(instrucao, divclock, sinal, desvio, memReg, opULA, escreveMem, origULA, escreveReg, ext, out, in, stop, jal, offset_register, lpc, spc, nextProgram, endProgram, defquantum, changeProgram);
 	
-	//BancoRegistradores BR(instrucao, divclock, escreveReg, dados, endereco, jal, leRS, leRT, leRD);
+	BancoRegistradores BR(instrucao, divclock, escreveReg, dados, endereco, jal, leRS, leRT, leRD);
 	
-	//extensor_Bit BIT(instrucao, valor, ext, imediato);
+	extensor_Bit BIT(instrucao, valor, ext, imediato);
 	
-	//controle_ULA cULA(instrucao, opULA, selec);
+	controle_ULA cULA(instrucao, opULA, selec);
 	
-	//ULA ULA (selec, leRS, leRT, leRD, imediato, origULA, result, zero, negativo);
+	ULA ULA (selec, leRS, leRT, leRD, imediato, origULA, result, zero, negativo);
 	
-	//dados_RAM DADO(leRS, result, result, escreveMem, clock , divclock, offset_register, spc, lpc, nextProgram, changeProgram, enderecoSpc, endProgram, acoes, dadosLidos);
+	dados_RAM DADO(leRS, result, result, escreveMem, clock , divclock, offset_register, spc, lpc, nextProgram, changeProgram, enderecoSpc, endProgram, dadosLidos);
 		
-	//mux_Mem MUX(dadosLidos, result, memReg, dados);
+	mux_Mem MUX(dadosLidos, result, memReg, dados);
 	
-	//saidaDados SaidaDados(divclock, dados, endereco, entrada, out, in, saida, segmentos, segmentosPrograma, neg);
+	saidaDados SaidaDados(divclock, dados, endereco, entrada, out, in, saida, segmentos, segmentosPrograma, neg);
 	
-	//display7seg Display(segmentos,segmentosPrograma, neg, seg0, seg1, seg2, seg3, seg4, seg5, seg6, seg7);
+	display7seg Display(segmentos,segmentosPrograma, neg, seg0, seg1, seg2, seg3, seg4, seg5, seg6, seg7);
 	
-	red_screen rs(clock, !reset, acoes, draw_x, draw_y, draw_color, enable_draw);
+	red_screen rs(clock, !reset_sync, acoes_sync, draw_x, draw_y, draw_color, enable_draw);
 	
 	vga_test inst_vga_test (
     .Fast_Clock(clock),
     .Slow_Clock(depclock),
-    .Reset(!reset),
-	 .acoes(acoes),
+    .Reset(!reset_sync),
 
     .VGA_HS(hsync),
     .VGA_VS(vsync),
@@ -125,6 +137,6 @@ module teste (clock, enter,reset, entrada, ps2_clk, ps2_data, seg0, seg1, seg2, 
     .Draw_Color(draw_color)  
 );
 	
-	ps2_receiver PS2( ps2_clk, ps2_data, scan_code, scan_ready, acoes);
+	ps2_receiver PS2( ps2_clk, ps2_data, acoes);
 	
 endmodule 

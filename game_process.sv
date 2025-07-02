@@ -1,14 +1,14 @@
 module game_process (
-    input wire clk,
-	 input wire reset,
-	 input wire [32:0] layer,
-	 input [5:0] acoes,
-    output reg [9:0] vram_inicio_X,
-    output reg [9:0] vram_inicio_Y,
-    output reg [9:0] vram_final_X,
-    output reg [9:0] vram_final_Y,
-	 output reg [9:0] FB_X,
-    output reg [9:0] FB_Y
+    input logic clk,
+	 input logic reset,
+	 input logic [32:0] layer,
+	 input logic [5:0] acoes,
+    output logic [9:0] vram_inicio_X,
+    output logic [9:0] vram_inicio_Y,
+    output logic [9:0] vram_final_X,
+    output logic [9:0] vram_final_Y,
+	 output logic [9:0] FB_X,
+    output logic [9:0] FB_Y
 );
 	
 	typedef struct {
@@ -95,30 +95,32 @@ initial begin
 	 
 end
 
-reg scenario_flag = 0;             
-reg [25:0] scenario_timer;
+logic scenario_flag = 0;             
+logic [25:0] scenario_timer;
 
-reg gun_flag = 0;
-reg [1:0] gun_y = 1;
-reg [25:0] gun_timer = 0;
-reg prev_acao4 = 0;
-reg [7:0] ammo = 60;
-reg [4:0] acoes_prev;
+logic gun_flag = 0;
+logic shoot_flag_next;
+logic [1:0] gun_x = 1;
+logic [1:0] gun_x_next;
+logic [25:0] gun_timer = 0;
+logic [7:0] ammo = 60;
+logic [5:0] acoes_prev;
 
-reg enemy_flag = 0;
-reg [2:0] enemy_x = 0;
-reg [2:0] enemy_y = 0;
-reg [1:0] rng;
-reg [25:0] enemy_timer = 0;
-reg trigger = 0;
+logic enemy_flag = 0;
+logic [2:0] enemy_x = 0;
+logic [2:0] enemy_y = 0;
+logic [1:0] rng;
+logic [25:0] enemy_timer = 0;
+logic trigger = 0;
 
-reg [7:0] hp = 80;
-reg [7:0] pts = 0;
-reg [7:0] max = 0;
-reg [7:0] tm = 60;
-reg [25:0] timer = 0;
+logic [7:0] hp = 80;
+logic [7:0] pts = 0;
+logic [7:0] pts_next = 0;
+logic [7:0] max = 0;
+logic [7:0] tm = 60;
+logic [25:0] timer = 0;
 
-reg menu = 1;
+logic menu = 1;
 
 random_enemy re (
 .trigger(trigger),
@@ -128,17 +130,16 @@ random_enemy re (
 .rng(rng)
 );
 
+always_comb begin
+    gun_x_next = gun_x;
+    shoot_flag_next = (!acoes_prev[4] && acoes[4]); // flanco de subida em acoes[4]
 
-always_ff @(posedge clk) begin
-    // detectar flanco de subida
-    if (acoes[1] && !acoes_prev[1]) begin
-        if (gun_y > 0)
-            gun_y <= gun_y - 1;
-    end else if (acoes[3] && !acoes_prev[3]) begin
-        if (gun_y < 2)
-            gun_y <= gun_y + 1;
-    end
-    acoes_prev <= acoes;
+    if (acoes[1] && !acoes_prev[1] && gun_x > 0)
+        gun_x_next = gun_x - 1;
+    if (acoes[3] && !acoes_prev[3] && gun_x < 2)
+        gun_x_next = gun_x + 1;
+
+    pts_next = pts + 1;
 end
 
 always @(posedge clk) begin
@@ -159,21 +160,20 @@ always @(posedge clk) begin
 			timer <= 0;
 		 end
 	 end else begin
-		 //gun_y = 1 - acoes[1] + acoes[3];
-		 prev_acao4 <= acoes[4];
-
-		 if (~prev_acao4 && acoes[4] && ammo) begin
+		 gun_x <= gun_x_next;
+		if (shoot_flag_next && ammo) begin
 			  gun_flag <= 1;
 			  gun_timer <= 0;
 			  ammo <= ammo - 1;
-			  if(gun_y == enemy_x && !enemy_flag)begin
+			  if(gun_x_next == enemy_x && !enemy_flag)begin
 					enemy_flag <= 1;
-					pts = pts + 1;
-					if(pts > max) begin
-						max <= pts;
+					pts <= pts_next;
+					if(pts_next > max) begin
+						max <= pts_next;
 					end
 			  end
-		 end else if (gun_flag) begin
+		 end 
+		 if (gun_flag) begin
 			  if (gun_timer >= 26'd12_499_999) begin
 					gun_flag <= 0;
 			  end else begin
@@ -186,9 +186,9 @@ always @(posedge clk) begin
 					scenario_timer <= 0;
 					scenario_flag <= ~scenario_flag;
 					if(acoes[0])
-						enemy_y = enemy_y + 1;
+						enemy_y <= enemy_y + 1;
 					else
-						enemy_y = (enemy_y == 0) ? 0 : (enemy_y - 1);
+						enemy_y <= (enemy_y == 0) ? 0 : (enemy_y - 1);
 			  end else begin
 					scenario_timer <= scenario_timer + 1;
 			  end
@@ -196,37 +196,38 @@ always @(posedge clk) begin
 		 
 		 if(enemy_timer >= 26'd29_999_999) begin
 			enemy_timer <= 0;
-			enemy_y = enemy_y + 1;
+			enemy_y <= enemy_y + 1;
 		 end else begin
 			enemy_timer <= enemy_timer + 1;
-		 end
-		 
-		 if(timer >= 26'd50_000_000)begin
-			timer <= 0;
-			tm <= tm - 1;
-		 end else begin
-			timer <= timer + 1;
 		 end
 		 
 		 if(enemy_y > 2) begin
 			enemy_y <= 0;
 			enemy_x <= rng;
-			if(!enemy_flag) hp <= hp - 10;
+			if(!enemy_flag) begin
+				hp <= hp - 10;
+				if(hp - 10 <= 0) menu <= 1;
+			end
 			enemy_flag <= 0;
-			trigger <=1;
+			trigger <= 1;
 		 end else begin
 			trigger <= 0;
-			end
-		 
-		 if(hp <= 0 || tm <= 0)begin
-			menu <= 1;
+		end
+		
+		if(timer >= 26'd50_000_000)begin
+			timer <= 0;
+			tm <= tm - 1;
+				if(tm - 1 <= 0) menu <= 1;
+		 end else begin
+			timer <= timer + 1;
 		 end
+		 acoes_prev <= acoes;
 	end
 end
 
 
 
-always @(*) begin
+always_comb begin
 		 case (layer)
 			  32'd0: begin
 					vram_inicio_X <= vram_scenario[scenario_flag].inicio_X;
@@ -249,8 +250,8 @@ always @(*) begin
 					vram_inicio_Y <= vram_gun[gun_flag].inicio_Y;
 					vram_final_X <= vram_gun[gun_flag].final_X;
 					vram_final_Y <= vram_gun[gun_flag].final_Y;
-					FB_X <= fb_gun[gun_y].X;
-					FB_Y <= fb_gun[gun_y].Y;
+					FB_X <= fb_gun[gun_x].X;
+					FB_Y <= fb_gun[gun_x].Y;
 			  end
 			  32'd3: begin
 					vram_inicio_X <= vram_HUD.inicio_X;

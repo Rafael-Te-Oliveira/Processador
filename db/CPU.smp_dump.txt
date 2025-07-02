@@ -1,0 +1,6 @@
+
+State Machine - |teste|ps2_receiver:PS2|state
+Name state.EXTENDED state.IDLE state.BREAK 
+state.IDLE 0 0 0 
+state.EXTENDED 1 1 0 
+state.BREAK 0 1 1 

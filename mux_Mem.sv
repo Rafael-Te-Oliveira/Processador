@@ -1,4 +1,4 @@
-module mux_Mem (
+module mux_mem (
     input  logic [31:0] dadosLidos,
     input  logic [31:0] result,
     input  logic        memReg,

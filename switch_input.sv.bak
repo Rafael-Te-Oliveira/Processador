@@ -1,0 +1,21 @@
+module switch_input(input clock, input[17:0] entrada, input in, input out, input enter, output reg sinal, output reg [17:0] valor);
+
+	integer controle=0;
+	
+	always @(posedge clock) begin
+				sinal = 1'b0;
+				if(in && !controle && enter)begin
+					valor = entrada;
+					sinal = enter;
+					controle = 1;
+				end
+				if(out && !controle && enter)begin
+					sinal = enter;
+					controle = 1;
+				end
+				if(!enter) begin
+					sinal = 1'b0;
+					controle = 0;
+				end
+	end
+endmodule

@@ -1,4 +1,4 @@
-module ULA (
+module ula (
     input  logic [2:0]  selec,
     input  logic [31:0] RS, RT, RD, IMED,
     input  logic [1:0]  origULA,

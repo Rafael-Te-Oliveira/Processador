@@ -1,0 +1,50 @@
+module game_process (
+    input wire [2:0] layer,
+    output reg [9:0] inicio_X,
+    output reg [9:0] inicio_Y,
+    output reg [9:0] final_X,
+    output reg [9:0] final_Y
+);
+	
+	typedef struct {
+    logic [9:0] inicio_X;
+    logic [9:0] inicio_Y;
+    logic [9:0] final_X;
+    logic [9:0] final_Y;
+} Asset;
+
+Asset cenarioA;
+Asset cenarioB;
+
+
+
+    always @(*) begin
+        case (layer)
+            3'd0: begin
+                inicio_X = 1;  inicio_Y = 1;
+                final_X  = 160; final_Y  = 120;
+            end
+            3'd1: begin
+                inicio_X = 40; inicio_Y = 240;
+                final_X  = 80; final_Y  = 273;
+            end
+            3'd2: begin
+                inicio_X = 81; inicio_Y = 240;
+                final_X  = 120; final_Y  = 273;
+            end
+            3'd3: begin
+                inicio_X = 1; inicio_Y = 240;
+                final_X  = 40; final_Y  = 273;
+            end
+            3'd4: begin
+                inicio_X = 1; inicio_Y = 308;
+                final_X  = 160; final_Y  = 320;
+            end
+            default: begin
+                inicio_X = 1; inicio_Y = 308;
+                final_X  = 160; final_Y  = 320;
+            end
+        endcase
+    end
+
+endmodule

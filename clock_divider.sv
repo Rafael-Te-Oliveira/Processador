@@ -1,0 +1,22 @@
+module clock_divider (
+    input  logic        fast_clock,
+	 input  logic        reset,
+    output logic        slow_clock,
+    output logic        dep_clock,
+	 output logic [3:0]  ledr
+);
+
+    logic [31:0] count;
+
+    always_ff @(posedge fast_clock or posedge reset) begin
+        if (reset)
+            count <= 32'd0;
+        else
+            count <= count + 1;
+    end
+
+    assign ledr     = count[27:24];
+    assign slow_clock = count[5];   // Clock dividido (25Hz)
+    assign dep_clock = count[24];  // Clock de depuração
+
+endmodule

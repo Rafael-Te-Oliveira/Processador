@@ -1,0 +1,39 @@
+module ps2_receiver (
+    input clk,
+    input rst,
+    input ps2_clk,
+    input ps2_data,
+    output reg [7:0] scan_code,
+    output reg scan_ready
+);
+
+    reg [10:0] shift_reg;
+    reg [3:0] bit_count;
+    reg [7:0] temp_code;
+    reg flag;
+
+    always @(posedge clk or posedge rst) begin
+        if (rst) begin
+            shift_reg <= 0;
+            bit_count <= 0;
+            scan_code <= 0;
+            scan_ready <= 0;
+            flag <= 0;
+        end else begin
+            if (!ps2_clk && !flag) begin
+                shift_reg <= {ps2_data, shift_reg[10:1]};
+                bit_count <= bit_count + 1;
+                flag <= 1;
+                if (bit_count == 10) begin
+                    scan_code <= shift_reg[8:1];
+                    scan_ready <= 1;
+                    bit_count <= 0;
+                end else begin
+                    scan_ready <= 0;
+                end
+            end
+            if (ps2_clk)
+                flag <= 0;
+        end
+    end
+endmodule

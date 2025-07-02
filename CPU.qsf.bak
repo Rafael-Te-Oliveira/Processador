@@ -59,81 +59,24 @@ set_global_assignment -name OUTPUT_IO_TIMING_NEAR_END_VMEAS "HALF VCCIO" -fall
 set_global_assignment -name OUTPUT_IO_TIMING_FAR_END_VMEAS "HALF SIGNAL SWING" -rise
 set_global_assignment -name OUTPUT_IO_TIMING_FAR_END_VMEAS "HALF SIGNAL SWING" -fall
 set_location_assignment PIN_Y2 -to clock
-set_location_assignment PIN_AB28 -to entrada[0]
-set_location_assignment PIN_AC28 -to entrada[1]
-set_location_assignment PIN_AC27 -to entrada[2]
-set_location_assignment PIN_AD27 -to entrada[3]
-set_location_assignment PIN_AB27 -to entrada[4]
-set_location_assignment PIN_AC26 -to entrada[5]
-set_location_assignment PIN_AD26 -to entrada[6]
-set_location_assignment PIN_AB26 -to entrada[7]
-set_location_assignment PIN_AC25 -to entrada[8]
-set_location_assignment PIN_AB25 -to entrada[9]
-set_location_assignment PIN_AC24 -to entrada[10]
-set_location_assignment PIN_AB24 -to entrada[11]
-set_location_assignment PIN_AB23 -to entrada[12]
-set_location_assignment PIN_AA24 -to entrada[13]
-set_location_assignment PIN_AA23 -to entrada[14]
-set_location_assignment PIN_AA22 -to entrada[15]
-set_location_assignment PIN_Y24 -to entrada[16]
-set_location_assignment PIN_Y23 -to entrada[17]
-set_location_assignment PIN_AD17 -to seg7[0]
-set_location_assignment PIN_AE17 -to seg7[1]
-set_location_assignment PIN_AG17 -to seg7[2]
-set_location_assignment PIN_AH17 -to seg7[3]
-set_location_assignment PIN_AF17 -to seg7[4]
-set_location_assignment PIN_AG18 -to seg7[5]
-set_location_assignment PIN_AA14 -to seg7[6]
-set_location_assignment PIN_AA17 -to seg6[0]
-set_location_assignment PIN_AB16 -to seg6[1]
-set_location_assignment PIN_AA16 -to seg6[2]
-set_location_assignment PIN_AB17 -to seg6[3]
-set_location_assignment PIN_AB15 -to seg6[4]
-set_location_assignment PIN_AA15 -to seg6[5]
-set_location_assignment PIN_AC17 -to seg6[6]
-set_location_assignment PIN_AD18 -to seg5[0]
-set_location_assignment PIN_AC18 -to seg5[1]
-set_location_assignment PIN_AB18 -to seg5[2]
-set_location_assignment PIN_AH19 -to seg5[3]
-set_location_assignment PIN_AG19 -to seg5[4]
-set_location_assignment PIN_AF18 -to seg5[5]
-set_location_assignment PIN_AH18 -to seg5[6]
-set_location_assignment PIN_AB19 -to seg4[0]
-set_location_assignment PIN_AA19 -to seg4[1]
-set_location_assignment PIN_AG21 -to seg4[2]
-set_location_assignment PIN_AH21 -to seg4[3]
-set_location_assignment PIN_AE19 -to seg4[4]
-set_location_assignment PIN_AF19 -to seg4[5]
-set_location_assignment PIN_AE18 -to seg4[6]
-set_location_assignment PIN_V21 -to seg3[0]
-set_location_assignment PIN_U21 -to seg3[1]
-set_location_assignment PIN_AB20 -to seg3[2]
-set_location_assignment PIN_AA21 -to seg3[3]
-set_location_assignment PIN_AD24 -to seg3[4]
-set_location_assignment PIN_AF23 -to seg3[5]
-set_location_assignment PIN_Y19 -to seg3[6]
-set_location_assignment PIN_AA25 -to seg2[0]
-set_location_assignment PIN_AA26 -to seg2[1]
-set_location_assignment PIN_Y25 -to seg2[2]
-set_location_assignment PIN_W26 -to seg2[3]
-set_location_assignment PIN_Y26 -to seg2[4]
-set_location_assignment PIN_W27 -to seg2[5]
-set_location_assignment PIN_W28 -to seg2[6]
-set_location_assignment PIN_M24 -to seg1[0]
-set_location_assignment PIN_Y22 -to seg1[1]
-set_location_assignment PIN_W21 -to seg1[2]
-set_location_assignment PIN_W22 -to seg1[3]
-set_location_assignment PIN_W25 -to seg1[4]
-set_location_assignment PIN_U23 -to seg1[5]
-set_location_assignment PIN_U24 -to seg1[6]
-set_location_assignment PIN_G18 -to seg0[0]
-set_location_assignment PIN_F22 -to seg0[1]
-set_location_assignment PIN_E17 -to seg0[2]
-set_location_assignment PIN_L26 -to seg0[3]
-set_location_assignment PIN_L25 -to seg0[4]
-set_location_assignment PIN_J22 -to seg0[5]
-set_location_assignment PIN_H22 -to seg0[6]
-set_location_assignment PIN_R24 -to reset
+set_location_assignment PIN_Y16 -to entrada[0]
+set_location_assignment PIN_AD21 -to entrada[1]
+set_location_assignment PIN_AE16 -to entrada[2]
+set_location_assignment PIN_AD15 -to entrada[3]
+set_location_assignment PIN_AE15 -to entrada[4]
+set_location_assignment PIN_AC19 -to entrada[5]
+set_location_assignment PIN_AF16 -to entrada[6]
+set_location_assignment PIN_AD19 -to entrada[7]
+set_location_assignment PIN_AF15 -to entrada[8]
+set_location_assignment PIN_AF24 -to entrada[9]
+set_location_assignment PIN_AE21 -to entrada[10]
+set_location_assignment PIN_AF25 -to entrada[11]
+set_location_assignment PIN_AC22 -to entrada[12]
+set_location_assignment PIN_AE22 -to entrada[13]
+set_location_assignment PIN_AF21 -to entrada[14]
+set_location_assignment PIN_AF22 -to entrada[15]
+set_location_assignment PIN_AD22 -to entrada[16]
+set_location_assignment PIN_AG25 -to entrada[17]
 set_global_assignment -name POWER_PRESET_COOLING_SOLUTION "23 MM HEAT SINK WITH 200 LFPM AIRFLOW"
 set_global_assignment -name POWER_BOARD_THERMAL_MODEL "NONE (CONSERVATIVE)"
 set_global_assignment -name TIMEQUEST_MULTICORNER_ANALYSIS ON
@@ -146,7 +89,6 @@ set_global_assignment -name FINAL_PLACEMENT_OPTIMIZATION NEVER
 set_global_assignment -name FITTER_AGGRESSIVE_ROUTABILITY_OPTIMIZATION NEVER
 set_global_assignment -name FITTER_EFFORT "FAST FIT"
 set_instance_assignment -name IO_STANDARD "2.5 V" -to clock
-set_instance_assignment -name IO_STANDARD "2.5 V" -to enter
 set_instance_assignment -name IO_STANDARD "2.5 V" -to entrada[17]
 set_instance_assignment -name IO_STANDARD "2.5 V" -to entrada[16]
 set_instance_assignment -name IO_STANDARD "2.5 V" -to entrada[15]
@@ -169,63 +111,6 @@ set_instance_assignment -name IO_STANDARD "2.5 V" -to ledr[3]
 set_instance_assignment -name IO_STANDARD "2.5 V" -to ledr[2]
 set_instance_assignment -name IO_STANDARD "2.5 V" -to ledr[1]
 set_instance_assignment -name IO_STANDARD "2.5 V" -to ledr[0]
-set_instance_assignment -name IO_STANDARD "2.5 V" -to reset
-set_instance_assignment -name IO_STANDARD "2.5 V" -to seg0[6]
-set_instance_assignment -name IO_STANDARD "2.5 V" -to seg0[5]
-set_instance_assignment -name IO_STANDARD "2.5 V" -to seg0[4]
-set_instance_assignment -name IO_STANDARD "2.5 V" -to seg0[3]
-set_instance_assignment -name IO_STANDARD "2.5 V" -to seg0[2]
-set_instance_assignment -name IO_STANDARD "2.5 V" -to seg0[1]
-set_instance_assignment -name IO_STANDARD "2.5 V" -to seg0[0]
-set_instance_assignment -name IO_STANDARD "2.5 V" -to seg1[6]
-set_instance_assignment -name IO_STANDARD "2.5 V" -to seg1[5]
-set_instance_assignment -name IO_STANDARD "2.5 V" -to seg1[4]
-set_instance_assignment -name IO_STANDARD "2.5 V" -to seg1[3]
-set_instance_assignment -name IO_STANDARD "2.5 V" -to seg1[2]
-set_instance_assignment -name IO_STANDARD "2.5 V" -to seg1[1]
-set_instance_assignment -name IO_STANDARD "2.5 V" -to seg1[0]
-set_instance_assignment -name IO_STANDARD "2.5 V" -to seg2[6]
-set_instance_assignment -name IO_STANDARD "2.5 V" -to seg2[5]
-set_instance_assignment -name IO_STANDARD "2.5 V" -to seg2[4]
-set_instance_assignment -name IO_STANDARD "2.5 V" -to seg2[3]
-set_instance_assignment -name IO_STANDARD "2.5 V" -to seg2[2]
-set_instance_assignment -name IO_STANDARD "2.5 V" -to seg2[1]
-set_instance_assignment -name IO_STANDARD "2.5 V" -to seg2[0]
-set_instance_assignment -name IO_STANDARD "2.5 V" -to seg3[6]
-set_instance_assignment -name IO_STANDARD "2.5 V" -to seg3[5]
-set_instance_assignment -name IO_STANDARD "2.5 V" -to seg3[4]
-set_instance_assignment -name IO_STANDARD "2.5 V" -to seg3[3]
-set_instance_assignment -name IO_STANDARD "2.5 V" -to seg3[2]
-set_instance_assignment -name IO_STANDARD "2.5 V" -to seg3[1]
-set_instance_assignment -name IO_STANDARD "2.5 V" -to seg3[0]
-set_instance_assignment -name IO_STANDARD "2.5 V" -to seg4[6]
-set_instance_assignment -name IO_STANDARD "2.5 V" -to seg4[5]
-set_instance_assignment -name IO_STANDARD "2.5 V" -to seg4[4]
-set_instance_assignment -name IO_STANDARD "2.5 V" -to seg4[3]
-set_instance_assignment -name IO_STANDARD "2.5 V" -to seg4[2]
-set_instance_assignment -name IO_STANDARD "2.5 V" -to seg4[1]
-set_instance_assignment -name IO_STANDARD "2.5 V" -to seg4[0]
-set_instance_assignment -name IO_STANDARD "2.5 V" -to seg5[6]
-set_instance_assignment -name IO_STANDARD "2.5 V" -to seg5[5]
-set_instance_assignment -name IO_STANDARD "2.5 V" -to seg5[4]
-set_instance_assignment -name IO_STANDARD "2.5 V" -to seg5[3]
-set_instance_assignment -name IO_STANDARD "2.5 V" -to seg5[2]
-set_instance_assignment -name IO_STANDARD "2.5 V" -to seg5[1]
-set_instance_assignment -name IO_STANDARD "2.5 V" -to seg5[0]
-set_instance_assignment -name IO_STANDARD "2.5 V" -to seg6[6]
-set_instance_assignment -name IO_STANDARD "2.5 V" -to seg6[5]
-set_instance_assignment -name IO_STANDARD "2.5 V" -to seg6[4]
-set_instance_assignment -name IO_STANDARD "2.5 V" -to seg6[3]
-set_instance_assignment -name IO_STANDARD "2.5 V" -to seg6[2]
-set_instance_assignment -name IO_STANDARD "2.5 V" -to seg6[1]
-set_instance_assignment -name IO_STANDARD "2.5 V" -to seg6[0]
-set_instance_assignment -name IO_STANDARD "2.5 V" -to seg7[6]
-set_instance_assignment -name IO_STANDARD "2.5 V" -to seg7[5]
-set_instance_assignment -name IO_STANDARD "2.5 V" -to seg7[4]
-set_instance_assignment -name IO_STANDARD "2.5 V" -to seg7[3]
-set_instance_assignment -name IO_STANDARD "2.5 V" -to seg7[2]
-set_instance_assignment -name IO_STANDARD "2.5 V" -to seg7[1]
-set_instance_assignment -name IO_STANDARD "2.5 V" -to seg7[0]
 set_location_assignment PIN_C13 -to vsync
 set_location_assignment PIN_G13 -to hsync
 set_location_assignment PIN_E12 -to red[0]
@@ -257,51 +142,56 @@ set_location_assignment PIN_H5 -to ps2_data
 set_location_assignment PIN_C10 -to vga_sync
 set_location_assignment PIN_F11 -to vga_blank
 set_location_assignment PIN_A12 -to vga_clock
-set_global_assignment -name VERILOG_FILE ULA.v
-set_global_assignment -name VERILOG_FILE BancoRegistradores.v
-set_global_assignment -name VERILOG_FILE dados_RAM.v
-set_global_assignment -name VERILOG_FILE instrucoes_RAM.v
-set_global_assignment -name VECTOR_WAVEFORM_FILE Waveform.vwf
-set_global_assignment -name VECTOR_WAVEFORM_FILE Waveform1.vwf
-set_global_assignment -name VECTOR_WAVEFORM_FILE Waveform2.vwf
-set_global_assignment -name VERILOG_FILE PC.v
-set_global_assignment -name VERILOG_FILE UC.v
-set_global_assignment -name VERILOG_FILE extensor_Bit.v
-set_global_assignment -name VECTOR_WAVEFORM_FILE simulation/qsim/CPU_20220708112511.sim.vwf
-set_global_assignment -name VERILOG_FILE controle_ULA.v
-set_global_assignment -name VECTOR_WAVEFORM_FILE Waveform3.vwf
-set_global_assignment -name VERILOG_FILE mux_Mem.v
-set_global_assignment -name VERILOG_FILE teste[.v
-set_global_assignment -name VERILOG_FILE teste.v
-set_global_assignment -name VHDL_FILE teste.vhd
-set_global_assignment -name VECTOR_WAVEFORM_FILE Waveform4.vwf
-set_global_assignment -name VECTOR_WAVEFORM_FILE Waveform5.vwf
-set_global_assignment -name VECTOR_WAVEFORM_FILE Waveform6.vwf
-set_global_assignment -name VECTOR_WAVEFORM_FILE simulation/qsim/CPU_20220709131037.sim.vwf
-set_global_assignment -name VECTOR_WAVEFORM_FILE simulation/qsim/CPU_20220709131957.sim.vwf
-set_global_assignment -name VECTOR_WAVEFORM_FILE simulation/qsim/CPU_20220709135739.sim.vwf
-set_global_assignment -name VERILOG_FILE saidaDados.v
-set_global_assignment -name VECTOR_WAVEFORM_FILE Waveform7.vwf
-set_global_assignment -name VECTOR_WAVEFORM_FILE simulation/qsim/CPU_20220711110917.sim.vwf
-set_global_assignment -name VECTOR_WAVEFORM_FILE pcteste.vwf
-set_global_assignment -name VECTOR_WAVEFORM_FILE Waveform8.vwf
-set_global_assignment -name VECTOR_WAVEFORM_FILE Waveform9.vwf
-set_global_assignment -name VECTOR_WAVEFORM_FILE Waveform10.vwf
-set_global_assignment -name VECTOR_WAVEFORM_FILE Waveform11.vwf
-set_global_assignment -name VECTOR_WAVEFORM_FILE Waveform12.vwf
-set_global_assignment -name VERILOG_FILE entradaDados.v
-set_global_assignment -name VECTOR_WAVEFORM_FILE Waveform13.vwf
-set_global_assignment -name VECTOR_WAVEFORM_FILE Waveform14.vwf
-set_global_assignment -name VERILOG_FILE display7seg.v
-set_global_assignment -name VECTOR_WAVEFORM_FILE Waveform15.vwf
-set_global_assignment -name VECTOR_WAVEFORM_FILE simulation/qsim/CPU_20220807114107.sim.vwf
-set_global_assignment -name VECTOR_WAVEFORM_FILE Waveform16.vwf
-set_global_assignment -name VECTOR_WAVEFORM_FILE Waveform17.vwf
-set_global_assignment -name VHDL_FILE contato1.vhd
-set_global_assignment -name VERILOG_FILE contato1.v
-set_global_assignment -name VERILOG_FILE displayLCD.v
-set_global_assignment -name VERILOG_FILE Reset_Delay.v
-set_global_assignment -name VERILOG_FILE LCD_TEST.v
+set_location_assignment PIN_F21 -to ledr[3]
+set_location_assignment PIN_E19 -to ledr[2]
+set_location_assignment PIN_F19 -to ledr[1]
+set_location_assignment PIN_G19 -to ledr[0]
+set_global_assignment -name VERILOG_FILE old/VRAM.v
+set_global_assignment -name QIP_FILE old/VRAM.qip
+set_global_assignment -name SYSTEMVERILOG_FILE old/vga_test.sv
+set_global_assignment -name SYSTEMVERILOG_FILE old/vga_sync.sv
+set_global_assignment -name VERILOG_FILE old/vga_pll.v
+set_global_assignment -name QIP_FILE old/vga_pll.qip
+set_global_assignment -name SYSTEMVERILOG_FILE old/ULA.sv
+set_global_assignment -name SYSTEMVERILOG_FILE old/UC.sv
+set_global_assignment -name SYSTEMVERILOG_FILE old/synchronizer.sv
+set_global_assignment -name SYSTEMVERILOG_FILE old/saidaDados.sv
+set_global_assignment -name SYSTEMVERILOG_FILE old/red_screen.sv
+set_global_assignment -name SYSTEMVERILOG_FILE old/random_enemy.sv
+set_global_assignment -name SYSTEMVERILOG_FILE old/ps2_receiver.sv
+set_global_assignment -name SYSTEMVERILOG_FILE old/PC.sv
+set_global_assignment -name SYSTEMVERILOG_FILE old/mux_Mem.sv
+set_global_assignment -name SYSTEMVERILOG_FILE old/instrucoes_RAM.sv
+set_global_assignment -name SYSTEMVERILOG_FILE old/game_process.sv
+set_global_assignment -name VERILOG_FILE old/FrameBuffer.v
+set_global_assignment -name QIP_FILE old/FrameBuffer.qip
+set_global_assignment -name SYSTEMVERILOG_FILE old/extensor_Bit.sv
+set_global_assignment -name SYSTEMVERILOG_FILE old/entradaDados.sv
+set_global_assignment -name SYSTEMVERILOG_FILE old/display7seg.sv
+set_global_assignment -name SYSTEMVERILOG_FILE old/dados_RAM.sv
+set_global_assignment -name SYSTEMVERILOG_FILE old/controle_ULA.sv
+set_global_assignment -name VHDL_FILE old/contato1.vhd
+set_global_assignment -name SYSTEMVERILOG_FILE old/contato1.sv
+set_global_assignment -name SYSTEMVERILOG_FILE old/BancoRegistradores.sv
+set_global_assignment -name SYSTEMVERILOG_FILE vga_test.sv
+set_global_assignment -name SYSTEMVERILOG_FILE vga_sync.sv
+set_global_assignment -name SYSTEMVERILOG_FILE ula_control.sv
+set_global_assignment -name SYSTEMVERILOG_FILE ula.sv
+set_global_assignment -name SYSTEMVERILOG_FILE teste.sv
+set_global_assignment -name SYSTEMVERILOG_FILE switch_input.sv
+set_global_assignment -name SYSTEMVERILOG_FILE sign_extender.sv
+set_global_assignment -name SYSTEMVERILOG_FILE rom_instructions.sv
+set_global_assignment -name SYSTEMVERILOG_FILE register_file.sv
+set_global_assignment -name SYSTEMVERILOG_FILE red_screen.sv
+set_global_assignment -name SYSTEMVERILOG_FILE ram_data.sv
+set_global_assignment -name SYSTEMVERILOG_FILE ps2_receiver.sv
+set_global_assignment -name SYSTEMVERILOG_FILE program_counter.sv
+set_global_assignment -name SYSTEMVERILOG_FILE mux_mem.sv
+set_global_assignment -name SYSTEMVERILOG_FILE game_process.sv
+set_global_assignment -name SYSTEMVERILOG_FILE display7seg.sv
+set_global_assignment -name SYSTEMVERILOG_FILE data_output.sv
+set_global_assignment -name SYSTEMVERILOG_FILE control_unit.sv
+set_global_assignment -name SYSTEMVERILOG_FILE clock_divider.sv
 set_global_assignment -name VERILOG_FILE vga_sync.v
 set_global_assignment -name VERILOG_FILE vga_test.v
 set_global_assignment -name VERILOG_FILE ps2_receiver.v
@@ -309,9 +199,65 @@ set_global_assignment -name QIP_FILE vga_pll.qip
 set_global_assignment -name QIP_FILE framebuffer.qip
 set_global_assignment -name VERILOG_FILE red_screen.v
 set_global_assignment -name QIP_FILE vram.qip
-set_global_assignment -name QIP_FILE testevram.qip
 set_global_assignment -name VERILOG_FILE game_process.v
 set_global_assignment -name SYSTEMVERILOG_FILE random_enemy.sv
-set_location_assignment PIN_M23 -to acoes_d
 set_global_assignment -name SYSTEMVERILOG_FILE synchronizer.sv
+set_location_assignment PIN_AB22 -to enter_n
+set_location_assignment PIN_Y17 -to reset_n
+set_location_assignment PIN_G18 -to seg[0][0]
+set_location_assignment PIN_F22 -to seg[0][1]
+set_location_assignment PIN_E17 -to seg[0][2]
+set_location_assignment PIN_L26 -to seg[0][3]
+set_location_assignment PIN_L25 -to seg[0][4]
+set_location_assignment PIN_J22 -to seg[0][5]
+set_location_assignment PIN_H22 -to seg[0][6]
+set_location_assignment PIN_M24 -to seg[1][0]
+set_location_assignment PIN_Y22 -to seg[1][1]
+set_location_assignment PIN_W21 -to seg[1][2]
+set_location_assignment PIN_W22 -to seg[1][3]
+set_location_assignment PIN_W25 -to seg[1][4]
+set_location_assignment PIN_U23 -to seg[1][5]
+set_location_assignment PIN_U24 -to seg[1][6]
+set_location_assignment PIN_AA26 -to seg[2][1]
+set_location_assignment PIN_U21 -to seg[3][1]
+set_location_assignment PIN_AA19 -to seg[4][1]
+set_location_assignment PIN_AC18 -to seg[5][1]
+set_location_assignment PIN_AB16 -to seg[6][1]
+set_location_assignment PIN_AE17 -to seg[7][1]
+set_location_assignment PIN_AA25 -to seg[2][0]
+set_location_assignment PIN_Y25 -to seg[2][2]
+set_location_assignment PIN_W26 -to seg[2][3]
+set_location_assignment PIN_Y26 -to seg[2][4]
+set_location_assignment PIN_W27 -to seg[2][5]
+set_location_assignment PIN_W28 -to seg[2][6]
+set_location_assignment PIN_V21 -to seg[3][0]
+set_location_assignment PIN_AB20 -to seg[3][2]
+set_location_assignment PIN_AA21 -to seg[3][3]
+set_location_assignment PIN_AD24 -to seg[3][4]
+set_location_assignment PIN_AF23 -to seg[3][5]
+set_location_assignment PIN_Y19 -to seg[3][6]
+set_location_assignment PIN_AH17 -to seg[7][3]
+set_location_assignment PIN_AB17 -to seg[6][3]
+set_location_assignment PIN_AH19 -to seg[5][3]
+set_location_assignment PIN_AH21 -to seg[4][3]
+set_location_assignment PIN_AB19 -to seg[4][0]
+set_location_assignment PIN_AG21 -to seg[4][2]
+set_location_assignment PIN_AE19 -to seg[4][4]
+set_location_assignment PIN_AF19 -to seg[4][5]
+set_location_assignment PIN_AE18 -to seg[4][6]
+set_location_assignment PIN_AF17 -to seg[7][4]
+set_location_assignment PIN_AB15 -to seg[6][4]
+set_location_assignment PIN_AG19 -to seg[5][4]
+set_location_assignment PIN_AG18 -to seg[7][5]
+set_location_assignment PIN_AA15 -to seg[6][5]
+set_location_assignment PIN_AD18 -to seg[5][0]
+set_location_assignment PIN_AB18 -to seg[5][2]
+set_location_assignment PIN_AF18 -to seg[5][5]
+set_location_assignment PIN_AH18 -to seg[5][6]
+set_location_assignment PIN_AA14 -to seg[7][6]
+set_location_assignment PIN_AA17 -to seg[6][0]
+set_location_assignment PIN_AA16 -to seg[6][2]
+set_location_assignment PIN_AC17 -to seg[6][6]
+set_location_assignment PIN_AD17 -to seg[7][0]
+set_location_assignment PIN_AG17 -to seg[7][2]
 set_instance_assignment -name PARTITION_HIERARCHY root_partition -to | -section_id Top

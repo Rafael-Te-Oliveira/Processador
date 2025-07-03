@@ -46,7 +46,7 @@ module rom_instructions
 
 	always_ff @(posedge clk)
 	begin
-		q <= rom[addr];
+		q <= rom[addr_index];
 	end
 
 endmodule

@@ -1,4 +1,4 @@
-|teste
+|doom_cpu
 clock => clock.IN4
 enter_n => synchronizer:sync_inst.enter
 reset_n => synchronizer:sync_inst.reset
@@ -20,8 +20,8 @@ entrada[14] => entrada[14].IN2
 entrada[15] => entrada[15].IN2
 entrada[16] => entrada[16].IN2
 entrada[17] => entrada[17].IN2
-ps2_clk => ps2_receiver:PS2.ps2_clk
-ps2_data => ps2_receiver:PS2.ps2_data
+ps2_clk => ps2_input:ps2_input_inst.ps2_clk
+ps2_data => ps2_input:ps2_input_inst.ps2_data
 seg[0][0] << display7seg:display7seg_inst.seg[0][0]
 seg[0][1] << display7seg:display7seg_inst.seg[0][1]
 seg[0][2] << display7seg:display7seg_inst.seg[0][2]
@@ -82,54 +82,54 @@ ledr[0] << clock_divider:clock_divider_inst.ledr
 ledr[1] << clock_divider:clock_divider_inst.ledr
 ledr[2] << clock_divider:clock_divider_inst.ledr
 ledr[3] << clock_divider:clock_divider_inst.ledr
-hsync << vga_test:inst_vga_test.VGA_HS
-vsync << vga_test:inst_vga_test.VGA_VS
-red[0] << vga_test:inst_vga_test.VGA_Red
-red[1] << vga_test:inst_vga_test.VGA_Red
-red[2] << vga_test:inst_vga_test.VGA_Red
-red[3] << vga_test:inst_vga_test.VGA_Red
-red[4] << vga_test:inst_vga_test.VGA_Red
-red[5] << vga_test:inst_vga_test.VGA_Red
-red[6] << vga_test:inst_vga_test.VGA_Red
-red[7] << vga_test:inst_vga_test.VGA_Red
-green[0] << vga_test:inst_vga_test.VGA_Green
-green[1] << vga_test:inst_vga_test.VGA_Green
-green[2] << vga_test:inst_vga_test.VGA_Green
-green[3] << vga_test:inst_vga_test.VGA_Green
-green[4] << vga_test:inst_vga_test.VGA_Green
-green[5] << vga_test:inst_vga_test.VGA_Green
-green[6] << vga_test:inst_vga_test.VGA_Green
-green[7] << vga_test:inst_vga_test.VGA_Green
-blue[0] << vga_test:inst_vga_test.VGA_Blue
-blue[1] << vga_test:inst_vga_test.VGA_Blue
-blue[2] << vga_test:inst_vga_test.VGA_Blue
-blue[3] << vga_test:inst_vga_test.VGA_Blue
-blue[4] << vga_test:inst_vga_test.VGA_Blue
-blue[5] << vga_test:inst_vga_test.VGA_Blue
-blue[6] << vga_test:inst_vga_test.VGA_Blue
-blue[7] << vga_test:inst_vga_test.VGA_Blue
-vga_blank << vga_test:inst_vga_test.VGA_Blank_N
-vga_clock << vga_test:inst_vga_test.VGA_Clk
-vga_sync << vga_test:inst_vga_test.VGA_Sync_N
+hsync << vga_controller:vga_controller_inst.VGA_HS
+vsync << vga_controller:vga_controller_inst.VGA_VS
+red[0] << vga_controller:vga_controller_inst.VGA_Red
+red[1] << vga_controller:vga_controller_inst.VGA_Red
+red[2] << vga_controller:vga_controller_inst.VGA_Red
+red[3] << vga_controller:vga_controller_inst.VGA_Red
+red[4] << vga_controller:vga_controller_inst.VGA_Red
+red[5] << vga_controller:vga_controller_inst.VGA_Red
+red[6] << vga_controller:vga_controller_inst.VGA_Red
+red[7] << vga_controller:vga_controller_inst.VGA_Red
+green[0] << vga_controller:vga_controller_inst.VGA_Green
+green[1] << vga_controller:vga_controller_inst.VGA_Green
+green[2] << vga_controller:vga_controller_inst.VGA_Green
+green[3] << vga_controller:vga_controller_inst.VGA_Green
+green[4] << vga_controller:vga_controller_inst.VGA_Green
+green[5] << vga_controller:vga_controller_inst.VGA_Green
+green[6] << vga_controller:vga_controller_inst.VGA_Green
+green[7] << vga_controller:vga_controller_inst.VGA_Green
+blue[0] << vga_controller:vga_controller_inst.VGA_Blue
+blue[1] << vga_controller:vga_controller_inst.VGA_Blue
+blue[2] << vga_controller:vga_controller_inst.VGA_Blue
+blue[3] << vga_controller:vga_controller_inst.VGA_Blue
+blue[4] << vga_controller:vga_controller_inst.VGA_Blue
+blue[5] << vga_controller:vga_controller_inst.VGA_Blue
+blue[6] << vga_controller:vga_controller_inst.VGA_Blue
+blue[7] << vga_controller:vga_controller_inst.VGA_Blue
+vga_blank << vga_controller:vga_controller_inst.VGA_Blank_N
+vga_clock << vga_controller:vga_controller_inst.VGA_Clk
+vga_sync << vga_controller:vga_controller_inst.VGA_Sync_N
 
 
-|teste|synchronizer:sync_inst
+|doom_cpu|synchronizer:sync_inst
+clk => reset_sync~reg0.CLK
+clk => enter_sync~reg0.CLK
+clk => reset_sync_0.CLK
+clk => enter_sync_0.CLK
 clk => acoes_sync[5]~reg0.CLK
 clk => acoes_sync[4]~reg0.CLK
 clk => acoes_sync[3]~reg0.CLK
 clk => acoes_sync[2]~reg0.CLK
 clk => acoes_sync[1]~reg0.CLK
 clk => acoes_sync[0]~reg0.CLK
-clk => reset_sync~reg0.CLK
-clk => enter_sync~reg0.CLK
 clk => acoes_sync_0[5].CLK
 clk => acoes_sync_0[4].CLK
 clk => acoes_sync_0[3].CLK
 clk => acoes_sync_0[2].CLK
 clk => acoes_sync_0[1].CLK
 clk => acoes_sync_0[0].CLK
-clk => reset_sync_0.CLK
-clk => enter_sync_0.CLK
 enter => enter_sync_0.DATAIN
 reset => reset_sync_0.DATAIN
 acoes[5] => acoes_sync_0[5].DATAIN
@@ -148,7 +148,7 @@ acoes_sync[1] <= acoes_sync[1]~reg0.DB_MAX_OUTPUT_PORT_TYPE
 acoes_sync[0] <= acoes_sync[0]~reg0.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|teste|clock_divider:clock_divider_inst
+|doom_cpu|clock_divider:clock_divider_inst
 fast_clock => count[0].CLK
 fast_clock => count[1].CLK
 fast_clock => count[2].CLK
@@ -213,7 +213,7 @@ reset => count[28].ACLR
 reset => count[29].ACLR
 reset => count[30].ACLR
 reset => count[31].ACLR
-slow_clock <= count[5].DB_MAX_OUTPUT_PORT_TYPE
+slow_clock <= count[1].DB_MAX_OUTPUT_PORT_TYPE
 dep_clock <= count[24].DB_MAX_OUTPUT_PORT_TYPE
 ledr[0] <= count[24].DB_MAX_OUTPUT_PORT_TYPE
 ledr[1] <= count[25].DB_MAX_OUTPUT_PORT_TYPE
@@ -221,7 +221,7 @@ ledr[2] <= count[26].DB_MAX_OUTPUT_PORT_TYPE
 ledr[3] <= count[27].DB_MAX_OUTPUT_PORT_TYPE
 
 
-|teste|program_counter:program_counter_inst
+|doom_cpu|program_counter:program_counter_inst
 changeProgram => always0.IN1
 changeProgram => execProgram.OUTPUTSELECT
 changeProgram => execProgram.OUTPUTSELECT
@@ -1351,7 +1351,7 @@ enderecoSpc[30] <= enderecoSpc[30]~reg0.DB_MAX_OUTPUT_PORT_TYPE
 enderecoSpc[31] <= enderecoSpc[31]~reg0.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|teste|switch_input:switch_input_inst
+|doom_cpu|switch_input:switch_input_inst
 clock => valor[0]~reg0.CLK
 clock => valor[1]~reg0.CLK
 clock => valor[2]~reg0.CLK
@@ -1433,7 +1433,7 @@ valor[16] <= valor[16]~reg0.DB_MAX_OUTPUT_PORT_TYPE
 valor[17] <= valor[17]~reg0.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|teste|rom_instructions:rom_instructions_inst
+|doom_cpu|rom_instructions:rom_instructions_inst
 addr[0] => rom.RADDR
 addr[1] => rom.RADDR1
 addr[2] => rom.RADDR2
@@ -1532,7 +1532,7 @@ q[30] <= q[30]~reg0.DB_MAX_OUTPUT_PORT_TYPE
 q[31] <= q[31]~reg0.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|teste|control_unit:control_unit_inst
+|doom_cpu|control_unit:control_unit_inst
 instrucao[0] => ~NO_FANOUT~
 instrucao[1] => ~NO_FANOUT~
 instrucao[2] => ~NO_FANOUT~
@@ -1737,7 +1737,7 @@ defquantum <= Equal23.DB_MAX_OUTPUT_PORT_TYPE
 changeProgram <= Equal24.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|teste|register_file:register_file_inst
+|doom_cpu|register_file:register_file_inst
 instrucao[0] => ~NO_FANOUT~
 instrucao[1] => ~NO_FANOUT~
 instrucao[2] => ~NO_FANOUT~
@@ -5474,7 +5474,7 @@ leRD[30] <= Mux65.DB_MAX_OUTPUT_PORT_TYPE
 leRD[31] <= Mux64.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|teste|sign_extender:sign_extender_inst
+|doom_cpu|sign_extender:sign_extender_inst
 instrucao[0] => Mux31.IN1
 instrucao[0] => Mux31.IN2
 instrucao[1] => Mux30.IN1
@@ -5675,7 +5675,7 @@ imediato[30] <= Mux1.DB_MAX_OUTPUT_PORT_TYPE
 imediato[31] <= Mux0.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|teste|ula_control:ula_control_inst
+|doom_cpu|ula_control:ula_control_inst
 instrucao[0] => Decoder0.IN5
 instrucao[1] => Decoder0.IN4
 instrucao[2] => Decoder0.IN3
@@ -5719,7 +5719,7 @@ selec[1] <= Mux0.DB_MAX_OUTPUT_PORT_TYPE
 selec[2] <= selec.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|teste|ula:ula_inst
+|doom_cpu|ula:ula_inst
 selec[0] => Mux0.IN9
 selec[0] => Mux1.IN9
 selec[0] => Mux2.IN9
@@ -6658,7 +6658,7 @@ zero <= Equal3.DB_MAX_OUTPUT_PORT_TYPE
 negativo <= Mux32.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|teste|ram_data:ram_data_inst
+|doom_cpu|ram_data:ram_data_inst
 data[0] => ram.DATAB
 data[1] => ram.DATAB
 data[2] => ram.DATAB
@@ -7335,7 +7335,7 @@ q[30] <= q[30]~reg0.DB_MAX_OUTPUT_PORT_TYPE
 q[31] <= q[31]~reg0.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|teste|mux_mem:mux_mem_inst
+|doom_cpu|mux_mem:mux_mem_inst
 dadosLidos[0] => saida.DATAB
 dadosLidos[1] => saida.DATAB
 dadosLidos[2] => saida.DATAB
@@ -7466,7 +7466,7 @@ saida[30] <= saida.DB_MAX_OUTPUT_PORT_TYPE
 saida[31] <= saida.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|teste|data_output:data_output_inst
+|doom_cpu|data_output:data_output_inst
 clock => segmentosPrograma[0]~reg0.CLK
 clock => segmentosPrograma[1]~reg0.CLK
 clock => segmentosPrograma[2]~reg0.CLK
@@ -8039,7 +8039,7 @@ segmentosPrograma[31] <= segmentosPrograma[31]~reg0.DB_MAX_OUTPUT_PORT_TYPE
 neg <= neg~reg0.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|teste|display7seg:display7seg_inst
+|doom_cpu|display7seg:display7seg_inst
 segmentos[0] => Decoder0.IN3
 segmentos[1] => Decoder0.IN2
 segmentos[2] => Decoder0.IN1
@@ -8163,9 +8163,9 @@ seg[7][5] <= <VCC>
 seg[7][6] <= neg.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|teste|red_screen:rs
+|doom_cpu|layer_draw_engine:layer_draw_engine_inst
 clk => clk.IN1
-reset => game_process:game_process.reset
+reset => game_state_renderer:game_state_renderer_inst.reset
 reset => prev_layer[0].PRESET
 reset => prev_layer[1].PRESET
 reset => prev_layer[2].PRESET
@@ -8252,12 +8252,12 @@ reset => VGA_X[6].ACLR
 reset => VGA_X[7].ACLR
 reset => VGA_X[8].ACLR
 reset => VGA_X[9].ACLR
-acoes[5] => game_process:game_process.acoes[5]
-acoes[4] => game_process:game_process.acoes[4]
-acoes[3] => game_process:game_process.acoes[3]
-acoes[2] => game_process:game_process.acoes[2]
-acoes[1] => game_process:game_process.acoes[1]
-acoes[0] => game_process:game_process.acoes[0]
+acoes[5] => game_state_renderer:game_state_renderer_inst.acoes[5]
+acoes[4] => game_state_renderer:game_state_renderer_inst.acoes[4]
+acoes[3] => game_state_renderer:game_state_renderer_inst.acoes[3]
+acoes[2] => game_state_renderer:game_state_renderer_inst.acoes[2]
+acoes[1] => game_state_renderer:game_state_renderer_inst.acoes[1]
+acoes[0] => game_state_renderer:game_state_renderer_inst.acoes[0]
 Draw_X[0] <= Draw_X[0]~reg0.DB_MAX_OUTPUT_PORT_TYPE
 Draw_X[1] <= Draw_X[1]~reg0.DB_MAX_OUTPUT_PORT_TYPE
 Draw_X[2] <= Draw_X[2]~reg0.DB_MAX_OUTPUT_PORT_TYPE
@@ -8357,7 +8357,7 @@ Draw_Color[31] <= Draw_Color[31]~reg0.DB_MAX_OUTPUT_PORT_TYPE
 Enable_Draw <= Enable_Draw~reg0.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|teste|red_screen:rs|game_process:game_process
+|doom_cpu|layer_draw_engine:layer_draw_engine_inst|game_state_renderer:game_state_renderer_inst
 clk => acoes_prev[4].CLK
 clk => acoes_prev[3].CLK
 clk => acoes_prev[1].CLK
@@ -9197,7 +9197,7 @@ FB_Y[8] <= <GND>
 FB_Y[9] <= <GND>
 
 
-|teste|red_screen:rs|game_process:game_process|random_enemy:re
+|doom_cpu|layer_draw_engine:layer_draw_engine_inst|game_state_renderer:game_state_renderer_inst|random_enemy:re
 trigger => lfsr[0].CLK
 trigger => lfsr[1].CLK
 reset => lfsr[0].PRESET
@@ -9222,7 +9222,7 @@ rng[0] <= lfsr[0].DB_MAX_OUTPUT_PORT_TYPE
 rng[1] <= lfsr[1].DB_MAX_OUTPUT_PORT_TYPE
 
 
-|teste|red_screen:rs|VRAM:VR
+|doom_cpu|layer_draw_engine:layer_draw_engine_inst|VRAM:VR
 address[0] => address[0].IN1
 address[1] => address[1].IN1
 address[2] => address[2].IN1
@@ -9251,7 +9251,7 @@ q[7] <= altsyncram:altsyncram_component.q_a
 q[8] <= altsyncram:altsyncram_component.q_a
 
 
-|teste|red_screen:rs|VRAM:VR|altsyncram:altsyncram_component
+|doom_cpu|layer_draw_engine:layer_draw_engine_inst|VRAM:VR|altsyncram:altsyncram_component
 wren_a => ~NO_FANOUT~
 rden_a => ~NO_FANOUT~
 wren_b => ~NO_FANOUT~
@@ -9310,7 +9310,7 @@ eccstatus[1] <= <GND>
 eccstatus[2] <= <GND>
 
 
-|teste|red_screen:rs|VRAM:VR|altsyncram:altsyncram_component|altsyncram_r9a1:auto_generated
+|doom_cpu|layer_draw_engine:layer_draw_engine_inst|VRAM:VR|altsyncram:altsyncram_component|altsyncram_r9a1:auto_generated
 address_a[0] => ram_block1a0.PORTAADDR
 address_a[0] => ram_block1a1.PORTAADDR
 address_a[0] => ram_block1a2.PORTAADDR
@@ -10342,7 +10342,7 @@ q_a[7] <= mux_cnb:mux2.result[7]
 q_a[8] <= mux_cnb:mux2.result[8]
 
 
-|teste|red_screen:rs|VRAM:VR|altsyncram:altsyncram_component|altsyncram_r9a1:auto_generated|decode_k8a:rden_decode
+|doom_cpu|layer_draw_engine:layer_draw_engine_inst|VRAM:VR|altsyncram:altsyncram_component|altsyncram_r9a1:auto_generated|decode_k8a:rden_decode
 data[0] => w_anode731w[1].IN0
 data[0] => w_anode749w[1].IN1
 data[0] => w_anode760w[1].IN0
@@ -10377,7 +10377,7 @@ eq[6] <= w_anode804w[3].DB_MAX_OUTPUT_PORT_TYPE
 eq[7] <= w_anode815w[3].DB_MAX_OUTPUT_PORT_TYPE
 
 
-|teste|red_screen:rs|VRAM:VR|altsyncram:altsyncram_component|altsyncram_r9a1:auto_generated|mux_cnb:mux2
+|doom_cpu|layer_draw_engine:layer_draw_engine_inst|VRAM:VR|altsyncram:altsyncram_component|altsyncram_r9a1:auto_generated|mux_cnb:mux2
 data[0] => _.IN0
 data[0] => _.IN0
 data[1] => _.IN0
@@ -10695,9 +10695,8 @@ sel[2] => result_node[0].IN0
 sel[2] => _.IN0
 
 
-|teste|vga_test:inst_vga_test
+|doom_cpu|vga_controller:vga_controller_inst
 Fast_Clock => Fast_Clock.IN2
-Slow_Clock => ~NO_FANOUT~
 Reset => Reset.IN1
 VGA_HS <= vga_sync:vga_sync_inst.VGA_HS
 VGA_VS <= vga_sync:vga_sync_inst.VGA_VS
@@ -10854,7 +10853,7 @@ Draw_Color[30] => ~NO_FANOUT~
 Draw_Color[31] => ~NO_FANOUT~
 
 
-|teste|vga_test:inst_vga_test|vga_sync:vga_sync_inst
+|doom_cpu|vga_controller:vga_controller_inst|vga_sync:vga_sync_inst
 Fast_Clock => Fast_Clock.IN1
 Reset => Counter_Y[0]~reg0.ACLR
 Reset => Counter_Y[1]~reg0.ACLR
@@ -10903,12 +10902,12 @@ VGA_Blank_N <= VGA_Blank_N~reg0.DB_MAX_OUTPUT_PORT_TYPE
 VGA_Sync_N <= <VCC>
 
 
-|teste|vga_test:inst_vga_test|vga_sync:vga_sync_inst|vga_pll:vga_pll
+|doom_cpu|vga_controller:vga_controller_inst|vga_sync:vga_sync_inst|vga_pll:vga_pll
 inclk0 => sub_wire1[0].IN1
 c0 <= altpll:altpll_component.clk
 
 
-|teste|vga_test:inst_vga_test|vga_sync:vga_sync_inst|vga_pll:vga_pll|altpll:altpll_component
+|doom_cpu|vga_controller:vga_controller_inst|vga_sync:vga_sync_inst|vga_pll:vga_pll|altpll:altpll_component
 inclk[0] => vga_pll_altpll:auto_generated.inclk[0]
 inclk[1] => vga_pll_altpll:auto_generated.inclk[1]
 fbin => ~NO_FANOUT~
@@ -10968,7 +10967,7 @@ fref <= <GND>
 icdrclk <= <GND>
 
 
-|teste|vga_test:inst_vga_test|vga_sync:vga_sync_inst|vga_pll:vga_pll|altpll:altpll_component|vga_pll_altpll:auto_generated
+|doom_cpu|vga_controller:vga_controller_inst|vga_sync:vga_sync_inst|vga_pll:vga_pll|altpll:altpll_component|vga_pll_altpll:auto_generated
 clk[0] <= pll1.CLK
 clk[1] <= pll1.CLK1
 clk[2] <= pll1.CLK2
@@ -10978,7 +10977,7 @@ inclk[0] => pll1.CLK
 inclk[1] => pll1.CLK1
 
 
-|teste|vga_test:inst_vga_test|FrameBuffer:FB
+|doom_cpu|vga_controller:vga_controller_inst|FrameBuffer:FB
 data[0] => data[0].IN1
 data[1] => data[1].IN1
 data[2] => data[2].IN1
@@ -11032,7 +11031,7 @@ q[7] <= altsyncram:altsyncram_component.q_b
 q[8] <= altsyncram:altsyncram_component.q_b
 
 
-|teste|vga_test:inst_vga_test|FrameBuffer:FB|altsyncram:altsyncram_component
+|doom_cpu|vga_controller:vga_controller_inst|FrameBuffer:FB|altsyncram:altsyncram_component
 wren_a => altsyncram_aoj1:auto_generated.wren_a
 rden_a => ~NO_FANOUT~
 wren_b => ~NO_FANOUT~
@@ -11120,7 +11119,7 @@ eccstatus[1] <= <GND>
 eccstatus[2] <= <GND>
 
 
-|teste|vga_test:inst_vga_test|FrameBuffer:FB|altsyncram:altsyncram_component|altsyncram_aoj1:auto_generated
+|doom_cpu|vga_controller:vga_controller_inst|FrameBuffer:FB|altsyncram:altsyncram_component|altsyncram_aoj1:auto_generated
 address_a[0] => ram_block1a0.PORTAADDR
 address_a[0] => ram_block1a1.PORTAADDR
 address_a[0] => ram_block1a2.PORTAADDR
@@ -11911,7 +11910,7 @@ wren_a => decode_lsa:decode2.enable
 wren_a => decode_lsa:wren_decode_a.enable
 
 
-|teste|vga_test:inst_vga_test|FrameBuffer:FB|altsyncram:altsyncram_component|altsyncram_aoj1:auto_generated|decode_lsa:decode2
+|doom_cpu|vga_controller:vga_controller_inst|FrameBuffer:FB|altsyncram:altsyncram_component|altsyncram_aoj1:auto_generated|decode_lsa:decode2
 data[0] => w_anode255w[1].IN0
 data[0] => w_anode268w[1].IN1
 data[0] => w_anode276w[1].IN0
@@ -11929,7 +11928,7 @@ eq[1] <= w_anode268w[2].DB_MAX_OUTPUT_PORT_TYPE
 eq[2] <= w_anode276w[2].DB_MAX_OUTPUT_PORT_TYPE
 
 
-|teste|vga_test:inst_vga_test|FrameBuffer:FB|altsyncram:altsyncram_component|altsyncram_aoj1:auto_generated|decode_e8a:rden_decode_b
+|doom_cpu|vga_controller:vga_controller_inst|FrameBuffer:FB|altsyncram:altsyncram_component|altsyncram_aoj1:auto_generated|decode_e8a:rden_decode_b
 data[0] => w_anode293w[1].IN0
 data[0] => w_anode307w[1].IN1
 data[0] => w_anode316w[1].IN0
@@ -11943,7 +11942,7 @@ eq[1] <= w_anode307w[2].DB_MAX_OUTPUT_PORT_TYPE
 eq[2] <= w_anode316w[2].DB_MAX_OUTPUT_PORT_TYPE
 
 
-|teste|vga_test:inst_vga_test|FrameBuffer:FB|altsyncram:altsyncram_component|altsyncram_aoj1:auto_generated|decode_lsa:wren_decode_a
+|doom_cpu|vga_controller:vga_controller_inst|FrameBuffer:FB|altsyncram:altsyncram_component|altsyncram_aoj1:auto_generated|decode_lsa:wren_decode_a
 data[0] => w_anode255w[1].IN0
 data[0] => w_anode268w[1].IN1
 data[0] => w_anode276w[1].IN0
@@ -11961,7 +11960,7 @@ eq[1] <= w_anode268w[2].DB_MAX_OUTPUT_PORT_TYPE
 eq[2] <= w_anode276w[2].DB_MAX_OUTPUT_PORT_TYPE
 
 
-|teste|vga_test:inst_vga_test|FrameBuffer:FB|altsyncram:altsyncram_component|altsyncram_aoj1:auto_generated|mux_6nb:mux3
+|doom_cpu|vga_controller:vga_controller_inst|FrameBuffer:FB|altsyncram:altsyncram_component|altsyncram_aoj1:auto_generated|mux_6nb:mux3
 data[0] => data0_wire[0].IN0
 data[1] => data0_wire[1].IN0
 data[2] => data0_wire[2].IN0
@@ -12020,62 +12019,33 @@ sel[1] => data2_wire[0].IN1
 sel[1] => _.IN0
 
 
-|teste|ps2_receiver:PS2
-ps2_clk => acoes[5]~reg0.CLK
-ps2_clk => acoes[4]~reg0.CLK
-ps2_clk => acoes[3]~reg0.CLK
-ps2_clk => acoes[2]~reg0.CLK
-ps2_clk => acoes[1]~reg0.CLK
-ps2_clk => acoes[0]~reg0.CLK
-ps2_clk => break_code.CLK
-ps2_clk => count[0].CLK
-ps2_clk => count[1].CLK
-ps2_clk => count[2].CLK
-ps2_clk => count[3].CLK
-ps2_clk => count[4].CLK
-ps2_clk => count[5].CLK
-ps2_clk => count[6].CLK
-ps2_clk => count[7].CLK
-ps2_clk => count[8].CLK
-ps2_clk => count[9].CLK
-ps2_clk => count[10].CLK
-ps2_clk => count[11].CLK
-ps2_clk => count[12].CLK
-ps2_clk => count[13].CLK
-ps2_clk => count[14].CLK
-ps2_clk => count[15].CLK
-ps2_clk => count[16].CLK
-ps2_clk => count[17].CLK
-ps2_clk => count[18].CLK
-ps2_clk => count[19].CLK
-ps2_clk => count[20].CLK
-ps2_clk => count[21].CLK
-ps2_clk => count[22].CLK
-ps2_clk => count[23].CLK
-ps2_clk => count[24].CLK
-ps2_clk => count[25].CLK
-ps2_clk => count[26].CLK
-ps2_clk => count[27].CLK
-ps2_clk => count[28].CLK
-ps2_clk => count[29].CLK
-ps2_clk => count[30].CLK
-ps2_clk => count[31].CLK
-ps2_clk => key_data[1].CLK
-ps2_clk => key_data[2].CLK
-ps2_clk => key_data[3].CLK
-ps2_clk => key_data[4].CLK
-ps2_clk => key_data[5].CLK
-ps2_clk => key_data[6].CLK
-ps2_clk => key_data[7].CLK
-ps2_clk => key_data[8].CLK
-ps2_data => key_data.DATAB
-ps2_data => key_data.DATAB
-ps2_data => key_data.DATAB
-ps2_data => key_data.DATAB
-ps2_data => key_data.DATAB
-ps2_data => key_data.DATAB
-ps2_data => key_data.DATAB
-ps2_data => key_data.DATAB
+|doom_cpu|ps2_input:ps2_input_inst
+clk => acoes[5]~reg0.CLK
+clk => acoes[4]~reg0.CLK
+clk => acoes[3]~reg0.CLK
+clk => acoes[2]~reg0.CLK
+clk => acoes[1]~reg0.CLK
+clk => acoes[0]~reg0.CLK
+clk => break_code.CLK
+clk => bit_count[0].CLK
+clk => bit_count[1].CLK
+clk => bit_count[2].CLK
+clk => bit_count[3].CLK
+clk => key_data[1].CLK
+clk => key_data[2].CLK
+clk => key_data[3].CLK
+clk => key_data[4].CLK
+clk => key_data[5].CLK
+clk => key_data[6].CLK
+clk => key_data[7].CLK
+clk => key_data[8].CLK
+clk => ps2_clk_sync_prev.CLK
+clk => ps2_data_sync_1.CLK
+clk => ps2_data_sync_0.CLK
+clk => ps2_clk_sync_1.CLK
+clk => ps2_clk_sync_0.CLK
+ps2_clk => ps2_clk_sync_0.DATAIN
+ps2_data => ps2_data_sync_0.DATAIN
 acoes[5] <= acoes[5]~reg0.DB_MAX_OUTPUT_PORT_TYPE
 acoes[4] <= acoes[4]~reg0.DB_MAX_OUTPUT_PORT_TYPE
 acoes[3] <= acoes[3]~reg0.DB_MAX_OUTPUT_PORT_TYPE

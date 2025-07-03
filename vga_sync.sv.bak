@@ -33,11 +33,17 @@ begin
 	Counter_Y <= 10'b0;
 end
 
+wire vga_clk_wire;
+
 vga_pll vga_pll
 (
 	.inclk0(Fast_Clock),
-	.c0(VGA_Clk)
+	.c0(vga_clk_wire)
 );
+
+always @(*) begin
+	VGA_Clk = vga_clk_wire;
+end
 
 assign VGA_Sync_N = 1'b1; //Should be tied to 1
 assign Counter_X_Clear = (Counter_X == (HORZ_TOTAL_PIXELS-1));

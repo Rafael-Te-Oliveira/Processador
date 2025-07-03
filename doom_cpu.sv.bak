@@ -226,7 +226,7 @@ module teste (
         .seg               (seg)
     );
 
-    red_screen rs (
+    layer_draw_engine layer_draw_engine_inst (
         .clk         (clock),
         .reset       (reset_sync),
         .acoes       (acoes_sync),
@@ -236,7 +236,7 @@ module teste (
         .Enable_Draw (enable_draw)
     );
 
-    vga_test inst_vga_test (
+    vga_controller vga_controller_inst (
         .Fast_Clock    (clock),
         .Slow_Clock    (depclock),
         .Reset         (reset_sync),
@@ -254,7 +254,8 @@ module teste (
         .Draw_Color    (draw_color)
     );
 
-    ps2_receiver PS2 (
+    ps2_input ps2_input_inst (
+		  .clk (clock),
         .ps2_clk   (ps2_clk),
         .ps2_data  (ps2_data),
         .acoes     (acoes)

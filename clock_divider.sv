@@ -16,7 +16,7 @@ module clock_divider (
     end
 
     assign ledr     = count[27:24];
-    assign slow_clock = count[5];   // Clock dividido (25Hz)
-    assign dep_clock = count[24];  // Clock de depuração
+    assign slow_clock = count[1];   
+    assign dep_clock = count[24];  
 
 endmodule

@@ -1,5 +1,5 @@
 Analysis & Synthesis report for CPU
-Wed Jul 02 15:49:06 2025
+Wed Jul 02 21:25:05 2025
 Quartus Prime Version 17.1.0 Build 590 10/25/2017 SJ Lite Edition
 
 
@@ -90,7 +90,7 @@ refer to the applicable agreement for further details.
 +----------------------------------------------------------------------------------+
 ; Analysis & Synthesis Summary                                                     ;
 +------------------------------------+---------------------------------------------+
-; Analysis & Synthesis Status        ; Successful - Wed Jul 02 15:49:06 2025       ;
+; Analysis & Synthesis Status        ; Successful - Wed Jul 02 21:25:05 2025       ;
 ; Quartus Prime Version              ; 17.1.0 Build 590 10/25/2017 SJ Lite Edition ;
 ; Revision Name                      ; CPU                                         ;
 ; Top-level Entity Name              ; teste                                       ;
@@ -214,8 +214,7 @@ refer to the applicable agreement for further details.
 ;     Processor 6            ;   0.1%      ;
 ;     Processor 7            ;   0.1%      ;
 ;     Processor 8            ;   0.1%      ;
-;     Processor 9            ;   0.1%      ;
-;     Processors 10-12       ;   0.1%      ;
+;     Processors 9-12        ;   0.0%      ;
 +----------------------------+-------------+
 
 
@@ -226,9 +225,7 @@ refer to the applicable agreement for further details.
 +-----------------------------------------------+-----------------+-------------------------------------------------------+-----------------------------------------------------------------------------------------------------------------+---------+
 ; old/VRAM.v                                    ; yes             ; User Wizard-Generated File                            ; C:/Users/rafae/OneDrive/Documents/Workspace/Faculdade/Processador/old/VRAM.v                                    ;         ;
 ; old/vga_pll.v                                 ; yes             ; User Wizard-Generated File                            ; C:/Users/rafae/OneDrive/Documents/Workspace/Faculdade/Processador/old/vga_pll.v                                 ;         ;
-; old/synchronizer.sv                           ; yes             ; User SystemVerilog HDL File                           ; C:/Users/rafae/OneDrive/Documents/Workspace/Faculdade/Processador/old/synchronizer.sv                           ;         ;
 ; old/random_enemy.sv                           ; yes             ; User SystemVerilog HDL File                           ; C:/Users/rafae/OneDrive/Documents/Workspace/Faculdade/Processador/old/random_enemy.sv                           ;         ;
-; old/game_process.sv                           ; yes             ; User SystemVerilog HDL File                           ; C:/Users/rafae/OneDrive/Documents/Workspace/Faculdade/Processador/old/game_process.sv                           ;         ;
 ; old/FrameBuffer.v                             ; yes             ; User Wizard-Generated File                            ; C:/Users/rafae/OneDrive/Documents/Workspace/Faculdade/Processador/old/FrameBuffer.v                             ;         ;
 ; vga_test.sv                                   ; yes             ; User SystemVerilog HDL File                           ; C:/Users/rafae/OneDrive/Documents/Workspace/Faculdade/Processador/vga_test.sv                                   ;         ;
 ; vga_sync.sv                                   ; yes             ; User SystemVerilog HDL File                           ; C:/Users/rafae/OneDrive/Documents/Workspace/Faculdade/Processador/vga_sync.sv                                   ;         ;
@@ -244,10 +241,12 @@ refer to the applicable agreement for further details.
 ; ps2_receiver.sv                               ; yes             ; User SystemVerilog HDL File                           ; C:/Users/rafae/OneDrive/Documents/Workspace/Faculdade/Processador/ps2_receiver.sv                               ;         ;
 ; program_counter.sv                            ; yes             ; User SystemVerilog HDL File                           ; C:/Users/rafae/OneDrive/Documents/Workspace/Faculdade/Processador/program_counter.sv                            ;         ;
 ; mux_mem.sv                                    ; yes             ; User SystemVerilog HDL File                           ; C:/Users/rafae/OneDrive/Documents/Workspace/Faculdade/Processador/mux_mem.sv                                    ;         ;
+; game_process.sv                               ; yes             ; User SystemVerilog HDL File                           ; C:/Users/rafae/OneDrive/Documents/Workspace/Faculdade/Processador/game_process.sv                               ;         ;
 ; display7seg.sv                                ; yes             ; User SystemVerilog HDL File                           ; C:/Users/rafae/OneDrive/Documents/Workspace/Faculdade/Processador/display7seg.sv                                ;         ;
 ; data_output.sv                                ; yes             ; User SystemVerilog HDL File                           ; C:/Users/rafae/OneDrive/Documents/Workspace/Faculdade/Processador/data_output.sv                                ;         ;
 ; control_unit.sv                               ; yes             ; User SystemVerilog HDL File                           ; C:/Users/rafae/OneDrive/Documents/Workspace/Faculdade/Processador/control_unit.sv                               ;         ;
 ; clock_divider.sv                              ; yes             ; User SystemVerilog HDL File                           ; C:/Users/rafae/OneDrive/Documents/Workspace/Faculdade/Processador/clock_divider.sv                              ;         ;
+; synchronizer.sv                               ; yes             ; User SystemVerilog HDL File                           ; C:/Users/rafae/OneDrive/Documents/Workspace/Faculdade/Processador/synchronizer.sv                               ;         ;
 ; instrucoes_ram/so.txt                         ; yes             ; Auto-Found File                                       ; C:/Users/rafae/OneDrive/Documents/Workspace/Faculdade/Processador/instrucoes_ram/so.txt                         ;         ;
 ; instrucoes_ram/programa_1.txt                 ; yes             ; Auto-Found File                                       ; C:/Users/rafae/OneDrive/Documents/Workspace/Faculdade/Processador/instrucoes_ram/programa_1.txt                 ;         ;
 ; instrucoes_ram/programa_2.txt                 ; yes             ; Auto-Found File                                       ; C:/Users/rafae/OneDrive/Documents/Workspace/Faculdade/Processador/instrucoes_ram/programa_2.txt                 ;         ;
@@ -2205,7 +2204,7 @@ Note: In order to hide this table in the UI and the text report file, please set
 +----------------+--------------+
 ; Partition Name ; Elapsed Time ;
 +----------------+--------------+
-; Top            ; 00:00:30     ;
+; Top            ; 00:00:18     ;
 +----------------+--------------+
 
 
@@ -2215,7 +2214,7 @@ Note: In order to hide this table in the UI and the text report file, please set
 Info: *******************************************************************
 Info: Running Quartus Prime Analysis & Synthesis
     Info: Version 17.1.0 Build 590 10/25/2017 SJ Lite Edition
-    Info: Processing started: Wed Jul 02 15:48:18 2025
+    Info: Processing started: Wed Jul 02 21:24:34 2025
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off CPU -c CPU
 Info (20030): Parallel compilation is enabled and will use 12 of the 12 processors detected
 Info (12021): Found 1 design units, including 1 entities, in source file old/vram.v
@@ -2231,7 +2230,7 @@ Info (12021): Found 1 design units, including 1 entities, in source file old/ula
 Info (12021): Found 1 design units, including 1 entities, in source file old/uc.sv
     Info (12023): Found entity 1: UC File: C:/Users/rafae/OneDrive/Documents/Workspace/Faculdade/Processador/old/UC.sv Line: 1
 Info (12021): Found 1 design units, including 1 entities, in source file old/synchronizer.sv
-    Info (12023): Found entity 1: synchronizer File: C:/Users/rafae/OneDrive/Documents/Workspace/Faculdade/Processador/old/synchronizer.sv Line: 1
+    Info (12023): Found entity 1: synchronizer_old File: C:/Users/rafae/OneDrive/Documents/Workspace/Faculdade/Processador/old/synchronizer.sv Line: 1
 Info (12021): Found 1 design units, including 1 entities, in source file old/saidadados.sv
     Info (12023): Found entity 1: saidaDados File: C:/Users/rafae/OneDrive/Documents/Workspace/Faculdade/Processador/old/saidaDados.sv Line: 1
 Info (12021): Found 1 design units, including 1 entities, in source file old/red_screen.sv
@@ -2247,7 +2246,7 @@ Info (12021): Found 1 design units, including 1 entities, in source file old/mux
 Info (12021): Found 1 design units, including 1 entities, in source file old/instrucoes_ram.sv
     Info (12023): Found entity 1: instrucoes_RAM File: C:/Users/rafae/OneDrive/Documents/Workspace/Faculdade/Processador/old/instrucoes_RAM.sv Line: 4
 Info (12021): Found 1 design units, including 1 entities, in source file old/game_process.sv
-    Info (12023): Found entity 1: game_process File: C:/Users/rafae/OneDrive/Documents/Workspace/Faculdade/Processador/old/game_process.sv Line: 1
+    Info (12023): Found entity 1: game_process_old File: C:/Users/rafae/OneDrive/Documents/Workspace/Faculdade/Processador/old/game_process.sv Line: 1
 Info (12021): Found 1 design units, including 1 entities, in source file old/framebuffer.v
     Info (12023): Found entity 1: FrameBuffer File: C:/Users/rafae/OneDrive/Documents/Workspace/Faculdade/Processador/old/FrameBuffer.v Line: 39
 Info (12021): Found 1 design units, including 1 entities, in source file old/extensor_bit.sv
@@ -2292,8 +2291,8 @@ Info (12021): Found 1 design units, including 1 entities, in source file program
     Info (12023): Found entity 1: program_counter File: C:/Users/rafae/OneDrive/Documents/Workspace/Faculdade/Processador/program_counter.sv Line: 1
 Info (12021): Found 1 design units, including 1 entities, in source file mux_mem.sv
     Info (12023): Found entity 1: mux_mem File: C:/Users/rafae/OneDrive/Documents/Workspace/Faculdade/Processador/mux_mem.sv Line: 1
-Info (15248): File "C:/Users/rafae/OneDrive/Documents/Workspace/Faculdade/Processador/game_process.sv" is a duplicate of already analyzed file "C:/Users/rafae/OneDrive/Documents/Workspace/Faculdade/Processador/old/game_process.sv" (same filename, same library name and same md5 digest). Skipping analysis of this file.
-Info (12021): Found 0 design units, including 0 entities, in source file game_process.sv
+Info (12021): Found 1 design units, including 1 entities, in source file game_process.sv
+    Info (12023): Found entity 1: game_process File: C:/Users/rafae/OneDrive/Documents/Workspace/Faculdade/Processador/game_process.sv Line: 1
 Info (12021): Found 1 design units, including 1 entities, in source file display7seg.sv
     Info (12023): Found entity 1: display7seg File: C:/Users/rafae/OneDrive/Documents/Workspace/Faculdade/Processador/display7seg.sv Line: 1
 Info (12021): Found 1 design units, including 1 entities, in source file data_output.sv
@@ -2315,16 +2314,16 @@ Info (12021): Found 0 design units, including 0 entities, in source file vram.v
 Warning (12019): Can't analyze file -- file game_process.v is missing
 Info (15248): File "C:/Users/rafae/OneDrive/Documents/Workspace/Faculdade/Processador/random_enemy.sv" is a duplicate of already analyzed file "C:/Users/rafae/OneDrive/Documents/Workspace/Faculdade/Processador/old/random_enemy.sv" (same filename, same library name and same md5 digest). Skipping analysis of this file.
 Info (12021): Found 0 design units, including 0 entities, in source file random_enemy.sv
-Info (15248): File "C:/Users/rafae/OneDrive/Documents/Workspace/Faculdade/Processador/synchronizer.sv" is a duplicate of already analyzed file "C:/Users/rafae/OneDrive/Documents/Workspace/Faculdade/Processador/old/synchronizer.sv" (same filename, same library name and same md5 digest). Skipping analysis of this file.
-Info (12021): Found 0 design units, including 0 entities, in source file synchronizer.sv
+Info (12021): Found 1 design units, including 1 entities, in source file synchronizer.sv
+    Info (12023): Found entity 1: synchronizer File: C:/Users/rafae/OneDrive/Documents/Workspace/Faculdade/Processador/synchronizer.sv Line: 1
 Warning (10037): Verilog HDL or VHDL warning at saidaDados.sv(67): conditional expression evaluates to a constant File: C:/Users/rafae/OneDrive/Documents/Workspace/Faculdade/Processador/old/saidaDados.sv Line: 67
 Warning (10037): Verilog HDL or VHDL warning at data_output.sv(50): conditional expression evaluates to a constant File: C:/Users/rafae/OneDrive/Documents/Workspace/Faculdade/Processador/data_output.sv Line: 50
 Info (12127): Elaborating entity "teste" for the top level hierarchy
-Info (12128): Elaborating entity "synchronizer" for hierarchy "synchronizer:sync_inst" File: C:/Users/rafae/OneDrive/Documents/Workspace/Faculdade/Processador/teste.sv Line: 83
-Info (12128): Elaborating entity "clock_divider" for hierarchy "clock_divider:clock_divider_inst" File: C:/Users/rafae/OneDrive/Documents/Workspace/Faculdade/Processador/teste.sv Line: 91
-Info (12128): Elaborating entity "program_counter" for hierarchy "program_counter:program_counter_inst" File: C:/Users/rafae/OneDrive/Documents/Workspace/Faculdade/Processador/teste.sv Line: 109
-Info (12128): Elaborating entity "switch_input" for hierarchy "switch_input:switch_input_inst" File: C:/Users/rafae/OneDrive/Documents/Workspace/Faculdade/Processador/teste.sv Line: 119
-Info (12128): Elaborating entity "rom_instructions" for hierarchy "rom_instructions:rom_instructions_inst" File: C:/Users/rafae/OneDrive/Documents/Workspace/Faculdade/Processador/teste.sv Line: 125
+Info (12128): Elaborating entity "synchronizer" for hierarchy "synchronizer:sync_inst" File: C:/Users/rafae/OneDrive/Documents/Workspace/Faculdade/Processador/teste.sv Line: 81
+Info (12128): Elaborating entity "clock_divider" for hierarchy "clock_divider:clock_divider_inst" File: C:/Users/rafae/OneDrive/Documents/Workspace/Faculdade/Processador/teste.sv Line: 89
+Info (12128): Elaborating entity "program_counter" for hierarchy "program_counter:program_counter_inst" File: C:/Users/rafae/OneDrive/Documents/Workspace/Faculdade/Processador/teste.sv Line: 107
+Info (12128): Elaborating entity "switch_input" for hierarchy "switch_input:switch_input_inst" File: C:/Users/rafae/OneDrive/Documents/Workspace/Faculdade/Processador/teste.sv Line: 117
+Info (12128): Elaborating entity "rom_instructions" for hierarchy "rom_instructions:rom_instructions_inst" File: C:/Users/rafae/OneDrive/Documents/Workspace/Faculdade/Processador/teste.sv Line: 123
 Warning (10036): Verilog HDL or VHDL warning at rom_instructions.sv(13): object "addr_index" assigned a value but never read File: C:/Users/rafae/OneDrive/Documents/Workspace/Faculdade/Processador/rom_instructions.sv Line: 13
 Warning (10850): Verilog HDL warning at rom_instructions.sv(26): number of words (65) in memory file does not match the number of elements in the address range [0:199] File: C:/Users/rafae/OneDrive/Documents/Workspace/Faculdade/Processador/rom_instructions.sv Line: 26
 Warning (10850): Verilog HDL warning at rom_instructions.sv(28): number of words (99) in memory file does not match the number of elements in the address range [200:399] File: C:/Users/rafae/OneDrive/Documents/Workspace/Faculdade/Processador/rom_instructions.sv Line: 28
@@ -2333,16 +2332,16 @@ Warning (10850): Verilog HDL warning at rom_instructions.sv(32): number of words
 Warning (10030): Net "rom.data_a" at rom_instructions.sv(10) has no driver or initial value, using a default initial value '0' File: C:/Users/rafae/OneDrive/Documents/Workspace/Faculdade/Processador/rom_instructions.sv Line: 10
 Warning (10030): Net "rom.waddr_a" at rom_instructions.sv(10) has no driver or initial value, using a default initial value '0' File: C:/Users/rafae/OneDrive/Documents/Workspace/Faculdade/Processador/rom_instructions.sv Line: 10
 Warning (10030): Net "rom.we_a" at rom_instructions.sv(10) has no driver or initial value, using a default initial value '0' File: C:/Users/rafae/OneDrive/Documents/Workspace/Faculdade/Processador/rom_instructions.sv Line: 10
-Info (12128): Elaborating entity "control_unit" for hierarchy "control_unit:control_unit_inst" File: C:/Users/rafae/OneDrive/Documents/Workspace/Faculdade/Processador/teste.sv Line: 149
-Info (12128): Elaborating entity "register_file" for hierarchy "register_file:register_file_inst" File: C:/Users/rafae/OneDrive/Documents/Workspace/Faculdade/Processador/teste.sv Line: 161
-Info (12128): Elaborating entity "sign_extender" for hierarchy "sign_extender:sign_extender_inst" File: C:/Users/rafae/OneDrive/Documents/Workspace/Faculdade/Processador/teste.sv Line: 168
-Info (12128): Elaborating entity "ula_control" for hierarchy "ula_control:ula_control_inst" File: C:/Users/rafae/OneDrive/Documents/Workspace/Faculdade/Processador/teste.sv Line: 174
-Info (12128): Elaborating entity "ula" for hierarchy "ula:ula_inst" File: C:/Users/rafae/OneDrive/Documents/Workspace/Faculdade/Processador/teste.sv Line: 186
+Info (12128): Elaborating entity "control_unit" for hierarchy "control_unit:control_unit_inst" File: C:/Users/rafae/OneDrive/Documents/Workspace/Faculdade/Processador/teste.sv Line: 146
+Info (12128): Elaborating entity "register_file" for hierarchy "register_file:register_file_inst" File: C:/Users/rafae/OneDrive/Documents/Workspace/Faculdade/Processador/teste.sv Line: 158
+Info (12128): Elaborating entity "sign_extender" for hierarchy "sign_extender:sign_extender_inst" File: C:/Users/rafae/OneDrive/Documents/Workspace/Faculdade/Processador/teste.sv Line: 165
+Info (12128): Elaborating entity "ula_control" for hierarchy "ula_control:ula_control_inst" File: C:/Users/rafae/OneDrive/Documents/Workspace/Faculdade/Processador/teste.sv Line: 171
+Info (12128): Elaborating entity "ula" for hierarchy "ula:ula_inst" File: C:/Users/rafae/OneDrive/Documents/Workspace/Faculdade/Processador/teste.sv Line: 183
 Info (10264): Verilog HDL Case Statement information at ula.sv(29): all case item expressions in this case statement are onehot File: C:/Users/rafae/OneDrive/Documents/Workspace/Faculdade/Processador/ula.sv Line: 29
 Info (10264): Verilog HDL Case Statement information at ula.sv(37): all case item expressions in this case statement are onehot File: C:/Users/rafae/OneDrive/Documents/Workspace/Faculdade/Processador/ula.sv Line: 37
-Info (12128): Elaborating entity "ram_data" for hierarchy "ram_data:ram_data_inst" File: C:/Users/rafae/OneDrive/Documents/Workspace/Faculdade/Processador/teste.sv Line: 203
-Info (12128): Elaborating entity "mux_mem" for hierarchy "mux_mem:mux_mem_inst" File: C:/Users/rafae/OneDrive/Documents/Workspace/Faculdade/Processador/teste.sv Line: 210
-Info (12128): Elaborating entity "data_output" for hierarchy "data_output:data_output_inst" File: C:/Users/rafae/OneDrive/Documents/Workspace/Faculdade/Processador/teste.sv Line: 223
+Info (12128): Elaborating entity "ram_data" for hierarchy "ram_data:ram_data_inst" File: C:/Users/rafae/OneDrive/Documents/Workspace/Faculdade/Processador/teste.sv Line: 200
+Info (12128): Elaborating entity "mux_mem" for hierarchy "mux_mem:mux_mem_inst" File: C:/Users/rafae/OneDrive/Documents/Workspace/Faculdade/Processador/teste.sv Line: 207
+Info (12128): Elaborating entity "data_output" for hierarchy "data_output:data_output_inst" File: C:/Users/rafae/OneDrive/Documents/Workspace/Faculdade/Processador/teste.sv Line: 220
 Warning (10230): Verilog HDL assignment warning at data_output.sv(29): truncated value with size 33 to match size of target (32) File: C:/Users/rafae/OneDrive/Documents/Workspace/Faculdade/Processador/data_output.sv Line: 29
 Warning (10230): Verilog HDL assignment warning at data_output.sv(21): truncated value with size 32 to match size of target (4) File: C:/Users/rafae/OneDrive/Documents/Workspace/Faculdade/Processador/data_output.sv Line: 21
 Warning (10230): Verilog HDL assignment warning at data_output.sv(22): truncated value with size 32 to match size of target (4) File: C:/Users/rafae/OneDrive/Documents/Workspace/Faculdade/Processador/data_output.sv Line: 22
@@ -2370,8 +2369,8 @@ Warning (10230): Verilog HDL assignment warning at data_output.sv(82): truncated
 Warning (10230): Verilog HDL assignment warning at data_output.sv(83): truncated value with size 32 to match size of target (4) File: C:/Users/rafae/OneDrive/Documents/Workspace/Faculdade/Processador/data_output.sv Line: 83
 Warning (10230): Verilog HDL assignment warning at data_output.sv(84): truncated value with size 32 to match size of target (4) File: C:/Users/rafae/OneDrive/Documents/Workspace/Faculdade/Processador/data_output.sv Line: 84
 Warning (10230): Verilog HDL assignment warning at data_output.sv(85): truncated value with size 32 to match size of target (4) File: C:/Users/rafae/OneDrive/Documents/Workspace/Faculdade/Processador/data_output.sv Line: 85
-Info (12128): Elaborating entity "display7seg" for hierarchy "display7seg:display7seg_inst" File: C:/Users/rafae/OneDrive/Documents/Workspace/Faculdade/Processador/teste.sv Line: 230
-Info (12128): Elaborating entity "red_screen" for hierarchy "red_screen:rs" File: C:/Users/rafae/OneDrive/Documents/Workspace/Faculdade/Processador/teste.sv Line: 240
+Info (12128): Elaborating entity "display7seg" for hierarchy "display7seg:display7seg_inst" File: C:/Users/rafae/OneDrive/Documents/Workspace/Faculdade/Processador/teste.sv Line: 227
+Info (12128): Elaborating entity "red_screen" for hierarchy "red_screen:rs" File: C:/Users/rafae/OneDrive/Documents/Workspace/Faculdade/Processador/teste.sv Line: 237
 Warning (10036): Verilog HDL or VHDL warning at red_screen.sv(37): object "inicio_X_d" assigned a value but never read File: C:/Users/rafae/OneDrive/Documents/Workspace/Faculdade/Processador/red_screen.sv Line: 37
 Warning (10036): Verilog HDL or VHDL warning at red_screen.sv(38): object "inicio_Y_d" assigned a value but never read File: C:/Users/rafae/OneDrive/Documents/Workspace/Faculdade/Processador/red_screen.sv Line: 38
 Warning (10036): Verilog HDL or VHDL warning at red_screen.sv(39): object "FB_X_d" assigned a value but never read File: C:/Users/rafae/OneDrive/Documents/Workspace/Faculdade/Processador/red_screen.sv Line: 39
@@ -2381,24 +2380,24 @@ Warning (10230): Verilog HDL assignment warning at red_screen.sv(45): truncated 
 Warning (10230): Verilog HDL assignment warning at red_screen.sv(86): truncated value with size 32 to match size of target (10) File: C:/Users/rafae/OneDrive/Documents/Workspace/Faculdade/Processador/red_screen.sv Line: 86
 Warning (10230): Verilog HDL assignment warning at red_screen.sv(89): truncated value with size 32 to match size of target (10) File: C:/Users/rafae/OneDrive/Documents/Workspace/Faculdade/Processador/red_screen.sv Line: 89
 Info (12128): Elaborating entity "game_process" for hierarchy "red_screen:rs|game_process:game_process" File: C:/Users/rafae/OneDrive/Documents/Workspace/Faculdade/Processador/red_screen.sv Line: 65
-Warning (10230): Verilog HDL assignment warning at game_process.sv(138): truncated value with size 32 to match size of target (2) File: C:/Users/rafae/OneDrive/Documents/Workspace/Faculdade/Processador/old/game_process.sv Line: 138
-Warning (10230): Verilog HDL assignment warning at game_process.sv(140): truncated value with size 32 to match size of target (2) File: C:/Users/rafae/OneDrive/Documents/Workspace/Faculdade/Processador/old/game_process.sv Line: 140
-Warning (10230): Verilog HDL assignment warning at game_process.sv(142): truncated value with size 32 to match size of target (8) File: C:/Users/rafae/OneDrive/Documents/Workspace/Faculdade/Processador/old/game_process.sv Line: 142
-Warning (10230): Verilog HDL assignment warning at game_process.sv(167): truncated value with size 32 to match size of target (8) File: C:/Users/rafae/OneDrive/Documents/Workspace/Faculdade/Processador/old/game_process.sv Line: 167
-Warning (10230): Verilog HDL assignment warning at game_process.sv(180): truncated value with size 32 to match size of target (26) File: C:/Users/rafae/OneDrive/Documents/Workspace/Faculdade/Processador/old/game_process.sv Line: 180
-Warning (10230): Verilog HDL assignment warning at game_process.sv(189): truncated value with size 32 to match size of target (3) File: C:/Users/rafae/OneDrive/Documents/Workspace/Faculdade/Processador/old/game_process.sv Line: 189
-Warning (10230): Verilog HDL assignment warning at game_process.sv(191): truncated value with size 32 to match size of target (3) File: C:/Users/rafae/OneDrive/Documents/Workspace/Faculdade/Processador/old/game_process.sv Line: 191
-Warning (10230): Verilog HDL assignment warning at game_process.sv(193): truncated value with size 32 to match size of target (26) File: C:/Users/rafae/OneDrive/Documents/Workspace/Faculdade/Processador/old/game_process.sv Line: 193
-Warning (10230): Verilog HDL assignment warning at game_process.sv(199): truncated value with size 32 to match size of target (3) File: C:/Users/rafae/OneDrive/Documents/Workspace/Faculdade/Processador/old/game_process.sv Line: 199
-Warning (10230): Verilog HDL assignment warning at game_process.sv(201): truncated value with size 32 to match size of target (26) File: C:/Users/rafae/OneDrive/Documents/Workspace/Faculdade/Processador/old/game_process.sv Line: 201
-Warning (10230): Verilog HDL assignment warning at game_process.sv(208): truncated value with size 32 to match size of target (8) File: C:/Users/rafae/OneDrive/Documents/Workspace/Faculdade/Processador/old/game_process.sv Line: 208
-Warning (10230): Verilog HDL assignment warning at game_process.sv(219): truncated value with size 32 to match size of target (8) File: C:/Users/rafae/OneDrive/Documents/Workspace/Faculdade/Processador/old/game_process.sv Line: 219
-Warning (10230): Verilog HDL assignment warning at game_process.sv(222): truncated value with size 32 to match size of target (26) File: C:/Users/rafae/OneDrive/Documents/Workspace/Faculdade/Processador/old/game_process.sv Line: 222
-Warning (10762): Verilog HDL Case Statement warning at game_process.sv(231): can't check case statement for completeness because the case expression has too many possible states File: C:/Users/rafae/OneDrive/Documents/Workspace/Faculdade/Processador/old/game_process.sv Line: 231
+Warning (10230): Verilog HDL assignment warning at game_process.sv(138): truncated value with size 32 to match size of target (2) File: C:/Users/rafae/OneDrive/Documents/Workspace/Faculdade/Processador/game_process.sv Line: 138
+Warning (10230): Verilog HDL assignment warning at game_process.sv(140): truncated value with size 32 to match size of target (2) File: C:/Users/rafae/OneDrive/Documents/Workspace/Faculdade/Processador/game_process.sv Line: 140
+Warning (10230): Verilog HDL assignment warning at game_process.sv(142): truncated value with size 32 to match size of target (8) File: C:/Users/rafae/OneDrive/Documents/Workspace/Faculdade/Processador/game_process.sv Line: 142
+Warning (10230): Verilog HDL assignment warning at game_process.sv(167): truncated value with size 32 to match size of target (8) File: C:/Users/rafae/OneDrive/Documents/Workspace/Faculdade/Processador/game_process.sv Line: 167
+Warning (10230): Verilog HDL assignment warning at game_process.sv(180): truncated value with size 32 to match size of target (26) File: C:/Users/rafae/OneDrive/Documents/Workspace/Faculdade/Processador/game_process.sv Line: 180
+Warning (10230): Verilog HDL assignment warning at game_process.sv(189): truncated value with size 32 to match size of target (3) File: C:/Users/rafae/OneDrive/Documents/Workspace/Faculdade/Processador/game_process.sv Line: 189
+Warning (10230): Verilog HDL assignment warning at game_process.sv(191): truncated value with size 32 to match size of target (3) File: C:/Users/rafae/OneDrive/Documents/Workspace/Faculdade/Processador/game_process.sv Line: 191
+Warning (10230): Verilog HDL assignment warning at game_process.sv(193): truncated value with size 32 to match size of target (26) File: C:/Users/rafae/OneDrive/Documents/Workspace/Faculdade/Processador/game_process.sv Line: 193
+Warning (10230): Verilog HDL assignment warning at game_process.sv(199): truncated value with size 32 to match size of target (3) File: C:/Users/rafae/OneDrive/Documents/Workspace/Faculdade/Processador/game_process.sv Line: 199
+Warning (10230): Verilog HDL assignment warning at game_process.sv(201): truncated value with size 32 to match size of target (26) File: C:/Users/rafae/OneDrive/Documents/Workspace/Faculdade/Processador/game_process.sv Line: 201
+Warning (10230): Verilog HDL assignment warning at game_process.sv(208): truncated value with size 32 to match size of target (8) File: C:/Users/rafae/OneDrive/Documents/Workspace/Faculdade/Processador/game_process.sv Line: 208
+Warning (10230): Verilog HDL assignment warning at game_process.sv(219): truncated value with size 32 to match size of target (8) File: C:/Users/rafae/OneDrive/Documents/Workspace/Faculdade/Processador/game_process.sv Line: 219
+Warning (10230): Verilog HDL assignment warning at game_process.sv(222): truncated value with size 32 to match size of target (26) File: C:/Users/rafae/OneDrive/Documents/Workspace/Faculdade/Processador/game_process.sv Line: 222
+Warning (10762): Verilog HDL Case Statement warning at game_process.sv(231): can't check case statement for completeness because the case expression has too many possible states File: C:/Users/rafae/OneDrive/Documents/Workspace/Faculdade/Processador/game_process.sv Line: 231
 Info (10008): Verilog HDL or VHDL information: EDA Netlist Writer cannot regroup multidimensional array "vram_enemy" into its bus
 Info (10008): Verilog HDL or VHDL information: EDA Netlist Writer cannot regroup multidimensional array "fb_number" into its bus
 Info (10008): Verilog HDL or VHDL information: EDA Netlist Writer cannot regroup multidimensional array "fb_enemy" into its bus
-Info (12128): Elaborating entity "random_enemy" for hierarchy "red_screen:rs|game_process:game_process|random_enemy:re" File: C:/Users/rafae/OneDrive/Documents/Workspace/Faculdade/Processador/old/game_process.sv Line: 131
+Info (12128): Elaborating entity "random_enemy" for hierarchy "red_screen:rs|game_process:game_process|random_enemy:re" File: C:/Users/rafae/OneDrive/Documents/Workspace/Faculdade/Processador/game_process.sv Line: 131
 Warning (10230): Verilog HDL assignment warning at random_enemy.sv(15): truncated value with size 32 to match size of target (8) File: C:/Users/rafae/OneDrive/Documents/Workspace/Faculdade/Processador/old/random_enemy.sv Line: 15
 Warning (10230): Verilog HDL assignment warning at random_enemy.sv(19): truncated value with size 8 to match size of target (2) File: C:/Users/rafae/OneDrive/Documents/Workspace/Faculdade/Processador/old/random_enemy.sv Line: 19
 Info (12128): Elaborating entity "VRAM" for hierarchy "red_screen:rs|VRAM:VR" File: C:/Users/rafae/OneDrive/Documents/Workspace/Faculdade/Processador/red_screen.sv Line: 99
@@ -2428,7 +2427,7 @@ Info (12128): Elaborating entity "decode_k8a" for hierarchy "red_screen:rs|VRAM:
 Info (12021): Found 1 design units, including 1 entities, in source file db/mux_cnb.tdf
     Info (12023): Found entity 1: mux_cnb File: C:/Users/rafae/OneDrive/Documents/Workspace/Faculdade/Processador/db/mux_cnb.tdf Line: 22
 Info (12128): Elaborating entity "mux_cnb" for hierarchy "red_screen:rs|VRAM:VR|altsyncram:altsyncram_component|altsyncram_r9a1:auto_generated|mux_cnb:mux2" File: C:/Users/rafae/OneDrive/Documents/Workspace/Faculdade/Processador/db/altsyncram_r9a1.tdf Line: 41
-Info (12128): Elaborating entity "vga_test" for hierarchy "vga_test:inst_vga_test" File: C:/Users/rafae/OneDrive/Documents/Workspace/Faculdade/Processador/teste.sv Line: 258
+Info (12128): Elaborating entity "vga_test" for hierarchy "vga_test:inst_vga_test" File: C:/Users/rafae/OneDrive/Documents/Workspace/Faculdade/Processador/teste.sv Line: 255
 Warning (10036): Verilog HDL or VHDL warning at vga_test.sv(32): object "Inv_VGA_Clk" assigned a value but never read File: C:/Users/rafae/OneDrive/Documents/Workspace/Faculdade/Processador/vga_test.sv Line: 32
 Warning (10036): Verilog HDL or VHDL warning at vga_test.sv(33): object "Inv_Slow_Clock" assigned a value but never read File: C:/Users/rafae/OneDrive/Documents/Workspace/Faculdade/Processador/vga_test.sv Line: 33
 Warning (10230): Verilog HDL assignment warning at vga_test.sv(102): truncated value with size 9 to match size of target (8) File: C:/Users/rafae/OneDrive/Documents/Workspace/Faculdade/Processador/vga_test.sv Line: 102
@@ -2530,7 +2529,7 @@ Info (12128): Elaborating entity "decode_e8a" for hierarchy "vga_test:inst_vga_t
 Info (12021): Found 1 design units, including 1 entities, in source file db/mux_6nb.tdf
     Info (12023): Found entity 1: mux_6nb File: C:/Users/rafae/OneDrive/Documents/Workspace/Faculdade/Processador/db/mux_6nb.tdf Line: 22
 Info (12128): Elaborating entity "mux_6nb" for hierarchy "vga_test:inst_vga_test|FrameBuffer:FB|altsyncram:altsyncram_component|altsyncram_aoj1:auto_generated|mux_6nb:mux3" File: C:/Users/rafae/OneDrive/Documents/Workspace/Faculdade/Processador/db/altsyncram_aoj1.tdf Line: 49
-Info (12128): Elaborating entity "ps2_receiver" for hierarchy "ps2_receiver:PS2" File: C:/Users/rafae/OneDrive/Documents/Workspace/Faculdade/Processador/teste.sv Line: 264
+Info (12128): Elaborating entity "ps2_receiver" for hierarchy "ps2_receiver:PS2" File: C:/Users/rafae/OneDrive/Documents/Workspace/Faculdade/Processador/teste.sv Line: 261
 Warning (10036): Verilog HDL or VHDL warning at ps2_receiver.sv(6): object "scan_code" assigned a value but never read File: C:/Users/rafae/OneDrive/Documents/Workspace/Faculdade/Processador/ps2_receiver.sv Line: 6
 Warning (10036): Verilog HDL or VHDL warning at ps2_receiver.sv(7): object "scan_ready" assigned a value but never read File: C:/Users/rafae/OneDrive/Documents/Workspace/Faculdade/Processador/ps2_receiver.sv Line: 7
 Warning (276027): Inferred dual-clock RAM node "ram_data:ram_data_inst|ram_rtl_0" from synchronous design logic.  The read-during-write behavior of a dual-clock RAM is undefined and may not match the behavior of the original design.
@@ -2591,16 +2590,16 @@ Info (278001): Inferred 18 megafunctions from design logic
     Info (278003): Inferred multiplier megafunction ("lpm_mult") from the following logic: "ram_data:ram_data_inst|Mult2" File: C:/Users/rafae/OneDrive/Documents/Workspace/Faculdade/Processador/ram_data.sv Line: 53
     Info (278003): Inferred multiplier megafunction ("lpm_mult") from the following logic: "ram_data:ram_data_inst|Mult1" File: C:/Users/rafae/OneDrive/Documents/Workspace/Faculdade/Processador/ram_data.sv Line: 51
     Info (278003): Inferred multiplier megafunction ("lpm_mult") from the following logic: "program_counter:program_counter_inst|Mult0" File: C:/Users/rafae/OneDrive/Documents/Workspace/Faculdade/Processador/program_counter.sv Line: 59
-    Info (278004): Inferred divider/modulo megafunction ("lpm_divide") from the following logic: "red_screen:rs|game_process:game_process|Mod9" File: C:/Users/rafae/OneDrive/Documents/Workspace/Faculdade/Processador/old/game_process.sv Line: 338
-    Info (278004): Inferred divider/modulo megafunction ("lpm_divide") from the following logic: "red_screen:rs|game_process:game_process|Div9" File: C:/Users/rafae/OneDrive/Documents/Workspace/Faculdade/Processador/old/game_process.sv Line: 330
-    Info (278004): Inferred divider/modulo megafunction ("lpm_divide") from the following logic: "red_screen:rs|game_process:game_process|Div7" File: C:/Users/rafae/OneDrive/Documents/Workspace/Faculdade/Processador/old/game_process.sv Line: 314
-    Info (278004): Inferred divider/modulo megafunction ("lpm_divide") from the following logic: "red_screen:rs|game_process:game_process|Mod5" File: C:/Users/rafae/OneDrive/Documents/Workspace/Faculdade/Processador/old/game_process.sv Line: 306
-    Info (278004): Inferred divider/modulo megafunction ("lpm_divide") from the following logic: "red_screen:rs|game_process:game_process|Div5" File: C:/Users/rafae/OneDrive/Documents/Workspace/Faculdade/Processador/old/game_process.sv Line: 298
-    Info (278004): Inferred divider/modulo megafunction ("lpm_divide") from the following logic: "red_screen:rs|game_process:game_process|Mod3" File: C:/Users/rafae/OneDrive/Documents/Workspace/Faculdade/Processador/old/game_process.sv Line: 290
-    Info (278004): Inferred divider/modulo megafunction ("lpm_divide") from the following logic: "red_screen:rs|game_process:game_process|Div3" File: C:/Users/rafae/OneDrive/Documents/Workspace/Faculdade/Processador/old/game_process.sv Line: 282
-    Info (278004): Inferred divider/modulo megafunction ("lpm_divide") from the following logic: "red_screen:rs|game_process:game_process|Mod1" File: C:/Users/rafae/OneDrive/Documents/Workspace/Faculdade/Processador/old/game_process.sv Line: 274
-    Info (278004): Inferred divider/modulo megafunction ("lpm_divide") from the following logic: "red_screen:rs|game_process:game_process|Div1" File: C:/Users/rafae/OneDrive/Documents/Workspace/Faculdade/Processador/old/game_process.sv Line: 266
-    Info (278004): Inferred divider/modulo megafunction ("lpm_divide") from the following logic: "red_screen:rs|game_process:game_process|Mod7" File: C:/Users/rafae/OneDrive/Documents/Workspace/Faculdade/Processador/old/game_process.sv Line: 322
+    Info (278004): Inferred divider/modulo megafunction ("lpm_divide") from the following logic: "red_screen:rs|game_process:game_process|Mod9" File: C:/Users/rafae/OneDrive/Documents/Workspace/Faculdade/Processador/game_process.sv Line: 338
+    Info (278004): Inferred divider/modulo megafunction ("lpm_divide") from the following logic: "red_screen:rs|game_process:game_process|Div9" File: C:/Users/rafae/OneDrive/Documents/Workspace/Faculdade/Processador/game_process.sv Line: 330
+    Info (278004): Inferred divider/modulo megafunction ("lpm_divide") from the following logic: "red_screen:rs|game_process:game_process|Div7" File: C:/Users/rafae/OneDrive/Documents/Workspace/Faculdade/Processador/game_process.sv Line: 314
+    Info (278004): Inferred divider/modulo megafunction ("lpm_divide") from the following logic: "red_screen:rs|game_process:game_process|Mod5" File: C:/Users/rafae/OneDrive/Documents/Workspace/Faculdade/Processador/game_process.sv Line: 306
+    Info (278004): Inferred divider/modulo megafunction ("lpm_divide") from the following logic: "red_screen:rs|game_process:game_process|Div5" File: C:/Users/rafae/OneDrive/Documents/Workspace/Faculdade/Processador/game_process.sv Line: 298
+    Info (278004): Inferred divider/modulo megafunction ("lpm_divide") from the following logic: "red_screen:rs|game_process:game_process|Mod3" File: C:/Users/rafae/OneDrive/Documents/Workspace/Faculdade/Processador/game_process.sv Line: 290
+    Info (278004): Inferred divider/modulo megafunction ("lpm_divide") from the following logic: "red_screen:rs|game_process:game_process|Div3" File: C:/Users/rafae/OneDrive/Documents/Workspace/Faculdade/Processador/game_process.sv Line: 282
+    Info (278004): Inferred divider/modulo megafunction ("lpm_divide") from the following logic: "red_screen:rs|game_process:game_process|Mod1" File: C:/Users/rafae/OneDrive/Documents/Workspace/Faculdade/Processador/game_process.sv Line: 274
+    Info (278004): Inferred divider/modulo megafunction ("lpm_divide") from the following logic: "red_screen:rs|game_process:game_process|Div1" File: C:/Users/rafae/OneDrive/Documents/Workspace/Faculdade/Processador/game_process.sv Line: 266
+    Info (278004): Inferred divider/modulo megafunction ("lpm_divide") from the following logic: "red_screen:rs|game_process:game_process|Mod7" File: C:/Users/rafae/OneDrive/Documents/Workspace/Faculdade/Processador/game_process.sv Line: 322
     Info (278004): Inferred divider/modulo megafunction ("lpm_divide") from the following logic: "red_screen:rs|Mod0" File: C:/Users/rafae/OneDrive/Documents/Workspace/Faculdade/Processador/red_screen.sv Line: 84
     Info (278004): Inferred divider/modulo megafunction ("lpm_divide") from the following logic: "red_screen:rs|game_process:game_process|random_enemy:re|Mod0" File: C:/Users/rafae/OneDrive/Documents/Workspace/Faculdade/Processador/old/random_enemy.sv Line: 15
     Info (278004): Inferred divider/modulo megafunction ("lpm_divide") from the following logic: "red_screen:rs|game_process:game_process|random_enemy:re|Div0" File: C:/Users/rafae/OneDrive/Documents/Workspace/Faculdade/Processador/old/random_enemy.sv Line: 15
@@ -2728,8 +2727,8 @@ Info (12133): Instantiated megafunction "ram_data:ram_data_inst|lpm_mult:Mult1" 
     Info (12134): Parameter "MAXIMIZE_SPEED" = "5"
 Info (12021): Found 1 design units, including 1 entities, in source file db/mult_8ft.tdf
     Info (12023): Found entity 1: mult_8ft File: C:/Users/rafae/OneDrive/Documents/Workspace/Faculdade/Processador/db/mult_8ft.tdf Line: 30
-Info (12130): Elaborated megafunction instantiation "red_screen:rs|game_process:game_process|lpm_divide:Mod9" File: C:/Users/rafae/OneDrive/Documents/Workspace/Faculdade/Processador/old/game_process.sv Line: 338
-Info (12133): Instantiated megafunction "red_screen:rs|game_process:game_process|lpm_divide:Mod9" with the following parameter: File: C:/Users/rafae/OneDrive/Documents/Workspace/Faculdade/Processador/old/game_process.sv Line: 338
+Info (12130): Elaborated megafunction instantiation "red_screen:rs|game_process:game_process|lpm_divide:Mod9" File: C:/Users/rafae/OneDrive/Documents/Workspace/Faculdade/Processador/game_process.sv Line: 338
+Info (12133): Instantiated megafunction "red_screen:rs|game_process:game_process|lpm_divide:Mod9" with the following parameter: File: C:/Users/rafae/OneDrive/Documents/Workspace/Faculdade/Processador/game_process.sv Line: 338
     Info (12134): Parameter "LPM_WIDTHN" = "8"
     Info (12134): Parameter "LPM_WIDTHD" = "4"
     Info (12134): Parameter "LPM_NREPRESENTATION" = "UNSIGNED"
@@ -2740,22 +2739,22 @@ Info (12021): Found 1 design units, including 1 entities, in source file db/sign
     Info (12023): Found entity 1: sign_div_unsign_bkh File: C:/Users/rafae/OneDrive/Documents/Workspace/Faculdade/Processador/db/sign_div_unsign_bkh.tdf Line: 24
 Info (12021): Found 1 design units, including 1 entities, in source file db/alt_u_div_a4f.tdf
     Info (12023): Found entity 1: alt_u_div_a4f File: C:/Users/rafae/OneDrive/Documents/Workspace/Faculdade/Processador/db/alt_u_div_a4f.tdf Line: 26
-Info (12130): Elaborated megafunction instantiation "red_screen:rs|game_process:game_process|lpm_divide:Div9" File: C:/Users/rafae/OneDrive/Documents/Workspace/Faculdade/Processador/old/game_process.sv Line: 330
-Info (12133): Instantiated megafunction "red_screen:rs|game_process:game_process|lpm_divide:Div9" with the following parameter: File: C:/Users/rafae/OneDrive/Documents/Workspace/Faculdade/Processador/old/game_process.sv Line: 330
+Info (12130): Elaborated megafunction instantiation "red_screen:rs|game_process:game_process|lpm_divide:Div9" File: C:/Users/rafae/OneDrive/Documents/Workspace/Faculdade/Processador/game_process.sv Line: 330
+Info (12133): Instantiated megafunction "red_screen:rs|game_process:game_process|lpm_divide:Div9" with the following parameter: File: C:/Users/rafae/OneDrive/Documents/Workspace/Faculdade/Processador/game_process.sv Line: 330
     Info (12134): Parameter "LPM_WIDTHN" = "8"
     Info (12134): Parameter "LPM_WIDTHD" = "4"
     Info (12134): Parameter "LPM_NREPRESENTATION" = "UNSIGNED"
     Info (12134): Parameter "LPM_DREPRESENTATION" = "UNSIGNED"
 Info (12021): Found 1 design units, including 1 entities, in source file db/lpm_divide_jhm.tdf
     Info (12023): Found entity 1: lpm_divide_jhm File: C:/Users/rafae/OneDrive/Documents/Workspace/Faculdade/Processador/db/lpm_divide_jhm.tdf Line: 24
-Info (12130): Elaborated megafunction instantiation "red_screen:rs|game_process:game_process|lpm_divide:Mod1" File: C:/Users/rafae/OneDrive/Documents/Workspace/Faculdade/Processador/old/game_process.sv Line: 274
-Info (12133): Instantiated megafunction "red_screen:rs|game_process:game_process|lpm_divide:Mod1" with the following parameter: File: C:/Users/rafae/OneDrive/Documents/Workspace/Faculdade/Processador/old/game_process.sv Line: 274
+Info (12130): Elaborated megafunction instantiation "red_screen:rs|game_process:game_process|lpm_divide:Mod1" File: C:/Users/rafae/OneDrive/Documents/Workspace/Faculdade/Processador/game_process.sv Line: 274
+Info (12133): Instantiated megafunction "red_screen:rs|game_process:game_process|lpm_divide:Mod1" with the following parameter: File: C:/Users/rafae/OneDrive/Documents/Workspace/Faculdade/Processador/game_process.sv Line: 274
     Info (12134): Parameter "LPM_WIDTHN" = "8"
     Info (12134): Parameter "LPM_WIDTHD" = "4"
     Info (12134): Parameter "LPM_NREPRESENTATION" = "UNSIGNED"
     Info (12134): Parameter "LPM_DREPRESENTATION" = "UNSIGNED"
-Info (12130): Elaborated megafunction instantiation "red_screen:rs|game_process:game_process|lpm_divide:Div1" File: C:/Users/rafae/OneDrive/Documents/Workspace/Faculdade/Processador/old/game_process.sv Line: 266
-Info (12133): Instantiated megafunction "red_screen:rs|game_process:game_process|lpm_divide:Div1" with the following parameter: File: C:/Users/rafae/OneDrive/Documents/Workspace/Faculdade/Processador/old/game_process.sv Line: 266
+Info (12130): Elaborated megafunction instantiation "red_screen:rs|game_process:game_process|lpm_divide:Div1" File: C:/Users/rafae/OneDrive/Documents/Workspace/Faculdade/Processador/game_process.sv Line: 266
+Info (12133): Instantiated megafunction "red_screen:rs|game_process:game_process|lpm_divide:Div1" with the following parameter: File: C:/Users/rafae/OneDrive/Documents/Workspace/Faculdade/Processador/game_process.sv Line: 266
     Info (12134): Parameter "LPM_WIDTHN" = "8"
     Info (12134): Parameter "LPM_WIDTHD" = "4"
     Info (12134): Parameter "LPM_NREPRESENTATION" = "UNSIGNED"
@@ -2838,10 +2837,10 @@ Info (21057): Implemented 8834 device resources after synthesis - the final reso
     Info (21065): Implemented 1 PLLs
     Info (21062): Implemented 14 DSP elements
 Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 95 warnings
-    Info: Peak virtual memory: 4948 megabytes
-    Info: Processing ended: Wed Jul 02 15:49:06 2025
-    Info: Elapsed time: 00:00:48
-    Info: Total CPU time (on all processors): 00:01:00
+    Info: Peak virtual memory: 4939 megabytes
+    Info: Processing ended: Wed Jul 02 21:25:05 2025
+    Info: Elapsed time: 00:00:31
+    Info: Total CPU time (on all processors): 00:00:39
 
 
 +------------------------------------------+

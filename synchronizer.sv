@@ -2,16 +2,16 @@ module synchronizer (
     input  wire clk,
     input  wire enter,
     input  wire reset,
-    input  wire [5:0] acoes,
+    input  wire acoes [0:5],
 
     output logic enter_sync,
     output logic reset_sync,
-    output logic [5:0] acoes_sync
+    output logic acoes_sync [0:5]
 );
 
     // Etapas intermediárias para sincronização
     logic enter_sync_0, reset_sync_0;
-    logic [5:0] acoes_sync_0;
+    logic acoes_sync_0 [0:5];
 
     always_ff @(posedge clk) begin
         // Primeira etapa

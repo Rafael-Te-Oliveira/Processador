@@ -1,7 +1,7 @@
 module red_screen (
     input logic clk,     
     input logic reset, 
-	 input logic [5:0] acoes,
+	 input logic acoes [0:5],
     output logic [31:0] Draw_X,
     output logic [31:0] Draw_Y,
     output logic [31:0] Draw_Color,
@@ -54,8 +54,8 @@ module red_screen (
     game_process game_process (
         .clk(clk),
 		  .reset(reset),
-		  .layer(layer[32:0]),
-		  .acoes(acoes[5:0]),
+		  .layer(layer),
+		  .acoes(acoes),
         .vram_inicio_X(inicio_X_wire),
         .vram_inicio_Y(inicio_Y_wire),
         .vram_final_X(final_X_wire),

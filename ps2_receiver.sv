@@ -1,7 +1,7 @@
 module ps2_receiver (
     input ps2_clk,
     input ps2_data,
-    output reg [5:0] acoes // agora 6 bits
+    output reg acoes [0:5] // agora 6 bits
 );
     reg [7:0] scan_code;
     reg scan_ready;

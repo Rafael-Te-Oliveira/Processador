@@ -62,13 +62,13 @@ module teste (
     logic [31:0] segmentosPrograma;
     logic defquantum;
     logic changeProgram;
-    logic [5:0] acoes;
+    logic acoes [0:5];
     logic [31:0] draw_x;
     logic [31:0] draw_y;
     logic [31:0] draw_color;
     logic enable_draw;
     logic enter_sync, reset_sync;
-    logic [5:0] acoes_sync;
+    logic acoes_sync [0:5];
 
     synchronizer sync_inst (
         .clk         (clock),

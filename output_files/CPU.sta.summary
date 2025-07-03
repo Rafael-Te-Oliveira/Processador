@@ -3,27 +3,27 @@ TimeQuest Timing Analyzer Summary
 ------------------------------------------------------------
 
 Type  : Slow 1200mV 85C Model Setup 'clock_divider:clock_divider_inst|count[5]'
-Slack : -170.366
-TNS   : -103587.994
+Slack : -169.458
+TNS   : -104766.752
 
 Type  : Slow 1200mV 85C Model Setup 'clock'
-Slack : -136.634
-TNS   : -633.780
+Slack : -138.233
+TNS   : -632.515
 
 Type  : Slow 1200mV 85C Model Setup 'red_screen:rs|game_process:game_process|trigger'
-Slack : -25.734
-TNS   : -51.467
+Slack : -25.166
+TNS   : -50.332
 
 Type  : Slow 1200mV 85C Model Setup 'ps2_clk'
-Slack : -6.801
-TNS   : -160.911
+Slack : -6.632
+TNS   : -141.666
 
 Type  : Slow 1200mV 85C Model Setup 'inst_vga_test|vga_sync_inst|vga_pll|altpll_component|auto_generated|pll1|clk[0]'
-Slack : -4.700
-TNS   : -79.348
+Slack : -4.866
+TNS   : -81.212
 
 Type  : Slow 1200mV 85C Model Hold 'clock'
-Slack : 0.354
+Slack : 0.402
 TNS   : 0.000
 
 Type  : Slow 1200mV 85C Model Hold 'clock_divider:clock_divider_inst|count[5]'
@@ -39,31 +39,31 @@ Slack : 0.440
 TNS   : 0.000
 
 Type  : Slow 1200mV 85C Model Hold 'red_screen:rs|game_process:game_process|trigger'
-Slack : 1.212
+Slack : 1.092
 TNS   : 0.000
 
 Type  : Slow 1200mV 85C Model Recovery 'inst_vga_test|vga_sync_inst|vga_pll|altpll_component|auto_generated|pll1|clk[0]'
-Slack : -5.254
-TNS   : -103.609
+Slack : -4.989
+TNS   : -98.001
 
 Type  : Slow 1200mV 85C Model Recovery 'red_screen:rs|game_process:game_process|trigger'
-Slack : -1.366
-TNS   : -2.732
+Slack : -1.289
+TNS   : -2.578
 
 Type  : Slow 1200mV 85C Model Recovery 'clock'
-Slack : 14.932
+Slack : 14.189
 TNS   : 0.000
 
 Type  : Slow 1200mV 85C Model Removal 'red_screen:rs|game_process:game_process|trigger'
-Slack : 1.546
+Slack : 1.474
 TNS   : 0.000
 
 Type  : Slow 1200mV 85C Model Removal 'clock'
-Slack : 2.825
+Slack : 3.844
 TNS   : 0.000
 
 Type  : Slow 1200mV 85C Model Removal 'inst_vga_test|vga_sync_inst|vga_pll|altpll_component|auto_generated|pll1|clk[0]'
-Slack : 4.190
+Slack : 4.071
 TNS   : 0.000
 
 Type  : Slow 1200mV 85C Model Minimum Pulse Width 'ps2_clk'
@@ -83,35 +83,35 @@ Slack : 9.622
 TNS   : 0.000
 
 Type  : Slow 1200mV 85C Model Minimum Pulse Width 'inst_vga_test|vga_sync_inst|vga_pll|altpll_component|auto_generated|pll1|clk[0]'
-Slack : 19.571
+Slack : 19.572
 TNS   : 0.000
 
 Type  : Slow 1200mV 0C Model Setup 'clock_divider:clock_divider_inst|count[5]'
-Slack : -154.177
-TNS   : -93927.832
+Slack : -153.472
+TNS   : -95142.664
 
 Type  : Slow 1200mV 0C Model Setup 'clock'
-Slack : -123.396
-TNS   : -544.965
+Slack : -125.209
+TNS   : -549.426
 
 Type  : Slow 1200mV 0C Model Setup 'red_screen:rs|game_process:game_process|trigger'
-Slack : -23.093
-TNS   : -46.185
+Slack : -22.626
+TNS   : -45.252
 
 Type  : Slow 1200mV 0C Model Setup 'ps2_clk'
-Slack : -6.115
-TNS   : -140.734
+Slack : -5.965
+TNS   : -124.004
 
 Type  : Slow 1200mV 0C Model Setup 'inst_vga_test|vga_sync_inst|vga_pll|altpll_component|auto_generated|pll1|clk[0]'
-Slack : -4.165
-TNS   : -70.157
+Slack : -4.310
+TNS   : -71.795
 
 Type  : Slow 1200mV 0C Model Hold 'clock_divider:clock_divider_inst|count[5]'
-Slack : 0.352
+Slack : 0.353
 TNS   : 0.000
 
 Type  : Slow 1200mV 0C Model Hold 'clock'
-Slack : 0.353
+Slack : 0.354
 TNS   : 0.000
 
 Type  : Slow 1200mV 0C Model Hold 'inst_vga_test|vga_sync_inst|vga_pll|altpll_component|auto_generated|pll1|clk[0]'
@@ -123,31 +123,31 @@ Slack : 0.387
 TNS   : 0.000
 
 Type  : Slow 1200mV 0C Model Hold 'red_screen:rs|game_process:game_process|trigger'
-Slack : 1.049
+Slack : 0.987
 TNS   : 0.000
 
 Type  : Slow 1200mV 0C Model Recovery 'inst_vga_test|vga_sync_inst|vga_pll|altpll_component|auto_generated|pll1|clk[0]'
-Slack : -4.634
-TNS   : -91.281
+Slack : -4.389
+TNS   : -86.156
 
 Type  : Slow 1200mV 0C Model Recovery 'red_screen:rs|game_process:game_process|trigger'
-Slack : -1.086
-TNS   : -2.172
+Slack : -1.029
+TNS   : -2.058
 
 Type  : Slow 1200mV 0C Model Recovery 'clock'
-Slack : 15.380
+Slack : 14.772
 TNS   : 0.000
 
 Type  : Slow 1200mV 0C Model Removal 'red_screen:rs|game_process:game_process|trigger'
-Slack : 1.433
+Slack : 1.370
 TNS   : 0.000
 
 Type  : Slow 1200mV 0C Model Removal 'clock'
-Slack : 2.608
+Slack : 3.520
 TNS   : 0.000
 
 Type  : Slow 1200mV 0C Model Removal 'inst_vga_test|vga_sync_inst|vga_pll|altpll_component|auto_generated|pll1|clk[0]'
-Slack : 3.717
+Slack : 3.610
 TNS   : 0.000
 
 Type  : Slow 1200mV 0C Model Minimum Pulse Width 'ps2_clk'
@@ -171,27 +171,27 @@ Slack : 19.574
 TNS   : 0.000
 
 Type  : Fast 1200mV 0C Model Setup 'clock_divider:clock_divider_inst|count[5]'
-Slack : -84.339
-TNS   : -50957.181
+Slack : -84.008
+TNS   : -51621.550
 
 Type  : Fast 1200mV 0C Model Setup 'clock'
-Slack : -67.719
-TNS   : -289.789
+Slack : -68.616
+TNS   : -291.610
 
 Type  : Fast 1200mV 0C Model Setup 'red_screen:rs|game_process:game_process|trigger'
-Slack : -11.878
-TNS   : -23.754
+Slack : -11.456
+TNS   : -22.911
 
 Type  : Fast 1200mV 0C Model Setup 'ps2_clk'
-Slack : -2.751
-TNS   : -53.684
+Slack : -2.661
+TNS   : -42.812
 
 Type  : Fast 1200mV 0C Model Setup 'inst_vga_test|vga_sync_inst|vga_pll|altpll_component|auto_generated|pll1|clk[0]'
-Slack : -2.431
-TNS   : -41.352
+Slack : -2.525
+TNS   : -42.304
 
 Type  : Fast 1200mV 0C Model Hold 'clock'
-Slack : 0.109
+Slack : 0.155
 TNS   : 0.000
 
 Type  : Fast 1200mV 0C Model Hold 'clock_divider:clock_divider_inst|count[5]'
@@ -199,44 +199,44 @@ Slack : 0.181
 TNS   : 0.000
 
 Type  : Fast 1200mV 0C Model Hold 'inst_vga_test|vga_sync_inst|vga_pll|altpll_component|auto_generated|pll1|clk[0]'
-Slack : 0.184
+Slack : 0.183
 TNS   : 0.000
 
 Type  : Fast 1200mV 0C Model Hold 'ps2_clk'
-Slack : 0.192
+Slack : 0.199
 TNS   : 0.000
 
 Type  : Fast 1200mV 0C Model Hold 'red_screen:rs|game_process:game_process|trigger'
-Slack : 0.531
+Slack : 0.495
 TNS   : 0.000
 
 Type  : Fast 1200mV 0C Model Recovery 'inst_vga_test|vga_sync_inst|vga_pll|altpll_component|auto_generated|pll1|clk[0]'
-Slack : -2.767
-TNS   : -54.277
+Slack : -2.593
+TNS   : -50.745
 
 Type  : Fast 1200mV 0C Model Recovery 'red_screen:rs|game_process:game_process|trigger'
-Slack : -0.332
-TNS   : -0.664
+Slack : -0.317
+TNS   : -0.634
 
 Type  : Fast 1200mV 0C Model Recovery 'clock'
-Slack : 17.292
+Slack : 16.831
 TNS   : 0.000
 
 Type  : Fast 1200mV 0C Model Removal 'red_screen:rs|game_process:game_process|trigger'
-Slack : 0.766
+Slack : 0.748
 TNS   : 0.000
 
 Type  : Fast 1200mV 0C Model Removal 'clock'
-Slack : 1.342
+Slack : 1.856
 TNS   : 0.000
 
 Type  : Fast 1200mV 0C Model Removal 'inst_vga_test|vga_sync_inst|vga_pll|altpll_component|auto_generated|pll1|clk[0]'
-Slack : 2.182
+Slack : 2.114
 TNS   : 0.000
 
 Type  : Fast 1200mV 0C Model Minimum Pulse Width 'ps2_clk'
 Slack : -3.000
-TNS   : -60.582
+TNS   : -60.681
 
 Type  : Fast 1200mV 0C Model Minimum Pulse Width 'clock_divider:clock_divider_inst|count[5]'
 Slack : -1.000
@@ -251,7 +251,7 @@ Slack : 9.371
 TNS   : 0.000
 
 Type  : Fast 1200mV 0C Model Minimum Pulse Width 'inst_vga_test|vga_sync_inst|vga_pll|altpll_component|auto_generated|pll1|clk[0]'
-Slack : 19.618
+Slack : 19.620
 TNS   : 0.000
 
 ------------------------------------------------------------

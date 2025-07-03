@@ -1,4 +1,4 @@
-module synchronizer_old (
+module synchronizer (
     input  wire clk,
     input  wire enter,
     input  wire reset,

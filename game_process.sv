@@ -2,7 +2,7 @@ module game_process (
     input logic clk,
 	 input logic reset,
 	 input logic [32:0] layer,
-	 input logic [5:0] acoes,
+	 input logic acoes[0:5],
     output logic [9:0] vram_inicio_X,
     output logic [9:0] vram_inicio_Y,
     output logic [9:0] vram_final_X,
@@ -104,7 +104,7 @@ logic [1:0] gun_x = 1;
 logic [1:0] gun_x_next;
 logic [25:0] gun_timer = 0;
 logic [7:0] ammo = 60;
-logic [5:0] acoes_prev;
+logic acoes_prev[0:5];
 
 logic enemy_flag = 0;
 logic [2:0] enemy_x = 0;

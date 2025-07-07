@@ -1,3 +1,0 @@
-ULA ULA (selec, X, Y, Z, origULA, result, zero);
-
-UC uc (instrucao, clock, regDst, desvio, leMem, memReg, opULA, escreveMem, origULA, escreveReg, ext);

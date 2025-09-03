@@ -1,5 +1,5 @@
 Analysis & Synthesis report for CPU
-Thu Jul 03 12:39:12 2025
+Wed Jul 16 19:10:28 2025
 Quartus Prime Version 17.1.0 Build 590 10/25/2017 SJ Lite Edition
 
 
@@ -89,7 +89,7 @@ refer to the applicable agreement for further details.
 +----------------------------------------------------------------------------------+
 ; Analysis & Synthesis Summary                                                     ;
 +------------------------------------+---------------------------------------------+
-; Analysis & Synthesis Status        ; Successful - Thu Jul 03 12:39:12 2025       ;
+; Analysis & Synthesis Status        ; Successful - Wed Jul 16 19:10:28 2025       ;
 ; Quartus Prime Version              ; 17.1.0 Build 590 10/25/2017 SJ Lite Edition ;
 ; Revision Name                      ; CPU                                         ;
 ; Top-level Entity Name              ; doom_cpu                                    ;
@@ -213,7 +213,7 @@ refer to the applicable agreement for further details.
 ;     Processor 6            ;   0.1%      ;
 ;     Processor 7            ;   0.1%      ;
 ;     Processor 8            ;   0.1%      ;
-;     Processors 9-12        ;   0.0%      ;
+;     Processors 9-12        ;   0.1%      ;
 +----------------------------+-------------+
 
 
@@ -227,10 +227,6 @@ refer to the applicable agreement for further details.
 ; ps2_input.sv                                  ; yes             ; User SystemVerilog HDL File                           ; C:/Users/rafae/OneDrive/Documents/Workspace/Faculdade/Processador/ps2_input.sv                                  ;         ;
 ; vga_controller.sv                             ; yes             ; User SystemVerilog HDL File                           ; C:/Users/rafae/OneDrive/Documents/Workspace/Faculdade/Processador/vga_controller.sv                             ;         ;
 ; layer_draw_engine.sv                          ; yes             ; User SystemVerilog HDL File                           ; C:/Users/rafae/OneDrive/Documents/Workspace/Faculdade/Processador/layer_draw_engine.sv                          ;         ;
-; old/VRAM.v                                    ; yes             ; User Wizard-Generated File                            ; C:/Users/rafae/OneDrive/Documents/Workspace/Faculdade/Processador/old/VRAM.v                                    ;         ;
-; old/vga_pll.v                                 ; yes             ; User Wizard-Generated File                            ; C:/Users/rafae/OneDrive/Documents/Workspace/Faculdade/Processador/old/vga_pll.v                                 ;         ;
-; old/random_enemy.sv                           ; yes             ; User SystemVerilog HDL File                           ; C:/Users/rafae/OneDrive/Documents/Workspace/Faculdade/Processador/old/random_enemy.sv                           ;         ;
-; old/FrameBuffer.v                             ; yes             ; User Wizard-Generated File                            ; C:/Users/rafae/OneDrive/Documents/Workspace/Faculdade/Processador/old/FrameBuffer.v                             ;         ;
 ; vga_sync.sv                                   ; yes             ; User SystemVerilog HDL File                           ; C:/Users/rafae/OneDrive/Documents/Workspace/Faculdade/Processador/vga_sync.sv                                   ;         ;
 ; ula_control.sv                                ; yes             ; User SystemVerilog HDL File                           ; C:/Users/rafae/OneDrive/Documents/Workspace/Faculdade/Processador/ula_control.sv                                ;         ;
 ; ula.sv                                        ; yes             ; User SystemVerilog HDL File                           ; C:/Users/rafae/OneDrive/Documents/Workspace/Faculdade/Processador/ula.sv                                        ;         ;
@@ -245,6 +241,10 @@ refer to the applicable agreement for further details.
 ; data_output.sv                                ; yes             ; User SystemVerilog HDL File                           ; C:/Users/rafae/OneDrive/Documents/Workspace/Faculdade/Processador/data_output.sv                                ;         ;
 ; control_unit.sv                               ; yes             ; User SystemVerilog HDL File                           ; C:/Users/rafae/OneDrive/Documents/Workspace/Faculdade/Processador/control_unit.sv                               ;         ;
 ; clock_divider.sv                              ; yes             ; User SystemVerilog HDL File                           ; C:/Users/rafae/OneDrive/Documents/Workspace/Faculdade/Processador/clock_divider.sv                              ;         ;
+; vga_pll.v                                     ; yes             ; User Wizard-Generated File                            ; C:/Users/rafae/OneDrive/Documents/Workspace/Faculdade/Processador/vga_pll.v                                     ;         ;
+; FrameBuffer.v                                 ; yes             ; User Wizard-Generated File                            ; C:/Users/rafae/OneDrive/Documents/Workspace/Faculdade/Processador/FrameBuffer.v                                 ;         ;
+; VRAM.v                                        ; yes             ; User Wizard-Generated File                            ; C:/Users/rafae/OneDrive/Documents/Workspace/Faculdade/Processador/VRAM.v                                        ;         ;
+; random_enemy.sv                               ; yes             ; User SystemVerilog HDL File                           ; C:/Users/rafae/OneDrive/Documents/Workspace/Faculdade/Processador/random_enemy.sv                               ;         ;
 ; synchronizer.sv                               ; yes             ; User SystemVerilog HDL File                           ; C:/Users/rafae/OneDrive/Documents/Workspace/Faculdade/Processador/synchronizer.sv                               ;         ;
 ; instrucoes_ram/so.txt                         ; yes             ; Auto-Found File                                       ; C:/Users/rafae/OneDrive/Documents/Workspace/Faculdade/Processador/instrucoes_ram/so.txt                         ;         ;
 ; instrucoes_ram/programa_1.txt                 ; yes             ; Auto-Found File                                       ; C:/Users/rafae/OneDrive/Documents/Workspace/Faculdade/Processador/instrucoes_ram/programa_1.txt                 ;         ;
@@ -508,15 +508,15 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 Note: number of Embedded Multiplier Blocks used is only available after a successful fit.
 
 
-+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Analysis & Synthesis IP Cores Summary                                                                                                                                   ;
-+--------+--------------+---------+--------------+--------------+-------------------------------------------------------------------------------------+-------------------+
-; Vendor ; IP Core Name ; Version ; Release Date ; License Type ; Entity Instance                                                                     ; IP Include File   ;
-+--------+--------------+---------+--------------+--------------+-------------------------------------------------------------------------------------+-------------------+
-; Altera ; ROM: 1-PORT  ; 17.1    ; N/A          ; N/A          ; |doom_cpu|layer_draw_engine:layer_draw_engine_inst|VRAM:VR                          ; old/VRAM.v        ;
-; Altera ; RAM: 2-PORT  ; 17.1    ; N/A          ; N/A          ; |doom_cpu|vga_controller:vga_controller_inst|FrameBuffer:FB                         ; old/FrameBuffer.v ;
-; Altera ; ALTPLL       ; 17.1    ; N/A          ; N/A          ; |doom_cpu|vga_controller:vga_controller_inst|vga_sync:vga_sync_inst|vga_pll:vga_pll ; old/vga_pll.v     ;
-+--------+--------------+---------+--------------+--------------+-------------------------------------------------------------------------------------+-------------------+
++-----------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis IP Cores Summary                                                                                                                                 ;
++--------+--------------+---------+--------------+--------------+-------------------------------------------------------------------------------------+-----------------+
+; Vendor ; IP Core Name ; Version ; Release Date ; License Type ; Entity Instance                                                                     ; IP Include File ;
++--------+--------------+---------+--------------+--------------+-------------------------------------------------------------------------------------+-----------------+
+; Altera ; ROM: 1-PORT  ; 17.1    ; N/A          ; N/A          ; |doom_cpu|layer_draw_engine:layer_draw_engine_inst|VRAM:VR                          ; VRAM.v          ;
+; Altera ; RAM: 2-PORT  ; 17.1    ; N/A          ; N/A          ; |doom_cpu|vga_controller:vga_controller_inst|FrameBuffer:FB                         ; FrameBuffer.v   ;
+; Altera ; ALTPLL       ; 17.1    ; N/A          ; N/A          ; |doom_cpu|vga_controller:vga_controller_inst|vga_sync:vga_sync_inst|vga_pll:vga_pll ; vga_pll.v       ;
++--------+--------------+---------+--------------+--------------+-------------------------------------------------------------------------------------+-----------------+
 
 
 +------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
@@ -2133,8 +2133,14 @@ Note: In order to hide this table in the UI and the text report file, please set
 Info: *******************************************************************
 Info: Running Quartus Prime Analysis & Synthesis
     Info: Version 17.1.0 Build 590 10/25/2017 SJ Lite Edition
-    Info: Processing started: Thu Jul 03 12:38:39 2025
+    Info: Processing started: Wed Jul 16 19:09:55 2025
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off CPU -c CPU
+Warning (125092): Tcl Script File old/VRAM.qip not found
+    Info (125063): set_global_assignment -name QIP_FILE old/VRAM.qip
+Warning (125092): Tcl Script File old/vga_pll.qip not found
+    Info (125063): set_global_assignment -name QIP_FILE old/vga_pll.qip
+Warning (125092): Tcl Script File old/FrameBuffer.qip not found
+    Info (125063): set_global_assignment -name QIP_FILE old/FrameBuffer.qip
 Info (20030): Parallel compilation is enabled and will use 12 of the 12 processors detected
 Info (12021): Found 1 design units, including 1 entities, in source file doom_cpu.sv
     Info (12023): Found entity 1: doom_cpu File: C:/Users/rafae/OneDrive/Documents/Workspace/Faculdade/Processador/doom_cpu.sv Line: 1
@@ -2146,52 +2152,30 @@ Info (12021): Found 1 design units, including 1 entities, in source file vga_con
     Info (12023): Found entity 1: vga_controller File: C:/Users/rafae/OneDrive/Documents/Workspace/Faculdade/Processador/vga_controller.sv Line: 1
 Info (12021): Found 1 design units, including 1 entities, in source file layer_draw_engine.sv
     Info (12023): Found entity 1: layer_draw_engine File: C:/Users/rafae/OneDrive/Documents/Workspace/Faculdade/Processador/layer_draw_engine.sv Line: 1
-Info (12021): Found 1 design units, including 1 entities, in source file old/vram.v
-    Info (12023): Found entity 1: VRAM File: C:/Users/rafae/OneDrive/Documents/Workspace/Faculdade/Processador/old/VRAM.v Line: 39
-Info (12021): Found 1 design units, including 1 entities, in source file old/vga_test.sv
-    Info (12023): Found entity 1: vga_test_old File: C:/Users/rafae/OneDrive/Documents/Workspace/Faculdade/Processador/old/vga_test.sv Line: 1
-Info (12021): Found 1 design units, including 1 entities, in source file old/vga_sync.sv
-    Info (12023): Found entity 1: vga_sync_old File: C:/Users/rafae/OneDrive/Documents/Workspace/Faculdade/Processador/old/vga_sync.sv Line: 1
-Info (12021): Found 1 design units, including 1 entities, in source file old/vga_pll.v
-    Info (12023): Found entity 1: vga_pll File: C:/Users/rafae/OneDrive/Documents/Workspace/Faculdade/Processador/old/vga_pll.v Line: 39
-Info (12021): Found 1 design units, including 1 entities, in source file old/ula.sv
-    Info (12023): Found entity 1: ULA File: C:/Users/rafae/OneDrive/Documents/Workspace/Faculdade/Processador/old/ULA.sv Line: 1
-Info (12021): Found 1 design units, including 1 entities, in source file old/uc.sv
-    Info (12023): Found entity 1: UC File: C:/Users/rafae/OneDrive/Documents/Workspace/Faculdade/Processador/old/UC.sv Line: 1
-Info (12021): Found 1 design units, including 1 entities, in source file old/synchronizer.sv
-    Info (12023): Found entity 1: synchronizer_old File: C:/Users/rafae/OneDrive/Documents/Workspace/Faculdade/Processador/old/synchronizer.sv Line: 1
-Info (12021): Found 1 design units, including 1 entities, in source file old/saidadados.sv
-    Info (12023): Found entity 1: saidaDados File: C:/Users/rafae/OneDrive/Documents/Workspace/Faculdade/Processador/old/saidaDados.sv Line: 1
-Info (12021): Found 1 design units, including 1 entities, in source file old/red_screen.sv
-    Info (12023): Found entity 1: red_screen_old File: C:/Users/rafae/OneDrive/Documents/Workspace/Faculdade/Processador/old/red_screen.sv Line: 1
-Info (12021): Found 1 design units, including 1 entities, in source file old/random_enemy.sv
-    Info (12023): Found entity 1: random_enemy File: C:/Users/rafae/OneDrive/Documents/Workspace/Faculdade/Processador/old/random_enemy.sv Line: 1
-Info (12021): Found 1 design units, including 1 entities, in source file old/ps2_receiver.sv
-    Info (12023): Found entity 1: ps2_receiver_old File: C:/Users/rafae/OneDrive/Documents/Workspace/Faculdade/Processador/old/ps2_receiver.sv Line: 1
-Info (12021): Found 1 design units, including 1 entities, in source file old/pc.sv
-    Info (12023): Found entity 1: PC File: C:/Users/rafae/OneDrive/Documents/Workspace/Faculdade/Processador/old/PC.sv Line: 1
-Info (12021): Found 1 design units, including 1 entities, in source file old/mux_mem.sv
-    Info (12023): Found entity 1: mux_Mem File: C:/Users/rafae/OneDrive/Documents/Workspace/Faculdade/Processador/old/mux_Mem.sv Line: 1
-Info (12021): Found 1 design units, including 1 entities, in source file old/instrucoes_ram.sv
-    Info (12023): Found entity 1: instrucoes_RAM File: C:/Users/rafae/OneDrive/Documents/Workspace/Faculdade/Processador/old/instrucoes_RAM.sv Line: 4
-Info (12021): Found 1 design units, including 1 entities, in source file old/game_process.sv
-    Info (12023): Found entity 1: game_process_old File: C:/Users/rafae/OneDrive/Documents/Workspace/Faculdade/Processador/old/game_process.sv Line: 1
-Info (12021): Found 1 design units, including 1 entities, in source file old/framebuffer.v
-    Info (12023): Found entity 1: FrameBuffer File: C:/Users/rafae/OneDrive/Documents/Workspace/Faculdade/Processador/old/FrameBuffer.v Line: 39
-Info (12021): Found 1 design units, including 1 entities, in source file old/extensor_bit.sv
-    Info (12023): Found entity 1: extensor_Bit File: C:/Users/rafae/OneDrive/Documents/Workspace/Faculdade/Processador/old/extensor_Bit.sv Line: 1
-Info (12021): Found 1 design units, including 1 entities, in source file old/entradadados.sv
-    Info (12023): Found entity 1: entradaDados File: C:/Users/rafae/OneDrive/Documents/Workspace/Faculdade/Processador/old/entradaDados.sv Line: 1
+Warning (12019): Can't analyze file -- file old/VRAM.v is missing
+Warning (12019): Can't analyze file -- file old/vga_test.sv is missing
+Warning (12019): Can't analyze file -- file old/vga_sync.sv is missing
+Warning (12019): Can't analyze file -- file old/vga_pll.v is missing
+Warning (12019): Can't analyze file -- file old/ULA.sv is missing
+Warning (12019): Can't analyze file -- file old/UC.sv is missing
+Warning (12019): Can't analyze file -- file old/synchronizer.sv is missing
+Warning (12019): Can't analyze file -- file old/saidaDados.sv is missing
+Warning (12019): Can't analyze file -- file old/red_screen.sv is missing
+Warning (12019): Can't analyze file -- file old/random_enemy.sv is missing
+Warning (12019): Can't analyze file -- file old/ps2_receiver.sv is missing
+Warning (12019): Can't analyze file -- file old/PC.sv is missing
+Warning (12019): Can't analyze file -- file old/mux_Mem.sv is missing
+Warning (12019): Can't analyze file -- file old/instrucoes_RAM.sv is missing
+Warning (12019): Can't analyze file -- file old/game_process.sv is missing
+Warning (12019): Can't analyze file -- file old/FrameBuffer.v is missing
+Warning (12019): Can't analyze file -- file old/extensor_Bit.sv is missing
+Warning (12019): Can't analyze file -- file old/entradaDados.sv is missing
 Warning (12019): Can't analyze file -- file old/display7seg.sv is missing
-Info (12021): Found 1 design units, including 1 entities, in source file old/dados_ram.sv
-    Info (12023): Found entity 1: dados_RAM File: C:/Users/rafae/OneDrive/Documents/Workspace/Faculdade/Processador/old/dados_RAM.sv Line: 1
-Info (12021): Found 1 design units, including 1 entities, in source file old/controle_ula.sv
-    Info (12023): Found entity 1: controle_ULA File: C:/Users/rafae/OneDrive/Documents/Workspace/Faculdade/Processador/old/controle_ULA.sv Line: 1
-Info (12021): Found 0 design units, including 0 entities, in source file old/contato1.vhd
-Info (12021): Found 1 design units, including 1 entities, in source file old/contato1.sv
-    Info (12023): Found entity 1: contato1 File: C:/Users/rafae/OneDrive/Documents/Workspace/Faculdade/Processador/old/contato1.sv Line: 1
-Info (12021): Found 1 design units, including 1 entities, in source file old/bancoregistradores.sv
-    Info (12023): Found entity 1: BancoRegistradores File: C:/Users/rafae/OneDrive/Documents/Workspace/Faculdade/Processador/old/BancoRegistradores.sv Line: 1
+Warning (12019): Can't analyze file -- file old/dados_RAM.sv is missing
+Warning (12019): Can't analyze file -- file old/controle_ULA.sv is missing
+Warning (12019): Can't analyze file -- file old/contato1.vhd is missing
+Warning (12019): Can't analyze file -- file old/contato1.sv is missing
+Warning (12019): Can't analyze file -- file old/BancoRegistradores.sv is missing
 Warning (12019): Can't analyze file -- file vga_test.sv is missing
 Info (12021): Found 1 design units, including 1 entities, in source file vga_sync.sv
     Info (12023): Found entity 1: vga_sync File: C:/Users/rafae/OneDrive/Documents/Workspace/Faculdade/Processador/vga_sync.sv Line: 1
@@ -2228,19 +2212,18 @@ Info (12021): Found 1 design units, including 1 entities, in source file clock_d
 Warning (12019): Can't analyze file -- file vga_sync.v is missing
 Warning (12019): Can't analyze file -- file vga_test.v is missing
 Warning (12019): Can't analyze file -- file ps2_receiver.v is missing
-Info (15248): File "C:/Users/rafae/OneDrive/Documents/Workspace/Faculdade/Processador/vga_pll.v" is a duplicate of already analyzed file "C:/Users/rafae/OneDrive/Documents/Workspace/Faculdade/Processador/old/vga_pll.v" (same filename, same library name and same md5 digest). Skipping analysis of this file.
-Info (12021): Found 0 design units, including 0 entities, in source file vga_pll.v
-Info (15248): File "C:/Users/rafae/OneDrive/Documents/Workspace/Faculdade/Processador/FrameBuffer.v" is a duplicate of already analyzed file "C:/Users/rafae/OneDrive/Documents/Workspace/Faculdade/Processador/old/FrameBuffer.v" (same filename, same library name and same md5 digest). Skipping analysis of this file.
-Info (12021): Found 0 design units, including 0 entities, in source file framebuffer.v
+Info (12021): Found 1 design units, including 1 entities, in source file vga_pll.v
+    Info (12023): Found entity 1: vga_pll File: C:/Users/rafae/OneDrive/Documents/Workspace/Faculdade/Processador/vga_pll.v Line: 39
+Info (12021): Found 1 design units, including 1 entities, in source file framebuffer.v
+    Info (12023): Found entity 1: FrameBuffer File: C:/Users/rafae/OneDrive/Documents/Workspace/Faculdade/Processador/FrameBuffer.v Line: 39
 Warning (12019): Can't analyze file -- file red_screen.v is missing
-Info (15248): File "C:/Users/rafae/OneDrive/Documents/Workspace/Faculdade/Processador/VRAM.v" is a duplicate of already analyzed file "C:/Users/rafae/OneDrive/Documents/Workspace/Faculdade/Processador/old/VRAM.v" (same filename, same library name and same md5 digest). Skipping analysis of this file.
-Info (12021): Found 0 design units, including 0 entities, in source file vram.v
+Info (12021): Found 1 design units, including 1 entities, in source file vram.v
+    Info (12023): Found entity 1: VRAM File: C:/Users/rafae/OneDrive/Documents/Workspace/Faculdade/Processador/VRAM.v Line: 39
 Warning (12019): Can't analyze file -- file game_process.v is missing
-Info (15248): File "C:/Users/rafae/OneDrive/Documents/Workspace/Faculdade/Processador/random_enemy.sv" is a duplicate of already analyzed file "C:/Users/rafae/OneDrive/Documents/Workspace/Faculdade/Processador/old/random_enemy.sv" (same filename, same library name and same md5 digest). Skipping analysis of this file.
-Info (12021): Found 0 design units, including 0 entities, in source file random_enemy.sv
+Info (12021): Found 1 design units, including 1 entities, in source file random_enemy.sv
+    Info (12023): Found entity 1: random_enemy File: C:/Users/rafae/OneDrive/Documents/Workspace/Faculdade/Processador/random_enemy.sv Line: 1
 Info (12021): Found 1 design units, including 1 entities, in source file synchronizer.sv
     Info (12023): Found entity 1: synchronizer File: C:/Users/rafae/OneDrive/Documents/Workspace/Faculdade/Processador/synchronizer.sv Line: 1
-Warning (10037): Verilog HDL or VHDL warning at saidaDados.sv(67): conditional expression evaluates to a constant File: C:/Users/rafae/OneDrive/Documents/Workspace/Faculdade/Processador/old/saidaDados.sv Line: 67
 Info (12127): Elaborating entity "doom_cpu" for the top level hierarchy
 Info (12128): Elaborating entity "synchronizer" for hierarchy "synchronizer:sync_inst" File: C:/Users/rafae/OneDrive/Documents/Workspace/Faculdade/Processador/doom_cpu.sv Line: 81
 Info (12128): Elaborating entity "clock_divider" for hierarchy "clock_divider:clock_divider_inst" File: C:/Users/rafae/OneDrive/Documents/Workspace/Faculdade/Processador/doom_cpu.sv Line: 89
@@ -2316,12 +2299,12 @@ Info (10008): Verilog HDL or VHDL information: EDA Netlist Writer cannot regroup
 Info (10008): Verilog HDL or VHDL information: EDA Netlist Writer cannot regroup multidimensional array "fb_number" into its bus
 Info (10008): Verilog HDL or VHDL information: EDA Netlist Writer cannot regroup multidimensional array "fb_enemy" into its bus
 Info (12128): Elaborating entity "random_enemy" for hierarchy "layer_draw_engine:layer_draw_engine_inst|game_state_renderer:game_state_renderer_inst|random_enemy:re" File: C:/Users/rafae/OneDrive/Documents/Workspace/Faculdade/Processador/game_state_renderer.sv Line: 131
-Warning (10230): Verilog HDL assignment warning at random_enemy.sv(15): truncated value with size 32 to match size of target (8) File: C:/Users/rafae/OneDrive/Documents/Workspace/Faculdade/Processador/old/random_enemy.sv Line: 15
-Warning (10230): Verilog HDL assignment warning at random_enemy.sv(19): truncated value with size 8 to match size of target (2) File: C:/Users/rafae/OneDrive/Documents/Workspace/Faculdade/Processador/old/random_enemy.sv Line: 19
+Warning (10230): Verilog HDL assignment warning at random_enemy.sv(15): truncated value with size 32 to match size of target (8) File: C:/Users/rafae/OneDrive/Documents/Workspace/Faculdade/Processador/random_enemy.sv Line: 15
+Warning (10230): Verilog HDL assignment warning at random_enemy.sv(19): truncated value with size 8 to match size of target (2) File: C:/Users/rafae/OneDrive/Documents/Workspace/Faculdade/Processador/random_enemy.sv Line: 19
 Info (12128): Elaborating entity "VRAM" for hierarchy "layer_draw_engine:layer_draw_engine_inst|VRAM:VR" File: C:/Users/rafae/OneDrive/Documents/Workspace/Faculdade/Processador/layer_draw_engine.sv Line: 91
-Info (12128): Elaborating entity "altsyncram" for hierarchy "layer_draw_engine:layer_draw_engine_inst|VRAM:VR|altsyncram:altsyncram_component" File: C:/Users/rafae/OneDrive/Documents/Workspace/Faculdade/Processador/old/VRAM.v Line: 81
-Info (12130): Elaborated megafunction instantiation "layer_draw_engine:layer_draw_engine_inst|VRAM:VR|altsyncram:altsyncram_component" File: C:/Users/rafae/OneDrive/Documents/Workspace/Faculdade/Processador/old/VRAM.v Line: 81
-Info (12133): Instantiated megafunction "layer_draw_engine:layer_draw_engine_inst|VRAM:VR|altsyncram:altsyncram_component" with the following parameter: File: C:/Users/rafae/OneDrive/Documents/Workspace/Faculdade/Processador/old/VRAM.v Line: 81
+Info (12128): Elaborating entity "altsyncram" for hierarchy "layer_draw_engine:layer_draw_engine_inst|VRAM:VR|altsyncram:altsyncram_component" File: C:/Users/rafae/OneDrive/Documents/Workspace/Faculdade/Processador/VRAM.v Line: 81
+Info (12130): Elaborated megafunction instantiation "layer_draw_engine:layer_draw_engine_inst|VRAM:VR|altsyncram:altsyncram_component" File: C:/Users/rafae/OneDrive/Documents/Workspace/Faculdade/Processador/VRAM.v Line: 81
+Info (12133): Instantiated megafunction "layer_draw_engine:layer_draw_engine_inst|VRAM:VR|altsyncram:altsyncram_component" with the following parameter: File: C:/Users/rafae/OneDrive/Documents/Workspace/Faculdade/Processador/VRAM.v Line: 81
     Info (12134): Parameter "address_aclr_a" = "NONE"
     Info (12134): Parameter "clock_enable_input_a" = "BYPASS"
     Info (12134): Parameter "clock_enable_output_a" = "BYPASS"
@@ -2351,9 +2334,9 @@ Warning (10230): Verilog HDL assignment warning at vga_controller.sv(79): trunca
 Warning (10230): Verilog HDL assignment warning at vga_controller.sv(80): truncated value with size 9 to match size of target (8) File: C:/Users/rafae/OneDrive/Documents/Workspace/Faculdade/Processador/vga_controller.sv Line: 80
 Info (12128): Elaborating entity "vga_sync" for hierarchy "vga_controller:vga_controller_inst|vga_sync:vga_sync_inst" File: C:/Users/rafae/OneDrive/Documents/Workspace/Faculdade/Processador/vga_controller.sv Line: 60
 Info (12128): Elaborating entity "vga_pll" for hierarchy "vga_controller:vga_controller_inst|vga_sync:vga_sync_inst|vga_pll:vga_pll" File: C:/Users/rafae/OneDrive/Documents/Workspace/Faculdade/Processador/vga_sync.sv Line: 40
-Info (12128): Elaborating entity "altpll" for hierarchy "vga_controller:vga_controller_inst|vga_sync:vga_sync_inst|vga_pll:vga_pll|altpll:altpll_component" File: C:/Users/rafae/OneDrive/Documents/Workspace/Faculdade/Processador/old/vga_pll.v Line: 90
-Info (12130): Elaborated megafunction instantiation "vga_controller:vga_controller_inst|vga_sync:vga_sync_inst|vga_pll:vga_pll|altpll:altpll_component" File: C:/Users/rafae/OneDrive/Documents/Workspace/Faculdade/Processador/old/vga_pll.v Line: 90
-Info (12133): Instantiated megafunction "vga_controller:vga_controller_inst|vga_sync:vga_sync_inst|vga_pll:vga_pll|altpll:altpll_component" with the following parameter: File: C:/Users/rafae/OneDrive/Documents/Workspace/Faculdade/Processador/old/vga_pll.v Line: 90
+Info (12128): Elaborating entity "altpll" for hierarchy "vga_controller:vga_controller_inst|vga_sync:vga_sync_inst|vga_pll:vga_pll|altpll:altpll_component" File: C:/Users/rafae/OneDrive/Documents/Workspace/Faculdade/Processador/vga_pll.v Line: 90
+Info (12130): Elaborated megafunction instantiation "vga_controller:vga_controller_inst|vga_sync:vga_sync_inst|vga_pll:vga_pll|altpll:altpll_component" File: C:/Users/rafae/OneDrive/Documents/Workspace/Faculdade/Processador/vga_pll.v Line: 90
+Info (12133): Instantiated megafunction "vga_controller:vga_controller_inst|vga_sync:vga_sync_inst|vga_pll:vga_pll|altpll:altpll_component" with the following parameter: File: C:/Users/rafae/OneDrive/Documents/Workspace/Faculdade/Processador/vga_pll.v Line: 90
     Info (12134): Parameter "bandwidth_type" = "AUTO"
     Info (12134): Parameter "clk0_divide_by" = "143"
     Info (12134): Parameter "clk0_duty_cycle" = "49"
@@ -2412,9 +2395,9 @@ Info (12021): Found 1 design units, including 1 entities, in source file db/vga_
     Info (12023): Found entity 1: vga_pll_altpll File: C:/Users/rafae/OneDrive/Documents/Workspace/Faculdade/Processador/db/vga_pll_altpll.v Line: 29
 Info (12128): Elaborating entity "vga_pll_altpll" for hierarchy "vga_controller:vga_controller_inst|vga_sync:vga_sync_inst|vga_pll:vga_pll|altpll:altpll_component|vga_pll_altpll:auto_generated" File: c:/intelfpga_lite/17.1/quartus/libraries/megafunctions/altpll.tdf Line: 897
 Info (12128): Elaborating entity "FrameBuffer" for hierarchy "vga_controller:vga_controller_inst|FrameBuffer:FB" File: C:/Users/rafae/OneDrive/Documents/Workspace/Faculdade/Processador/vga_controller.sv Line: 72
-Info (12128): Elaborating entity "altsyncram" for hierarchy "vga_controller:vga_controller_inst|FrameBuffer:FB|altsyncram:altsyncram_component" File: C:/Users/rafae/OneDrive/Documents/Workspace/Faculdade/Processador/old/FrameBuffer.v Line: 90
-Info (12130): Elaborated megafunction instantiation "vga_controller:vga_controller_inst|FrameBuffer:FB|altsyncram:altsyncram_component" File: C:/Users/rafae/OneDrive/Documents/Workspace/Faculdade/Processador/old/FrameBuffer.v Line: 90
-Info (12133): Instantiated megafunction "vga_controller:vga_controller_inst|FrameBuffer:FB|altsyncram:altsyncram_component" with the following parameter: File: C:/Users/rafae/OneDrive/Documents/Workspace/Faculdade/Processador/old/FrameBuffer.v Line: 90
+Info (12128): Elaborating entity "altsyncram" for hierarchy "vga_controller:vga_controller_inst|FrameBuffer:FB|altsyncram:altsyncram_component" File: C:/Users/rafae/OneDrive/Documents/Workspace/Faculdade/Processador/FrameBuffer.v Line: 90
+Info (12130): Elaborated megafunction instantiation "vga_controller:vga_controller_inst|FrameBuffer:FB|altsyncram:altsyncram_component" File: C:/Users/rafae/OneDrive/Documents/Workspace/Faculdade/Processador/FrameBuffer.v Line: 90
+Info (12133): Instantiated megafunction "vga_controller:vga_controller_inst|FrameBuffer:FB|altsyncram:altsyncram_component" with the following parameter: File: C:/Users/rafae/OneDrive/Documents/Workspace/Faculdade/Processador/FrameBuffer.v Line: 90
     Info (12134): Parameter "address_aclr_b" = "NONE"
     Info (12134): Parameter "address_reg_b" = "CLOCK1"
     Info (12134): Parameter "clock_enable_input_a" = "BYPASS"
@@ -2446,7 +2429,7 @@ Info (12021): Found 1 design units, including 1 entities, in source file db/mux_
     Info (12023): Found entity 1: mux_6nb File: C:/Users/rafae/OneDrive/Documents/Workspace/Faculdade/Processador/db/mux_6nb.tdf Line: 22
 Info (12128): Elaborating entity "mux_6nb" for hierarchy "vga_controller:vga_controller_inst|FrameBuffer:FB|altsyncram:altsyncram_component|altsyncram_aoj1:auto_generated|mux_6nb:mux3" File: C:/Users/rafae/OneDrive/Documents/Workspace/Faculdade/Processador/db/altsyncram_aoj1.tdf Line: 49
 Info (12128): Elaborating entity "ps2_input" for hierarchy "ps2_input:ps2_input_inst" File: C:/Users/rafae/OneDrive/Documents/Workspace/Faculdade/Processador/doom_cpu.sv Line: 261
-Warning (10230): Verilog HDL assignment warning at ps2_input.sv(37): truncated value with size 32 to match size of target (4) File: C:/Users/rafae/OneDrive/Documents/Workspace/Faculdade/Processador/ps2_input.sv Line: 37
+Warning (10230): Verilog HDL assignment warning at ps2_input.sv(32): truncated value with size 32 to match size of target (4) File: C:/Users/rafae/OneDrive/Documents/Workspace/Faculdade/Processador/ps2_input.sv Line: 32
 Warning (276027): Inferred dual-clock RAM node "ram_data:ram_data_inst|ram_rtl_0" from synchronous design logic.  The read-during-write behavior of a dual-clock RAM is undefined and may not match the behavior of the original design.
 Warning (276027): Inferred dual-clock RAM node "ram_data:ram_data_inst|ram_rtl_1" from synchronous design logic.  The read-during-write behavior of a dual-clock RAM is undefined and may not match the behavior of the original design.
 Info (19000): Inferred 3 megafunctions from design logic
@@ -2508,8 +2491,8 @@ Info (278001): Inferred 18 megafunctions from design logic
     Info (278004): Inferred divider/modulo megafunction ("lpm_divide") from the following logic: "layer_draw_engine:layer_draw_engine_inst|game_state_renderer:game_state_renderer_inst|Div1" File: C:/Users/rafae/OneDrive/Documents/Workspace/Faculdade/Processador/game_state_renderer.sv Line: 266
     Info (278004): Inferred divider/modulo megafunction ("lpm_divide") from the following logic: "layer_draw_engine:layer_draw_engine_inst|game_state_renderer:game_state_renderer_inst|Mod7" File: C:/Users/rafae/OneDrive/Documents/Workspace/Faculdade/Processador/game_state_renderer.sv Line: 322
     Info (278004): Inferred divider/modulo megafunction ("lpm_divide") from the following logic: "layer_draw_engine:layer_draw_engine_inst|Mod0" File: C:/Users/rafae/OneDrive/Documents/Workspace/Faculdade/Processador/layer_draw_engine.sv Line: 76
-    Info (278004): Inferred divider/modulo megafunction ("lpm_divide") from the following logic: "layer_draw_engine:layer_draw_engine_inst|game_state_renderer:game_state_renderer_inst|random_enemy:re|Mod0" File: C:/Users/rafae/OneDrive/Documents/Workspace/Faculdade/Processador/old/random_enemy.sv Line: 15
-    Info (278004): Inferred divider/modulo megafunction ("lpm_divide") from the following logic: "layer_draw_engine:layer_draw_engine_inst|game_state_renderer:game_state_renderer_inst|random_enemy:re|Div0" File: C:/Users/rafae/OneDrive/Documents/Workspace/Faculdade/Processador/old/random_enemy.sv Line: 15
+    Info (278004): Inferred divider/modulo megafunction ("lpm_divide") from the following logic: "layer_draw_engine:layer_draw_engine_inst|game_state_renderer:game_state_renderer_inst|random_enemy:re|Mod0" File: C:/Users/rafae/OneDrive/Documents/Workspace/Faculdade/Processador/random_enemy.sv Line: 15
+    Info (278004): Inferred divider/modulo megafunction ("lpm_divide") from the following logic: "layer_draw_engine:layer_draw_engine_inst|game_state_renderer:game_state_renderer_inst|random_enemy:re|Div0" File: C:/Users/rafae/OneDrive/Documents/Workspace/Faculdade/Processador/random_enemy.sv Line: 15
 Info (12130): Elaborated megafunction instantiation "rom_instructions:rom_instructions_inst|altsyncram:rom_rtl_0"
 Info (12133): Instantiated megafunction "rom_instructions:rom_instructions_inst|altsyncram:rom_rtl_0" with the following parameter:
     Info (12134): Parameter "OPERATION_MODE" = "ROM"
@@ -2667,8 +2650,8 @@ Info (12021): Found 1 design units, including 1 entities, in source file db/sign
     Info (12023): Found entity 1: sign_div_unsign_bnh File: C:/Users/rafae/OneDrive/Documents/Workspace/Faculdade/Processador/db/sign_div_unsign_bnh.tdf Line: 24
 Info (12021): Found 1 design units, including 1 entities, in source file db/alt_u_div_baf.tdf
     Info (12023): Found entity 1: alt_u_div_baf File: C:/Users/rafae/OneDrive/Documents/Workspace/Faculdade/Processador/db/alt_u_div_baf.tdf Line: 26
-Info (12130): Elaborated megafunction instantiation "layer_draw_engine:layer_draw_engine_inst|game_state_renderer:game_state_renderer_inst|random_enemy:re|lpm_divide:Mod0" File: C:/Users/rafae/OneDrive/Documents/Workspace/Faculdade/Processador/old/random_enemy.sv Line: 15
-Info (12133): Instantiated megafunction "layer_draw_engine:layer_draw_engine_inst|game_state_renderer:game_state_renderer_inst|random_enemy:re|lpm_divide:Mod0" with the following parameter: File: C:/Users/rafae/OneDrive/Documents/Workspace/Faculdade/Processador/old/random_enemy.sv Line: 15
+Info (12130): Elaborated megafunction instantiation "layer_draw_engine:layer_draw_engine_inst|game_state_renderer:game_state_renderer_inst|random_enemy:re|lpm_divide:Mod0" File: C:/Users/rafae/OneDrive/Documents/Workspace/Faculdade/Processador/random_enemy.sv Line: 15
+Info (12133): Instantiated megafunction "layer_draw_engine:layer_draw_engine_inst|game_state_renderer:game_state_renderer_inst|random_enemy:re|lpm_divide:Mod0" with the following parameter: File: C:/Users/rafae/OneDrive/Documents/Workspace/Faculdade/Processador/random_enemy.sv Line: 15
     Info (12134): Parameter "LPM_WIDTHN" = "9"
     Info (12134): Parameter "LPM_WIDTHD" = "2"
     Info (12134): Parameter "LPM_NREPRESENTATION" = "UNSIGNED"
@@ -2679,8 +2662,8 @@ Info (12021): Found 1 design units, including 1 entities, in source file db/sign
     Info (12023): Found entity 1: sign_div_unsign_akh File: C:/Users/rafae/OneDrive/Documents/Workspace/Faculdade/Processador/db/sign_div_unsign_akh.tdf Line: 24
 Info (12021): Found 1 design units, including 1 entities, in source file db/alt_u_div_84f.tdf
     Info (12023): Found entity 1: alt_u_div_84f File: C:/Users/rafae/OneDrive/Documents/Workspace/Faculdade/Processador/db/alt_u_div_84f.tdf Line: 26
-Info (12130): Elaborated megafunction instantiation "layer_draw_engine:layer_draw_engine_inst|game_state_renderer:game_state_renderer_inst|random_enemy:re|lpm_divide:Div0" File: C:/Users/rafae/OneDrive/Documents/Workspace/Faculdade/Processador/old/random_enemy.sv Line: 15
-Info (12133): Instantiated megafunction "layer_draw_engine:layer_draw_engine_inst|game_state_renderer:game_state_renderer_inst|random_enemy:re|lpm_divide:Div0" with the following parameter: File: C:/Users/rafae/OneDrive/Documents/Workspace/Faculdade/Processador/old/random_enemy.sv Line: 15
+Info (12130): Elaborated megafunction instantiation "layer_draw_engine:layer_draw_engine_inst|game_state_renderer:game_state_renderer_inst|random_enemy:re|lpm_divide:Div0" File: C:/Users/rafae/OneDrive/Documents/Workspace/Faculdade/Processador/random_enemy.sv Line: 15
+Info (12133): Instantiated megafunction "layer_draw_engine:layer_draw_engine_inst|game_state_renderer:game_state_renderer_inst|random_enemy:re|lpm_divide:Div0" with the following parameter: File: C:/Users/rafae/OneDrive/Documents/Workspace/Faculdade/Processador/random_enemy.sv Line: 15
     Info (12134): Parameter "LPM_WIDTHN" = "8"
     Info (12134): Parameter "LPM_WIDTHD" = "2"
     Info (12134): Parameter "LPM_NREPRESENTATION" = "UNSIGNED"
@@ -2732,11 +2715,11 @@ Info (21057): Implemented 8769 device resources after synthesis - the final reso
     Info (21064): Implemented 195 RAM segments
     Info (21065): Implemented 1 PLLs
     Info (21062): Implemented 14 DSP elements
-Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 91 warnings
-    Info: Peak virtual memory: 4947 megabytes
-    Info: Processing ended: Thu Jul 03 12:39:12 2025
+Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 116 warnings
+    Info: Peak virtual memory: 4925 megabytes
+    Info: Processing ended: Wed Jul 16 19:10:28 2025
     Info: Elapsed time: 00:00:33
-    Info: Total CPU time (on all processors): 00:00:42
+    Info: Total CPU time (on all processors): 00:00:37
 
 
 +------------------------------------------+

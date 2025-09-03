@@ -59,24 +59,24 @@ set_global_assignment -name OUTPUT_IO_TIMING_NEAR_END_VMEAS "HALF VCCIO" -fall
 set_global_assignment -name OUTPUT_IO_TIMING_FAR_END_VMEAS "HALF SIGNAL SWING" -rise
 set_global_assignment -name OUTPUT_IO_TIMING_FAR_END_VMEAS "HALF SIGNAL SWING" -fall
 set_location_assignment PIN_Y2 -to clock
-set_location_assignment PIN_AB28 -to entrada[0]
-set_location_assignment PIN_AC28 -to entrada[1]
-set_location_assignment PIN_AC27 -to entrada[2]
-set_location_assignment PIN_AD27 -to entrada[3]
-set_location_assignment PIN_AB27 -to entrada[4]
-set_location_assignment PIN_AC26 -to entrada[5]
-set_location_assignment PIN_AD26 -to entrada[6]
-set_location_assignment PIN_AB26 -to entrada[7]
-set_location_assignment PIN_AC25 -to entrada[8]
-set_location_assignment PIN_AB25 -to entrada[9]
-set_location_assignment PIN_AC24 -to entrada[10]
-set_location_assignment PIN_AB24 -to entrada[11]
-set_location_assignment PIN_AB23 -to entrada[12]
-set_location_assignment PIN_AA24 -to entrada[13]
-set_location_assignment PIN_AA23 -to entrada[14]
-set_location_assignment PIN_AA22 -to entrada[15]
-set_location_assignment PIN_Y24 -to entrada[16]
-set_location_assignment PIN_Y23 -to entrada[17]
+set_location_assignment PIN_Y16 -to entrada[0]
+set_location_assignment PIN_AD21 -to entrada[1]
+set_location_assignment PIN_AE16 -to entrada[2]
+set_location_assignment PIN_AD15 -to entrada[3]
+set_location_assignment PIN_AE15 -to entrada[4]
+set_location_assignment PIN_AC19 -to entrada[5]
+set_location_assignment PIN_AF16 -to entrada[6]
+set_location_assignment PIN_AD19 -to entrada[7]
+set_location_assignment PIN_AF15 -to entrada[8]
+set_location_assignment PIN_AF24 -to entrada[9]
+set_location_assignment PIN_AE21 -to entrada[10]
+set_location_assignment PIN_AF25 -to entrada[11]
+set_location_assignment PIN_AC22 -to entrada[12]
+set_location_assignment PIN_AE22 -to entrada[13]
+set_location_assignment PIN_AF21 -to entrada[14]
+set_location_assignment PIN_AF22 -to entrada[15]
+set_location_assignment PIN_AD22 -to entrada[16]
+set_location_assignment PIN_AG25 -to entrada[17]
 set_global_assignment -name POWER_PRESET_COOLING_SOLUTION "23 MM HEAT SINK WITH 200 LFPM AIRFLOW"
 set_global_assignment -name POWER_BOARD_THERMAL_MODEL "NONE (CONSERVATIVE)"
 set_global_assignment -name TIMEQUEST_MULTICORNER_ANALYSIS ON
@@ -120,8 +120,8 @@ set_location_assignment PIN_F21 -to ledr[3]
 set_location_assignment PIN_E19 -to ledr[2]
 set_location_assignment PIN_F19 -to ledr[1]
 set_location_assignment PIN_G19 -to ledr[0]
-set_location_assignment PIN_M23 -to enter_n
-set_location_assignment PIN_R24 -to reset_n
+set_location_assignment PIN_AB22 -to enter_n
+set_location_assignment PIN_Y17 -to reset_n
 set_global_assignment -name SYSTEMVERILOG_FILE doom_cpu.sv
 set_global_assignment -name SYSTEMVERILOG_FILE game_state_renderer.sv
 set_global_assignment -name SYSTEMVERILOG_FILE ps2_input.sv

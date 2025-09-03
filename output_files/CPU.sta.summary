@@ -3,59 +3,59 @@ TimeQuest Timing Analyzer Summary
 ------------------------------------------------------------
 
 Type  : Slow 1200mV 85C Model Setup 'clock_divider:clock_divider_inst|count[1]'
-Slack : -165.336
-TNS   : -101541.891
+Slack : -181.772
+TNS   : -112720.271
 
 Type  : Slow 1200mV 85C Model Setup 'clock'
-Slack : -134.024
-TNS   : -594.842
+Slack : -149.329
+TNS   : -671.074
 
 Type  : Slow 1200mV 85C Model Setup 'layer_draw_engine:layer_draw_engine_inst|game_state_renderer:game_state_renderer_inst|trigger'
-Slack : -25.082
-TNS   : -50.163
+Slack : -25.520
+TNS   : -51.039
 
 Type  : Slow 1200mV 85C Model Setup 'vga_controller_inst|vga_sync_inst|vga_pll|altpll_component|auto_generated|pll1|clk[0]'
-Slack : -5.066
-TNS   : -83.526
+Slack : -5.281
+TNS   : -87.292
 
 Type  : Slow 1200mV 85C Model Hold 'clock'
-Slack : 0.353
+Slack : 0.359
+TNS   : 0.000
+
+Type  : Slow 1200mV 85C Model Hold 'vga_controller_inst|vga_sync_inst|vga_pll|altpll_component|auto_generated|pll1|clk[0]'
+Slack : 0.361
 TNS   : 0.000
 
 Type  : Slow 1200mV 85C Model Hold 'clock_divider:clock_divider_inst|count[1]'
 Slack : 0.403
 TNS   : 0.000
 
-Type  : Slow 1200mV 85C Model Hold 'vga_controller_inst|vga_sync_inst|vga_pll|altpll_component|auto_generated|pll1|clk[0]'
-Slack : 0.405
-TNS   : 0.000
-
 Type  : Slow 1200mV 85C Model Hold 'layer_draw_engine:layer_draw_engine_inst|game_state_renderer:game_state_renderer_inst|trigger'
-Slack : 1.898
+Slack : 1.152
 TNS   : 0.000
 
 Type  : Slow 1200mV 85C Model Recovery 'vga_controller_inst|vga_sync_inst|vga_pll|altpll_component|auto_generated|pll1|clk[0]'
-Slack : -5.277
-TNS   : -104.150
+Slack : -5.182
+TNS   : -101.272
 
 Type  : Slow 1200mV 85C Model Recovery 'layer_draw_engine:layer_draw_engine_inst|game_state_renderer:game_state_renderer_inst|trigger'
-Slack : -0.698
-TNS   : -1.396
+Slack : -1.473
+TNS   : -2.946
 
 Type  : Slow 1200mV 85C Model Recovery 'clock'
-Slack : 15.376
+Slack : 14.878
 TNS   : 0.000
 
 Type  : Slow 1200mV 85C Model Removal 'layer_draw_engine:layer_draw_engine_inst|game_state_renderer:game_state_renderer_inst|trigger'
-Slack : 1.018
+Slack : 1.696
 TNS   : 0.000
 
 Type  : Slow 1200mV 85C Model Removal 'clock'
-Slack : 2.284
+Slack : 3.396
 TNS   : 0.000
 
 Type  : Slow 1200mV 85C Model Removal 'vga_controller_inst|vga_sync_inst|vga_pll|altpll_component|auto_generated|pll1|clk[0]'
-Slack : 4.210
+Slack : 4.178
 TNS   : 0.000
 
 Type  : Slow 1200mV 85C Model Minimum Pulse Width 'clock_divider:clock_divider_inst|count[1]'
@@ -75,59 +75,59 @@ Slack : 19.572
 TNS   : 0.000
 
 Type  : Slow 1200mV 0C Model Setup 'clock_divider:clock_divider_inst|count[1]'
-Slack : -149.100
-TNS   : -91809.924
+Slack : -164.794
+TNS   : -102400.164
 
 Type  : Slow 1200mV 0C Model Setup 'clock'
-Slack : -120.877
-TNS   : -529.516
+Slack : -135.372
+TNS   : -587.054
 
 Type  : Slow 1200mV 0C Model Setup 'layer_draw_engine:layer_draw_engine_inst|game_state_renderer:game_state_renderer_inst|trigger'
-Slack : -22.596
-TNS   : -45.191
+Slack : -22.930
+TNS   : -45.860
 
 Type  : Slow 1200mV 0C Model Setup 'vga_controller_inst|vga_sync_inst|vga_pll|altpll_component|auto_generated|pll1|clk[0]'
-Slack : -4.510
-TNS   : -73.904
+Slack : -4.691
+TNS   : -77.325
 
-Type  : Slow 1200mV 0C Model Hold 'clock'
+Type  : Slow 1200mV 0C Model Hold 'clock_divider:clock_divider_inst|count[1]'
 Slack : 0.352
 TNS   : 0.000
 
-Type  : Slow 1200mV 0C Model Hold 'clock_divider:clock_divider_inst|count[1]'
+Type  : Slow 1200mV 0C Model Hold 'clock'
 Slack : 0.353
 TNS   : 0.000
 
 Type  : Slow 1200mV 0C Model Hold 'vga_controller_inst|vga_sync_inst|vga_pll|altpll_component|auto_generated|pll1|clk[0]'
-Slack : 0.356
+Slack : 0.355
 TNS   : 0.000
 
 Type  : Slow 1200mV 0C Model Hold 'layer_draw_engine:layer_draw_engine_inst|game_state_renderer:game_state_renderer_inst|trigger'
-Slack : 1.688
+Slack : 1.040
 TNS   : 0.000
 
 Type  : Slow 1200mV 0C Model Recovery 'vga_controller_inst|vga_sync_inst|vga_pll|altpll_component|auto_generated|pll1|clk[0]'
-Slack : -4.653
-TNS   : -91.746
+Slack : -4.579
+TNS   : -89.310
 
 Type  : Slow 1200mV 0C Model Recovery 'layer_draw_engine:layer_draw_engine_inst|game_state_renderer:game_state_renderer_inst|trigger'
-Slack : -0.507
-TNS   : -1.014
+Slack : -1.207
+TNS   : -2.414
 
 Type  : Slow 1200mV 0C Model Recovery 'clock'
-Slack : 15.861
+Slack : 15.280
 TNS   : 0.000
 
 Type  : Slow 1200mV 0C Model Removal 'layer_draw_engine:layer_draw_engine_inst|game_state_renderer:game_state_renderer_inst|trigger'
-Slack : 0.941
+Slack : 1.580
 TNS   : 0.000
 
 Type  : Slow 1200mV 0C Model Removal 'clock'
-Slack : 2.060
+Slack : 3.150
 TNS   : 0.000
 
 Type  : Slow 1200mV 0C Model Removal 'vga_controller_inst|vga_sync_inst|vga_pll|altpll_component|auto_generated|pll1|clk[0]'
-Slack : 3.740
+Slack : 3.709
 TNS   : 0.000
 
 Type  : Slow 1200mV 0C Model Minimum Pulse Width 'clock_divider:clock_divider_inst|count[1]'
@@ -139,67 +139,67 @@ Slack : -1.285
 TNS   : -2.570
 
 Type  : Slow 1200mV 0C Model Minimum Pulse Width 'clock'
-Slack : 9.643
+Slack : 9.644
 TNS   : 0.000
 
 Type  : Slow 1200mV 0C Model Minimum Pulse Width 'vga_controller_inst|vga_sync_inst|vga_pll|altpll_component|auto_generated|pll1|clk[0]'
-Slack : 19.573
+Slack : 19.574
 TNS   : 0.000
 
 Type  : Fast 1200mV 0C Model Setup 'clock_divider:clock_divider_inst|count[1]'
-Slack : -81.408
-TNS   : -49843.307
+Slack : -91.241
+TNS   : -56151.333
 
 Type  : Fast 1200mV 0C Model Setup 'clock'
-Slack : -66.219
-TNS   : -281.303
+Slack : -75.319
+TNS   : -317.731
 
 Type  : Fast 1200mV 0C Model Setup 'layer_draw_engine:layer_draw_engine_inst|game_state_renderer:game_state_renderer_inst|trigger'
-Slack : -11.473
-TNS   : -22.945
+Slack : -11.757
+TNS   : -23.514
 
 Type  : Fast 1200mV 0C Model Setup 'vga_controller_inst|vga_sync_inst|vga_pll|altpll_component|auto_generated|pll1|clk[0]'
-Slack : -2.615
-TNS   : -43.379
+Slack : -2.788
+TNS   : -45.936
 
 Type  : Fast 1200mV 0C Model Hold 'clock'
-Slack : 0.146
+Slack : 0.137
+TNS   : 0.000
+
+Type  : Fast 1200mV 0C Model Hold 'vga_controller_inst|vga_sync_inst|vga_pll|altpll_component|auto_generated|pll1|clk[0]'
+Slack : 0.147
 TNS   : 0.000
 
 Type  : Fast 1200mV 0C Model Hold 'clock_divider:clock_divider_inst|count[1]'
 Slack : 0.181
 TNS   : 0.000
 
-Type  : Fast 1200mV 0C Model Hold 'vga_controller_inst|vga_sync_inst|vga_pll|altpll_component|auto_generated|pll1|clk[0]'
-Slack : 0.184
-TNS   : 0.000
-
 Type  : Fast 1200mV 0C Model Hold 'layer_draw_engine:layer_draw_engine_inst|game_state_renderer:game_state_renderer_inst|trigger'
-Slack : 0.864
+Slack : 0.497
 TNS   : 0.000
 
 Type  : Fast 1200mV 0C Model Recovery 'vga_controller_inst|vga_sync_inst|vga_pll|altpll_component|auto_generated|pll1|clk[0]'
-Slack : -2.783
-TNS   : -54.586
+Slack : -2.705
+TNS   : -52.922
 
 Type  : Fast 1200mV 0C Model Recovery 'layer_draw_engine:layer_draw_engine_inst|game_state_renderer:game_state_renderer_inst|trigger'
-Slack : 0.077
-TNS   : 0.000
+Slack : -0.393
+TNS   : -0.786
 
 Type  : Fast 1200mV 0C Model Recovery 'clock'
-Slack : 17.531
+Slack : 17.184
 TNS   : 0.000
 
 Type  : Fast 1200mV 0C Model Removal 'layer_draw_engine:layer_draw_engine_inst|game_state_renderer:game_state_renderer_inst|trigger'
-Slack : 0.459
+Slack : 0.831
 TNS   : 0.000
 
 Type  : Fast 1200mV 0C Model Removal 'clock'
-Slack : 1.090
+Slack : 1.659
 TNS   : 0.000
 
 Type  : Fast 1200mV 0C Model Removal 'vga_controller_inst|vga_sync_inst|vga_pll|altpll_component|auto_generated|pll1|clk[0]'
-Slack : 2.192
+Slack : 2.187
 TNS   : 0.000
 
 Type  : Fast 1200mV 0C Model Minimum Pulse Width 'clock_divider:clock_divider_inst|count[1]'
@@ -215,7 +215,7 @@ Slack : 9.371
 TNS   : 0.000
 
 Type  : Fast 1200mV 0C Model Minimum Pulse Width 'vga_controller_inst|vga_sync_inst|vga_pll|altpll_component|auto_generated|pll1|clk[0]'
-Slack : 19.617
+Slack : 19.619
 TNS   : 0.000
 
 ------------------------------------------------------------

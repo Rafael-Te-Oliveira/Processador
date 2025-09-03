@@ -115,9 +115,9 @@ VCCIO4                       : AA18      : power  :                   : 2.5V    
 seg[4][1]                    : AA19      : output : 2.5 V             :         : 4         : Y              
 GNDA4                        : AA20      : gnd    :                   :         :           :                
 seg[3][3]                    : AA21      : output : 2.5 V             :         : 4         : Y              
-entrada[15]                  : AA22      : input  : 2.5 V             :         : 5         : Y              
-entrada[14]                  : AA23      : input  : 2.5 V             :         : 5         : Y              
-entrada[13]                  : AA24      : input  : 2.5 V             :         : 5         : Y              
+RESERVED_INPUT               : AA22      :        :                   :         : 5         :                
+RESERVED_INPUT               : AA23      :        :                   :         : 5         :                
+RESERVED_INPUT               : AA24      :        :                   :         : 5         :                
 seg[2][0]                    : AA25      : output : 2.5 V             :         : 5         : Y              
 seg[2][1]                    : AA26      : output : 2.5 V             :         : 5         : Y              
 GND                          : AA27      : gnd    :                   :         :           :                
@@ -143,13 +143,13 @@ seg[5][2]                    : AB18      : output : 2.5 V             :         
 seg[4][0]                    : AB19      : output : 2.5 V             :         : 4         : Y              
 seg[3][2]                    : AB20      : output : 2.5 V             :         : 4         : Y              
 RESERVED_INPUT               : AB21      :        :                   :         : 4         :                
-RESERVED_INPUT               : AB22      :        :                   :         : 4         :                
-entrada[12]                  : AB23      : input  : 2.5 V             :         : 5         : Y              
-entrada[11]                  : AB24      : input  : 2.5 V             :         : 5         : Y              
-entrada[9]                   : AB25      : input  : 2.5 V             :         : 5         : Y              
-entrada[7]                   : AB26      : input  : 2.5 V             :         : 5         : Y              
-entrada[4]                   : AB27      : input  : 2.5 V             :         : 5         : Y              
-entrada[0]                   : AB28      : input  : 2.5 V             :         : 5         : Y              
+enter_n                      : AB22      : input  : 2.5 V             :         : 4         : Y              
+RESERVED_INPUT               : AB23      :        :                   :         : 5         :                
+RESERVED_INPUT               : AB24      :        :                   :         : 5         :                
+RESERVED_INPUT               : AB25      :        :                   :         : 5         :                
+RESERVED_INPUT               : AB26      :        :                   :         : 5         :                
+RESERVED_INPUT               : AB27      :        :                   :         : 5         :                
+RESERVED_INPUT               : AB28      :        :                   :         : 5         :                
 RESERVED_INPUT               : AC1       :        :                   :         : 2         :                
 RESERVED_INPUT               : AC2       :        :                   :         : 2         :                
 RESERVED_INPUT               : AC3       :        :                   :         : 2         :                
@@ -168,16 +168,16 @@ RESERVED_INPUT               : AC15      :        :                   :         
 GND                          : AC16      : gnd    :                   :         :           :                
 seg[6][6]                    : AC17      : output : 2.5 V             :         : 4         : Y              
 seg[5][1]                    : AC18      : output : 2.5 V             :         : 4         : Y              
-RESERVED_INPUT               : AC19      :        :                   :         : 4         :                
+entrada[5]                   : AC19      : input  : 2.5 V             :         : 4         : Y              
 GND                          : AC20      : gnd    :                   :         :           :                
 RESERVED_INPUT               : AC21      :        :                   :         : 4         :                
-RESERVED_INPUT               : AC22      :        :                   :         : 4         :                
+entrada[12]                  : AC22      : input  : 2.5 V             :         : 4         : Y              
 GND                          : AC23      : gnd    :                   :         :           :                
-entrada[10]                  : AC24      : input  : 2.5 V             :         : 5         : Y              
-entrada[8]                   : AC25      : input  : 2.5 V             :         : 5         : Y              
-entrada[5]                   : AC26      : input  : 2.5 V             :         : 5         : Y              
-entrada[2]                   : AC27      : input  : 2.5 V             :         : 5         : Y              
-entrada[1]                   : AC28      : input  : 2.5 V             :         : 5         : Y              
+RESERVED_INPUT               : AC24      :        :                   :         : 5         :                
+RESERVED_INPUT               : AC25      :        :                   :         : 5         :                
+RESERVED_INPUT               : AC26      :        :                   :         : 5         :                
+RESERVED_INPUT               : AC27      :        :                   :         : 5         :                
+RESERVED_INPUT               : AC28      :        :                   :         : 5         :                
 RESERVED_INPUT               : AD1       :        :                   :         : 2         :                
 RESERVED_INPUT               : AD2       :        :                   :         : 2         :                
 RESERVED_INPUT               : AD3       :        :                   :         : 2         :                
@@ -192,19 +192,19 @@ RESERVED_INPUT               : AD11      :        :                   :         
 RESERVED_INPUT               : AD12      :        :                   :         : 3         :                
 VCCIO3                       : AD13      : power  :                   : 2.5V    : 3         :                
 RESERVED_INPUT               : AD14      :        :                   :         : 3         :                
-RESERVED_INPUT               : AD15      :        :                   :         : 4         :                
+entrada[3]                   : AD15      : input  : 2.5 V             :         : 4         : Y              
 VCCIO4                       : AD16      : power  :                   : 2.5V    : 4         :                
 seg[7][0]                    : AD17      : output : 2.5 V             :         : 4         : Y              
 seg[5][0]                    : AD18      : output : 2.5 V             :         : 4         : Y              
-RESERVED_INPUT               : AD19      :        :                   :         : 4         :                
+entrada[7]                   : AD19      : input  : 2.5 V             :         : 4         : Y              
 VCCIO4                       : AD20      : power  :                   : 2.5V    : 4         :                
-RESERVED_INPUT               : AD21      :        :                   :         : 4         :                
-RESERVED_INPUT               : AD22      :        :                   :         : 4         :                
+entrada[1]                   : AD21      : input  : 2.5 V             :         : 4         : Y              
+entrada[16]                  : AD22      : input  : 2.5 V             :         : 4         : Y              
 VCCIO4                       : AD23      : power  :                   : 2.5V    : 4         :                
 seg[3][4]                    : AD24      : output : 2.5 V             :         : 4         : Y              
 RESERVED_INPUT               : AD25      :        :                   :         : 4         :                
-entrada[6]                   : AD26      : input  : 2.5 V             :         : 5         : Y              
-entrada[3]                   : AD27      : input  : 2.5 V             :         : 5         : Y              
+RESERVED_INPUT               : AD26      :        :                   :         : 5         :                
+RESERVED_INPUT               : AD27      :        :                   :         : 5         :                
 RESERVED_INPUT               : AD28      :        :                   :         : 5         :                
 RESERVED_INPUT               : AE1       :        :                   :         : 2         :                
 RESERVED_INPUT               : AE2       :        :                   :         : 2         :                
@@ -220,14 +220,14 @@ RESERVED_INPUT               : AE11      :        :                   :         
 RESERVED_INPUT               : AE12      :        :                   :         : 3         :                
 RESERVED_INPUT               : AE13      :        :                   :         : 3         :                
 RESERVED_INPUT               : AE14      :        :                   :         : 3         :                
-RESERVED_INPUT               : AE15      :        :                   :         : 4         :                
-RESERVED_INPUT               : AE16      :        :                   :         : 4         :                
+entrada[4]                   : AE15      : input  : 2.5 V             :         : 4         : Y              
+entrada[2]                   : AE16      : input  : 2.5 V             :         : 4         : Y              
 seg[7][1]                    : AE17      : output : 2.5 V             :         : 4         : Y              
 seg[4][6]                    : AE18      : output : 2.5 V             :         : 4         : Y              
 seg[4][4]                    : AE19      : output : 2.5 V             :         : 4         : Y              
 RESERVED_INPUT               : AE20      :        :                   :         : 4         :                
-RESERVED_INPUT               : AE21      :        :                   :         : 4         :                
-RESERVED_INPUT               : AE22      :        :                   :         : 4         :                
+entrada[10]                  : AE21      : input  : 2.5 V             :         : 4         : Y              
+entrada[13]                  : AE22      : input  : 2.5 V             :         : 4         : Y              
 RESERVED_INPUT               : AE23      :        :                   :         : 4         :                
 RESERVED_INPUT               : AE24      :        :                   :         : 4         :                
 RESERVED_INPUT               : AE25      :        :                   :         : 4         :                
@@ -248,17 +248,17 @@ RESERVED_INPUT               : AF11      :        :                   :         
 RESERVED_INPUT               : AF12      :        :                   :         : 3         :                
 RESERVED_INPUT               : AF13      :        :                   :         : 3         :                
 RESERVED_INPUT               : AF14      :        :                   :         : 3         :                
-RESERVED_INPUT               : AF15      :        :                   :         : 4         :                
-RESERVED_INPUT               : AF16      :        :                   :         : 4         :                
+entrada[8]                   : AF15      : input  : 2.5 V             :         : 4         : Y              
+entrada[6]                   : AF16      : input  : 2.5 V             :         : 4         : Y              
 seg[7][4]                    : AF17      : output : 2.5 V             :         : 4         : Y              
 seg[5][5]                    : AF18      : output : 2.5 V             :         : 4         : Y              
 seg[4][5]                    : AF19      : output : 2.5 V             :         : 4         : Y              
 RESERVED_INPUT               : AF20      :        :                   :         : 4         :                
-RESERVED_INPUT               : AF21      :        :                   :         : 4         :                
-RESERVED_INPUT               : AF22      :        :                   :         : 4         :                
+entrada[14]                  : AF21      : input  : 2.5 V             :         : 4         : Y              
+entrada[15]                  : AF22      : input  : 2.5 V             :         : 4         : Y              
 seg[3][5]                    : AF23      : output : 2.5 V             :         : 4         : Y              
-RESERVED_INPUT               : AF24      :        :                   :         : 4         :                
-RESERVED_INPUT               : AF25      :        :                   :         : 4         :                
+entrada[9]                   : AF24      : input  : 2.5 V             :         : 4         : Y              
+entrada[11]                  : AF25      : input  : 2.5 V             :         : 4         : Y              
 RESERVED_INPUT               : AF26      :        :                   :         : 4         :                
 RESERVED_INPUT               : AF27      :        :                   :         : 5         :                
 GND                          : AF28      : gnd    :                   :         :           :                
@@ -286,7 +286,7 @@ seg[4][2]                    : AG21      : output : 2.5 V             :         
 RESERVED_INPUT               : AG22      :        :                   :         : 4         :                
 RESERVED_INPUT               : AG23      :        :                   :         : 4         :                
 GND                          : AG24      : gnd    :                   :         :           :                
-RESERVED_INPUT               : AG25      :        :                   :         : 4         :                
+entrada[17]                  : AG25      : input  : 2.5 V             :         : 4         : Y              
 RESERVED_INPUT               : AG26      :        :                   :         : 4         :                
 GND                          : AG27      : gnd    :                   :         :           :                
 VCCIO5                       : AG28      : power  :                   : 2.5V    : 5         :                
@@ -618,7 +618,7 @@ VCCINT                       : M19       : power  :                   : 1.2V    
 GND                          : M20       : gnd    :                   :         :           :                
 RESERVED_INPUT               : M21       :        :                   :         : 6         :                
 MSEL2                        : M22       :        :                   :         : 6         :                
-enter_n                      : M23       : input  : 2.5 V             :         : 6         : Y              
+RESERVED_INPUT               : M23       :        :                   :         : 6         :                
 seg[1][0]                    : M24       : output : 2.5 V             :         : 6         : Y              
 RESERVED_INPUT               : M25       :        :                   :         : 6         :                
 RESERVED_INPUT               : M26       :        :                   :         : 6         :                
@@ -703,7 +703,7 @@ VCCINT                       : R20       : power  :                   : 1.2V    
 RESERVED_INPUT               : R21       :        :                   :         : 5         :                
 RESERVED_INPUT               : R22       :        :                   :         : 5         :                
 RESERVED_INPUT               : R23       :        :                   :         : 5         :                
-reset_n                      : R24       : input  : 2.5 V             :         : 5         : Y              
+RESERVED_INPUT               : R24       :        :                   :         : 5         :                
 RESERVED_INPUT               : R25       :        :                   :         : 5         :                
 RESERVED_INPUT               : R26       :        :                   :         : 5         :                
 RESERVED_INPUT               : R27       :        :                   :         : 5         :                
@@ -835,15 +835,15 @@ RESERVED_INPUT               : Y12       :        :                   :         
 RESERVED_INPUT               : Y13       :        :                   :         : 3         :                
 RESERVED_INPUT               : Y14       :        :                   :         : 3         :                
 RESERVED_INPUT               : Y15       :        :                   :         : 3         :                
-RESERVED_INPUT               : Y16       :        :                   :         : 4         :                
-RESERVED_INPUT               : Y17       :        :                   :         : 4         :                
+entrada[0]                   : Y16       : input  : 2.5 V             :         : 4         : Y              
+reset_n                      : Y17       : input  : 2.5 V             :         : 4         : Y              
 GND                          : Y18       : gnd    :                   :         :           :                
 seg[3][6]                    : Y19       : output : 2.5 V             :         : 4         : Y              
 VCCD_PLL4                    : Y20       : power  :                   : 1.2V    :           :                
 VCCA4                        : Y21       : power  :                   : 2.5V    :           :                
 seg[1][1]                    : Y22       : output : 2.5 V             :         : 5         : Y              
-entrada[17]                  : Y23       : input  : 2.5 V             :         : 5         : Y              
-entrada[16]                  : Y24       : input  : 2.5 V             :         : 5         : Y              
+RESERVED_INPUT               : Y23       :        :                   :         : 5         :                
+RESERVED_INPUT               : Y24       :        :                   :         : 5         :                
 seg[2][2]                    : Y25       : output : 2.5 V             :         : 5         : Y              
 seg[2][4]                    : Y26       : output : 2.5 V             :         : 5         : Y              
 GND+                         : Y27       :        :                   :         : 5         :                

@@ -1,3 +1,2 @@
-Warning (10268): Verilog HDL information at ps2_input.sv(34): always construct contains both blocking and non-blocking assignments File: C:/Users/rafae/OneDrive/Documents/Workspace/Faculdade/Processador/ps2_input.sv Line: 34
-Warning (10268): Verilog HDL information at ps2_receiver.sv(11): always construct contains both blocking and non-blocking assignments File: C:/Users/rafae/OneDrive/Documents/Workspace/Faculdade/Processador/old/ps2_receiver.sv Line: 11
+Warning (10268): Verilog HDL information at ps2_input.sv(29): always construct contains both blocking and non-blocking assignments File: C:/Users/rafae/OneDrive/Documents/Workspace/Faculdade/Processador/ps2_input.sv Line: 29
 Warning (10268): Verilog HDL information at program_counter.sv(37): always construct contains both blocking and non-blocking assignments File: C:/Users/rafae/OneDrive/Documents/Workspace/Faculdade/Processador/program_counter.sv Line: 37
